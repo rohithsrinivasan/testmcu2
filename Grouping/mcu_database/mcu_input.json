@@ -1,0 +1,1626 @@
+{
+  "ADC": {
+    "0 Channel": [
+      "ADC0I0",
+      "ADC0I1",
+      "ADC0I10",
+      "ADC0I11",
+      "ADC0I12",
+      "ADC0I13",
+      "ADC0I14",
+      "ADC0I15",
+      "ADC0I16",
+      "ADC0I17",
+      "ADC0I18",
+      "ADC0I19",
+      "ADC0I2",
+      "ADC0I3",
+      "ADC0I4",
+      "ADC0I5",
+      "ADC0I6",
+      "ADC0I7",
+      "ADC0I8",
+      "ADC0I9"
+    ],
+    "C0 Channel Group 0": [
+      "ADCC0I00",
+      "ADCC0I01",
+      "ADCC0I02",
+      "ADCC0I03",
+      "ADCC0I2",
+      "ADCC0I10",
+      "ADCC0I11",
+      "ADCC0I12",
+      "ADCC0I13",
+      "ADCC0I20",
+      "ADCC0I21",
+      "ADCC0I22",
+      "ADCC0I23",
+      "ADCC0I30",
+      "ADCC0I31",
+      "ADCC0I32",
+      "ADCC0I33"
+    ],
+    "1I Channel": [
+      "ADC1I0",
+      "ADC1I1",
+      "ADC1I10",
+      "ADC1I11",
+      "ADC1I12",
+      "ADC1I13",
+      "ADC1I14",
+      "ADC1I15",
+      "ADC1I16",
+      "ADC1I17",
+      "ADC1I18",
+      "ADC1I19",
+      "ADC1I2",
+      "ADC1I3",
+      "ADC1I4",
+      "ADC1I5",
+      "ADC1I6",
+      "ADC1I7",
+      "ADC1I8",
+      "ADC1I9"
+    ],
+    "1 Input": [
+      "ADC1_IN0",
+      "ADC1_IN1",
+      "ADC1_IN2",
+      "ADC1_IN3",
+      "ADC1_IN4",
+      "ADC1_IN6",
+      "ADC1_IN7",
+      "ADC1_IN8"
+    ],
+    "C1 Channel Group 1": [
+      "ADCC1I00",
+      "ADCC1I01",
+      "ADCC1I02",
+      "ADCC1I03",
+      "ADCC1I10",
+      "ADCC1I11",
+      "ADCC1I12",
+      "ADCC1I13",
+      "ADCC1I20",
+      "ADCC1I21",
+      "ADCC1I22",
+      "ADCC1I23",
+      "ADCC1I30",
+      "ADCC1I31",
+      "ADCC1I32",
+      "ADCC1I33",
+      "ADCC1I40",
+      "ADCC1I41",
+      "ADCC1I42",
+      "ADCC1I50",
+      "ADCC1I51",
+      "ADCC1I52",
+      "ADCC1I60",
+      "ADCC1I61",
+      "ADCC1I62"
+    ],
+    "2 Input": [
+      "ADC2_IN0",
+      "ADC2_IN1",
+      "ADC2_IN2",
+      "ADC2_IN3",
+      "ADC2_IN4",
+      "ADC2_IN6",
+      "ADC2_IN7",
+      "ADC2_IN8"
+    ],
+    "C2 Channel Group 2": [
+      "ADCC2I00",
+      "ADCC2I01",
+      "ADCC2I02",
+      "ADCC2I03",
+      "ADCC2I10",
+      "ADCC2I11",
+      "ADCC2I12",
+      "ADCC2I13",
+      "ADCC2I20",
+      "ADCC2I21",
+      "ADCC2I22",
+      "ADCC2I23",
+      "ADCC2I30",
+      "ADCC2I31",
+      "ADCC2I32",
+      "ADCC2I33"
+    ],
+    "Channel group D0": [
+      "ADCD0I0",
+      "ADCD0I1",
+      "ADCD0I10",
+      "ADCD0I11",
+      "ADCD0I2",
+      "ADCD0I3",
+      "ADCD0I4",
+      "ADCD0I5",
+      "ADCD0I6",
+      "ADCD0I7",
+      "ADCD0I8",
+      "ADCD0I9"
+    ],
+    "Channel group D1": [
+      "ADCD1I0",
+      "ADCD1I1",
+      "ADCD1I10",
+      "ADCD1I11",
+      "ADCD1I2",
+      "ADCD1I3",
+      "ADCD1I4",
+      "ADCD1I5",
+      "ADCD1I6",
+      "ADCD1I7",
+      "ADCD1I8",
+      "ADCD1I9"
+    ],
+    "Channel group G0": [
+      "ADCG0I0",
+      "ADCG0I1",
+      "ADCG0I10",
+      "ADCG0I11",
+      "ADCG0I2",
+      "ADCG0I3",
+      "ADCG0I4",
+      "ADCG0I5",
+      "ADCG0I6",
+      "ADCG0I7",
+      "ADCG0I8",
+      "ADCG0I9"
+    ],
+    "Channel group G1": [
+      "ADCG1I0",
+      "ADCG1I1",
+      "ADCG1I10",
+      "ADCG1I11",
+      "ADCG1I2",
+      "ADCG1I3",
+      "ADCG1I4",
+      "ADCG1I5",
+      "ADCG1I6",
+      "ADCG1I7",
+      "ADCG1I8",
+      "ADCG1I9"
+    ],
+    "Input": [
+      "ADC_IN0",
+      "ADC_IN1",
+      "ADC_IN2",
+      "ADC_IN3",
+      "ADC_IN4",
+      "ADC_IN5",
+      "ADC_IN6",
+      "ADC_IN7"
+    ]
+  },
+  "Reset": {
+    "Reset": [
+      "ERAMRES2#",
+      "ERAMRES2Z",
+      "ERAMRESPD#",
+      "ERAMRESPDZ"
+    ],
+    "General": [
+      "RESET#",
+      "RESETZ",
+      "RESETZ#",
+      "/RESET",
+      "RES",
+      "RES#",
+      "RESET",
+      "RSTN",
+      "R\\E\\S\\",
+      "R\\E\\S\\(Vpp)",
+      "R\\E\\S\\E\\T\\M\\",
+      "R\\E\\S\\E\\T\\P\\",
+      "\\RES",
+      "\\RES(Vpp)",
+      "\\RESET",
+      "\\RESETM",
+      "\\RESETP",
+      "\\RES_IN",
+      "\\RES_OUT",
+      "\\\\RESET",
+      "nRST",
+      "RSTB",
+      "RSTN#",
+      "#RES"
+    ],
+    "Q" :[
+      "QRESN",
+      "QRESNSEL"
+    ]
+  },
+  "AVB": {
+    "0 Control": [
+      "AVB0_RXC",
+      "AVB0_RX_CTL",
+      "AVB0_TXC",
+      "AVB0_TX_CTL",
+      "HDREXT",
+      "IP0_0",
+      "I\\R\\Q\\O\\U\\T\\",
+      "JIT0",
+      "JIT1",
+      "LVRXREXT",
+      "L\\O\\C\\K\\"
+    ]
+  },
+  "IFR": {
+    "General": [
+      "IFRXTN",
+      "IFRXTP"
+    ]
+  },
+  "Analog": {
+    "Pins 0": [
+      "AN011",
+      "AN012",
+      "AN013",
+      "AN020",
+      "AN021",
+      "AN022",
+      "AN023",
+      "AN030",
+      "AN031",
+      "AN032",
+      "AN033",
+      "AN040",
+      "AN041",
+      "AN042",
+      "AN043",
+      "AN050",
+      "AN051",
+      "AN052",
+      "AN053",
+      "AN060",
+      "AN061",
+      "AN062",
+      "AN063"
+    ],
+    "Pins 1": [
+      "AN120",
+      "AN121",
+      "AN122",
+      "AN123",
+      "AN130",
+      "AN131",
+      "AN132",
+      "AN140",
+      "AN141",
+      "AN142",
+      "AN150",
+      "AN151",
+      "AN152",
+      "AN160",
+      "AN161",
+      "AN162",
+      "AN170",
+      "AN171",
+      "AN172"
+    ],
+    "Pins 2": [
+      "AN200",
+      "AN201",
+      "AN202",
+      "AN203",
+      "AN210",
+      "AN211",
+      "AN212",
+      "AN213",
+      "AN220",
+      "AN221",
+      "AN222",
+      "AN223",
+      "AN230",
+      "AN231",
+      "AN232",
+      "AN233",
+      "AN240",
+      "AN241",
+      "AN242",
+      "AN243",
+      "AN250",
+      "AN251",
+      "AN252",
+      "AN253",
+      "AN260",
+      "AN261",
+      "AN262",
+      "AN263",
+      "AN270",
+      "AN271",
+      "AN272",
+      "AN273"
+    ],
+    "Pins 3": [
+      "AN300",
+      "AN301",
+      "AN302",
+      "AN303",
+      "AN310",
+      "AN311",
+      "AN312",
+      "AN313",
+      "AN320",
+      "AN321",
+      "AN322",
+      "AN323",
+      "AN350",
+      "AN351",
+      "AN352",
+      "AN353",
+      "AN360",
+      "AN361",
+      "AN362",
+      "AN363",
+      "AN370",
+      "AN371",
+      "AN372",
+      "AN373"
+    ],
+    "Pins Port 1": [
+      "AP1_0",
+      "AP1_1",
+      "AP1_10",
+      "AP1_11",
+      "AP1_12",
+      "AP1_13",
+      "AP1_14",
+      "AP1_15",
+      "AP1_2",
+      "AP1_3",
+      "AP1_4",
+      "AP1_5",
+      "AP1_6",
+      "AP1_7",
+      "AP1_8",
+      "AP1_9"
+    ],
+    "Pins Port 2": [
+      "AP2_0",
+      "AP2_1",
+      "AP2_10",
+      "AP2_11",
+      "AP2_12",
+      "AP2_13",
+      "AP2_14",
+      "AP2_15",
+      "AP2_2",
+      "AP2_3",
+      "AP2_4",
+      "AP2_5",
+      "AP2_6",
+      "AP2_7",
+      "AP2_8",
+      "AP2_9"
+    ],
+    "Pins Port 3": [
+      "AP3_0",
+      "AP3_1",
+      "AP3_2",
+      "AP3_3"
+    ],
+    "Pins Port 4": [
+      "AP4_0",
+      "AP4_1",
+      "AP4_10",
+      "AP4_11",
+      "AP4_12",
+      "AP4_13",
+      "AP4_14",
+      "AP4_15",
+      "AP4_2",
+      "AP4_3",
+      "AP4_4",
+      "AP4_5",
+      "AP4_6",
+      "AP4_7",
+      "AP4_8",
+      "AP4_9"
+    ],
+    "Pins Port 5": [
+      "AP5_0",
+      "AP5_1",
+      "AP5_2",
+      "AP5_3"
+    ],
+    "Inputs AIN": [
+      "AIN0",
+      "AIN1",
+      "AIN11",
+      "AIN12",
+      "AIN13",
+      "AIN14",
+      "AIN15",
+      "AIN4",
+      "AIN5",
+      "AIN6",
+      "AIN7"
+    ],
+    "Inputs ANI": [
+      "ANI0",
+      "ANI01",
+      "ANI02",
+      "ANI03",
+      "ANI04",
+      "ANI05",
+      "ANI06",
+      "ANI07",
+      "ANI1",
+      "ANI10",
+      "ANI11",
+      "ANI12",
+      "ANI13",
+      "ANI14",
+      "ANI15",
+      "ANI16",
+      "ANI17",
+      "ANI2",
+      "ANI20",
+      "ANI21",
+      "ANI3",
+      "ANI4",
+      "ANI5",
+      "ANI6",
+      "ANI7",
+      "ANI9"
+    ],
+    "Inputs ANIN ANIP": [
+      "AN010",
+      "ANIN0",
+      "ANIN1",
+      "ANIN2",
+      "ANIN3",
+      "ANIN4",
+      "ANIN5",
+      "ANIN6",
+      "ANIP0",
+      "ANIP1",
+      "ANIP2",
+      "ANIP3",
+      "ANIP4",
+      "ANIP5",
+      "ANIP6",
+      "AN_B40",
+      "AN_B41",
+      "AN_B42",
+      "AN_B43",
+      "AN_B44",
+      "AN_B45",
+      "AN_B46",
+      "AN_B47",
+      "AN_B48"
+    ],
+    "Inputs ANI Indexed": [
+      "ANI00",
+      "ANI000",
+      "ANI001",
+      "ANI002",
+      "ANI003",
+      "ANI004",
+      "ANI005",
+      "ANI006",
+      "ANI007"
+    ],
+    "Inputs AN Array": [
+      "AN[0]",
+      "AN[1]",
+      "AN[2]",
+      "AN[3]",
+      "AN[4]",
+      "AN[5]",
+      "AN[6]",
+      "AN[7]"
+    ],
+    "Voltage Analog Inputs": [
+      "HVAIN0",
+      "HVAIN1",
+      "HVAIN2",
+      "HVAIN3"
+    ]
+  },
+  "Audio": {
+    "Pins": [
+      "AUDIO_EXTAL",
+      "AUDIO_X1",
+      "AUDIO_X2",
+      "AUD_CLK",
+      "AUDIO_CLK",
+      "AUDIO_CLK1",
+      "AUDIO_CLK2",
+      "AUDIO_CLKA_A",
+      "AUDIO_CLKB_A",
+      "AUDIO_CLKC",
+      "AUDIO_CLKOUT",
+      "AUDIO_CLK_A",
+      "AUDIO_CLK_B",
+      "AUDIO_CLK_C",
+      "AUDIO_CLK_D",
+      "AUDIO_CLK_E",
+      "AUDIO_CLK_F",
+      "AUDIO_CLK_G",
+      "AUDIO_CLK_H"
+    ],
+    "DATA": [
+      "AUDATA[0]",
+      "AUDATA[1]",
+      "AUDATA[2]",
+      "AUDATA[3]",
+      "AUDIO_DATA0_A",
+      "AUDIO_DATA1_A",
+      "AUDIO_DATA2_A",
+      "AUDIO_DATA3_A",
+      "AUDIO_DATA4_A",
+      "AUDIO_DATA5_A",
+      "AUDIO_DATA6_A",
+      "AUDIO_DATA7_A"
+    ],
+    "Reset": [
+      "AUDRST#",
+      "AUDRSTZ",
+      "\\AUDRST"
+    ],
+    "SYNC": [
+      "AUDSYNC",
+      "AUDSYNC#",
+      "AUDSYNCZ",
+      "\\AUDSYNC",
+      "A\\U\\D\\S\\Y\\N\\C\\"
+    ]
+  },
+  "Boot": {
+    "Config": [
+      "BOOTCPUSEL",
+      "BOOTPLLCA0",
+      "BOOTPLLCA1",
+      "UROM_EN"
+    ]
+  },
+  "CAN_Interface": {
+    "Interface": [
+      "CANFD0_RX_A",
+      "CANFD0_TX_A",
+      "CANFD1_RX",
+      "CANFD1_TX",
+      "CANFD_CLK_A"
+    ],
+    "System Control": [
+      "BSCANP"
+    ],
+    "CAN0": [
+      "CAN0_RX_A"
+    ],
+    "CAN1": [
+      "CAN1_RX_A"
+    ],
+    "CAN": [
+      "CAN_CLK_A"
+    ],
+    "ERXD": [
+      "ERXD0",
+      "ERXD1",
+      "ERXD2",
+      "ERXD3"
+    ],
+    "ET0 RX": [
+      "ET0_RXD0",
+      "ET0_RXD1",
+      "ET0_RXD2",
+      "ET0_RXD3"
+    ],
+    "ET1 RX": [
+      "ET1_RXD0",
+      "ET1_RXD1",
+      "ET1_RXD2",
+      "ET1_RXD3"
+    ],
+    "HRx": [
+      "HRXD",
+      "HRxD",
+      "HRxD0",
+      "HRxD1"
+    ],
+    "PCIE RX0": [
+      "PCIE_RXDNL0",
+      "PCIE_RXDPL0"
+    ],
+    "PCIE RX1": [
+      "PCIE_RXDNL1",
+      "PCIE_RXDPL1"
+    ],
+    "PCIE RX2": [
+      "PCIE_RXDNL2",
+      "PCIE_RXDPL2"
+    ],
+    "PCIE RX3": [
+      "PCIE_RXDNL3",
+      "PCIE_RXDPL3"
+    ],
+    "PCIE RX": [
+      "PCIE_RX_DN",
+      "PCIE_RX_DP"
+    ],
+    "USB30": [
+      "USB30_RX0M",
+      "USB30_RX0P"
+    ],
+    "USB31": [
+      "USB31_RX0M",
+      "USB31_RX0P"
+    ],
+    "USRX0": [
+      "USRX0M",
+      "USRX0P"
+    ],
+    "ET0 TX": [
+      "ET0_TXD0",
+      "ET0_TXD1",
+      "ET0_TXD2",
+      "ET0_TXD3"
+    ],
+    "ET1 TX": [
+      "ET1_TXD0",
+      "ET1_TXD1",
+      "ET1_TXD2",
+      "ET1_TXD3"
+    ]
+  },
+  "Clock": {
+    "Control": [
+      "CKSEL",
+      "DIGRF_CLKIN",
+      "DIGRF_CLKOUT",
+      "DSMDNCLK",
+      "DSMDPCLK",
+      "DSSDNCLK",
+      "DSSDPCLK",
+      "FSCLKST#",
+      "MN",
+      "NAWPN",
+      "OSCTH",
+      "SSEL0",
+      "SSEL1",
+      "SVRNGATE",
+      "SVRPGATE"
+    ],
+    "Diffierential pair 0": [
+      "CLKIN0",
+      "nCLKIN0"
+    ],
+    "Diffierential pair 1": [
+      "CLKIN1",
+      "nCLKIN1"
+    ],
+    "Diffierential pair 2": [
+      "CLKIN2",
+      "nCLKIN2"
+    ],
+    "Diffierential pair 3": [
+      "CLKIN3",
+      "nCLKIN3"
+    ],
+    "Diffierential pair 4": [
+      "CLKIN4",
+      "nCLKIN4"
+    ],
+    "B_XT": [
+      "EMEXTAL",
+      "EXRES1",
+      "EXTALR",
+      "PCREXT",
+      "QEXTAL",
+      "REXT",
+      "TRCCLK"
+    ],
+    "External": [
+      "EXCIN",
+      "EXCLK",
+      "EXTCLKIN"
+    ],
+    "A_Main": [
+      "X1",
+      "X2",
+      "XIN",
+      "X1[CL1]",
+      "X2[CL2]"
+    ],
+    "WAIT": [
+      "EX_WAIT0",
+      "EX_WAIT1",
+      "EX_WAIT2"
+    ],
+    "USB": [
+      "USB_X1"
+    ],
+    "Capacitor_ET_RXCTL": [
+      "ET0_RXCTL_RXDV",
+      "ET1_RXCTL_RXDV",
+      "ET1_TXCTL_TXEN",
+      "ET0_TXCTL_TXEN"
+    ],
+    "Capacitor_ET_RXC": [
+      "ET0_RXC_RXCLK",
+      "ET1_RXC_RXCLK",
+      "ET1_TXC_TXCLK",
+      "ET0_TXC_TXCLK"
+    ],
+    "XC": [
+      "XCIN"
+    ],
+    "Reference Clocks": [
+      "PCIE_REFCLKN0",
+      "PCIE_REFCLKN1",
+      "PCIE_REFCLKP0",
+      "PCIE_REFCLKP1"
+    ],
+    "General": [
+      "CACREF",
+      "CACREF_A",
+      "CACREF_B",
+      "CACREF_C"
+    ],
+    "Miscelleneous": [
+      "CLK",
+      "DU0_DOTCLKIN",
+      "IM0CLK",
+      "IM0_CLK",
+      "IM1CLK",
+      "IM1_CLK",
+      "LVDSRE-FRIN",
+      "LVDSREFRIN",
+      "MCLK_XI",
+      "MCLK_XO",
+      "RTC1HZ",
+      "RTXIN",
+      "RX1_B"
+    ],
+    "Clock Oscillator": [
+      "OSC1",
+      "OSC2"
+    ],
+    "Clock Real Time Clock": [
+      "RTC_X1",
+      "RTC_XI"
+    ],
+    "Clock Video": [
+      "VIDEO_X1"
+    ],
+    "Mode Clock": [
+      "MD_CLK",
+      "MD_CLK0",
+      "MD_CLKS"
+    ],
+    "Input Clock": [
+      "XT1",
+      "XT2"
+    ],
+    "External Clock":[
+      "XTAL",
+      "EXTAL",
+      "XTAL1_RF",
+      "XTAL2_RF"
+    ],
+    "CLOCK INPUTS": [
+      "RHSB0FCLN",
+      "RHSB0FCLP",
+      "RHSB1FCLN",
+      "RHSB1FCLP"
+    ]
+  },
+  "Control": {
+    "INPUTS": [
+      "MCS0#",
+      "MSYN#",
+      "MSYNZ",
+      "PLLSEL",
+      "PWDETRSTN",
+      "READY",
+      "\\RDY",
+      "R\\D\\",
+      "R\\D\\Y\\",
+      "B\\S\\"
+    ]
+  },
+  "Chip_Select": {
+    "Select": [
+      "CS",
+      "CS0",
+      "CS1",
+      "CS2",
+      "CS3",
+      "CS4",
+      "CS5",
+      "CSI_DATA0N",
+      "CSI_DATA0P",
+      "CSI_DATA1N",
+      "CSI_DATA1P",
+      "C\\S\\0\\",
+      "C\\S\\1\\",
+      "C\\S\\2\\",
+      "C\\S\\3\\",
+      "C\\S\\4\\",
+      "C\\S\\5\\",
+      "C\\S\\6\\",
+      "XSPI0_ECS0N",
+      "nCS_A0"
+    ],
+    "CS0 CLK": [
+      "CSI0_CLKN",
+      "CSI0_CLKP"
+    ],
+    "CS0 DATA0": [
+      "CSI0_DATA0N",
+      "CSI0_DATA0P"
+    ],
+    "CS0 DATA1": [
+      "CSI0_DATA1N",
+      "CSI0_DATA1P"
+    ],
+    "CS0 DATA2": [
+      "CSI0_DATA2N",
+      "CSI0_DATA2P"
+    ],
+    "CS0 DATA3": [
+      "CSI0_DATA3N",
+      "CSI0_DATA3P"
+    ],
+    "CS0 DATA 0": [
+      "CSI0_DATAN0",
+      "CSI0_DATAP0"
+    ],
+    "CS0 DATA 1": [
+      "CSI0_DATAN1",
+      "CSI0_DATAP1"
+    ],
+    "CS0 DATA 2": [
+      "CSI0_DATAN2",
+      "CSI0_DATAP2"
+    ],
+    "CS0 DATA 3": [
+      "CSI0_DATAN3",
+      "CSI0_DATAP3"
+    ],
+    "CS1 CLK": [
+      "CSI1_CLKN",
+      "CSI1_CLKP"
+    ],
+    "CS1 DATA0": [
+      "CSI1_DATA0N",
+      "CSI1_DATA0P"
+    ],
+    "CS1 DATA1": [
+      "CSI1_DATA1N",
+      "CSI1_DATA1P"
+    ],
+    "CS1 DATA2": [
+      "CSI1_DATA2N",
+      "CSI1_DATA2P"
+    ],
+    "CS1 DATA3": [
+      "CSI1_DATA3N",
+      "CSI1_DATA3P"
+    ],
+    "CS2 CLK": [
+      "CSI2_CLKN",
+      "CSI2_CLKP"
+    ],
+    "CS2 DATA0": [
+      "CSI2_DATA0N",
+      "CSI2_DATA0P"
+    ],
+    "CS2 DATA1": [
+      "CSI2_DATA1N",
+      "CSI2_DATA1P"
+    ],
+    "CS2 DATA2": [
+      "CSI2_DATA2N",
+      "CSI2_DATA2P"
+    ],
+    "CS2 DATA3": [
+      "CSI2_DATA3N",
+      "CSI2_DATA3P"
+    ],
+    "CS3 CLK": [
+      "CSI3_CLKN",
+      "CSI3_CLKP"
+    ],
+    "CS3 DATA0": [
+      "CSI3_DATA0N",
+      "CSI3_DATA0P"
+    ],
+    "CS3 DATA1": [
+      "CSI3_DATA1N",
+      "CSI3_DATA1P"
+    ],
+    "CS3 DATA2": [
+      "CSI3_DATA2N",
+      "CSI3_DATA2P"
+    ],
+    "CS3 DATA3": [
+      "CSI3_DATA3N",
+      "CSI3_DATA3P"
+    ],
+    "CS  CLK": [
+      "CSI_CLKN",
+      "CSI_CLKP"
+    ],
+    "CS  DATA0": [
+      "CSI_DATA0_N",
+      "CSI_DATA0_P"
+    ],
+    "CS  DATA1": [
+      "CSI_DATA1_N",
+      "CSI_DATA1_P"
+    ],
+    "CS  DATA2": [
+      "CSI_DATA2_N",
+      "CSI_DATA2_P"
+    ],
+    "CS  DATA3": [
+      "CSI_DATA3_N",
+      "CSI_DATA3_P"
+    ]
+  },
+  "DREQ": {
+    "General": [
+      "D\\R\\E\\Q\\0\\",
+      "D\\R\\E\\Q\\1\\"
+    ],
+    "DREQ0": [
+      "DREQ0",
+      "\\DREQ0"
+    ],
+    "DREQ1": [
+      "DREQ1",
+      "\\DREQ1"
+    ]
+  },
+  "Data_Bus": {
+    "General": [
+      "AUDCK"
+    ]
+  },
+  "Ethernet_Interface": {
+    "0": [
+      "DET3OR5",
+      "ET0_MDC",
+      "ET0_MDIO"
+    ],
+    "ER 0": [
+      "ET0_TXER",
+      "ET0_RXER"
+    ],
+    "ER 1": [
+      "ET1_TXER",
+      "ET1_RXER"
+    ],
+    "ET COL": [
+      "ET0_COL",
+      "ET1_COL"
+    ],
+    "ET CRS": [
+      "ET0_CRS",
+      "ET1_CRS"
+    ],
+    "1": [
+      "ET1_MDC",
+      "ET1_MDIO"
+    ]
+  },
+  "Other_External": {
+    "Wait": [
+      "W\\A\\I\\T\\",
+      "\\WAIT"
+    ]
+  },
+  "General_IO": {
+    "PGA": [
+      "PGA00N",
+      "PGA00P",
+      "PGA0P",
+      "PGA0N"
+    ],
+    "Port N": [
+      "PN04",
+      "PN05"
+    ],
+    "Port TF": [
+      "PTF3",
+      "PTF4"
+    ],
+    "Port TG": [
+      "PTG[4]"
+    ],
+    "Port TM": [
+      "PTM4",
+      "PTM5",
+      "PTM[4]",
+      "PTM[7]"
+    ]
+  },
+  "Generic": {
+    "ADC Channel": [
+      "ADC_CH0",
+      "ADC_CH1",
+      "ADC_CH2",
+      "ADC_CH3",
+      "ADC_CH4",
+      "ADC_CH5",
+      "ADC_CH6",
+      "ADC_CH7"
+    ]
+  },
+  "Interrupt": {
+    "General": [
+      "INT",
+      "INTR",
+      "XSPI0_INT0N",
+      "nMR"
+    ],
+    "ET PHY": [
+      "ET0_PHYINTR",
+      "ET1_PHYINTR"
+    ],
+    "IRL": [
+      "IRL0#",
+      "IRL1#",
+      "IRL2#",
+      "IRL3#",
+      "\\IRL3",
+      "I\\R\\L\\0\\",
+      "I\\R\\L\\1\\",
+      "I\\R\\L\\2\\",
+      "I\\R\\L\\3\\"
+    ],
+    "Interrupt": [
+      "NMI",
+      "\\NMI",
+      "N\\M\\I\\"
+    ],
+    "QSP Interrupt": [
+      "\\QSPI_INT"
+    ]
+  },
+  "JTAG": {
+    "Interface": [
+      "DCUTCK",
+      "DCUTDI",
+      "DCUTMS",
+      "DCUTRSTN#",
+      "JTAG_TCK",
+      "JTAG_TDI",
+      "JTAG_TRST_N"
+    ]
+  },
+  "Keypad": {
+    "INPUTS": [
+      "PWKY0N",
+      "PWKY1N",
+      "PWKY2N",
+      "PWKY3N",
+      "PWKY4N"
+    ]
+  },
+  "MIPI": {
+    "INPUT PAIRS": [
+      "MIPI_CL_N",
+      "MIPI_CL_P",
+      "MIPI_DL0_N",
+      "MIPI_DL0_P",
+      "MIPI_DL1_N",
+      "MIPI_DL1_P"
+    ]
+  },
+  "Mode": {
+    "General": [
+      "BOOTSELCPU",
+      "BSMODE",
+      "D\\B\\G\\M\\D\\",
+      "EHMD",
+      "MDE",
+      "MDX",
+      "MD_BYPASS",
+      "MD_CLK2",
+      "MD_CLKP",
+      "MD_OSCDRV0",
+      "MD_OSCDRV1",
+      "MPMD",
+      "THMODE",
+      "\\DBGMD"
+    ],
+    "ASEMD": [
+      "ASEMD",
+      "ASEMD#",
+      "ASEMD0#",
+      "ASEMODE",
+      "A\\S\\E\\M\\D\\0\\",
+      "\\ASEMD",
+      "\\ASEMD0"
+    ],
+    "Config": [
+      "CONFIG0",
+      "CONFIG1",
+      "CONFIG2"
+    ],
+    "FLMD": [
+      "FLMD0",
+      "FLMD1",
+      "FLMD",
+      "FLMD2",
+      "FLMODE",
+      "\\FLMD0",
+      "\\FLMD1",
+      "\\FLMD2"
+    ],
+    "Mode": [
+      "MD/FINED",
+      "MD0",
+      "MD1",
+      "MD2",
+      "MD3",
+      "MD4",
+      "MD5",
+      "MD6",
+      "MODE",
+      "MODE0",
+      "MODE1",
+      "MODE2"
+    ],
+    "Boot": [
+      "MD_BOOT0",
+      "MD_BOOT1",
+      "MD_BOOT2",
+      "MD_BOOT3",
+      "MD_BOOT4"
+    ],
+    "Test Mode": [
+      "TESTMD#",
+      "TESTMD",
+      "TMOD"
+    ]
+  },
+  "On_Chip_Oscillator": {
+    "Chip Oscillator": [
+      "DETCK",
+      "DETDI",
+      "DETRSTN#",
+      "OC_EN",
+      "RTRSTN#",
+      "DEBUGEN",
+      "DESRSTN#"
+    ],
+    "PLL": [
+      "PLLCAP",
+      "PLLCAP1",
+      "PLLCAP2"
+    ]
+  },
+  "Emulator": {
+    "General": [
+      "TCK",
+      "TCK/SWDCLK",
+      "TCK_SWCLK",
+      "TDI",
+      "TMS",
+      "TRST",
+      "TRST#",
+      "TRSTN",
+      "\\TRST",
+      "TRSTZ",
+      "T\\R\\S\\T\\"
+    ]
+  },
+  "Other_Input": {
+    "Input": [
+      "ASEBRK#",
+      "BIAS",
+      "BYTE",
+      "B\\R\\E\\Q\\",
+      "B\\R\\L\\S\\",
+      "B\\U\\S\\H\\i\\Z\\",
+      "CA",
+      "CK_PHY",
+      "COL",
+      "CRS",
+      "C\\K\\I\\O\\2\\E\\N\\B\\",
+      "C\\K\\P\\R\\E\\Q\\",
+      "DCLIN",
+      "DCLIN_A",
+      "DCLIN_D",
+      "DDR_WE\\",
+      "IDSEL",
+      "LCLK",
+      "PCICLK",
+      "PWRGD",
+      "QBYPASS",
+      "RFCTLEN",
+      "RFIP",
+      "RTISO",
+      "R\\Q\\",
+      "SCIF_CLK_A",
+      "SCPT7",
+      "SCPT[7]",
+      "SD2_CD_A",
+      "SD2_WP_A",
+      "SDBUP",
+      "SEN",
+      "SIN",
+      "SIOMCLK",
+      "TAMPIN",
+      "THDCD",
+      "THDCTL",
+      "TMC1",
+      "TMC2",
+      "TX-CLK",
+      "TX_DATAN",
+      "TX_DATAP",
+      "VI1_CLK_A",
+      "XSPI0_RSTO0N",
+      "XTAL48",
+      "\\ADTRG",
+      "\\BREQ",
+      "\\BRLS",
+      "\\BUSHiZ",
+      "\\CKIO2ENB",
+      "\\CKPREQ"
+    ],
+    "Amplifier": [
+      "AMP0N",
+      "AMP0P",
+      "AMP1N",
+      "AMP2N"
+    ],
+    "Analog Input": [
+      "AN0",
+      "AN1",
+      "AN2",
+      "AN3",
+      "AN4",
+      "AN5",
+      "AN6",
+      "AN7",
+      "AN8",
+      "AN9",
+      "AN10",
+      "AN11",
+      "AN12",
+      "AN13",
+      "AN14",
+      "AN15"
+    ],
+    "Analog Input0": [
+      "AN000",
+      "AN001",
+      "AN002",
+      "AN003",
+      "AN004",
+      "AN005",
+      "AN006",
+      "AN007"
+    ],
+    "Analog Input1": [
+      "AN100",
+      "AN101",
+      "AN102",
+      "AN103",
+      "AN104",
+      "AN105",
+      "AN106",
+      "AN107",
+      "AN108",
+      "AN109",
+      "AN110",
+      "AN111",
+      "AN112",
+      "AN113",
+      "AN114",
+      "AN115"
+    ],
+    "ANDS0": [
+      "ANDS0",
+      "ANDS0N",
+      "ANDS0P"
+    ],
+    "ANDS1": [
+      "ANDS1",
+      "ANDS1N",
+      "ANDS1P"
+    ],
+    "ANDS2": [
+      "ANDS2",
+      "ANDS2N",
+      "ANDS2P"
+    ],
+    "ANDS3": [
+      "ANDS3",
+      "ANDS3N",
+      "ANDS3P"
+    ],
+    "ANDS4": [
+      "ANDS4",
+      "ANDS4N",
+      "ANDS4P"
+    ],
+    "ANDS5": [
+      "ANDS5",
+      "ANDS5N",
+      "ANDS5P"
+    ],
+    "ANDS6": [
+      "ANDS6"
+    ],
+    "Interrupt": [
+      "IRQ0",
+      "IRQ0_A",
+      "IRQ1",
+      "IRQ1_A",
+      "IRQ2",
+      "IRQ2_A",
+      "IRQ3",
+      "IRQ3_A",
+      "IRQ4"
+    ],
+    "Over Current": [
+      "OVC0",
+      "OVC1"
+    ],
+    "Port F": [
+      "PF13",
+      "PF14",
+      "PF15",
+      "PF8",
+      "PF9"
+    ],
+    "PGA10": [
+      "PGA10N",
+      "PGA10P"
+    ],
+    "PGA11": [
+      "PGA11N",
+      "PGA11P"
+    ],
+    "PGA1": [
+      "PGA1N",
+      "PGA1P"
+    ],
+    "PGA2": [
+      "PGA2N",
+      "PGA2P"
+    ],
+    "PGA3": [
+      "PGA3N",
+      "PGA3P"
+    ],
+    "Port N": [
+      "PN00",
+      "PN01",
+      "PN02",
+      "PN03"
+    ],
+    "Port TF": [
+      "PTF5",
+      "PTF6",
+      "PTF7"
+    ],
+    "Port TM": [
+      "PTM6",
+      "PTM7"
+    ],
+    "Ready": [
+      "RDY#"
+    ],
+    "Rx": [
+      "RxD0",
+      "RxD2"
+    ],
+    "SCK": [
+      "SCK0_A",
+      "SCK2",
+      "SCLK"
+    ],
+    "VI1": [
+      "VI1_0_A",
+      "VI1_1_A",
+      "VI1_2_A",
+      "VI1_3_A",
+      "VI1_4_A",
+      "VI1_5_A",
+      "VI1_6_A",
+      "VI1_7_A"
+    ],
+    "VIN": [
+      "VIN1",
+      "VIN2",
+      "VINN",
+      "VINP"
+    ],
+    "IRL": [
+      "\\IRL0",
+      "\\IRL1",
+      "\\IRL2"
+    ],
+    "PCIRe": [
+      "\\PCIREQ1",
+      "\\PCIREQ2",
+      "\\PCIREQ3",
+      "\\PCIREQ4"
+    ]
+  },
+  "RPC": {
+    "General": [
+      "RPC_INT#",
+      "RPC_RESET#",
+      "RPC_WP#"
+    ]
+  },
+  "Sensor_Input": {
+    "SENSA": [
+      "SENSA0",
+      "SENSA1",
+      "SENSA2",
+      "SENSA3"
+    ],
+    "SENSB": [
+      "SENSB0",
+      "SENSB1",
+      "SENSB2",
+      "SENSB3"
+    ]
+  },
+  "PCIe": {
+    "General": [
+      "P\\C\\I\\R\\E\\Q\\1\\",
+      "P\\C\\I\\R\\E\\Q\\2\\",
+      "P\\C\\I\\R\\E\\Q\\3\\",
+      "P\\C\\I\\R\\E\\Q\\4\\"
+    ]
+  },
+  "SCIF": {
+    "General": [
+      "SCIF2_RXD",
+      "SCIF_RXD"
+    ]
+  },
+  "RX": {
+    "CLK": [
+      "RX_CLKN",
+      "RX_CLKP",
+      "RX-CLK"
+    ],
+    "DATA": [
+      "RX_DATAN",
+      "RX_DATAP"
+    ],
+    "Miscelleneous": [
+      "RX-DV",
+      "RX-ER",
+      "RX0_A",
+      "RXD",
+      "RxD_SIO",
+      "RxM",
+      "RxP"
+    ]
+  },
+  "Other_Standby": {
+    "General": [
+      "CTRSTBYB",
+      "STANDBY",
+      "STBY#",
+      "S\\T\\B\\Y\\",
+      "\\HSTBY",
+      "\\STBY",
+      "\\B\\S"
+    ]
+  },
+  "System": {
+    "General": [
+      "EMLE",
+      "FWE",
+      "FWP",
+      "MBKPRST#",
+      "MRESET_N",
+      "PRESET#",
+      "PRST#",
+      "PWRSTN#",
+      "S\\L\\E\\E\\P\\",
+      "S\\c\\a\\n\\_\\t\\e\\s\\t\\e\\n\\",
+      "Scan_t\\e\\s\\t\\e\\n\\",
+      "UB",
+      "UB#",
+      "USB20_VUBUSIN",
+      "U\\B\\P\\M\\",
+      "VBATTRESET#",
+      "VBAT_EHC",
+      "\\SLEEP",
+      "\\Scan_testen",
+      "\\UBPM",
+      "FEW",
+      "HSTBY#",
+      "H\\S\\T\\B\\Y\\",
+      "UPSEL"
+    ]
+  },
+  "Wake": {
+    "General": [
+      "WKUP0#",
+      "\\WKUP0",
+      "\\WKUP1"
+    ]
+  },
+  "Other_VBUS": {
+    "General": [
+      "VBUS",
+      "VBUS0",
+      "VBUS1"
+    ]
+  },
+  "Other_VIN": {
+    "General": [
+      "VIN",
+      "VIN1A",
+      "VIN1B",
+      "VIN2A",
+      "VIN2B"
+    ]
+  },
+  "USB_Interface": {
+    "Interface": [
+      "USB_VBUS",
+      "USOTGID",
+      "USOVC#",
+      "U\\S\\B\\1\\_\\o\\v\\r\\_\\C\\U\\R\\R\\E\\N\\T\\",
+      "U\\S\\B\\2\\_\\o\\v\\r\\_\\C\\U\\R\\R\\E\\N\\T\\",
+      "\\USB1_ovr_CURRENT",
+      "\\USB2_ovr_CURRENT",
+      "U\\S\\B\\1\\_o\\v\\r\\_c\\u\\r\\r\\e\\n\\t\\",
+      "U\\S\\B\\2\\_o\\v\\r\\_c\\u\\r\\r\\e\\n\\t\\"
+    ],
+    "USB0": [
+      "USB0_VBUSIN"
+    ],
+    "USB20": [
+      "USB20_OTGID",
+      "USB20_TXRTUNE"
+    ],
+    "USB21": [
+      "USB21_TXRTUNE"
+    ],
+    "USB30": [
+      "USB30_TXRTUNE"
+    ],
+    "USB31": [
+      "USB31_TXRTUNE"
+    ],
+    "USB OV": [
+      "USB_OVC0",
+      "USB_OVC1"
+    ],
+    "USB BUS": [
+      "USVBUS",
+      "UVBUS"
+    ],
+    "General": [
+      "USB30_DM",
+      "USB30_DP",
+      "USBM",
+      "USBP",
+      "USB30_TX0M",
+      "USB30_TX0P"
+    ]
+  },
+  "Video": {
+    "General": [
+      "HDRVM",
+      "HDRVP"
+    ]
+  },
+  "I2C": {
+    "General": [
+      "SCL",
+      "SDA"
+    ]
+  }
+}
