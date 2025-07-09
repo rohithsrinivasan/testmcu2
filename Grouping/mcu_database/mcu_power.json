@@ -742,7 +742,7 @@
       "U7VDD18"
     ]
   },
-  "Ports_Positive_Power": {
+  "Positive_Power": {
     "Ports": [
       "B0VCC",
       "B1VCC",

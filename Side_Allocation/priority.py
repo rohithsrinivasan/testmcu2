@@ -90,6 +90,62 @@ def priority_order(row, df, priority_mapping_json):
     # 6. Final fallback
     return f"ZZ_{value}"
 
+def priority_order(row, df, priority_mapping_json):
+    with open(priority_mapping_json, 'r') as file:
+        mappings = json.load(file)
+
+    value = str(row.get('Grouping', '')).strip()  # Ensure value is a string, avoid None
+    index = row.name
+    value_alternative = str(row.get('Pin Alternate Name', ''))
+    pin_display_name = str(row.get('Pin Display Name', ''))
+    electrical_type = str(row.get('Electrical Type', ''))
+
+    # 1. Highest priority: Direct mapping
+    if value in mappings.get('priority_map', {}):
+        return mappings['priority_map'][value]
+
+    # 2. Input + Port check 
+    is_input_or_io = electrical_type in ['Input', 'I/O']
+    is_port = value.startswith("Port")
+    
+    if is_input_or_io and is_port:
+        # 2A. Mixed port assignment
+        port_assignment = handle_mixed_port_assignment(pin_display_name, value, df)
+        if port_assignment:
+            print(f"Step 2A: Mixed port assignment returned: {port_assignment}")
+            return port_assignment
+
+        # 2B. Swap conditions
+        pin_names = [name.strip() for name in value_alternative.split('/')]
+        for alt_name, priority in mappings.get('swap_conditions', {}).items():
+            if alt_name in pin_names:
+                print(f"Swap match: '{alt_name}' found in '{value_alternative}' → Priority: {priority}")
+                swap_pins_for_that_row(df, index, mappings['swap_conditions'])
+                return priority
+
+        return f"P_{value}"
+
+    # 3. Generic Port handling
+    if is_port:
+        parts = value.split()
+        if len(parts) >= 2:
+            try:
+                port_number = int(parts[1])
+                return f"P_Port {port_number:02d}"
+            except ValueError:
+                return f"P_Port {parts[1]}"
+        else:
+            return f"P_Port"
+
+    # 4. Prefix-based mapping fallback
+    for key, prefix in mappings.get('priority_map', {}).items():
+        if value.startswith(key):
+            return f"{prefix}_{value}"
+
+    # 5. Final fallback
+    return f"ZZ_{value}"
+
+
 def swap_pins_for_that_row(df, index, swap_conditions):
     current_display = df.loc[index, 'Pin Display Name']
     current_alternate = df.loc[index, 'Pin Alternate Name']

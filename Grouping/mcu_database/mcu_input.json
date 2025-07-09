@@ -208,6 +208,8 @@
       "RESETZ#",
       "/RESET",
       "RES",
+      "\\RST",
+      "\\PRST",
       "RES#",
       "RESET",
       "RSTN",
@@ -642,14 +644,6 @@
     "PCIE RX": [
       "PCIE_RX_DN",
       "PCIE_RX_DP"
-    ],
-    "USB30": [
-      "USB30_RX0M",
-      "USB30_RX0P"
-    ],
-    "USB31": [
-      "USB31_RX0M",
-      "USB31_RX0P"
     ],
     "USRX0": [
       "USRX0M",
@@ -1566,7 +1560,7 @@
       "VIN2B"
     ]
   },
-  "USB_Interface": {
+  "USB_Interface_input": {
     "Interface": [
       "USB_VBUS",
       "USOTGID",
@@ -1588,12 +1582,6 @@
     "USB21": [
       "USB21_TXRTUNE"
     ],
-    "USB30": [
-      "USB30_TXRTUNE"
-    ],
-    "USB31": [
-      "USB31_TXRTUNE"
-    ],
     "USB OV": [
       "USB_OVC0",
       "USB_OVC1"
@@ -1609,6 +1597,17 @@
       "USBP",
       "USB30_TX0M",
       "USB30_TX0P"
+    ],
+
+    "USB30": [
+      "USB30_RX0M",
+      "USB30_RX0P",
+      "USB30_TXRTUNE"
+    ],
+    "USB31": [
+      "USB31_RX0M",
+      "USB31_RX0P",
+      "USB31_TXRTUNE"
     ]
   },
   "Video": {
@@ -1621,6 +1620,12 @@
     "General": [
       "SCL",
       "SDA"
+    ],
+    "RIIC":[
+      "RIIC0_SCL",
+      "RIIC0_SDA",
+      "RIIC1_SCL",
+      "RIIC1_SDA"
     ]
   }
 }

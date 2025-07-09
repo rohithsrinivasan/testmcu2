@@ -11,7 +11,7 @@
       "COM7"
     ]
   },
-  "DDR_Output": {
+  "DDR_Pins_Output": {
     "Address Bits Output": [
       "DDR_ADDR0",
       "DDR_ADDR1",
@@ -342,7 +342,8 @@
     "Interface": [
       "DCUTDO",
       "DETDO",
-      "JTAG_TDO"
+      "JTAG_TDO",
+      "JTAG_TMS"
     ]
   },
   "LED_Output": {
@@ -943,9 +944,12 @@
       "R\\E\\S\\E\\T\\",
       "\\RESETOUT",
       "\\RESOUT",
-      "\\RSTOUT"
+      "\\RSTOUT",
+      "\\DDR_RESET",
+      "\\QSPI_RESET",
+      "\\WDTOVF_PERROUT"
     ],
-    "DDR": [
+    "DDR_Pins": [
       "DDR0_RESETN",
       "DDR1_RESETN",
       "DDR_RESET_N"

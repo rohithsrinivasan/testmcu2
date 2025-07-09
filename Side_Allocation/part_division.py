@@ -41,34 +41,42 @@ def partitioning(df_last, Strict_Population):
     number_of_rows_left = len(unfilled_df)
     print(f"Step 3: Unfilled rows - {number_of_rows_left} rows remaining")
 
-    # NEW FEATURE: Check for GPIO and SDRB pins that need separate handling
+    # NEW FEATURE: Check for GPIO, SDRB, and DDR pins that need separate handling
     gpio_pins = unfilled_df[unfilled_df['Priority'].str.contains('GPIO_Pins', na=False)]
     sdrb_pins = unfilled_df[unfilled_df['Priority'].str.contains('SDRB_Pins', na=False)]
-    
+    ddr_pins = unfilled_df[unfilled_df['Priority'].str.contains('DDR_Pins', na=False)]
+
     print(f"GPIO pins found: {len(gpio_pins)}")
     print(f"SDRB pins found: {len(sdrb_pins)}")
-    
-    # Separate GPIO/SDRB if they exceed 40 pins
+    print(f"DDR pins found: {len(ddr_pins)}")
+
+    # Separate GPIO, SDRB, DDR if they exceed 40 pins
     gpio_parts = []
     sdrb_parts = []
-    
+    ddr_parts = []
+
     if len(gpio_pins) > 40:
         print(">>> GPIO pins > 40: Creating separate GPIO tables")
         gpio_parts = functional_block_constraints.test_one_GPIOcase(unfilled_df, df)
-        # Remove GPIO pins from unfilled_df for main processing
         unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('GPIO_Pins', na=False)]
         print(f">>> GPIO separated: {len(gpio_parts)} GPIO parts created")
-    
+
     if len(sdrb_pins) > 40:
         print(">>> SDRB pins > 40: Creating separate SDRB tables")
         sdrb_parts = functional_block_constraints.test_two_SRDBcase(unfilled_df, df)
-        # Remove SDRB pins from unfilled_df for main processing
         unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('SDRB_Pins', na=False)]
         print(f">>> SDRB separated: {len(sdrb_parts)} SDRB parts created")
-    
-    # Update the count after removing GPIO/SDRB
+
+    if len(ddr_pins) > 40:
+        print(">>> DDR pins > 40: Creating separate DDR tables")
+        ddr_parts = functional_block_constraints.test_three_DDRcase(unfilled_df, df)
+        unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('DDR_Pins', na=False)]
+        print(f">>> DDR separated: {len(ddr_parts)} DDR parts created")
+
+    # Update the count after removing GPIO, SDRB, DDR
     number_of_rows_left = len(unfilled_df)
-    print(f"Remaining unfilled rows after GPIO/SDRB separation: {number_of_rows_left}")
+    print(f"Remaining unfilled rows after GPIO/SDRB/DDR separation: {number_of_rows_left}")
+
 
     # Initialize result DataFrames
     df_Part_A = pd.DataFrame()
@@ -299,36 +307,46 @@ def partitioning(df_last, Strict_Population):
     except Exception as e:
         print(f"❌ Step 4 FAILED: {e}")
         raise
-
-    # Step 5: Handle GPIO/SDRB separation
+    # Step 5: Handle GPIO/SDRB/DDR separation
     gpio_parts = []
     sdrb_parts = []
+    ddr_parts = []
+
     try:
-        print("🎯 Step 5: Handling GPIO/SDRB separation...")
-        
+        print("🎯 Step 5: Handling GPIO/SDRB/DDR separation...")
+
         gpio_pins = unfilled_df[unfilled_df['Priority'].str.contains('GPIO_Pins', na=False)]
         sdrb_pins = unfilled_df[unfilled_df['Priority'].str.contains('SDRB_Pins', na=False)]
-        
+        ddr_pins  = unfilled_df[unfilled_df['Priority'].str.contains('DDR_Pins', na=False)]
+
         print(f"🔍 GPIO pins found: {len(gpio_pins)}")
         print(f"🔍 SDRB pins found: {len(sdrb_pins)}")
-        
+        print(f"🔍 DDR pins found: {len(ddr_pins)}")
+
         if len(gpio_pins) > 40:
             print(f"🔄 Separating {len(gpio_pins)} GPIO pins (>40)")
             gpio_parts = functional_block_constraints.test_one_GPIOcase(unfilled_df, df)
             unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('GPIO_Pins', na=False)]
             print(f"✅ GPIO separation complete: {len(gpio_parts)} parts")
-        
+
         if len(sdrb_pins) > 40:
             print(f"🔄 Separating {len(sdrb_pins)} SDRB pins (>40)")
             sdrb_parts = functional_block_constraints.test_two_SRDBcase(unfilled_df, df)
             unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('SDRB_Pins', na=False)]
             print(f"✅ SDRB separation complete: {len(sdrb_parts)} parts")
-        
+
+        if len(ddr_pins) > 40:
+            print(f"🔄 Separating {len(ddr_pins)} DDR pins (>40)")
+            ddr_parts = functional_block_constraints.test_three_DDRcase(unfilled_df, df)
+            unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('DDR_Pins', na=False)]
+            print(f"✅ DDR separation complete: {len(ddr_parts)} parts")
+
         print(f"✅ Step 5 Complete: {len(unfilled_df)} pins remaining for main processing")
 
     except Exception as e:
         print(f"❌ Step 5 FAILED: {e}")
         raise
+
 
     # Step 6: Split remaining pins and assign sides
     main_parts = []
@@ -423,6 +441,12 @@ def partitioning(df_last, Strict_Population):
             if not sdrb_part.empty:
                 df_dict[f'SDRB Table - {i+1}'] = sdrb_part
                 print(f"📦 Added SDRB Table - {i+1}: {len(sdrb_part)} rows")
+
+            # Add DDR tables
+        for i, ddr_part in enumerate(ddr_parts):
+            if not ddr_part.empty:
+                df_dict[f'DDR Table - {i+1}'] = ddr_part
+                print(f"📦 Added DDR Table - {i+1}: {len(ddr_part)} rows")
         
         print(f"✅ Step 7 Complete: {len(df_dict)} tables in final dictionary")
 

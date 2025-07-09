@@ -1,5 +1,5 @@
 import pandas as pd 
-from . import single80pin_constraints
+from . import general_constraints
 
 def filter_out_power_pins(row, df):
     # Fill NaN values in Priority column
@@ -57,7 +57,7 @@ def split_power_pins_by_priority(power_df, Strict_Population, max_rows=80):
         if len(group_df) <= max_rows:
             print(f"  [DEBUG] Group fits within {max_rows} rows.")
             try:
-                group_df_processed = single80pin_constraints.side_for_one_symbol(group_df)
+                group_df_processed = general_constraints.side_for_one_symbol(group_df)
                 power_parts.append(group_df_processed)
                 print(f"  -> Created single part with {len(group_df_processed)} pins")
             except Exception as e:
@@ -96,7 +96,7 @@ def split_large_power_group(group_df, max_rows):
     
     for i in range(0, len(group_df), max_rows):
         part = group_df.iloc[i:i + max_rows].copy()
-        part_processed = single80pin_constraints.side_for_one_symbol(part)
+        part_processed = general_constraints.side_for_one_symbol(part)
         parts.append(part_processed)
     
     return parts

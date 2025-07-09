@@ -308,99 +308,43 @@
       "S\\0\\",
       "S\\1\\",
       "S\\2\\"
-    ]
-  },
-  "GPIO_Digital": {
-    "RF txrx pins": [
+    ],
+  "RF txrx pins": [
       "DIGRF_RX_N",
       "DIGRF_RX_P",
       "DIGRF_TX_N",
       "DIGRF_TX_P"
-    ],
-    "Pins": [
+    ]
+
+  },
+  "GPIO_Pins_Digital": {
+    "Pins_00": [
       "GPIO0",
       "GPIO1",
+      "GPIO2",
+      "GPIO3",
+      "GPIO4",
+      "GPIO5",
+      "GPIO6",
+      "GPIO7",
+      "GPIO8",
+      "GPIO9"
+    ],
+
+  "Pins_01":[
       "GPIO10",
-      "GPIO100",
-      "GPIO101",
-      "GPIO102",
-      "GPIO103",
-      "GPIO104",
-      "GPIO105",
-      "GPIO106",
-      "GPIO107",
-      "GPIO108",
-      "GPIO109",
       "GPIO11",
-      "GPIO110",
-      "GPIO111",
-      "GPIO112",
-      "GPIO113",
-      "GPIO114",
-      "GPIO115",
-      "GPIO116",
-      "GPIO117",
-      "GPIO118",
-      "GPIO119",
       "GPIO12",
-      "GPIO120",
-      "GPIO121",
-      "GPIO122",
-      "GPIO123",
-      "GPIO124",
-      "GPIO125",
-      "GPIO126",
-      "GPIO127",
-      "GPIO128",
-      "GPIO129",
       "GPIO13",
-      "GPIO130",
-      "GPIO131",
-      "GPIO132",
-      "GPIO133",
-      "GPIO134",
-      "GPIO135",
-      "GPIO136",
-      "GPIO137",
-      "GPIO138",
-      "GPIO139",
       "GPIO14",
-      "GPIO140",
-      "GPIO141",
-      "GPIO142",
-      "GPIO143",
-      "GPIO144",
-      "GPIO145",
-      "GPIO146",
-      "GPIO147",
-      "GPIO148",
-      "GPIO149",
       "GPIO15",
-      "GPIO150",
-      "GPIO151",
-      "GPIO152",
-      "GPIO153",
-      "GPIO154",
-      "GPIO155",
-      "GPIO156",
-      "GPIO157",
-      "GPIO158",
-      "GPIO159",
       "GPIO16",
-      "GPIO160",
-      "GPIO161",
-      "GPIO162",
-      "GPIO163",
-      "GPIO164",
-      "GPIO165",
-      "GPIO166",
-      "GPIO167",
-      "GPIO168",
-      "GPIO169",
       "GPIO17",
       "GPIO18",
-      "GPIO19",
-      "GPIO2",
+      "GPIO19"
+  ],
+
+  "Pins_02":[
       "GPIO20",
       "GPIO21",
       "GPIO22",
@@ -410,8 +354,9 @@
       "GPIO26",
       "GPIO27",
       "GPIO28",
-      "GPIO29",
-      "GPIO3",
+      "GPIO29"
+  ],
+  "Pins_03":[
       "GPIO30",
       "GPIO31",
       "GPIO32",
@@ -421,8 +366,9 @@
       "GPIO36",
       "GPIO37",
       "GPIO38",
-      "GPIO39",
-      "GPIO4",
+      "GPIO39"
+  ],
+  "Pins_04":[
       "GPIO40",
       "GPIO41",
       "GPIO42",
@@ -432,8 +378,9 @@
       "GPIO46",
       "GPIO47",
       "GPIO48",
-      "GPIO49",
-      "GPIO5",
+      "GPIO49"
+  ],
+  "Pins_05":[
       "GPIO50",
       "GPIO51",
       "GPIO52",
@@ -443,8 +390,9 @@
       "GPIO56",
       "GPIO57",
       "GPIO58",
-      "GPIO59",
-      "GPIO6",
+      "GPIO59"
+  ],
+  "Pins_06":[
       "GPIO60",
       "GPIO61",
       "GPIO62",
@@ -454,8 +402,9 @@
       "GPIO66",
       "GPIO67",
       "GPIO68",
-      "GPIO69",
-      "GPIO7",
+      "GPIO69"
+  ],
+  "Pins_07":[
       "GPIO70",
       "GPIO71",
       "GPIO72",
@@ -465,8 +414,9 @@
       "GPIO76",
       "GPIO77",
       "GPIO78",
-      "GPIO79",
-      "GPIO8",
+      "GPIO79"
+  ],
+  "Pins_08":[
       "GPIO80",
       "GPIO81",
       "GPIO82",
@@ -476,8 +426,9 @@
       "GPIO86",
       "GPIO87",
       "GPIO88",
-      "GPIO89",
-      "GPIO9",
+      "GPIO89"
+  ],
+  "Pins_09":[
       "GPIO90",
       "GPIO91",
       "GPIO92",
@@ -488,7 +439,93 @@
       "GPIO97",
       "GPIO98",
       "GPIO99"
-    ]
+  ],
+  "Pins_10":[
+      "GPIO100",
+      "GPIO101",
+      "GPIO102",
+      "GPIO103",
+      "GPIO104",
+      "GPIO105",
+      "GPIO106",
+      "GPIO107",
+      "GPIO108",
+      "GPIO109"
+  ],
+
+  "Pins_11":[
+      "GPIO110",
+      "GPIO111",
+      "GPIO112",
+      "GPIO113",
+      "GPIO114",
+      "GPIO115",
+      "GPIO116",
+      "GPIO117",
+      "GPIO118",
+      "GPIO119"
+  ],
+
+  "Pins_12":[
+      "GPIO120",
+      "GPIO121",
+      "GPIO122",
+      "GPIO123",
+      "GPIO124",
+      "GPIO125",
+      "GPIO126",
+      "GPIO127",
+      "GPIO128",
+      "GPIO129"
+  ],
+  "Pins_13":[
+      "GPIO130",
+      "GPIO131",
+      "GPIO132",
+      "GPIO133",
+      "GPIO134",
+      "GPIO135",
+      "GPIO136",
+      "GPIO137",
+      "GPIO138",
+      "GPIO139"
+  ],
+  "Pins_14":[
+      "GPIO140",
+      "GPIO141",
+      "GPIO142",
+      "GPIO143",
+      "GPIO144",
+      "GPIO145",
+      "GPIO146",
+      "GPIO147",
+      "GPIO148",
+      "GPIO149"
+  ],
+  "Pins_15":[
+      "GPIO150",
+      "GPIO151",
+      "GPIO152",
+      "GPIO153",
+      "GPIO154",
+      "GPIO155",
+      "GPIO156",
+      "GPIO157",
+      "GPIO158",
+      "GPIO159"
+  ],
+  "Pins_16":[
+      "GPIO160",
+      "GPIO161",
+      "GPIO162",
+      "GPIO163",
+      "GPIO164",
+      "GPIO165",
+      "GPIO166",
+      "GPIO167",
+      "GPIO168",
+      "GPIO169"
+  ]
   },
   "Audio_io": {
     "Data": [
@@ -661,7 +698,7 @@
       "SDRBDQS3",
       "SDRBDQS3B"
     ],
-    "Interface": [
+    "Interface_DDR_Pins": [
       "DDR0_ATEST",
       "DDR0_RESETN",
       "DDR0_VAA",
@@ -674,13 +711,15 @@
       "DDR1_VDDQLP",
       "DDR1_ZN",
       "DDR_CALIBRATION",
-      "DDR_MZQ",
+      "DDR_MZQ"
+    ],
+    "Interface_SDO_Pins" :[
       "SD0CMD",
       "SD0_CMD",
       "SD1_CMD",
       "SD2_CMD_A"
     ],
-    "DDR0_CAA0": [
+    "DDR_Pins_0_CAA0": [
       "DDR0_CAA0",
       "DDR0_CAA1",
       "DDR0_CAA2",
@@ -688,7 +727,7 @@
       "DDR0_CAA4",
       "DDR0_CAA5"
     ],
-    "DDR0_CAB0": [
+    "DDR_Pins_0_CAB0": [
       "DDR0_CAB0",
       "DDR0_CAB1",
       "DDR0_CAB2",
@@ -696,39 +735,39 @@
       "DDR0_CAB4",
       "DDR0_CAB5"
     ],
-    "DDR0_CKA": [
+    "DDR_Pins_0_CKA": [
       "DDR0_CKAC",
       "DDR0_CKAT"
     ],
-    "DDR0_CKB": [
+    "DDR_Pins_0_CKB": [
       "DDR0_CKBC",
       "DDR0_CKBT"
     ],
-    "DDR0_CKEA": [
+    "DDR_Pins_0_CKEA": [
       "DDR0_CKEA0",
       "DDR0_CKEA1"
     ],
-    "DDR0_CKEB": [
+    "DDR_Pins_0_CKEB": [
       "DDR0_CKEB0",
       "DDR0_CKEB1"
     ],
-    "DDR0_CSA": [
+    "DDR_Pins_0_CSA": [
       "DDR0_CSA0",
       "DDR0_CSA1"
     ],
-    "DDR0_CSB": [
+    "DDR_Pins_0_CSB": [
       "DDR0_CSB0",
       "DDR0_CSB1"
     ],
-    "DDR0_DMIA": [
+    "DDR_Pins_0_DMIA": [
       "DDR0_DMIA0",
       "DDR0_DMIA1"
     ],
-    "DDR0_DMIB": [
+    "DDR_Pins_0_DMIB": [
       "DDR0_DMIB0",
       "DDR0_DMIB1"
     ],
-    "DDR0_DQA": [
+    "DDR_Pins_0_DQA": [
       "DDR0_DQA0",
       "DDR0_DQA1",
       "DDR0_DQA10",
@@ -746,7 +785,7 @@
       "DDR0_DQA8",
       "DDR0_DQA9"
     ],
-    "DDR0_DQB": [
+    "DDR_Pins_0_DQB": [
       "DDR0_DQB0",
       "DDR0_DQB1",
       "DDR0_DQB10",
@@ -764,29 +803,29 @@
       "DDR0_DQB8",
       "DDR0_DQB9"
     ],
-    "DDR0_DQSAC": [
+    "DDR_Pins_0_DQSAC": [
       "DDR0_DQSAC0",
       "DDR0_DQSAC1"
     ],
-    "DDR0_DQSAT": [
+    "DDR_Pins_0_DQSAT": [
       "DDR0_DQSAT0",
       "DDR0_DQSAT1"
     ],
-    "DDR0_DQSBC": [
+    "DDR_Pins_0_DQSBC": [
       "DDR0_DQSBC0",
       "DDR0_DQSBC1"
     ],
-    "DDR0_DQSBT": [
+    "DDR_Pins_0_DQSBT": [
       "DDR0_DQSBT0",
       "DDR0_DQSBT1"
     ],
-    "DDR0_DTEST": [
+    "DDR_Pins_0_DTEST": [
       "DDR0_DTEST"
     ],
-    "DDR1_ATEST": [
+    "DDR_Pins_1_ATEST": [
       "DDR1_ATEST"
     ],
-    "DDR1_CAA": [
+    "DDR_Pins_1_CAA": [
       "DDR1_CAA0",
       "DDR1_CAA1",
       "DDR1_CAA2",
@@ -794,7 +833,7 @@
       "DDR1_CAA4",
       "DDR1_CAA5"
     ],
-    "DDR1_CAB": [
+    "DDR_Pins_1_CAB": [
       "DDR1_CAB0",
       "DDR1_CAB1",
       "DDR1_CAB2",
@@ -802,39 +841,39 @@
       "DDR1_CAB4",
       "DDR1_CAB5"
     ],
-    "DDR1_CKA": [
+    "DDR_Pins_1_CKA": [
       "DDR1_CKAC",
       "DDR1_CKAT"
     ],
-    "DDR1_CKB": [
+    "DDR_Pins_1_CKB": [
       "DDR1_CKBC",
       "DDR1_CKBT"
     ],
-    "DDR1_CKEA": [
+    "DDR_Pins_1_CKEA": [
       "DDR1_CKEA0",
       "DDR1_CKEA1"
     ],
-    "DDR1_CKEB": [
+    "DDR_Pins_1_CKEB": [
       "DDR1_CKEB0",
       "DDR1_CKEB1"
     ],
-    "DDR1_CSA": [
+    "DDR_Pins_1_CSA": [
       "DDR1_CSA0",
       "DDR1_CSA1"
     ],
-    "DDR1_CSB": [
+    "DDR_Pins_1_CSB": [
       "DDR1_CSB0",
       "DDR1_CSB1"
     ],
-    "DDR1_DMIA": [
+    "DDR_Pins_1_DMIA": [
       "DDR1_DMIA0",
       "DDR1_DMIA1"
     ],
-    "DDR1_DMIB": [
+    "DDR_Pins_1_DMIB": [
       "DDR1_DMIB0",
       "DDR1_DMIB1"
     ],
-    "DDR1_DQA": [
+    "DDR_Pins_1_DQA": [
       "DDR1_DQA0",
       "DDR1_DQA1",
       "DDR1_DQA10",
@@ -852,7 +891,7 @@
       "DDR1_DQA8",
       "DDR1_DQA9"
     ],
-    "DDR1_DQB": [
+    "DDR_Pins_1_DQB": [
       "DDR1_DQB0",
       "DDR1_DQB1",
       "DDR1_DQB10",
@@ -870,26 +909,26 @@
       "DDR1_DQB8",
       "DDR1_DQB9"
     ],
-    "DDR1_DQSAC": [
+    "DDR_Pins_1_DQSAC": [
       "DDR1_DQSAC0",
       "DDR1_DQSAC1"
     ],
-    "DDR1_DQSAT": [
+    "DDR_Pins_1_DQSAT": [
       "DDR1_DQSAT0",
       "DDR1_DQSAT1"
     ],
-    "DDR1_DQSBC": [
+    "DDR_Pins_1_DQSBC": [
       "DDR1_DQSBC0",
       "DDR1_DQSBC1"
     ],
-    "DDR1_DQSBT": [
+    "DDR_Pins_1_DQSBT": [
       "DDR1_DQSBT0",
       "DDR1_DQSBT1"
     ],
-    "DDR1_DTEST": [
+    "DDR_Pins_1_DTEST": [
       "DDR1_DTEST"
     ],
-    "DDR_DQ": [
+    "DDR_Pins_DQ": [
       "DDR_DQ0",
       "DDR_DQ1",
       "DDR_DQ10",
@@ -907,19 +946,19 @@
       "DDR_DQ8",
       "DDR_DQ9"
     ],
-    "DDR_DQS": [
+    "DDR_Pins_DQS": [
       "DDR_DQS0",
       "DDR_DQS1"
     ],
-    "DDR_DQS0": [
+    "DDR_Pins_DQS0": [
       "DDR_DQS0_N",
       "DDR_DQS0_P"
     ],
-    "DDR_DQS1": [
+    "DDR_Pins_DQS1": [
       "DDR_DQS1_N",
       "DDR_DQS1_P"
     ],
-    "DDR_DQS_N": [
+    "DDR_Pins_DQS_N": [
       "DDR_DQS_N0",
       "DDR_DQS_N1"
     ],
