@@ -40,6 +40,8 @@
         "Clock": "BA",
         "Reset": "BB",
         "I2C": "BC",
+        "I3C" :"BCA",
+        "SPI" :"BCB",
         "System": "BD",
         "Emulator": "BE",
         "On_Chip_Oscillator": "BF",
@@ -69,6 +71,7 @@
         "Sensor_Input": "CD",
         "PCIE": "CE",
         "SCIF": "CF",
+        "PCRX" :"CFA",
         "RX": "CG",
         "Other_Standby": "CH",
         "Wake": "CI",
@@ -76,8 +79,10 @@
         "Other_VIN": "CK",
         "Video": "CL",
 
-        "Power_Clock_Control": "QC",
-        "Communication_Interfaces": "QD",
+        "Power_Clock_Control": "MC",
+        "Communication_Interfaces": "MD",
+
+        
         "Data_Bus_io": "QE",
         "Buzzer": "QF",
         "Analog_io": "QG",

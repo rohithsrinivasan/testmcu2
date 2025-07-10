@@ -1,49 +1,4 @@
 import pandas as pd
-
-
-
-'''def check_excel_format(df, required_columns, optional_column=None, default_value=' '):
-    """
-    Check if DataFrame has required columns and optionally add missing column with default value.
-    
-    Args:
-        df: pandas DataFrame to check
-        required_columns: list of column names that must be present
-        optional_column: column name that can be missing (will be added if missing)
-        default_value: default value to use for optional column if it's missing
-    
-    Returns:
-        tuple: (is_valid, modified_dataframe)
-    """
-    try:
-        df_columns = set(df.columns)
-        required_set = set(required_columns)
-        
-        # Check if all required columns are present
-        if required_set == df_columns:
-            return True, df
-        
-        # If optional column is specified, check if we're only missing that column
-        if optional_column:
-            required_with_optional = required_set.union({optional_column})
-            
-            # If we have all columns including optional
-            if required_with_optional == df_columns:
-                return True, df
-            
-            # If we're missing only the optional column
-            if required_set == df_columns:
-                df = df.copy()  # Create a copy to avoid modifying original
-                df[optional_column] = default_value
-                return True, df
-        
-        if optional_column:
-            print(f"Optional column: {optional_column}")
-        return False, df
-        
-    except Exception as e:
-        print(f"Error checking DataFrame format: {e}")
-        return False, df'''
     
 
 def check_excel_format(df, required_columns, optional_column=None, default_value=' '):
@@ -147,3 +102,25 @@ def remove_electrical_type(df):
 def check_empty_groupings(df):
     empty_groupings = df[df['Grouping'].isna()]
     return empty_groupings
+
+
+def normalize_string(text):
+    """
+    Normalize string by converting to uppercase, removing spaces, 
+    and removing characters like "(", ")", "[", "]"
+    """
+    if not isinstance(text, str):
+        return str(text)
+    
+    # Convert to uppercase
+    normalized = text.upper()
+    
+    # Remove spaces
+    normalized = normalized.replace(" ", "")
+    
+    # Remove specific characters
+    chars_to_remove = ["(", ")", "[", "]"]
+    for char in chars_to_remove:
+        normalized = normalized.replace(char, "")
+    
+    return normalized

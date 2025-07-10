@@ -1,4 +1,8 @@
 {
+
+
+
+
   "Common_Output": {
     "Output": [
       "COM0",
@@ -204,6 +208,32 @@
       "DSI_DPDATA2",
       "DSI_DPDATA3"
     ],
+
+    "AVB0_Data_Bus": [
+        "AVB0_AVTP_CAPTURE",
+        "AVB0_AVTP_MATCH",
+        "AVB0_LINK",
+        "AVB0_MAGIC",
+        "AVB0_MDC",
+        "AVB0_MDIO",
+        "AVB0_PHY_INT",
+        "AVB0_RD0",
+        "AVB0_RD1",
+        "AVB0_RD2",
+        "AVB0_RD3",
+        "AVB0_TD0",
+        "AVB0_TD1",
+        "AVB0_TD2",
+        "AVB0_TD3"
+    ],
+
+    "DSA": [
+        "DSAN0N",
+        "DSAN0P",
+        "DSAN1N",
+        "DSAN1P"
+    ],
+
     "DSI CLK": [
       "DSI_CLKN",
       "DSI_CLKP",
@@ -899,38 +929,62 @@
     ]
   },
   "Display_Output": {
-    "Display Lines": [
-      "SEG0",
-      "SEG1",
-      "SEG10",
-      "SEG11",
-      "SEG12",
-      "SEG13",
-      "SEG14",
-      "SEG15",
-      "SEG16",
-      "SEG17",
-      "SEG18",
-      "SEG19",
-      "SEG2",
-      "SEG20",
-      "SEG21",
-      "SEG22",
-      "SEG23",
-      "SEG24",
-      "SEG25",
-      "SEG26",
-      "SEG27",
-      "SEG28",
-      "SEG29",
-      "SEG3",
-      "SEG4",
-      "SEG5",
-      "SEG6",
-      "SEG7",
-      "SEG8",
-      "SEG9"
+
+    "Display Lines - Group 1": [
+        "SEG0",
+        "SEG1",
+        "SEG2",
+        "SEG3",
+        "SEG4",
+        "SEG5",
+        "SEG6",
+        "SEG7"
+    ],
+    "Display Lines - Group 2": [
+        "SEG8",
+        "SEG9",
+        "SEG10",
+        "SEG11",
+        "SEG12",
+        "SEG13",
+        "SEG14",
+        "SEG15"
+    ],
+    "Display Lines - Group 3": [
+        "SEG16",
+        "SEG17",
+        "SEG18",
+        "SEG19",
+        "SEG20",
+        "SEG21",
+        "SEG22",
+        "SEG23"
+    ],
+    "Display Lines - Group 4": [
+        "SEG24",
+        "SEG25",
+        "SEG26",
+        "SEG27",
+        "SEG28",
+        "SEG29",
+        "SEG30",
+        "SEG31"
+    ],
+    "Display Lines - Group 5": [
+        "SEG32",
+        "SEG33",
+        "SEG34",
+        "SEG35",
+        "SEG36",
+        "SEG37",
+        "SEG38",
+        "SEG39"
+    ],
+    "Display Lines - Group 6": [
+        "SEG40"
     ]
+
+
   },
   "System_Output": {
     "General": [
@@ -941,14 +995,28 @@
       "RESETOUT",
       "RESETOUT#",
       "RESOUT#",
-      "R\\E\\S\\E\\T\\",
       "\\RESETOUT",
       "\\RESOUT",
       "\\RSTOUT",
       "\\DDR_RESET",
-      "\\QSPI_RESET",
+      "\\QSPI_RESET"
+    ],
+
+    "Watchdog" :[
       "\\WDTOVF_PERROUT"
     ],
+
+    "Miscellaneous Resetout": [
+        "PCRSTOUTB#",
+        "PWSYSRSTN",
+        "LPMRESETL",
+        "BP_MEMRESET#",
+        "M\\R\\E\\S\\E\\T\\",
+        "P\\C\\I\\R\\S\\T\\",
+        "PRESETOUT#",
+        "\\VMONOUT"
+    ],
+
     "DDR_Pins": [
       "DDR0_RESETN",
       "DDR1_RESETN",
@@ -967,6 +1035,12 @@
     "XSPI": [
       "XSPI0_RESET0N",
       "XSPI_RESET0#"
+    ],
+    "REG" :[
+      "REGOUT",
+      "\\VMOUT",
+      "VMONOUT#",
+      "\\CVMOUT"
     ]
   },
   "Other_On Chip Emulator.2": {

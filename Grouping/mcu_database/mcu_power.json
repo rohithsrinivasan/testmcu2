@@ -256,6 +256,19 @@
       "VRP",
       "VBN",
       "VBP"
+    ],
+
+    "VBUS": [
+      "VBUS",
+      "VBUS0",
+      "VBUS1"
+    ],
+    "VIN": [
+      "VIN",
+      "VIN1A",
+      "VIN1B",
+      "VIN2A",
+      "VIN2B"
     ]
   },
   "RF_Negative_Power": {
@@ -1055,6 +1068,7 @@
       "MVREFCA",
       "MVREFDQ",
       "PEVref",
+      "PEVREF",
       "REFRIN",
       "SDRBVREF",
       "U3REF",

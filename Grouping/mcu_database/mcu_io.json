@@ -12,6 +12,18 @@
       "DSSDNDATA0",
       "DSSDPDATA0"
     ],
+    "DSMDN Data Lines": [
+        "DSMDNDATA0",
+        "DSMDNDATA1",
+        "DSMDNDATA2",
+        "DSMDNDATA3"
+    ],
+    "DSMDDP Data Lines": [
+        "DSMDPDATA0",
+        "DSMDPDATA1",
+        "DSMDPDATA2",
+        "DSMDPDATA3"
+    ],
     "Data Group": [
       "DU_DG0",
       "DU_DG1",
@@ -626,7 +638,28 @@
       "LVRXD7M",
       "LVRXD7P"
     ],
-    "Group": [
+
+    "VI0": [
+        "VI0_CLK",
+        "VI0_CLKENB",
+        "VI0_DATA0",
+        "VI0_DATA1",
+        "VI0_DATA10",
+        "VI0_DATA11",
+        "VI0_DATA2",
+        "VI0_DATA3",
+        "VI0_DATA4",
+        "VI0_DATA5",
+        "VI0_DATA6",
+        "VI0_DATA7",
+        "VI0_DATA8",
+        "VI0_DATA9",
+        "VI0_FIELD",
+        "VI0_HSYNC#",
+        "VI0_VSYNC#"
+    ],
+
+    "VI1": [
       "VI1_CLK",
       "VI1_CLKENB",
       "VI1_DATA0",
@@ -683,6 +716,41 @@
       "SDRBDQ8",
       "SDRBDQ9"
     ],
+    "DDR3L Pins": [
+        "MDQ0",
+        "MDQ1",
+        "MDQ10",
+        "MDQ11",
+        "MDQ12",
+        "MDQ13",
+        "MDQ14",
+        "MDQ15",
+        "MDQ16",
+        "MDQ17",
+        "MDQ18",
+        "MDQ19",
+        "MDQ2",
+        "MDQ20",
+        "MDQ21",
+        "MDQ22",
+        "MDQ23",
+        "MDQ24",
+        "MDQ25",
+        "MDQ26",
+        "MDQ27",
+        "MDQ28",
+        "MDQ29",
+        "MDQ3",
+        "MDQ30",
+        "MDQ31",
+        "MDQ4",
+        "MDQ5",
+        "MDQ6",
+        "MDQ7",
+        "MDQ8",
+        "MDQ9"
+    ],
+
     "DATA_MASKS_SDRB": [
       "SDRBDM0",
       "SDRBDM1",
@@ -1105,7 +1173,25 @@
     "DU2": [
       "DU0_EXVSYNC"
     ],
+    "Debug" :[
+        "JTAG_TMS",
+        "THDAG",
+        "THDAS",
+        "DCK",
+        "DCTL",
+        "DDI",
+        "DDO",
+        "DRDY#",
+        "DRST#",
+        "\\DCURDY",
+        "\\DCUTRST",
+        "DCURDY",
+        "DCUTRST",
+        "\\DRDY",
+        "DETMS"
+    ],
     "ET0": [
+      "MDIO",
       "ET0_MDIO",
       "ET0_TXC_TXCLK"
     ],
@@ -1324,6 +1410,26 @@
     ]
   },
   "Control_Interface_Pins": {
+
+    "PCM_Pins": [
+        "PCM0",
+        "PCM1",
+        "PCM2",
+        "PCM3",
+        "PCM4",
+        "PCM5"
+    ],
+    "PCS_Pins": [
+        "PCS0",
+        "PCS1",
+        "PCS2",
+        "PCS3",
+        "PCS4",
+        "PCS5",
+        "PCS6",
+        "PCS7"
+    ],
+
     "PCT_Pins": [
       "PCT0",
       "PCT1",
@@ -1660,6 +1766,7 @@
       "P2_12",
       "P2_13",
       "P2_14",
+      "P2_15",
       "P2_1",
       "P2_2",
       "P2_2",
@@ -3587,7 +3694,21 @@
       "TO013",
       "TO014",
       "TO015"
+    ],
+
+    "TODN_Pins": [
+        "TODN0",
+        "TODN1",
+        "TODN2",
+        "TODN3"
+    ],
+    "TODP_Pins": [
+        "TODP0",
+        "TODP1",
+        "TODP2",
+        "TODP3"
     ]
+
   },
   "USB_Interface_io": {
     "Interface": [

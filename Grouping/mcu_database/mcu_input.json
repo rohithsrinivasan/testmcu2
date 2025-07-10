@@ -210,6 +210,9 @@
       "RES",
       "\\RST",
       "\\PRST",
+      "\\PRESET",
+      "\\MRESET",
+      "R\\E\\S\\E\\T\\",
       "RES#",
       "RESET",
       "RSTN",
@@ -233,7 +236,16 @@
     "Q" :[
       "QRESN",
       "QRESNSEL"
+    ],
+    "AURORA_Reset": [
+        "AURORES1#",
+        "AURORES1Z",
+        "AURORES2#",
+        "AURORES2Z",
+        "AURORESPD#",
+        "AURORESPDZ"
     ]
+
   },
   "AVB": {
     "0 Control": [
@@ -727,7 +739,10 @@
       "EX_WAIT2"
     ],
     "USB": [
-      "USB_X1"
+      "USB_X1",
+      "USB_XTAL",
+      "USB_EXTAL",
+      "USBEXTAL"
     ],
     "Capacitor_ET_RXCTL": [
       "ET0_RXCTL_RXDV",
@@ -744,13 +759,29 @@
     "XC": [
       "XCIN"
     ],
-    "Reference Clocks": [
+    "Reference Clocks PCIE": [
       "PCIE_REFCLKN0",
       "PCIE_REFCLKN1",
       "PCIE_REFCLKP0",
       "PCIE_REFCLKP1"
     ],
-    "General": [
+
+    "General":[
+        "AVB0_TXCREFCLK",
+        "PCREFCKM",
+        "PCREFCKP",
+        "REF0N",
+        "REF0P",
+        "REF125CK",
+        "REF1N",
+        "REF1P",
+        "REF50CK",
+        "REFCLK",
+        "RREF0",
+        "RREF1"
+    ],
+
+    "CACREF": [
       "CACREF",
       "CACREF_A",
       "CACREF_B",
@@ -794,8 +825,14 @@
     "External Clock":[
       "XTAL",
       "EXTAL",
+      "EXTAL2",
+      "EXTAL48",
       "XTAL1_RF",
       "XTAL2_RF"
+    ],
+    "EXTL Diff Pair" :[
+      "EXTLDN",
+      "EXTLDP"
     ],
     "CLOCK INPUTS": [
       "RHSB0FCLN",
@@ -816,7 +853,10 @@
       "R\\D\\",
       "R\\D\\Y\\",
       "B\\S\\"
-    ]
+    ],
+  "Watchdog" : [
+    "\\WDTOVF"
+  ]
   },
   "Chip_Select": {
     "Select": [
@@ -1478,6 +1518,16 @@
       "SCIF_RXD"
     ]
   },
+
+  "PCRX": {
+    "General" :[ 
+      "PCRXD0M",
+      "PCRXD0P",
+      "PCRXD1M",
+      "PCRXD1P"
+    ]
+  },
+
   "RX": {
     "CLK": [
       "RX_CLKN",
@@ -1621,11 +1671,44 @@
       "SCL",
       "SDA"
     ],
+    "0":[
+      "SCL0",
+      "SDA0"
+    ],
+    "1":[
+      "SCL1",
+      "SDA1"
+    ],
+    "2":[
+      "SCL2",
+      "SDA2"
+    ],
     "RIIC":[
       "RIIC0_SCL",
       "RIIC0_SDA",
       "RIIC1_SCL",
       "RIIC1_SDA"
+    ]
+  },
+
+  "SPI" : {
+    "Interface": [
+        "MISO",
+        "MOSI",
+        "SCK",
+        "SCK",
+        "SCK0",
+        "SCK1_B",
+        "SCK2_A",
+        "SCK_SIO",
+        "SS"
+    ]    
+
+  },
+  "I3C" :{
+    "General" : [
+      "I3C_SCL",
+      "I3C_SDA"
     ]
   }
 }
