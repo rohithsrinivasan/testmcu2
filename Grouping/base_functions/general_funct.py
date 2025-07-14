@@ -99,6 +99,21 @@ def remove_electrical_type(df):
     # Return the updated DataFrame and a flag indicating if any columns were removed
     return df, False
 
+
+def remove_description_type(df):
+    columns_removed = []
+    
+    # Remove "Description" column if it exists
+    if "Description" in df.columns:
+        df = df.drop(columns=["Description"])
+        columns_removed.append("Description")
+        print("'Description' column has been removed.")
+    else:
+        print("'Description' column is not present in the DataFrame.")
+    
+    # Return the updated DataFrame and a flag indicating if any columns were removed
+    return df, False
+
 def check_empty_groupings(df):
     empty_groupings = df[df['Grouping'].isna()]
     return empty_groupings
@@ -107,7 +122,7 @@ def check_empty_groupings(df):
 def normalize_string(text):
     """
     Normalize string by converting to uppercase, removing spaces, 
-    and removing characters like "(", ")", "[", "]"
+    and removing characters like "(", ")", "[", "]", "."
     """
     if not isinstance(text, str):
         return str(text)
@@ -119,7 +134,7 @@ def normalize_string(text):
     normalized = normalized.replace(" ", "")
     
     # Remove specific characters
-    chars_to_remove = ["(", ")", "[", "]"]
+    chars_to_remove = ["(", ")", "[", "]", "."]
     for char in chars_to_remove:
         normalized = normalized.replace(char, "")
     

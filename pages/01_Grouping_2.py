@@ -30,7 +30,7 @@ st.subheader("Grouping Page")
 if 'pin_table' in st.session_state:
     pin_table = st.session_state['pin_table']
 
-    col1, col2 = st.columns(2)
+    col1, col2, col3 = st.columns(3)
 
     # Button 1: Clear Pin Table (Light Blue)
     with col1:
@@ -45,6 +45,14 @@ if 'pin_table' in st.session_state:
             pin_table_without_type, electrical_type_removed = general_funct.remove_electrical_type(pin_table)
             st.session_state['pin_table'] = pin_table_without_type 
             st.session_state['electrical_type_removed'] = electrical_type_removed 
+
+
+    with col3:
+        if st.button("Remove Description", type="secondary"):  # Fixed button text
+            pin_table_without_Description, description_removed = general_funct.remove_description_type(pin_table)
+            st.session_state['pin_table'] = pin_table_without_Description
+            st.session_state['description_removed'] = description_removed  # Store the flag
+            
 
     part_number = st.session_state["part number"]
     if part_number is None:
@@ -80,7 +88,7 @@ if 'pin_table' in st.session_state:
         pin_table = st.session_state['pin_table']
         required_cols = ['Pin Designator', 'Pin Display Name', 'Pin Alternate Name']
         before_pin_type_flag, added_empty_pin_type_column = general_funct.check_excel_format(pin_table, required_cols, optional_column='Electrical Type')
-        pin_type_added_table = Assigning_Electrical_Type.pin_type_as_per_database(added_empty_pin_type_column, json_paths) 
+        pin_type_added_table = Assigning_Electrical_Type.pin_type_as_per_database(added_empty_pin_type_column, json_paths, sensitivity=False) 
         st.dataframe(pin_type_added_table)
         st.session_state['pin_table'] = pin_type_added_table
         database_for_grouping = st.checkbox("Use database for grouping")

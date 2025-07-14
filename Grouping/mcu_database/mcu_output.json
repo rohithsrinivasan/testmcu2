@@ -116,20 +116,15 @@
       "ETXD3"
     ]
   },
-  "Clock_Output": {
-    "Clock": [
-      "AUDIO_XTAL",
-      "EMXTAL",
-      "QXTAL",
-      "RTXOUT",
-      "USBXTAL",
-      "USB_XTAL",
-      "XOUT",
-      "XCOUT",
-      "XTAL",
-      "XTAL2",
-      "XTAL32Mm",
-      "XTAL32Mp"
+  "Clock": {
+    "output": [
+      "RTXOUT"
+    ],
+    "X" :[
+      "XOUT"
+    ],
+    "XC": [
+      "XCOUT"
     ]
   },
   "GPIO_Output": {
@@ -1086,9 +1081,6 @@
       "USB31_TX0P",
       "USB31_RX0M",
       "USB31_RX0P"
-    ],
-    "Interface Output USB": [
-      "USB_X2"
     ]
   },
   "Gate_Driver_Output": {

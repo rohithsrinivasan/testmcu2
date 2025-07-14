@@ -196,7 +196,7 @@
     ]
   },
   "Reset": {
-    "Reset": [
+    "ERAM": [
       "ERAMRES2#",
       "ERAMRES2Z",
       "ERAMRESPD#",
@@ -208,7 +208,10 @@
       "RESETZ#",
       "/RESET",
       "RES",
+      "#RST",
+      "#RESET",
       "\\RST",
+      "RST",
       "\\PRST",
       "\\PRESET",
       "\\MRESET",
@@ -537,27 +540,6 @@
     ]
   },
   "Audio": {
-    "Pins": [
-      "AUDIO_EXTAL",
-      "AUDIO_X1",
-      "AUDIO_X2",
-      "AUD_CLK",
-      "AUDIO_CLK",
-      "AUDIO_CLK1",
-      "AUDIO_CLK2",
-      "AUDIO_CLKA_A",
-      "AUDIO_CLKB_A",
-      "AUDIO_CLKC",
-      "AUDIO_CLKOUT",
-      "AUDIO_CLK_A",
-      "AUDIO_CLK_B",
-      "AUDIO_CLK_C",
-      "AUDIO_CLK_D",
-      "AUDIO_CLK_E",
-      "AUDIO_CLK_F",
-      "AUDIO_CLK_G",
-      "AUDIO_CLK_H"
-    ],
     "DATA": [
       "AUDATA[0]",
       "AUDATA[1]",
@@ -729,9 +711,32 @@
     "A_Main": [
       "X1",
       "X2",
-      "XIN",
       "X1[CL1]",
       "X2[CL2]"
+    ],
+
+    "Audio" : [
+      "AUDIO_XTAL",
+      "AUDIO_EXTAL",
+      "AUDIO_X1",
+      "AUDIO_X2",
+      "AUD_CLK",
+      "AUDIO_CLK",
+      "AUDIO_CLK1",
+      "AUDIO_CLK2",
+      "AUDIO_CLKA_A",
+      "AUDIO_CLKB_A",
+      "AUDIO_CLKC",
+      "AUDIO_CLKOUT",
+      "AUDIO_CLK_A",
+      "AUDIO_CLK_B",
+      "AUDIO_CLK_C",
+      "AUDIO_CLK_D",
+      "AUDIO_CLK_E",
+      "AUDIO_CLK_F",
+      "AUDIO_CLK_G",
+      "AUDIO_CLK_H"
+
     ],
     "WAIT": [
       "EX_WAIT0",
@@ -740,9 +745,11 @@
     ],
     "USB": [
       "USB_X1",
+      "USB_X2",
       "USB_XTAL",
       "USB_EXTAL",
-      "USBEXTAL"
+      "USBEXTAL",
+      "USBXTAL"
     ],
     "Capacitor_ET_RXCTL": [
       "ET0_RXCTL_RXDV",
@@ -759,6 +766,9 @@
     "XC": [
       "XCIN"
     ],
+    "X" :[
+        "XIN"
+    ],
     "Reference Clocks PCIE": [
       "PCIE_REFCLKN0",
       "PCIE_REFCLKN1",
@@ -766,7 +776,12 @@
       "PCIE_REFCLKP1"
     ],
 
-    "General":[
+    "RF" : [
+      "XTAL1_RF",
+      "XTAL2_RF"
+    ],
+
+    "Reference":[
         "AVB0_TXCREFCLK",
         "PCREFCKM",
         "PCREFCKP",
@@ -776,9 +791,7 @@
         "REF1N",
         "REF1P",
         "REF50CK",
-        "REFCLK",
-        "RREF0",
-        "RREF1"
+        "REFCLK"
     ],
 
     "CACREF": [
@@ -825,15 +838,21 @@
     "External Clock":[
       "XTAL",
       "EXTAL",
-      "EXTAL2",
       "EXTAL48",
-      "XTAL1_RF",
-      "XTAL2_RF"
+      "XTAL32Mm",
+      "XTAL32Mp",
+      "EMXTAL",
+      "QXTAL"
+    ],
+    "External_Clock_2" : [
+      "EXTAL2",
+      "XTAL2"
     ],
     "EXTL Diff Pair" :[
       "EXTLDN",
       "EXTLDP"
     ],
+
     "CLOCK INPUTS": [
       "RHSB0FCLN",
       "RHSB0FCLP",

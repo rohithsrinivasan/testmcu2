@@ -1139,7 +1139,9 @@
       "USB3_USRESREF",
       "USBA_RREF",
       "USBHS_RREF",
-      "USB_RREF"
+      "USB_RREF",
+      "RREF0",
+      "RREF1"
     ]
   },
   "USB_Positive_Power": {
