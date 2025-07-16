@@ -49,7 +49,7 @@ def process_pin_dataframe(df, testing_electrical_type=False):
     
     # Filter out unwanted rows
     if "Pin Alternate Name" in df.columns:
-        filter_terms = ["renesas", "Cortex", "operation"]
+        filter_terms = ["renesas", "Cortex", "operation","Microcontroller"]
         for term in filter_terms:
             df = df[~df["Pin Alternate Name"].str.contains(term, case=False, na=False)]
     

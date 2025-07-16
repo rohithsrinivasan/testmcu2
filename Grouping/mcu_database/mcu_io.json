@@ -145,7 +145,36 @@
       "HM_DQ7",
       "HM_RESET#",
       "HM_RWDS"
-    ]
+    ],
+
+  "UDM": [
+    "UDM",
+    "UDM0",
+    "UDM1"
+    ],
+
+  "UDP" : [
+    "UDP",
+    "UDP0",
+    "UDP1"
+
+  ],
+
+  "USD" : [
+    "USD+",
+    "USD-",
+    "USDM",
+    "USDP"
+  ],
+  "D" : [
+    "DM",
+    "DM0",
+    "DM1",
+    "DMS",
+    "DP",
+    "DP0",
+    "DP1"
+  ]
   },
 
   "Buzzer" : {
@@ -299,13 +328,6 @@
       "MODE14",
       "MODE5",
       "MODE6"
-    ],
-    "Chip Oscillator On Chip Emulator": [
-      "TCLK",
-      "TMS/SWDIO",
-      "TMS_SWDIO",
-      "\\TRDY",
-      "T\\R\\D\\Y\\"
     ],
     "Node": [
       "LX",
@@ -1174,7 +1196,6 @@
       "DU0_EXVSYNC"
     ],
     "Debug" :[
-        "JTAG_TMS",
         "THDAG",
         "THDAS",
         "DCK",
@@ -1310,27 +1331,6 @@
       "T\\E\\S\\T\\1\\",
       "\\TEST1"
     ],
-    "XSPI0": [
-      "XSPI0_IO0",
-      "XSPI0_IO1",
-      "XSPI0_IO2",
-      "XSPI0_IO3",
-      "XSPI0_IO4",
-      "XSPI0_IO5",
-      "XSPI0_IO6",
-      "XSPI0_IO7"
-    ],
-    "XSPI": [
-      "XSPI_DS",
-      "XSPI_IO0",
-      "XSPI_IO1",
-      "XSPI_IO2",
-      "XSPI_IO3",
-      "XSPI_IO4",
-      "XSPI_IO5",
-      "XSPI_IO6",
-      "XSPI_IO7"
-    ],
     "Byte_Enable": [
       "\\BE0",
       "\\BE1",
@@ -1356,11 +1356,54 @@
       "\\PCC0VS1",
       "\\PCC0VS2",
       "\\PCC0WAIT"
-    ],
-    "Crystal_Clock": [
-      "\\XOUT"
     ]
   },
+
+"XSP_Pins" : {
+
+    "XSP10 RST": [
+      "XSPI0_RSTO0N",
+      "XSPI0_RSTO0P"
+    ],
+    "XSPI_CLK": [
+      "XSPI0_CKN",
+      "XSPI0_CKP",
+      "XSPI0_CS0N",
+      "XSPI_CS0#",
+      "XSPI_CS1#",
+      "XSPI_SPCLK",
+      "XSPI_WP0#"
+    ],
+
+    "XSPI0": [
+      "XSPI0_IO0",
+      "XSPI0_IO1",
+      "XSPI0_IO2",
+      "XSPI0_IO3",
+      "XSPI0_IO4",
+      "XSPI0_IO5",
+      "XSPI0_IO6",
+      "XSPI0_IO7"
+    ],
+    "XSPI": [
+      "XSPI_DS",
+      "XSPI_IO0",
+      "XSPI_IO1",
+      "XSPI_IO2",
+      "XSPI_IO3",
+      "XSPI_IO4",
+      "XSPI_IO5",
+      "XSPI_IO6",
+      "XSPI_IO7"
+    ],
+    "B_XSPI_reset": [
+      "XSPI0_RESET0N",
+      "XSPI_RESET0#"
+    ]
+
+},
+
+
   "Other_CCA": {
     "B": [
       "CCA0",
@@ -1393,20 +1436,6 @@
       "RETESTH5",
       "RETESTH6",
       "RETESTRL"
-    ]
-  },
-  "Other_USB": {
-    "IO Pins": [
-      "UDM",
-      "UDM0",
-      "UDM1",
-      "UDP",
-      "UDP0",
-      "UDP1",
-      "USD+",
-      "USD-",
-      "USDM",
-      "USDP"
     ]
   },
   "Control_Interface_Pins": {
@@ -3710,15 +3739,8 @@
     ]
 
   },
-  "USB_Interface_io": {
+  "USB": {
     "Interface": [
-      "DM",
-      "DM0",
-      "DM1",
-      "DMS",
-      "DP",
-      "DP0",
-      "DP1",
       "USB1d_SUSPEND",
       "USBHS_DM",
       "USBHS_DP",
@@ -3770,18 +3792,7 @@
     "2": [
       "USB_DM2",
       "USB_DP2"
-    ],
-    "Other_IO_Pins": [
-    "UDM",
-    "UDM0",
-    "UDM1",
-    "UDP",
-    "UDP0",
-    "UDP1",
-    "USD+",
-    "USD-",
-    "USDM",
-    "USDP"
-  ]
+    ]
+
   }
 }

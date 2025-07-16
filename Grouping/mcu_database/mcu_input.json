@@ -595,6 +595,19 @@
     "CAN": [
       "CAN_CLK_A"
     ],
+    "HRx": [
+      "HRXD",
+      "HRxD",
+      "HRxD0",
+      "HRxD1"
+    ],
+    "USRX0": [
+      "USRX0M",
+      "USRX0P"
+    ]
+  },
+
+  "Ethernet_Interface" : {
     "ERXD": [
       "ERXD0",
       "ERXD1",
@@ -613,12 +626,48 @@
       "ET1_RXD2",
       "ET1_RXD3"
     ],
-    "HRx": [
-      "HRXD",
-      "HRxD",
-      "HRxD0",
-      "HRxD1"
+    "ET0 TX": [
+      "ET0_TXD0",
+      "ET0_TXD1",
+      "ET0_TXD2",
+      "ET0_TXD3"
     ],
+    "ET1 TX": [
+      "ET1_TXD0",
+      "ET1_TXD1",
+      "ET1_TXD2",
+      "ET1_TXD3"
+    ],
+    "0": [
+      "DET3OR5",
+      "ET0_MDC",
+      "ET0_MDIO"
+    ],
+    "ER 0": [
+      "ET0_TXER",
+      "ET0_RXER"
+    ],
+    "ER 1": [
+      "ET1_TXER",
+      "ET1_RXER"
+    ],
+    "ET COL": [
+      "ET0_COL",
+      "ET1_COL"
+    ],
+    "ET CRS": [
+      "ET0_CRS",
+      "ET1_CRS"
+    ],
+    "1": [
+      "ET1_MDC",
+      "ET1_MDIO"
+    ]
+  },
+
+
+  "PCIE Interface" : {
+
     "PCIE RX0": [
       "PCIE_RXDNL0",
       "PCIE_RXDPL0"
@@ -639,23 +688,15 @@
       "PCIE_RX_DN",
       "PCIE_RX_DP"
     ],
-    "USRX0": [
-      "USRX0M",
-      "USRX0P"
-    ],
-    "ET0 TX": [
-      "ET0_TXD0",
-      "ET0_TXD1",
-      "ET0_TXD2",
-      "ET0_TXD3"
-    ],
-    "ET1 TX": [
-      "ET1_TXD0",
-      "ET1_TXD1",
-      "ET1_TXD2",
-      "ET1_TXD3"
+    "General": [
+      "P\\C\\I\\R\\E\\Q\\1\\",
+      "P\\C\\I\\R\\E\\Q\\2\\",
+      "P\\C\\I\\R\\E\\Q\\3\\",
+      "P\\C\\I\\R\\E\\Q\\4\\"
     ]
+
   },
+
   "Clock": {
     "Control": [
       "CKSEL",
@@ -779,6 +820,11 @@
     "RF" : [
       "XTAL1_RF",
       "XTAL2_RF"
+    ],
+
+    "Parity" : [
+      "PAR"
+
     ],
 
     "Reference":[
@@ -1036,33 +1082,7 @@
       "AUDCK"
     ]
   },
-  "Ethernet_Interface": {
-    "0": [
-      "DET3OR5",
-      "ET0_MDC",
-      "ET0_MDIO"
-    ],
-    "ER 0": [
-      "ET0_TXER",
-      "ET0_RXER"
-    ],
-    "ER 1": [
-      "ET1_TXER",
-      "ET1_RXER"
-    ],
-    "ET COL": [
-      "ET0_COL",
-      "ET1_COL"
-    ],
-    "ET CRS": [
-      "ET0_CRS",
-      "ET1_CRS"
-    ],
-    "1": [
-      "ET1_MDC",
-      "ET1_MDIO"
-    ]
-  },
+
   "Other_External": {
     "Wait": [
       "W\\A\\I\\T\\",
@@ -1145,6 +1165,7 @@
       "DCUTRSTN#",
       "JTAG_TCK",
       "JTAG_TDI",
+      "JTAG_TMS",
       "JTAG_TRST_N"
     ]
   },
@@ -1263,6 +1284,7 @@
       "TRSTN",
       "\\TRST",
       "TRSTZ",
+      "\\ASEBRKAK",
       "T\\R\\S\\T\\"
     ]
   },
@@ -1311,7 +1333,6 @@
       "TX_DATAN",
       "TX_DATAP",
       "VI1_CLK_A",
-      "XSPI0_RSTO0N",
       "XTAL48",
       "\\ADTRG",
       "\\BREQ",
@@ -1523,18 +1544,12 @@
       "SENSB3"
     ]
   },
-  "PCIe": {
-    "General": [
-      "P\\C\\I\\R\\E\\Q\\1\\",
-      "P\\C\\I\\R\\E\\Q\\2\\",
-      "P\\C\\I\\R\\E\\Q\\3\\",
-      "P\\C\\I\\R\\E\\Q\\4\\"
-    ]
-  },
+
   "SCIF": {
     "General": [
       "SCIF2_RXD",
-      "SCIF_RXD"
+      "SCIF_RXD",
+      "SCIF_TXD"
     ]
   },
 
@@ -1629,7 +1644,7 @@
       "VIN2B"
     ]
   },
-  "USB_Interface_input": {
+  "USB": {
     "Interface": [
       "USB_VBUS",
       "USOTGID",

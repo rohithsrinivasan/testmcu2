@@ -88,8 +88,8 @@
       "\\ERROROUT"
     ]
   },
-  "Ethernet_Output": {
-    "Interface Output": [
+  "Ethernet_Interface": {
+    "Output": [
       "ET0_MDC",
       "ET0_TXCTL_TXEN",
       "ET0_TXER",
@@ -97,19 +97,19 @@
       "ET1_TXCTL_TXEN",
       "ET1_TXER"
     ],
-    "Interface Output ET0 TX": [
+    "Output ET0 TX": [
       "ET0_TXD0",
       "ET0_TXD1",
       "ET0_TXD2",
       "ET0_TXD3"
     ],
-    "Interface Output ET1 TX": [
+    "Output ET1 TX": [
       "ET1_TXD0",
       "ET1_TXD1",
       "ET1_TXD2",
       "ET1_TXD3"
     ],
-    "Interface Output EXTD": [
+    "Output EXTD": [
       "ETXD0",
       "ETXD1",
       "ETXD2",
@@ -121,11 +121,34 @@
       "RTXOUT"
     ],
     "X" :[
-      "XOUT"
+      "XOUT",
+      "\\XOUT"
     ],
     "XC": [
       "XCOUT"
+    ],
+    "Clock Out": [
+      "BCLK",
+      "CLKOUT",
+      "CLKOUT25M",
+      "CLKOUTENB",
+      "CKOUT",
+      "CKPO",
+      "CLKOUT_A",
+      "CLKOUT_B"
+    ],
+    "DSI CLK": [
+      "DSI_CLKN",
+      "DSI_CLKP",
+      "DSI_DNCLK",
+      "DSI_DPCLK"
+    ],
+    "Other" : [      
+      "DIGRF_CLKOUT",
+      "DU_DOTCLKIN",
+      "DU_DOTCLKOUT"
     ]
+
   },
   "GPIO_Output": {
     "Output": [
@@ -175,6 +198,21 @@
       "A8",
       "A9"
     ],
+
+    "TDATA": [
+      "TDATA0",
+      "TDATA1",
+      "TDATA2",
+      "TDATA3"
+    ],
+    "TRCDATA": [
+      "TRCDATA0",
+      "TRCDATA1",
+      "TRCDATA2",
+      "TRCDATA3",
+      "TRCEND"
+    ],
+
     "DSI 0": [
       "DSI_DATA0_N",
       "DSI_DATA0_P"
@@ -227,13 +265,6 @@
         "DSAN0P",
         "DSAN1N",
         "DSAN1P"
-    ],
-
-    "DSI CLK": [
-      "DSI_CLKN",
-      "DSI_CLKP",
-      "DSI_DNCLK",
-      "DSI_DPCLK"
     ],
     "LPCAA": [
       "LPCAA0",
@@ -293,18 +324,7 @@
       "SDRABA1"
     ]
   },
-  "Other_On Chip Emulator": {
-    "General": [
-      "TRDATA0",
-      "TRDATA1",
-      "TRDATA2",
-      "TRDATA3",
-      "TRDATA4",
-      "TRDATA5",
-      "TRDATA6",
-      "TRDATA7"
-    ]
-  },
+
   "General_Output": {
     "Differential pair OUT0": [
       "OUT0",
@@ -361,14 +381,16 @@
     "Differential pair OUT9": [
       "OUT9",
       "nOUT9"
-    ]
-  },
-  "JTAG_Output": {
-    "Interface": [
-      "DCUTDO",
-      "DETDO",
-      "JTAG_TDO",
-      "JTAG_TMS"
+    ],
+    "TR Data bus": [
+      "TRDATA0",
+      "TRDATA1",
+      "TRDATA2",
+      "TRDATA3",
+      "TRDATA4",
+      "TRDATA5",
+      "TRDATA6",
+      "TRDATA7"
     ]
   },
   "LED_Output": {
@@ -414,7 +436,6 @@
       "A\\F\\E\\_\\R\\L\\Y\\C\\N\\T\\",
       "A\\S\\E\\B\\R\\K\\",
       "A\\S\\E\\B\\R\\K\\A\\K\\",
-      "BCLK",
       "BP_ZN",
       "BS#",
       "B\\A\\C\\K\\",
@@ -431,7 +452,6 @@
       "DCLOUT",
       "DDCOUT",
       "DDC_OUT",
-      "DIGRF_CLKOUT",
       "EPTVOUT",
       "INTOUT",
       "I\\N\\T\\A\\",
@@ -460,7 +480,6 @@
       "R\\A\\S\\L\\",
       "R\\A\\S\\U\\",
       "SBIAS",
-      "SCIF_TXD",
       "SDSELF",
       "SOUT",
       "TESTOUT#",
@@ -485,15 +504,6 @@
     "CAN": [
       "CAN0_TX_A",
       "CAN1_TX_A"
-    ],
-    "Clock Out": [
-      "CLKOUT",
-      "CLKOUT25M",
-      "CLKOUTENB",
-      "CKOUT",
-      "CKPO",
-      "CLKOUT_A",
-      "CLKOUT_B"
     ],
     "Chip Select": [
       "CS0",
@@ -713,15 +723,6 @@
       "W\\E\\6\\",
       "W\\E\\7\\"
     ],
-    "XSPI": [
-      "XSPI0_CKN",
-      "XSPI0_CKP",
-      "XSPI0_CS0N",
-      "XSPI_CS0#",
-      "XSPI_CS1#",
-      "XSPI_SPCLK",
-      "XSPI_WP0#"
-    ],
     "PCI": [
       "\\PCIGNT1",
       "\\PCIGNT2",
@@ -738,8 +739,6 @@
   },
   "Other_DU": {
     "General": [
-      "DU_DOTCLKIN",
-      "DU_DOTCLKOUT",
       "DU_EXHSYNC",
       "DU_EXODDF",
       "DU_EXVSYNC"
@@ -804,16 +803,28 @@
       "P130"
     ]
   },
-  "Other_On Chip Emulator.1": {
+  "Emulator": {
     "General": [
       "TRCLK",
       "TRSYNC",
       "TRSYNC#",
       "TRSYNC1",
-      "TDO"
+      "TDO",
+      "TCLK",
+      "TMS/SWDIO",
+      "TMS_SWDIO",
+      "\\TRDY",
+      "T\\R\\D\\Y\\"
+    ],    
+    "Interface": [
+      "DCUTDO",
+      "DETDO",
+      "JTAG_TDO",
+      "JTAG_TMS"
     ]
+  
   },
-  "PCIe_Output": {
+  "PCIE Interface": {
     "Interface Output": [
       "PCIE_TX_DN",
       "PCIE_TX_DP"
@@ -1038,24 +1049,8 @@
       "\\CVMOUT"
     ]
   },
-  "Other_On Chip Emulator.2": {
-    "General": [
-      "TDATA0",
-      "TDATA1",
-      "TDATA2",
-      "TDATA3"
-    ]
-  },
-  "Other_On Chip Emulator.3": {
-    "General": [
-      "TRCDATA0",
-      "TRCDATA1",
-      "TRCDATA2",
-      "TRCDATA3",
-      "TRCEND"
-    ]
-  },
-  "USB_Output": {
+
+  "USB": {
     "Interface Output": [
       "USB31_DM",
       "USB31_DP",

@@ -46,7 +46,6 @@
         "Emulator": "BE",
         "On_Chip_Oscillator": "BF",
         "Mode": "BG",
-        "USB_Interface_input": "BH",
         "Interrupt": "BI",
         "ADC": "BJ",
         "Analog": "BK",
@@ -60,6 +59,7 @@
         "DREQ": "BS",
         "Data_Bus": "BT",
         "Ethernet_Interface": "BU",
+        "USB": "BUU",
         "Other_External": "BV",
         "General_IO": "BW",
         "Generic": "BX",
@@ -69,7 +69,7 @@
         "Other_Input": "CB",
         "RPC": "CC",
         "Sensor_Input": "CD",
-        "PCIE": "CE",
+        "PCIE Interface": "CE",
         "SCIF": "CF",
         "PCRX" :"CFA",
         "RX": "CG",
@@ -97,21 +97,16 @@
         "Other_CCA": "QP",
         "Other_Ungrouped": "QQ",
         "Other_RE": "QR",
-        "Other_USB": "QS",
         "Control_Interface_Pins": "QT",
         "TOD_Pins": "QU",
-        "USB_Interface_io": "QV",
 
         "Common_Output": "SA",
         "Error_Output": "SB",
         "DDR_Pins_Output": "SC",
         "Debug_Output": "SD",
-        "Ethernet_Output": "SE",
-        "Clock_Output": "SF",
         "GPIO_Output": "SG",
         "Other_On Chip Emul": "SH",
         "General_Output": "SI",
-        "JTAG_Output": "SJ",
         "LED_Output": "SK",
         "Memory_Output": "SL",
         "Other_Output": "SM",
@@ -123,7 +118,6 @@
         "Other_HTX": "SS",
         "Other_DRAK": "ST",
         "Other_Port 13": "SU",
-        "PCIe_Output": "SV",
         "QSPI_Output": "SW",
         "RDC_Output": "SX",
         "PWSD_Output": "SY",
@@ -133,7 +127,7 @@
         "USB_Output": "TC",
         "Gate_Driver_Output": "TD",
 
-        "No Connect" : "X"
+        "No Connect" : "X_Noconnect"
 
       },
 
