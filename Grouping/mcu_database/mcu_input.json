@@ -1148,7 +1148,7 @@
       "I\\R\\L\\2\\",
       "I\\R\\L\\3\\"
     ],
-    "Interrupt": [
+    "NMI": [
       "NMI",
       "\\NMI",
       "N\\M\\I\\"
@@ -1231,6 +1231,7 @@
     ],
     "Mode": [
       "MD/FINED",
+      "MD",
       "MD0",
       "MD1",
       "MD2",
@@ -1238,10 +1239,19 @@
       "MD4",
       "MD5",
       "MD6",
+      "MD7",
+      "MD8",
+      "MDA",
+      "MDB",
+      "MDD",
       "MODE",
       "MODE0",
       "MODE1",
-      "MODE2"
+      "MODE2",
+      "MODE3",
+      "MODE4",
+      "MODE5",
+      "MODE6"
     ],
     "Boot": [
       "MD_BOOT0",
@@ -1426,7 +1436,7 @@
     "ANDS6": [
       "ANDS6"
     ],
-    "Interrupt": [
+    "IRQ": [
       "IRQ0",
       "IRQ0_A",
       "IRQ1",

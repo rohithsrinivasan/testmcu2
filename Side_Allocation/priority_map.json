@@ -3,8 +3,8 @@
 
         "General_Positive_Power" : "AA",
         "Digital_Core_Positive_Power" : "AB",
-        "Ports_Positive_Power" : "AC",
         "Battery_Voltage_Logic" : "AD",
+        "Positive_Power" : "ADA",
         "Reference_Voltage_Positive" : "AE",
         "Peripheral_Positive_Power" : "AF",
         "Digital_Peripheral_Positive_Power" :"AG",
@@ -34,8 +34,9 @@
         "Other_Analog_Negative" : "ZH",
         "Analog_Negative_Power" : "ZI",
         "General_Negative_Power" : "ZJ",
-        "Ground_Common" : "ZK",
-        "EPAD" :"ZL",
+        "Other_Power_Negative" : "ZK",
+        "Ground_Common" : "ZL",
+        "EPAD" :"ZM",
 
         "Clock": "BA",
         "Reset": "BB",
@@ -99,13 +100,13 @@
         "Other_RE": "QR",
         "Control_Interface_Pins": "QT",
         "TOD_Pins": "QU",
+        "XSP_Pins" : "QV",
 
         "Common_Output": "SA",
         "Error_Output": "SB",
         "DDR_Pins_Output": "SC",
         "Debug_Output": "SD",
         "GPIO_Output": "SG",
-        "Other_On Chip Emul": "SH",
         "General_Output": "SI",
         "LED_Output": "SK",
         "Memory_Output": "SL",
@@ -115,7 +116,7 @@
         "Other_PCIGNT": "SP",
         "Other_PCD": "SQ",
         "Other_LPC": "SR",
-        "Other_HTX": "SS",
+        "Other_HTx": "SS",
         "Other_DRAK": "ST",
         "Other_Port 13": "SU",
         "QSPI_Output": "SW",
@@ -124,7 +125,6 @@
         "SD_Output": "SZ",
         "Display_Output": "TA",
         "System_Output": "TB",
-        "USB_Output": "TC",
         "Gate_Driver_Output": "TD",
 
         "No Connect" : "X_Noconnect"
@@ -133,10 +133,10 @@
 
     
     "swap_conditions": {
-      "X1": "CA_Main_Clocks/Oscillators",
-      "X2": "CA_Main_Clocks/Oscillators",
-      "XT1": "CB_External_Clocks/Oscillators",
-      "XT2": "CB_External_Clocks/Oscillators",
+      "X1": "BA_Clock_A_Main",
+      "X2": "BA_Clock_A_Main",
+      "XT1": "BA_Clock_Input Clock",
+      "XT2": "BA_Clock_Input Clock",
       "MD": "E_ModePins",
       "NMI": "I_Interrupts",
       "VREF": "ABA_Power_Ref_Positive",

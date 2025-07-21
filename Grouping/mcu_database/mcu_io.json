@@ -310,13 +310,7 @@
     ]
   },
   "Power_Clock_Control": {
-    "Pins": [
-      "MD",
-      "MD7",
-      "MD8",
-      "MDA",
-      "MDB",
-      "MDD",
+    "MDQS Pins": [
       "MDQS0",
       "MDQS0#",
       "MDQS1",
@@ -324,15 +318,14 @@
       "MDQS2",
       "MDQS2#",
       "MDQS3",
-      "MDQS3#",
-      "MODE14",
-      "MODE5",
-      "MODE6"
+      "MDQS3#"
     ],
     "Node": [
       "LX",
       "LY",
-      "LZ",
+      "LZ"
+    ],
+    "SW" :[
       "SWCLK",
       "SWDIO"
     ]

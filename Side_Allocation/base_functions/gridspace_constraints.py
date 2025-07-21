@@ -1,4 +1,5 @@
 from . import single80pin_constraints
+import pandas as pd
 
 def split_large_identical_groups(df, current_unused_grids):
     """
@@ -253,3 +254,50 @@ def balance_grid_space(df):
         print("❌ No improvement from swap. Keeping current balance.")
 
     return df
+
+
+
+def lighthouse_view(parts, n_parts, max_rows):
+    """
+    Rebalance all parts to make distribution as even as possible,
+    keeping groups with the same prefix together.
+    """
+    all_data = pd.concat(parts)
+
+    # Group by Priority first
+    grouped = list(all_data.groupby('Priority'))
+
+    # Determine prefix key for grouping priorities
+    def get_prefix(priority):
+        if '_' in priority:
+            return priority.split('_')[0]  # Take part before first '_'
+        return priority[:2]  # If no '_', take first 2 letters as fallback
+
+    # Create prefix-based super-groups
+    prefix_groups = {}
+    for priority, group in grouped:
+        prefix = get_prefix(priority)
+        if prefix not in prefix_groups:
+            prefix_groups[prefix] = []
+        prefix_groups[prefix].append(group)
+
+    # Merge each prefix group into a single DataFrame
+    super_groups = []
+    for prefix, groups in prefix_groups.items():
+        combined_group = pd.concat(groups)
+        super_groups.append((prefix, combined_group))
+
+    # Sort super-groups by size (largest first)
+    super_groups.sort(key=lambda x: len(x[1]), reverse=True)
+
+    # Re-assign super-groups to parts
+    new_parts = [pd.DataFrame() for _ in range(n_parts)]
+    part_counts = [0] * n_parts
+
+    for prefix, group in super_groups:
+        # Pick the least filled part (ignore max_rows if needed)
+        idx = min(range(n_parts), key=lambda i: part_counts[i])
+        new_parts[idx] = pd.concat([new_parts[idx], group])
+        part_counts[idx] += len(group)
+
+    return new_parts

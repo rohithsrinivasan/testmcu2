@@ -239,7 +239,6 @@
       "VLED",
       "VPP",
       "VSL",
-      "AWOVCL",
       "HVCOM",
       "BGR_BO",
       "B\\G\\R\\",
@@ -331,15 +330,10 @@
     ]
   },
   "Analog_Positive_Power": {
-    "Analog VCL": [
-      "ADSVCL",
-      "GETH0VCL",
+    "AV": [
       "AV12",
       "AV33",
-      "RAMSVCL",
-      "RAMVCL",
-      "VSUP_RF",
-      "ISOVCL"
+      "VSUP_RF"
     ],
     "Analog VCC": [
       "A10VCC",
@@ -457,9 +451,7 @@
     ]
   },
   "PLL_Positive_Power": {
-    "PLL": [
-      "PLLVCL"
-    ],
+
     "Digital CPGPLL": [
       "VDD18_CPGPLL0",
       "VDD18_CPGPLL1",
@@ -756,24 +748,31 @@
     ]
   },
   "Positive_Power": {
-    "Ports": [
+    "Ports B": [
       "B0VCC",
       "B1VCC",
       "B2VCC",
       "B3VCC",
       "B4VCC",
       "B5VCC",
-      "BVCC",
-      "CVCC",
+      "BVCC"
+    ],
+    "Ports C" : [
+      "CVCC"
+    ],
+    "Ports E" :[
       "E0VCC",
       "E1VCC",
       "E2VCC",
+      "EVCC"
+    ],
+    "Ports IO": [
       "IOVCC0",
       "IOVCC1",
       "IOVCC2",
-      "IOVCC3",
-      "EVCC"
+      "IOVCC3"
     ],
+
     "A_Digital_Ports": [
       "E0VDD",
       "E1VDD",
@@ -809,21 +808,27 @@
     ]
   },
   "Other_Power_Negative": {
-    "Supply Negative Ports": [
+    "Ports B": [
       "B0VSS",
       "B1VSS",
       "B2VSS",
       "B3VSS",
       "B4VSS",
       "B5VSS",
-      "BVSS",
-      "CVSS",
-      "DVSS",
+      "BVSS"
+    ],
+    "Port C" : [
+      "CVSS"
+    ],
+    "Port D" : [
+      "DVSS"
+    ],
+    "Port E" :[
       "E0VSS",
       "E1VSS",
       "EVSS",
       "EVSS0",
-      "EVSS1"
+      "EVSS1"    
     ],
     "Supply Negative ERAM": [
       "ERAM0VSS",
@@ -1011,7 +1016,7 @@
       "VLC3"
     ]
   },
-  "RF_Other_Negetive_Power": {
+  "RF_Other_Negative_Power": {
     "Other": [
       "PSUBRF",
       "PSUB_RF",
@@ -1223,6 +1228,15 @@
       "VCL2",
       "VCLH",
       "VCL_F"
+    ],
+    "Others" : [
+      "AWOVCL",
+      "PLLVCL",
+      "ISOVCL",
+      "RAMSVCL",
+      "RAMVCL",
+      "ADSVCL",
+      "GETH0VCL"
     ]
   },
 
