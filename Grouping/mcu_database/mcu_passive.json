@@ -1,21 +1,30 @@
 {
-  "No Connect": [
-    "(N.C)",
-    "CAP1",
-    "CAP2",
-    "IC",
-    "IC(VPP)",
-    "IC0",
-    "IC1",
-    "IC2",
-    "IC3",
-    "IC4",
-    "IC5",
-    "N.C.",
-    "NC",
-    "Notused",
-    "RESERVE",
-    "Reserve",
-    "Reserved"
-  ]
+  "No Connect": {
+    "NC": [
+      "(N.C)",
+      "N.C.",
+      "NC",
+      "nC"
+    ],
+    "Capacitors": [
+      "CAP1",
+      "CAP2"
+    ],
+    "Integrated Circuit": [
+      "IC",
+      "IC(VPP)",
+      "IC0",
+      "IC1",
+      "IC2",
+      "IC3",
+      "IC4",
+      "IC5"
+    ],
+    "Reserved": [
+      "Notused",
+      "RESERVE",
+      "Reserve",
+      "Reserved"
+    ]
+  }
 }

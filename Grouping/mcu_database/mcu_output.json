@@ -75,7 +75,8 @@
       "MTDO6_DRV1",
       "MTDO7_DRV2",
       "MTDO8_DRV2",
-      "MTDO9_DRV2"
+      "MTDO9_DRV2",
+      "PM_RES1_DRV0"
     ]
   },
   "Error_Output": {
@@ -661,10 +662,6 @@
       "RFU8",
       "RFU9"
     ],
-    "Real Time Clock": [
-      "RTC_X2",
-      "RTC_XO"
-    ],
     "SDR": [
       "SDRACAS#",
       "SDRACK",
@@ -796,11 +793,6 @@
       "DRACK0",
       "DRAK0",
       "DRAK1"
-    ]
-  },
-  "Other_Port 13": {
-    "General": [
-      "P130"
     ]
   },
   "Emulator": {
@@ -993,25 +985,23 @@
 
   },
   "System_Output": {
-    "General": [
-      "RESETOUTZ",
-      "RESOUT",
-      "RSTOUT#",
-      "\\RESO",
-      "RESETOUT",
-      "RESETOUT#",
-      "RESOUT#",
-      "\\RESETOUT",
-      "\\RESOUT",
-      "\\RSTOUT",
-      "\\DDR_RESET",
-      "\\QSPI_RESET"
-    ],
-
-    "Watchdog" :[
-      "\\WDTOVF_PERROUT"
-    ],
-
+"General": {
+  "Reset Output Signals": [
+    "RESETOUT",
+    "RESETOUT#",
+    "RESETOUTZ",
+    "\\RESETOUT",
+    "RESOUT",
+    "RESOUT#",
+    "\\RESOUT",
+    "\\RESO",
+    "RSTOUT#",
+    "\\RSTOUT"
+  ],
+  "Interface Specific Reset": [
+    "\\DDR_RESET",
+    "\\QSPI_RESET"
+  ],
     "Miscellaneous Resetout": [
         "PCRSTOUTB#",
         "PWSYSRSTN",
@@ -1021,12 +1011,6 @@
         "P\\C\\I\\R\\S\\T\\",
         "PRESETOUT#",
         "\\VMONOUT"
-    ],
-
-    "DDR_Pins": [
-      "DDR0_RESETN",
-      "DDR1_RESETN",
-      "DDR_RESET_N"
     ],
     "MRESET": [
       "MRESET#",
@@ -1041,6 +1025,17 @@
     "XSPI": [
       "XSPI0_RESET0N",
       "XSPI_RESET0#"
+    ]
+},
+
+    "Watchdog" :[
+      "\\WDTOVF_PERROUT"
+    ],
+
+    "DDR_Pins": [
+      "DDR0_RESETN",
+      "DDR1_RESETN",
+      "DDR_RESET_N"
     ],
     "REG" :[
       "REGOUT",

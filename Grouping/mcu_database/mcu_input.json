@@ -196,81 +196,116 @@
     ]
   },
   "Reset": {
-    "ERAM": [
-      "ERAMRES2#",
-      "ERAMRES2Z",
-      "ERAMRESPD#",
-      "ERAMRESPDZ"
-    ],
-    "General": [
-      "RESET#",
-      "RESETZ",
-      "RESETZ#",
-      "/RESET",
-      "RES",
-      "#RST",
-      "#RESET",
-      "\\RST",
-      "RST",
-      "\\PRST",
-      "\\PRESET",
-      "\\MRESET",
-      "R\\E\\S\\E\\T\\",
-      "RES#",
-      "RESET",
-      "RSTN",
-      "R\\E\\S\\",
-      "R\\E\\S\\(Vpp)",
-      "R\\E\\S\\E\\T\\M\\",
-      "R\\E\\S\\E\\T\\P\\",
-      "\\RES",
-      "\\RES(Vpp)",
-      "\\RESET",
-      "\\RESETM",
-      "\\RESETP",
-      "\\RES_IN",
-      "\\RES_OUT",
-      "\\\\RESET",
-      "nRST",
-      "RSTB",
-      "RSTN#",
-      "#RES"
-    ],
-    "Q" :[
+    "ERAM": {
+      "With Hash (#)": [
+        "ERAMRES2#",
+        "ERAMRESPD#"
+      ],
+      "With Z": [
+        "ERAMRES2Z",
+        "ERAMRESPDZ"
+      ]
+    },
+    "General": {
+      "Basic Reset Names": [
+        "RESET",
+        "RES",
+        "RST"
+      ],
+      "With Hash (#)": [
+        "RESET#",
+        "#RST",
+        "#RESET",
+        "RES#",
+        "#RES",
+        "RSTN#"
+      ],
+      "With_Z": [
+        "RESETZ",
+        "RESETZ#"
+      ],
+      "Slash Variants": [
+        "/RESET"
+      ],
+      "Backslash Variants": [
+        "\\RST",
+        "\\PRST",
+        "\\PRESET",
+        "\\MRESET",
+        "\\RES",
+        "\\RES(Vpp)",
+        "\\RESET",
+        "\\RESETM",
+        "\\RESETP",
+        "\\RES_IN",
+        "\\RES_OUT",
+        "\\\\RESET"
+      ],
+      "Stylized with Backslashes": [
+        "R\\E\\S\\E\\T\\",
+        "R\\E\\S\\",
+        "R\\E\\S\\(Vpp)",
+        "R\\E\\S\\E\\T\\M\\",
+        "R\\E\\S\\E\\T\\P\\"
+      ],
+      "Other Variants": [
+        "RSTN",
+        "nRST",
+        "RSTB"
+      ],
+    "Q": [
       "QRESN",
       "QRESNSEL"
     ],
-    "AURORA_Reset": [
+    "AURORA_Reset": {
+      "With Hash (#)": [
         "AURORES1#",
-        "AURORES1Z",
         "AURORES2#",
+        "AURORESPD#"
+      ],
+      "With Z": [
+        "AURORES1Z",
         "AURORES2Z",
-        "AURORESPD#",
         "AURORESPDZ"
-    ]
+      ]
+    }
+  }
+},
 
-  },
   "AVB": {
-    "0 Control": [
-      "AVB0_RXC",
-      "AVB0_RX_CTL",
-      "AVB0_TXC",
-      "AVB0_TX_CTL",
-      "HDREXT",
-      "IP0_0",
-      "I\\R\\Q\\O\\U\\T\\",
-      "JIT0",
-      "JIT1",
-      "LVRXREXT",
-      "L\\O\\C\\K\\"
-    ]
+    "0 Control": {
+      "RX Signals": [
+        "AVB0_RXC",
+        "AVB0_RX_CTL"
+      ],
+      "TX Signals": [
+        "AVB0_TXC",
+        "AVB0_TX_CTL"
+      ],
+      "Clock and Reset": [
+        "HDREXT",
+        "LVRXREXT",
+        "L\\O\\C\\K\\"
+      ],
+      "Interrupts and Control": [
+        "IP0_0",
+        "I\\R\\Q\\O\\U\\T\\"
+      ],
+      "Jitter Control": [
+        "JIT0",
+        "JIT1"
+      ]
+    }
   },
   "IFR": {
-    "General": [
-      "IFRXTN",
-      "IFRXTP"
-    ]
+    "General": {
+      "Transmit/Receive": [
+        "IFRXTN",
+        "IFRXTP"
+      ]
+    }
   },
+
   "Analog": {
     "Pins 0": [
       "AN011",
@@ -592,7 +627,7 @@
     "CAN1": [
       "CAN1_RX_A"
     ],
-    "CAN": [
+    "CAN_CLK": [
       "CAN_CLK_A"
     ],
     "HRx": [
@@ -698,23 +733,35 @@
   },
 
   "Clock": {
-    "Control": [
+  "Control": {
+    "Clock Selection": [
       "CKSEL",
+      "SSEL0",
+      "SSEL1"
+    ],
+    "DIGRF Clocks": [
       "DIGRF_CLKIN",
-      "DIGRF_CLKOUT",
+      "DIGRF_CLKOUT"
+    ],
+    "DSM Clocks": [
       "DSMDNCLK",
-      "DSMDPCLK",
+      "DSMDPCLK"
+    ],
+    "DSS Clocks": [
       "DSSDNCLK",
-      "DSSDPCLK",
-      "FSCLKST#",
+      "DSSDPCLK"
+    ],
+    "Status and Reset": [
+      "FSCLKST#"
+    ],
+    "Miscellaneous": [
       "MN",
       "NAWPN",
       "OSCTH",
-      "SSEL0",
-      "SSEL1",
       "SVRNGATE",
       "SVRPGATE"
-    ],
+    ]
+  },
     "Diffierential pair 0": [
       "CLKIN0",
       "nCLKIN0"
@@ -840,34 +887,50 @@
         "REFCLK"
     ],
 
-    "CACREF": [
+    "Last_CACREF": [
       "CACREF",
       "CACREF_A",
       "CACREF_B",
       "CACREF_C"
     ],
-    "Miscelleneous": [
-      "CLK",
-      "DU0_DOTCLKIN",
-      "IM0CLK",
-      "IM0_CLK",
-      "IM1CLK",
-      "IM1_CLK",
-      "LVDSRE-FRIN",
-      "LVDSREFRIN",
-      "MCLK_XI",
-      "MCLK_XO",
-      "RTC1HZ",
-      "RTXIN",
-      "RX1_B"
-    ],
+"Miscelleneous": {
+  "General Clock": [
+    "CLK"
+  ],
+  "Display Interface Clocks": [
+    "DU0_DOTCLKIN"
+  ],
+  "Image Interface Clocks": [
+    "IM0CLK",
+    "IM0_CLK",
+    "IM1CLK",
+    "IM1_CLK"
+  ],
+  "LVDS Related": [
+    "LVDSRE-FRIN",
+    "LVDSREFRIN"
+  ],
+  "Main Clocks (Crystal)": [
+    "MCLK_XI",
+    "MCLK_XO"
+  ],
+  "RTC": [
+    "RTC1HZ"
+  ],
+  "Radio / Receiver": [
+    "RTXIN",
+    "RX1_B"
+  ]
+},
     "Clock Oscillator": [
       "OSC1",
       "OSC2"
     ],
     "Clock Real Time Clock": [
       "RTC_X1",
-      "RTC_XI"
+      "RTC_X2",
+      "RTC_XI",
+      "RTC_XO"
     ],
     "Clock Video": [
       "VIDEO_X1"
@@ -906,23 +969,38 @@
       "RHSB1FCLP"
     ]
   },
-  "Control": {
-    "INPUTS": [
-      "MCS0#",
+"Control": {
+  "INPUTS": {
+    "Memory and Bus Control": [
+      "MCS0#"
+    ],
+    "Synchronization": [
       "MSYN#",
-      "MSYNZ",
-      "PLLSEL",
-      "PWDETRSTN",
+      "MSYNZ"
+    ],
+    "PLL Control": [
+      "PLLSEL"
+    ],
+    "Power and Reset": [
+      "PWDETRSTN"
+    ],
+    "Ready Signals": [
       "READY",
       "\\RDY",
       "R\\D\\",
-      "R\\D\\Y\\",
-      "B\\S\\"
+      "R\\D\\Y\\"
     ],
-  "Watchdog" : [
-    "\\WDTOVF"
-  ]
+    "Miscellaneous": [
+      "B\\S\\"
+    ]
   },
+  "Watchdog": {
+    "Overflow": [
+      "\\WDTOVF"
+    ]
+  }
+},
+
   "Chip_Select": {
     "Select": [
       "CS",
@@ -1089,31 +1167,6 @@
       "\\WAIT"
     ]
   },
-  "General_IO": {
-    "PGA": [
-      "PGA00N",
-      "PGA00P",
-      "PGA0P",
-      "PGA0N"
-    ],
-    "Port N": [
-      "PN04",
-      "PN05"
-    ],
-    "Port TF": [
-      "PTF3",
-      "PTF4"
-    ],
-    "Port TG": [
-      "PTG[4]"
-    ],
-    "Port TM": [
-      "PTM4",
-      "PTM5",
-      "PTM[4]",
-      "PTM[7]"
-    ]
-  },
   "Generic": {
     "ADC Channel": [
       "ADC_CH0",
@@ -1157,18 +1210,24 @@
       "\\QSPI_INT"
     ]
   },
-  "JTAG": {
-    "Interface": [
+"JTAG": {
+  "Interface": {
+    "DCU Signals": [
       "DCUTCK",
       "DCUTDI",
       "DCUTMS",
       "DCUTRSTN#",
+      "DCUTTDO"
+    ],
+    "JTAG Signals": [
       "JTAG_TCK",
       "JTAG_TDI",
       "JTAG_TMS",
-      "JTAG_TRST_N"
+      "JTAG_TRST_N",
+      "JTAG_TDO"
     ]
-  },
+  }
+},
   "Keypad": {
     "INPUTS": [
       "PWKY0N",
@@ -1188,23 +1247,35 @@
       "MIPI_DL1_P"
     ]
   },
-  "Mode": {
-    "General": [
+"Mode": {
+  "General": {
+    "Boot Selection": [
       "BOOTSELCPU",
-      "BSMODE",
+      "BSMODE"
+    ],
+    "Debug Mode": [
       "D\\B\\G\\M\\D\\",
-      "EHMD",
-      "MDE",
-      "MDX",
-      "MD_BYPASS",
-      "MD_CLK2",
-      "MD_CLKP",
-      "MD_OSCDRV0",
-      "MD_OSCDRV1",
-      "MPMD",
-      "THMODE",
       "\\DBGMD"
     ],
+    "Error Handling / Extended Mode": [
+      "EHMD",
+      "THMODE"
+    ],
+    "Main Mode Control": [
+      "MDE",
+      "MPMD",
+      "MDX"
+    ],
+    "Bypass and Clock Control": [
+      "MD_BYPASS",
+      "MD_CLK2",
+      "MD_CLKP"
+    ],
+    "Oscillator Drive Strength": [
+      "MD_OSCDRV0",
+      "MD_OSCDRV1"
+    ]
+  },
     "ASEMD": [
       "ASEMD",
       "ASEMD#",
@@ -1299,58 +1370,86 @@
     ]
   },
   "Other_Input": {
-    "Input": [
-      "ASEBRK#",
-      "BIAS",
-      "BYTE",
-      "B\\R\\E\\Q\\",
-      "B\\R\\L\\S\\",
-      "B\\U\\S\\H\\i\\Z\\",
-      "CA",
-      "CK_PHY",
-      "COL",
-      "CRS",
-      "C\\K\\I\\O\\2\\E\\N\\B\\",
-      "C\\K\\P\\R\\E\\Q\\",
-      "DCLIN",
-      "DCLIN_A",
-      "DCLIN_D",
-      "DDR_WE\\",
-      "IDSEL",
-      "LCLK",
-      "PCICLK",
-      "PWRGD",
-      "QBYPASS",
-      "RFCTLEN",
-      "RFIP",
-      "RTISO",
-      "R\\Q\\",
-      "SCIF_CLK_A",
-      "SCPT7",
-      "SCPT[7]",
-      "SD2_CD_A",
-      "SD2_WP_A",
-      "SDBUP",
-      "SEN",
-      "SIN",
-      "SIOMCLK",
-      "TAMPIN",
-      "THDCD",
-      "THDCTL",
-      "TMC1",
-      "TMC2",
-      "TX-CLK",
-      "TX_DATAN",
-      "TX_DATAP",
-      "VI1_CLK_A",
-      "XTAL48",
-      "\\ADTRG",
-      "\\BREQ",
-      "\\BRLS",
-      "\\BUSHiZ",
-      "\\CKIO2ENB",
-      "\\CKPREQ"
-    ],
+"Input": {
+  "Break and Debug": [
+    "ASEBRK#",
+    "B\\R\\E\\Q\\",
+    "B\\R\\L\\S\\",
+    "\\BREQ",
+    "\\BRLS"
+  ],
+  "Bias and Control": [
+    "BIAS",
+    "BYTE",
+    "QBYPASS",
+    "SEN",
+    "THDCTL",
+    "TMC1",
+    "TMC2"
+  ],
+  "Clock Inputs": [
+    "CK_PHY",
+    "LCLK",
+    "PCICLK",
+    "SCIF_CLK_A",
+    "SIOMCLK",
+    "VI1_CLK_A",
+    "XTAL48"
+  ],
+  "CK/REQ Variants": [
+    "C\\K\\I\\O\\2\\E\\N\\B\\",
+    "C\\K\\P\\R\\E\\Q\\",
+    "\\CKIO2ENB",
+    "\\CKPREQ"
+  ],
+  "DDR and Memory": [
+    "DDR_WE\\",
+    "IDSEL"
+  ],
+  "Bus Control": [
+    "B\\U\\S\\H\\i\\Z\\",
+    "\\BUSHiZ"
+  ],
+  "Trigger and Test": [
+    "\\ADTRG",
+    "TAMPIN"
+  ],
+  "Networking / PHY": [
+    "COL",
+    "CRS",
+    "TX-CLK",
+    "TX_DATAN",
+    "TX_DATAP"
+  ],
+  "RF Control": [
+    "RFCTLEN",
+    "RFIP",
+    "RTISO"
+  ],
+  "Data and Serial": [
+    "SIN",
+    "SCPT7",
+    "SCPT[7]"
+  ],
+  "SD Card Signals": [
+    "SD2_CD_A",
+    "SD2_WP_A",
+    "SDBUP"
+  ],
+  "Power and Reset": [
+    "PWRGD",
+    "THDCD"
+  ],
+  "DCLIN Variants": [
+    "DCLIN",
+    "DCLIN_A",
+    "DCLIN_D"
+  ],
+  "Miscellaneous": [
+    "CA",
+    "R\\Q\\"
+  ]
+},
     "Amplifier": [
       "AMP0N",
       "AMP0P",
@@ -1451,13 +1550,6 @@
       "OVC0",
       "OVC1"
     ],
-    "Port F": [
-      "PF13",
-      "PF14",
-      "PF15",
-      "PF8",
-      "PF9"
-    ],
     "PGA10": [
       "PGA10N",
       "PGA10P"
@@ -1483,11 +1575,6 @@
       "PN01",
       "PN02",
       "PN03"
-    ],
-    "Port TF": [
-      "PTF5",
-      "PTF6",
-      "PTF7"
     ],
     "Port TM": [
       "PTM6",
@@ -1603,46 +1690,51 @@
       "\\B\\S"
     ]
   },
-  "System": {
-    "General": [
-      "EMLE",
-      "FWE",
-      "FWP",
+"System": {
+  "General": {
+    "Reset and Power-On": [
       "MBKPRST#",
       "MRESET_N",
       "PRESET#",
       "PRST#",
       "PWRSTN#",
+      "VBATTRESET#"
+    ],
+    "Sleep and Standby Control": [
       "S\\L\\E\\E\\P\\",
+      "\\SLEEP",
+      "HSTBY#",
+      "H\\S\\T\\B\\Y\\"
+    ],
+    "Scan/Test Mode": [
       "S\\c\\a\\n\\_\\t\\e\\s\\t\\e\\n\\",
       "Scan_t\\e\\s\\t\\e\\n\\",
+      "\\Scan_testen"
+    ],
+    "USB and UB Control": [
       "UB",
       "UB#",
-      "USB20_VUBUSIN",
       "U\\B\\P\\M\\",
-      "VBATTRESET#",
-      "VBAT_EHC",
-      "\\SLEEP",
-      "\\Scan_testen",
       "\\UBPM",
+      "USB20_VUBUSIN"
+    ],
+    "Voltage and Battery Control": [
+      "VBAT_EHC"
+    ],
+    "Mode and Feature Enable": [
+      "EMLE",
       "FEW",
-      "HSTBY#",
-      "H\\S\\T\\B\\Y\\",
+      "FWE",
+      "FWP",
       "UPSEL"
     ]
-  },
+  }
+},
   "Wake": {
     "General": [
       "WKUP0#",
       "\\WKUP0",
       "\\WKUP1"
-    ]
-  },
-  "Other_VBUS": {
-    "General": [
-      "VBUS",
-      "VBUS0",
-      "VBUS1"
     ]
   },
   "Other_VIN": {

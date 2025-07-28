@@ -24,10 +24,8 @@ def side_for_one_symbol(df):
     return df_new.reset_index(drop=True)
 
 
-def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balanced_Assignment=False):
-    import pandas as pd
-    import re
-    
+'''def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balanced_Assignment=False):
+  
     # Step 1: Sort groups by numeric key to ensure ordered processing
     def extract_numeric_key(pin_name):
         """Extract numeric part from pin name for sorting."""
@@ -91,6 +89,42 @@ def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balance
     # ✅ Lighthouse View: Final Rebalancing if Balanced_Assignment=True
     if Balanced_Assignment:
         parts = gridspace_constraints.lighthouse_view(parts, n_parts, max_rows)
+
+    return parts'''
+
+def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balanced_Assignment=False):
+    """
+    Split df into n_parts without breaking Priority groups.
+    Maintains original order of df (row order), not sorted by numeric key.
+    If a group cannot fit in current part, move to next part (even if overflow occurs).
+    """
+
+    # ✅ Group rows by Priority in original order
+    grouped = [(priority, group) for priority, group in df.groupby('Priority', sort=True)]
+
+    parts = [pd.DataFrame() for _ in range(n_parts)]
+    part_row_counts = [0] * n_parts
+    current_part = 0
+
+    for priority, group in grouped:
+        group_size = len(group)
+
+        # If adding this group exceeds max_rows AND current part is not empty -> move to next part
+        if part_row_counts[current_part] > 0 and part_row_counts[current_part] + group_size > max_rows:
+            current_part += 1
+
+        # If we run out of parts, just append to the last part
+        if current_part >= n_parts:
+            current_part = n_parts - 1
+
+        # Add group to current part
+        parts[current_part] = pd.concat([parts[current_part], group])
+        part_row_counts[current_part] += group_size
+
+    # ✅ Lighthouse View: Final Rebalancing if Balanced_Assignment=True
+    if Balanced_Assignment:
+        #parts = gridspace_constraints.lighthouse_view(parts, n_parts, max_rows)
+        parts = gridspace_constraints.distributed_view(parts, n_parts, max_rows)
 
     return parts
 

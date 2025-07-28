@@ -22,10 +22,10 @@ def priority_order(row, df, priority_mapping_json):
         return mappings['priority_map'][value]
 
     # 2. Input + Port check 
-    is_input_or_io = electrical_type in ['Input', 'I/O']
+    is_input_or_io_or_output = electrical_type in ['Input', 'I/O','Output']
     is_port = value.startswith("Port")
     
-    if is_input_or_io and is_port:
+    if is_input_or_io_or_output and is_port:
         # 2A. Mixed port assignment
         port_assignment = handle_mixed_port_assignment(pin_display_name, value, df)
         if port_assignment:
@@ -45,14 +45,22 @@ def priority_order(row, df, priority_mapping_json):
     # 3. Generic Port handling
     if is_port:
         parts = value.split()
+
         if len(parts) >= 2:
+            # Example: "P 10"
             try:
                 port_number = int(parts[1])
-                return f"P_Port {port_number:02d}"
+                return f"P_Port_{port_number:02d}"
             except ValueError:
-                return f"P_Port {parts[1]}"
-        else:
-            return f"P_Port"
+                return f"P_Port_{parts[1]}"
+
+        elif len(parts) == 1:
+            # Example: "Port_00"
+            sub_parts = parts[0].split("_")
+            if len(sub_parts) == 2 and sub_parts[1].isdigit():
+                port_number = int(sub_parts[1])
+                return f"P_Port_{port_number:02d}"
+
 
     # 4. Prefix-based mapping fallback
     for key, prefix in mappings.get('priority_map', {}).items():
@@ -63,34 +71,50 @@ def priority_order(row, df, priority_mapping_json):
     return f"ZZ_{value}"
 
 def swap_pins_for_that_row(df, index, swap_conditions):
+    print(f"🔍 Processing row: {index}")
+    
     current_display = df.loc[index, 'Pin Display Name']
     current_alternate = df.loc[index, 'Pin Alternate Name']
     
+    # Split alternate names into list
     pin_names = [name.strip() for name in current_alternate.split('/')]
 
     matched = False
     
+    # Check swap conditions
     for key, details in swap_conditions.items():      
+        
         if key in pin_names or key == current_display:
             matched_part = key
             matched = True
+            print(f"✅Swap Match Found: {matched_part}")
             
-            # If key in alternate, replace it
+            # Replace in alternate if match found there
             if key in pin_names:
                 new_alternate = current_alternate.replace(matched_part, current_display)
+                print(f"♻️ Swapping in Alternate: {current_alternate} ➡️ {new_alternate}")
             else:
                 new_alternate = current_alternate
+                print(f"⚠️ No swap in Alternate (key not found there)")
             
             new_display = matched_part
+            print(f"🆕 New Display: {new_display}")
             
+            # Apply updates to DataFrame
             df.loc[index, 'Pin Display Name'] = new_display
             df.loc[index, 'Pin Alternate Name'] = new_alternate
             
+            # If electrical type change exists
             if 'type' in details:
+                old_type = df.loc[index, 'Electrical Type']
                 df.loc[index, 'Electrical Type'] = details['type']
+                print(f"🔌 Electrical Type changed: {old_type} ➡️ {details['type']}")
             
-            print(f"Updated Display: {new_display}, Alternate: {new_alternate}")
+            print(f"✅ Row Updated Successfully!\n")
             return
+    
+    if not matched:
+        print(f"❌ No match found for row {index}\n")
 
 
 def handle_mixed_port_assignment(pin_display_name, grouping_value, df):

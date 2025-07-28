@@ -73,8 +73,8 @@ def automate_streamlit(input_dir, output_dir):
 
 if __name__ == "__main__":
     # Configure these paths (use raw strings for Windows)
-    input_directory = r"C:\Users\a5149169\Downloads\RA_Testing\next_sprint_testing\Unique_Symbols_Excels"
-    output_directory = r"C:\Users\a5149169\Downloads\RA_Testing\next_sprint_testing\Unique_Symbol_Excels_Output"
+    input_directory = r"C:\Users\a5149169\Downloads\RA_Testing\next_sprint_testing\Copied_Files"
+    output_directory = r"C:\Users\a5149169\Downloads\RA_Testing\next_sprint_testing\Tool_Output_Monday"
 
     # Create output directory if needed
     os.makedirs(output_directory, exist_ok=True)

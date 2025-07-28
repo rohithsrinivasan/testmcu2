@@ -301,3 +301,49 @@ def lighthouse_view(parts, n_parts, max_rows):
         part_counts[idx] += len(group)
 
     return new_parts
+
+
+def distributed_view(parts, n_parts, max_rows):
+    """
+    Re-distribute into balanced parts while:
+    ✅ Preserving order
+    ✅ Keeping 'Priority' groups intact
+    ✅ Allowing slight imbalance
+    """
+
+    all_data = pd.concat(parts, ignore_index=True)
+
+    # ✅ Group by Priority in original order
+    grouped = [(priority, group) for priority, group in all_data.groupby('Priority', sort=False)]
+
+    # Calculate target size per part
+    total_rows = len(all_data)
+    target_size = total_rows // n_parts
+
+    new_parts = []
+    current_part = []
+    current_count = 0
+
+    for i, (priority, group) in enumerate(grouped):
+        group_size = len(group)
+
+        # If adding this group exceeds target size (and not last part) -> cut here
+        if current_count + group_size > target_size and len(new_parts) < n_parts - 1:
+            new_parts.append(pd.concat(current_part, ignore_index=True))
+            current_part = []
+            current_count = 0
+
+        current_part.append(group)
+        current_count += group_size
+
+    # Append last part
+    if current_part:
+        new_parts.append(pd.concat(current_part, ignore_index=True))
+
+    # ✅ Debug log
+    print(f"🔄 Distributed View (Preserve Order): {total_rows} pins")
+    for i, part in enumerate(new_parts, 1):
+        print(f"   📦 Part {i}: {len(part)} pins (indices {part.index.min()}-{part.index.max()})")
+
+    return new_parts
+

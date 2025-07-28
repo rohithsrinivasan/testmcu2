@@ -1123,52 +1123,66 @@
     ]
   },
   "Miscellaneous_IO": {
-    "Pins": [
-      "\\ADTRG",
-      "\\AFE_RLYCNT",
-      "\\ASEBRK",
-      "\\DEVSEL",
-      "\\IOIS16",
-      "\\IRDY",
-      "\\PCCREG",
-      "\\PCIFRAME",
-      "\\PCILOCK",
-      "\\PCISTOP",
-      "\\PERR",
-      "\\SERR",
-      "A\\D\\T\\R\\G\\",
-      "ANT",
-      "CF",
-      "CL2",
-      "CT",
-      "D\\E\\V\\S\\E\\L\\",
-      "HCTS0_A#",
-      "HRTS0_A#",
-      "HRX0_A",
-      "HSCK0_A",
-      "I\\O\\I\\S\\1\\6\\",
-      "I\\R\\D\\Y\\",
-      "INT_ANT",
-      "MZQ",
-      "NSD",
-      "OM_DQS",
-      "P\\C\\I\\F\\R\\A\\M\\E\\",
-      "P\\C\\I\\L\\O\\C\\K\\",
-      "P\\C\\I\\S\\T\\O\\P\\",
-      "P\\E\\R\\R\\",
-      "PWCTEST1",
-      "PWTEST",
-      "QSPI1_SSL",
-      "RFIOP",
-      "S\\E\\R\\R\\",
-      "SIOFSYNC",
-      "SSI_WS23",
-      "TSTBUSA",
-      "TxD_SIO",
-      "VCPWC",
-      "VEPWC",
-      "XSPI0_DS"
-    ],
+"Pins": {
+  "Trigger and Analog": [
+    "\\ADTRG",
+    "A\\D\\T\\R\\G\\",
+    "\\AFE_RLYCNT",
+    "ANT",
+    "INT_ANT"
+  ],
+  "Break / Debug": [
+    "\\ASEBRK"
+  ],
+  "PCI / PC Card Interface": [
+    "\\DEVSEL",
+    "D\\E\\V\\S\\E\\L\\",
+    "\\IOIS16",
+    "I\\O\\I\\S\\1\\6\\",
+    "\\IRDY",
+    "I\\R\\D\\Y\\",
+    "\\PCCREG",
+    "\\PCIFRAME",
+    "\\PCILOCK",
+    "\\PCISTOP",
+    "\\PERR",
+    "\\SERR",
+    "P\\C\\I\\F\\R\\A\\M\\E\\",
+    "P\\C\\I\\L\\O\\C\\K\\",
+    "P\\C\\I\\S\\T\\O\\P\\",
+    "P\\E\\R\\R\\",
+    "S\\E\\R\\R\\"
+  ],
+  "Serial / High-Speed Interface": [
+    "HCTS0_A#",
+    "HRTS0_A#",
+    "HRX0_A",
+    "HSCK0_A",
+    "TxD_SIO",
+    "SIOFSYNC",
+    "SSI_WS23",
+    "QSPI1_SSL",
+    "XSPI0_DS"
+  ],
+  "Power and Test Control": [
+    "PWCTEST1",
+    "PWTEST",
+    "TSTBUSA",
+    "VCPWC",
+    "VEPWC"
+  ],
+  "Memory / Data Strobe": [
+    "OM_DQS"
+  ],
+  "Miscellaneous": [
+    "CF",
+    "CL2",
+    "CT",
+    "MZQ",
+    "NSD",
+    "RFIOP"
+  ]
+},
     "CTS": [
       "CTS0_B#",
       "CTS1_B#",
@@ -1188,22 +1202,33 @@
     "DU2": [
       "DU0_EXVSYNC"
     ],
-    "Debug" :[
-        "THDAG",
-        "THDAS",
-        "DCK",
-        "DCTL",
-        "DDI",
-        "DDO",
-        "DRDY#",
-        "DRST#",
-        "\\DCURDY",
-        "\\DCUTRST",
-        "DCURDY",
-        "DCUTRST",
-        "\\DRDY",
-        "DETMS"
-    ],
+"Debug": {
+  "Trigger and Halt Control": [
+    "THDAG",
+    "THDAS"
+  ],
+  "Debug Clock and Control": [
+    "DCK",
+    "DCTL"
+  ],
+  "Debug Data Signals": [
+    "DDI",
+    "DDO"
+  ],
+  "Ready and Reset Control": [
+    "DRDY#",
+    "\\DRDY",
+    "DCURDY",
+    "\\DCURDY",
+    "DRST#",
+    "DCUTRST",
+    "\\DCUTRST"
+  ],
+  "Mode Select / State": [
+    "DETMS"
+  ]
+},
+
     "ET0": [
       "MDIO",
       "ET0_MDIO",
@@ -3590,8 +3615,7 @@
       "PM6",
       "PM7",
       "PM8",
-      "PM9",
-      "PM_RES1_DRV0"
+      "PM9"
     ],
     "N": [
       "PN0",
@@ -3601,7 +3625,13 @@
       "PN4",
       "PN5",
       "PN6",
-      "PN7"
+      "PN7",
+      "PN00",
+      "PN01",
+      "PN02",
+      "PN03",
+      "PN04",
+      "PN05"
     ],
     "P": [
       "PP0",
@@ -3659,37 +3689,58 @@
       "PT4",
       "PT5",
       "PT6",
-      "PT7",
-      "PTD5",
-      "PTD7",
-      "PTD[5]",
-      "PTD[7]",
-      "PTE0",
-      "PTE1",
-      "PTE2",
-      "PTE3",
-      "PTE6",
-      "PTE7",
-      "PTE[0]",
-      "PTE[1]",
-      "PTE[2]",
-      "PTE[3]",
-      "PTE[6]",
-      "PTE[7]",
-      "PTF[3]",
-      "PTF[4]",
-      "PTF[5]",
-      "PTF[6]",
-      "PTF[7]",
-      "PTG4",
-      "PTG5",
-      "PTG[5]",
-      "PTJ1",
-      "PTJ3",
-      "PTJ4",
-      "PTJ5",
-      "PTM[5]",
-      "PTM[6]"
+      "PT7"],
+    "PTD": [
+        "PTD5",
+        "PTD7",
+        "PTD[5]",
+        "PTD[7]"
+    ],
+    "PTE": [
+        "PTE0",
+        "PTE1",
+        "PTE2",
+        "PTE3",
+        "PTE6",
+        "PTE7",
+        "PTE[0]",
+        "PTE[1]",
+        "PTE[2]",
+        "PTE[3]",
+        "PTE[6]",
+        "PTE[7]"
+    ],
+    "PTF": [
+        "PTF[3]",
+        "PTF[4]",
+        "PTF[5]",
+        "PTF[6]",
+        "PTF[7]",
+        "PTF3",
+        "PTF4",
+        "PTF5",
+        "PTF6",
+        "PTF7"
+    ],
+    "PTG": [
+        "PTG4",
+        "PTG5",
+        "PTG[4]",
+        "PTG[5]"
+    ],
+    "PTJ": [
+        "PTJ1",
+        "PTJ3",
+        "PTJ4",
+        "PTJ5"
+    ],
+    "PTM": [
+        "PTM[5]",
+        "PTM[6]",
+        "PTM4",
+        "PTM5",
+        "PTM[4]",
+        "PTM[7]"
     ],
     "U": [
       "PU0",
@@ -3745,14 +3796,20 @@
       "USB0_DP"
     ],
     "1": [
-      "USB1_DM",
-      "USB1_DP",
       "USB1_M",
-      "USB1_M(ANALOG)",
-      "USB1_P",
-      "USB1_P(ANALOG)",
+      "USB1_P"
+    ],
+    "1_D":[
+      "USB1_DM",
+      "USB1_DP"
+    ],
+    "D1":[
       "USB_DM1",
       "USB_DP1"
+    ],
+    "1_Analog" :[
+          "USB1_M(ANALOG)",
+          "USB1_P(ANALOG)"
     ],
     "2_0": [
       "USB20_DM",
@@ -3764,10 +3821,11 @@
     ],
     "2_M": [
       "USB2_M",
-      "USB2_M(ANALOG)"
+      "USB2_P"
+
     ],
     "2_P": [
-      "USB2_P",
+      "USB2_M(ANALOG)",
       "USB2_P(ANALOG)"
     ],
     "3_0": [

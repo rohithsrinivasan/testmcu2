@@ -30,7 +30,6 @@ def side_for_singlepart(df):
     return processed_dfs
 '''
 
-
 def side_for_multipart(dataframes_dict):
     if not isinstance(dataframes_dict, dict):
         raise ValueError("Input must be a dictionary")
@@ -40,6 +39,9 @@ def side_for_multipart(dataframes_dict):
     
     processed_dfs = {}
     
+    # ✅ Count how many tables are Power tables
+    power_tables = [name for name in dataframes_dict.keys() if name.startswith("Power")]
+    
     for table_name, df in dataframes_dict.items():
         if df is None:
             processed_dfs[table_name] = None
@@ -47,12 +49,19 @@ def side_for_multipart(dataframes_dict):
         
         df_processed = df.copy(deep=True)
 
-        # ✅ Apply logic based on key name
+        # ✅ Apply logic based on conditions
         if table_name.startswith("Power"):
-            # Apply filter_out_power_pins to assign 'Side' column
-            df_processed['Side'] = df_processed.apply(lambda row: power_pins_constaints.filter_out_power_pins(row, df_processed), axis=1)
+            if len(power_tables) == 1:
+                # ✅ Only one Power table → apply power-specific logic
+                df_processed = df.copy()
+                df_processed = single80pin_constraints.filter_and_sort_by_priority(df_processed)
+                df_processed['Side'] = df_processed.apply(lambda row: power_pins_constaints.filter_out_power_pins(row, df_processed), axis=1)
+                df_processed = single80pin_constraints.assigning_ascending_order_for_similar_group(df_processed)
+            else:
+                # ✅ More than one Power table → use general logic
+                df_processed = general_constraints.side_for_one_symbol(df_processed)
         else:
-            # Default logic for non-power tables
+            # ✅ Default for non-Power tables
             df_processed = general_constraints.side_for_one_symbol(df_processed)
         
         processed_dfs[table_name] = df_processed

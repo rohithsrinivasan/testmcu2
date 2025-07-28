@@ -9,7 +9,6 @@
       "ISOVSS",
       "PGAVSS0",
       "VSS_MIPI",
-      "VSS_USBHS",
       "PGAVSS1"
     ],
     "VSS": [
@@ -1116,6 +1115,7 @@
       "AVSS_USBHS",
       "PVSS_USBA",
       "PVSS_USBHS",
+      "VSS_USBHS",
       "USBAPVss",
       "USBAVss",
       "USBDPVss",
