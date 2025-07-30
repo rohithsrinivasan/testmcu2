@@ -14,7 +14,8 @@ setup(
     packages=[
         "Extraction",
         "Grouping",
-        "Side_Allocation"
+        "Side_Allocation",
+        "utils"
     ],
     install_requires=[
         "fitz",
