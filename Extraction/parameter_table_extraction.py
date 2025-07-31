@@ -47,3 +47,4 @@ def parameter_tables(input_buffer,part_number):
       st.write("Page with 'Symbol Parameters' not found.")
 
   return None
+

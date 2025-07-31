@@ -82,6 +82,9 @@ if 'pin_table' in st.session_state:
         'I/O': 'Grouping/mcu_database/mcu_io.json',
         'Passive': 'Grouping/mcu_database/mcu_passive.json'
     }
+    json_paths_Single = {
+    'Single': 'Grouping/shrinidhi_database/combined.json'
+    }
 
     if database_for_pin_type:
         st.success("Using database for Type Assignment")
@@ -98,7 +101,7 @@ if 'pin_table' in st.session_state:
         pin_table = st.session_state['pin_table']
         required_cols = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name']
         before_grouping_flag, added_empty_grouping_column = general_funct.check_excel_format(pin_table,  required_cols, optional_column='Grouping')
-        pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths, SENSITIVITY= False)  
+        pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths_Single, SENSITIVITY= False, SINGLE_FILE=True)  
 
     # Common operations after grouping
         st.dataframe(pin_grouping_table)

@@ -11,6 +11,7 @@ from Extraction.gemini_api_functions import chat_interface
 from Extraction.gemini_api_functions import pinout_reader
 from Extraction import part_number_extraction
 from Extraction import pin_table_extraction
+from Extraction import fetch_from_url
 
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -41,7 +42,15 @@ ui_widgets.header_intro_2()
 if "input_buffer" not in st.session_state:
     st.session_state.input_buffer = None
 
-input_buffer = st.file_uploader("Upload a file", type=("PDF"))
+input_method = st.radio("Choose input method:", ["Upload File", "Enter URL"])
+
+if input_method == "Upload File":
+    input_buffer = st.file_uploader("Upload a file", type=("PDF"))
+else:
+    pdf_url = st.text_input("Enter PDF URL:")
+    if pdf_url and st.button("Load PDF from URL"):
+        # Add URL validation and PDF fetching logic here
+        input_buffer = fetch_from_url.fetch_pdf_from_url(pdf_url) 
 
 if input_buffer:
     st.session_state.input_buffer = input_buffer  # Store in session state

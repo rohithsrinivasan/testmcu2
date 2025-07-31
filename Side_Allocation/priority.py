@@ -3,11 +3,11 @@ import json
 
 def assigning_priority(df,priority_mapping_json):
     df_copy = df.copy()  
-    df_copy['Priority'] = df_copy.apply(lambda row: priority_order(row, df_copy,priority_mapping_json), axis=1)
+    df_copy['Priority'] = df_copy.apply(lambda row: priority_order(row, df_copy,priority_mapping_json,SWAP = False), axis=1)
     return df_copy
 
 
-def priority_order(row, df, priority_mapping_json):
+def priority_order(row, df, priority_mapping_json, SWAP = True):
     with open(priority_mapping_json, 'r') as file:
         mappings = json.load(file)
 
@@ -18,8 +18,11 @@ def priority_order(row, df, priority_mapping_json):
     electrical_type = str(row.get('Electrical Type', ''))
 
     # 1. Highest priority: Direct mapping
+    # if value in mappings.get('priority_map', {}):
+    #     return mappings['priority_map'][value]
     if value in mappings.get('priority_map', {}):
-        return mappings['priority_map'][value]
+        return f"{mappings['priority_map'][value]}{value}"
+
 
     # 2. Input + Port check 
     is_input_or_io_or_output = electrical_type in ['Input', 'I/O','Output']
@@ -32,13 +35,13 @@ def priority_order(row, df, priority_mapping_json):
             print(f"Step 2A: Mixed port assignment returned: {port_assignment}")
             return port_assignment
 
-        # 2B. Swap conditions
-        pin_names = [name.strip() for name in value_alternative.split('/')]
-        for alt_name, priority in mappings.get('swap_conditions', {}).items():
-            if alt_name in pin_names:
-                print(f"Swap match: '{alt_name}' found in '{value_alternative}' → Priority: {priority}")
-                swap_pins_for_that_row(df, index, mappings['swap_conditions'])
-                return priority
+        if SWAP == True :
+            pin_names = [name.strip() for name in value_alternative.split('/')]
+            for alt_name, priority in mappings.get('swap_conditions', {}).items():
+                if alt_name in pin_names:
+                    print(f"Swap match: '{alt_name}' found in '{value_alternative}' → Priority: {priority}")
+                    swap_pins_for_that_row(df, index, mappings['swap_conditions'])
+                    return priority
 
         return f"P_{value}"
 

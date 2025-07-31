@@ -1,0 +1,5975 @@
+{
+    "ADTRG#": [
+        "ADTRG#"
+    ],
+    "AFE_*": {
+        "AFE_HC1": [
+            "AFE_HC1"
+        ],
+        "AFE_RLYCNT#": [
+            "AFE_RLYCNT#"
+        ],
+        "AFE_SCLK": [
+            "AFE_SCLK"
+        ]
+    },
+    "AND*": {
+        "ANDS*": [
+            "ANDS0",
+            "ANDS1",
+            "ANDS2",
+            "ANDS3",
+            "ANDS4",
+            "ANDS5",
+            "ANDS6"
+        ],
+        "ANDS0": {
+            "Diff Pair": [
+                "ANDS0N",
+                "ANDS0P"
+            ]
+        },
+        "ANDS1": {
+            "Diff Pair": [
+                "ANDS1N",
+                "ANDS1P"
+            ]
+        },
+        "ANDS2": {
+            "Diff Pair": [
+                "ANDS2N",
+                "ANDS2P"
+            ]
+        },
+        "ANDS3": {
+            "Diff Pair": [
+                "ANDS3N",
+                "ANDS3P"
+            ]
+        },
+        "ANDS4": {
+            "Diff Pair": [
+                "ANDS4N",
+                "ANDS4P"
+            ]
+        },
+        "ANDS5": {
+            "Diff Pair": [
+                "ANDS5N",
+                "ANDS5P"
+            ]
+        },
+        "ANDSSG": [
+            "ANDSSG"
+        ]
+    },
+    "ANT*": {
+        "ANT": [
+            "ANT"
+        ],
+        "INT_ANT": [
+            "INT_ANT"
+        ]
+    },
+    "ASEBR*": {
+        "ASEBRK": [
+            "ASEBRK#"
+        ],
+        "ASEBRK#": [
+            "ASEBRK#"
+        ],
+        "ASEBRKAK": [
+            "ASEBRKAK#"
+        ],
+        "ASEBRKAK#": [
+            "ASEBRKAK#"
+        ]
+    },
+    "ASEM*": {
+        "ASEMD": [
+            "ASEMD",
+            "ASEMD#"
+        ],
+        "ASEMD0": [
+            "ASEMD0#"
+        ],
+        "ASEMD0#": [
+            "ASEMD0#"
+        ],
+        "ASEMODE": [
+            "ASEMODE"
+        ]
+    },
+    "AUD*": {
+        "AUDATA*": [
+            "AUDATA0",
+            "AUDATA1",
+            "AUDATA2",
+            "AUDATA3",
+            "AUDATA[0]",
+            "AUDATA[1]",
+            "AUDATA[2]",
+            "AUDATA[3]"
+        ],
+        "AUDCK": [
+            "AUDCK"
+        ],
+        "AUDRST": [
+            "AUDRST",
+            "AUDRST#",
+            "AUDRSTZ"
+        ],
+        "AUDSYNC": [
+            "AUDSYNC",
+            "AUDSYNC#",
+            "AUDSYNCZ"
+        ]
+    },
+    "AUDIO_CLK*": [
+        "AUDIO_CLKA_A",
+        "AUDIO_CLKB_A",
+        "AUDIO_CLKC",
+        "AUDIO_CLKOUT"
+    ],
+    "AUDIO_X*": [
+        "AUDIO_X1",
+        "AUDIO_X2"
+    ],
+    "AURORES*": [
+        "AURORES1#",
+        "AURORES1Z",
+        "AURORES2#",
+        "AURORES2Z",
+        "AURORESPD#",
+        "AURORESPDZ"
+    ],
+    "Address Bit": {
+        "A*": [
+            "A0",
+            "A0(HBS)#",
+            "A1",
+            "A10",
+            "A11",
+            "A12",
+            "A13",
+            "A14",
+            "A15",
+            "A16",
+            "A17",
+            "A18",
+            "A19",
+            "A2",
+            "A20",
+            "A21",
+            "A22",
+            "A23",
+            "A24",
+            "A25",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "A7",
+            "A8",
+            "A9"
+        ],
+        "A0*": [
+            "A00",
+            "A01",
+            "A02",
+            "A03",
+            "A04",
+            "A05",
+            "A06",
+            "A07",
+            "A08",
+            "A09"
+        ],
+        "AD*": [
+            "AD0",
+            "AD1",
+            "AD10",
+            "AD11",
+            "AD12",
+            "AD13",
+            "AD14",
+            "AD15",
+            "AD16",
+            "AD17",
+            "AD18",
+            "AD19",
+            "AD2",
+            "AD20",
+            "AD21",
+            "AD22",
+            "AD23",
+            "AD24",
+            "AD25",
+            "AD26",
+            "AD27",
+            "AD28",
+            "AD29",
+            "AD3",
+            "AD30",
+            "AD31",
+            "AD4",
+            "AD5",
+            "AD6",
+            "AD7",
+            "AD8",
+            "AD9"
+        ],
+        "ADC0I*": [
+            "ADC0I0",
+            "ADC0I1",
+            "ADC0I10",
+            "ADC0I11",
+            "ADC0I12",
+            "ADC0I13",
+            "ADC0I14",
+            "ADC0I15",
+            "ADC0I16",
+            "ADC0I17",
+            "ADC0I18",
+            "ADC0I19",
+            "ADC0I2",
+            "ADC0I3",
+            "ADC0I4",
+            "ADC0I5",
+            "ADC0I6",
+            "ADC0I7",
+            "ADC0I8",
+            "ADC0I9"
+        ],
+        "ADC1I*": [
+            "ADC1I0",
+            "ADC1I1",
+            "ADC1I10",
+            "ADC1I11",
+            "ADC1I12",
+            "ADC1I13",
+            "ADC1I14",
+            "ADC1I15",
+            "ADC1I16",
+            "ADC1I17",
+            "ADC1I18",
+            "ADC1I19",
+            "ADC1I2",
+            "ADC1I3",
+            "ADC1I4",
+            "ADC1I5",
+            "ADC1I6",
+            "ADC1I7",
+            "ADC1I8",
+            "ADC1I9"
+        ],
+        "ADCC0I*": [
+            "ADCC0I00",
+            "ADCC0I01",
+            "ADCC0I02",
+            "ADCC0I03",
+            "ADCC0I10",
+            "ADCC0I11",
+            "ADCC0I12",
+            "ADCC0I13",
+            "ADCC0I20",
+            "ADCC0I21",
+            "ADCC0I22",
+            "ADCC0I23",
+            "ADCC0I30",
+            "ADCC0I31",
+            "ADCC0I32",
+            "ADCC0I33"
+        ],
+        "ADCC1I*": [
+            "ADCC1I00",
+            "ADCC1I01",
+            "ADCC1I02",
+            "ADCC1I03",
+            "ADCC1I10",
+            "ADCC1I11",
+            "ADCC1I12",
+            "ADCC1I13",
+            "ADCC1I20",
+            "ADCC1I21",
+            "ADCC1I22",
+            "ADCC1I23",
+            "ADCC1I30",
+            "ADCC1I31",
+            "ADCC1I32",
+            "ADCC1I33",
+            "ADCC1I40",
+            "ADCC1I41",
+            "ADCC1I42",
+            "ADCC1I50",
+            "ADCC1I51",
+            "ADCC1I52",
+            "ADCC1I60",
+            "ADCC1I61",
+            "ADCC1I62"
+        ],
+        "ADCC2I*": [
+            "ADCC2I00",
+            "ADCC2I01",
+            "ADCC2I02",
+            "ADCC2I03",
+            "ADCC2I10",
+            "ADCC2I11",
+            "ADCC2I12",
+            "ADCC2I13",
+            "ADCC2I20",
+            "ADCC2I21",
+            "ADCC2I22",
+            "ADCC2I23",
+            "ADCC2I30",
+            "ADCC2I31",
+            "ADCC2I32",
+            "ADCC2I33"
+        ],
+        "ADCD0I*": [
+            "ADCD0I0",
+            "ADCD0I1",
+            "ADCD0I10",
+            "ADCD0I11",
+            "ADCD0I2",
+            "ADCD0I3",
+            "ADCD0I4",
+            "ADCD0I5",
+            "ADCD0I6",
+            "ADCD0I7",
+            "ADCD0I8",
+            "ADCD0I9"
+        ],
+        "ADCD1I*": [
+            "ADCD1I0",
+            "ADCD1I1",
+            "ADCD1I10",
+            "ADCD1I11",
+            "ADCD1I2",
+            "ADCD1I3",
+            "ADCD1I4",
+            "ADCD1I5",
+            "ADCD1I6",
+            "ADCD1I7",
+            "ADCD1I8",
+            "ADCD1I9"
+        ],
+        "ADCG0I*": [
+            "ADCG0I0",
+            "ADCG0I1",
+            "ADCG0I10",
+            "ADCG0I11",
+            "ADCG0I2",
+            "ADCG0I3",
+            "ADCG0I4",
+            "ADCG0I5",
+            "ADCG0I6",
+            "ADCG0I7",
+            "ADCG0I8",
+            "ADCG0I9"
+        ],
+        "ADCG1I*": [
+            "ADCG1I0",
+            "ADCG1I1",
+            "ADCG1I10",
+            "ADCG1I11",
+            "ADCG1I2",
+            "ADCG1I3",
+            "ADCG1I4",
+            "ADCG1I5",
+            "ADCG1I6",
+            "ADCG1I7",
+            "ADCG1I8",
+            "ADCG1I9"
+        ],
+        "MA*": [
+            "MA0",
+            "MA1",
+            "MA10",
+            "MA11",
+            "MA12",
+            "MA13",
+            "MA14",
+            "MA2",
+            "MA3",
+            "MA4",
+            "MA5",
+            "MA6",
+            "MA7",
+            "MA8",
+            "MA9"
+        ]
+    },
+    "Amplifier-AMP*": {
+        "AMP*N": [
+            "AMP0N",
+            "AMP0P",
+            "AMP1N",
+            "AMP2N"
+        ],
+        "AMP*O": [
+            "AMP0O",
+            "AMP1O",
+            "AMP2O"
+        ]
+    },
+    "Analog input": {
+        "AIN*": [
+            "AIN0",
+            "AIN1",
+            "AIN10",
+            "AIN11",
+            "AIN12",
+            "AIN13",
+            "AIN14",
+            "AIN15",
+            "AIN2",
+            "AIN3",
+            "AIN4",
+            "AIN5",
+            "AIN6",
+            "AIN7",
+            "AIN8",
+            "AIN9"
+        ],
+        "AN*": [
+            "AN0",
+            "AN1",
+            "AN10",
+            "AN11",
+            "AN12",
+            "AN13",
+            "AN14",
+            "AN15",
+            "AN2",
+            "AN3",
+            "AN4",
+            "AN5",
+            "AN6",
+            "AN7",
+            "AN8",
+            "AN9",
+            "AN[0]",
+            "AN[1]",
+            "AN[2]",
+            "AN[3]",
+            "AN[4]",
+            "AN[5]",
+            "AN[6]",
+            "AN[7]"
+        ],
+        "AN0*": [
+            "AN000",
+            "AN001",
+            "AN002",
+            "AN003",
+            "AN010",
+            "AN011",
+            "AN012",
+            "AN013",
+            "AN020",
+            "AN021",
+            "AN022",
+            "AN023",
+            "AN030",
+            "AN031",
+            "AN032",
+            "AN033",
+            "AN040",
+            "AN041",
+            "AN042",
+            "AN043",
+            "AN050",
+            "AN051",
+            "AN052",
+            "AN053",
+            "AN060",
+            "AN061",
+            "AN062",
+            "AN063"
+        ],
+        "AN10*": [
+            "AN100",
+            "AN101",
+            "AN102",
+            "AN103"
+        ],
+        "AN11*": [
+            "AN110",
+            "AN111",
+            "AN112",
+            "AN113"
+        ],
+        "AN12*": [
+            "AN120",
+            "AN121",
+            "AN122",
+            "AN123"
+        ],
+        "AN13*": [
+            "AN130",
+            "AN131",
+            "AN132"
+        ],
+        "AN14*": [
+            "AN140",
+            "AN141",
+            "AN142"
+        ],
+        "AN15*": [
+            "AN150",
+            "AN151",
+            "AN152"
+        ],
+        "AN16*": [
+            "AN160",
+            "AN161",
+            "AN162"
+        ],
+        "AN17*": [
+            "AN170",
+            "AN171",
+            "AN172"
+        ],
+        "AN20*": [
+            "AN200",
+            "AN201",
+            "AN202",
+            "AN203"
+        ],
+        "AN21*": [
+            "AN210",
+            "AN211",
+            "AN212",
+            "AN213"
+        ],
+        "AN22*": [
+            "AN220",
+            "AN221",
+            "AN222",
+            "AN223"
+        ],
+        "AN23*": [
+            "AN230",
+            "AN231",
+            "AN232",
+            "AN233"
+        ],
+        "AN24*": [
+            "AN240",
+            "AN241",
+            "AN242",
+            "AN243"
+        ],
+        "AN25*": [
+            "AN250",
+            "AN251",
+            "AN252",
+            "AN253"
+        ],
+        "AN26*": [
+            "AN260",
+            "AN261",
+            "AN262",
+            "AN263"
+        ],
+        "AN27*": [
+            "AN270",
+            "AN271",
+            "AN272",
+            "AN273"
+        ],
+        "AN30*": [
+            "AN300",
+            "AN301",
+            "AN302",
+            "AN303"
+        ],
+        "AN31*": [
+            "AN310",
+            "AN311",
+            "AN312",
+            "AN313"
+        ],
+        "AN32*": [
+            "AN320",
+            "AN321",
+            "AN322",
+            "AN323"
+        ],
+        "AN35*": [
+            "AN350",
+            "AN351",
+            "AN352",
+            "AN353"
+        ],
+        "AN36*": [
+            "AN360",
+            "AN361",
+            "AN362",
+            "AN363"
+        ],
+        "AN37*": [
+            "AN370",
+            "AN371",
+            "AN372",
+            "AN373"
+        ],
+        "ANI*": [
+            "ANI1",
+            "ANI10",
+            "ANI11",
+            "ANI12",
+            "ANI13",
+            "ANI14",
+            "ANI15",
+            "ANI16",
+            "ANI17",
+            "ANI2",
+            "ANI20",
+            "ANI21",
+            "ANI3",
+            "ANI4",
+            "ANI5",
+            "ANI6",
+            "ANI7",
+            "ANI9"
+        ],
+        "ANI0*": [
+            "ANI0",
+            "ANI00",
+            "ANI01",
+            "ANI02",
+            "ANI03",
+            "ANI04",
+            "ANI05",
+            "ANI06",
+            "ANI07"
+        ],
+        "AN_B4*": [
+            "AN_B40",
+            "AN_B41",
+            "AN_B42",
+            "AN_B43",
+            "AN_B44",
+            "AN_B45",
+            "AN_B46",
+            "AN_B47",
+            "AN_B48"
+        ],
+        "AP0_*": [
+            "AP0_0",
+            "AP0_1",
+            "AP0_10",
+            "AP0_11",
+            "AP0_12",
+            "AP0_13",
+            "AP0_14",
+            "AP0_15",
+            "AP0_2",
+            "AP0_3",
+            "AP0_4",
+            "AP0_5",
+            "AP0_6",
+            "AP0_7",
+            "AP0_8",
+            "AP0_9"
+        ],
+        "AP1_*": [
+            "AP1_0",
+            "AP1_1",
+            "AP1_10",
+            "AP1_11",
+            "AP1_12",
+            "AP1_13",
+            "AP1_14",
+            "AP1_15",
+            "AP1_2",
+            "AP1_3",
+            "AP1_4",
+            "AP1_5",
+            "AP1_6",
+            "AP1_7",
+            "AP1_8",
+            "AP1_9"
+        ],
+        "AP2_*": [
+            "AP2_0",
+            "AP2_1",
+            "AP2_10",
+            "AP2_11",
+            "AP2_12",
+            "AP2_13",
+            "AP2_14",
+            "AP2_15",
+            "AP2_2",
+            "AP2_3",
+            "AP2_4",
+            "AP2_5",
+            "AP2_6",
+            "AP2_7",
+            "AP2_8",
+            "AP2_9"
+        ],
+        "AP3_*": [
+            "AP3_0",
+            "AP3_1",
+            "AP3_2",
+            "AP3_3"
+        ],
+        "AP4_*": [
+            "AP4_0",
+            "AP4_1",
+            "AP4_10",
+            "AP4_11",
+            "AP4_12",
+            "AP4_13",
+            "AP4_14",
+            "AP4_15",
+            "AP4_2",
+            "AP4_3",
+            "AP4_4",
+            "AP4_5",
+            "AP4_6",
+            "AP4_7",
+            "AP4_8",
+            "AP4_9"
+        ],
+        "AP5_*": [
+            "AP5_0",
+            "AP5_1",
+            "AP5_2",
+            "AP5_3"
+        ]
+    },
+    "Analog input-Diffpair": {
+        "ANI0": [
+            "ANIN0",
+            "ANIP0"
+        ],
+        "ANI1": [
+            "ANIN1",
+            "ANIP1"
+        ],
+        "ANI2": [
+            "ANIN2",
+            "ANIP2"
+        ],
+        "ANI3": [
+            "ANIN3",
+            "ANIP3"
+        ],
+        "ANI4": [
+            "ANIN4",
+            "ANIP4"
+        ],
+        "ANI5": [
+            "ANIN5",
+            "ANIP5"
+        ],
+        "ANI6": [
+            "ANIN6",
+            "ANIP6"
+        ]
+    },
+    "BACK": [
+        "BACK#"
+    ],
+    "BCLK": [
+        "BCLK"
+    ],
+    "BE*": [
+        "BE0#",
+        "BE1#",
+        "BE2#",
+        "BE3#"
+    ],
+    "BH#": [
+        "BH#"
+    ],
+    "BREQ#": [
+        "BREQ#"
+    ],
+    "BRLS#": [
+        "BRLS#"
+    ],
+    "BS#": [
+        "BS#",
+        "BS#"
+    ],
+    "BSCANP": [
+        "BSCANP"
+    ],
+    "BSMODE": [
+        "BSMODE"
+    ],
+    "BUSHiZ#": [
+        "BUSHiZ#"
+    ],
+    "BYTE": [
+        "BYTE"
+    ],
+    "Bank address ": {
+        "MB*": [
+            "MBA0",
+            "MBA1",
+            "MBA2"
+        ]
+    },
+    "CA": [
+        "CA"
+    ],
+    "CACREF*": [
+        "CACREF",
+        "CACREF_A",
+        "CACREF_B",
+        "CACREF_C"
+    ],
+    "CAN*": {
+        "CAN0": [
+            "CAN0_RX_A",
+            "CAN0_TX_A"
+        ],
+        "CAN1": [
+            "CAN1_RX_A",
+            "CAN1_TX_A"
+        ],
+        "CAN_CLK": [
+            "CAN_CLK_A"
+        ]
+    },
+    "CAS*": [
+        "CAS0#",
+        "CAS1#",
+        "CAS2#",
+        "CAS3#"
+    ],
+    "CAS-RAS": [
+        "CAS#",
+        "CASL#",
+        "CASU#",
+        "RAS#",
+        "RASL#",
+        "RASU#"
+    ],
+    "CC*": {
+        "CCA*": [
+            "CCA0",
+            "CCA1",
+            "CCA2",
+            "CCA3",
+            "CCB0",
+            "CCB1",
+            "CCB2",
+            "CCB3"
+        ]
+    },
+    "CE2": [
+        "CE2A#",
+        "CE2B#"
+    ],
+    "CF": [
+        "CF"
+    ],
+    "CICREF": {
+        "Diff Pair": [
+            "CICREFN",
+            "CICREFP"
+        ]
+    },
+    "CKE": [
+        "CKE"
+    ],
+    "CKIO": [
+        "CKIO",
+        "CKIO2"
+    ],
+    "CKIO2ENB": [
+        "CKIO2ENB#"
+    ],
+    "CKP*": [
+        "CKPACK#",
+        "CKPREQ#"
+    ],
+    "CKPO": [
+        "CKPO"
+    ],
+    "CKSEL": [
+        "CKSEL"
+    ],
+    "CK_PHY": [
+        "CK_PHY"
+    ],
+    "CL2": [
+        "CL2"
+    ],
+    "CLK*": {
+        "EXCI": [
+            "EXCIN",
+            "EXCLK"
+        ],
+        "EXTLD": [
+            "EXTLDN",
+            "EXTLDP"
+        ],
+        "OSC": [
+            "OSC1",
+            "OSC2"
+        ],
+        "RTC_X": [
+            "RTC_X1",
+            "RTC_X2"
+        ],
+        "RX-TX-CLK": [
+            "RX-CLK",
+            "TCLK",
+            "TX-CLK"
+        ],
+        "SCK": [
+            "SCK",
+            "SCK0",
+            "SCK0_A",
+            "SCK2",
+            "SCLK"
+        ],
+        "SDCLK": [
+            "SDCLK"
+        ],
+        "USB_X": [
+            "USB_X1",
+            "USB_X2"
+        ],
+        "USB_XTAL": [
+            "USBEXTAL",
+            "USBXTAL",
+            "USB_EXTAL",
+            "USB_XTAL"
+        ],
+        "AX*": [
+            "X1",
+            "X1[CL1]",
+            "X2",
+            "X2[CL2]"
+        ],
+        "BXC*": [
+            "XCIN",
+            "XCOUT",
+            "XIN",
+            "XOUT",
+            "XOUT#"
+        ],
+        "CXT*": [
+            "XT1",
+            "XT2"
+        ],
+        "DXTAL": [
+            "EXTAL",
+            "XTAL"
+        ],
+        "XTAL2": [
+            "EXTAL2",
+            "XTAL2"
+        ],
+        "XTAL32M": [
+            "XTAL32Mm",
+            "XTAL32Mp"
+        ],
+        "XTAL48": [
+            "EXTAL48",
+            "XTAL48"
+        ],
+        "XTAL_RF": [
+            "RFCTLEN",
+            "XTAL1_RF",
+            "XTAL2_RF"
+        ]
+    },
+    "CLKOUT": {
+        "CK": [
+            "CK"
+        ],
+        "CKOUT": [
+            "CKOUT",
+            "CLKOUT",
+            "CLKOUT25M",
+            "CLKOUTENB",
+            "CLKOUT_A",
+            "CLKOUT_B"
+        ]
+    },
+    "COL": [
+        "COL"
+    ],
+    "COM*": [
+        "COM0",
+        "COM1",
+        "COM2",
+        "COM3",
+        "COM4",
+        "COM5",
+        "COM6",
+        "COM7"
+    ],
+    "CRS": [
+        "CRS"
+    ],
+    "CS*": [
+        "CS0",
+        "CS0#",
+        "CS1#",
+        "CS1#",
+        "CS2#",
+        "CS2#",
+        "CS3#",
+        "CS3#",
+        "CS4#",
+        "CS4#",
+        "CS5#",
+        "CS5#",
+        "CS6#",
+        "CS6#"
+    ],
+    "CT": [
+        "CT",
+        "CTS2#"
+    ],
+    "CTS-RTS_B": {
+        "CTS0-RTS0*": [
+            "CTS0_B#",
+            "RTS0_B#"
+        ],
+        "CTS0-RTS1*": [
+            "CTS1_B#",
+            "RTS1_B#"
+        ],
+        "SCK1*": [
+            "SCK1_B",
+            "SCK2_A"
+        ],
+        "TX-RX": [
+            "RX1_B",
+            "TX1_B"
+        ]
+    },
+    "CVMOUT": [
+        "CVMOUT",
+        "CVMOUTZ"
+    ],
+    "DA": [
+        "DA0",
+        "DA1"
+    ],
+    "DBGMD": [
+        "DBGMD#"
+    ],
+    "DBSC3": {
+        "MC*": [
+            "MCAS#",
+            "MCK0",
+            "MCK0#",
+            "MCK1",
+            "MCK1#",
+            "MCKE",
+            "MCS#",
+            "MRAS#",
+            "MWE#"
+        ],
+        "MDM*": [
+            "MDM0",
+            "MDM1",
+            "MDM2",
+            "MDM3"
+        ],
+        "MDQ*": [
+            "MDQ0",
+            "MDQ1",
+            "MDQ10",
+            "MDQ11",
+            "MDQ12",
+            "MDQ13",
+            "MDQ14",
+            "MDQ15",
+            "MDQ16",
+            "MDQ17",
+            "MDQ18",
+            "MDQ19",
+            "MDQ2",
+            "MDQ20",
+            "MDQ21",
+            "MDQ22",
+            "MDQ23",
+            "MDQ24",
+            "MDQ25",
+            "MDQ26",
+            "MDQ27",
+            "MDQ28",
+            "MDQ29",
+            "MDQ3",
+            "MDQ30",
+            "MDQ31",
+            "MDQ4",
+            "MDQ5",
+            "MDQ6",
+            "MDQ7",
+            "MDQ8",
+            "MDQ9"
+        ],
+        "MDQS0": {
+            "Diff Pair": [
+                "MDQS0",
+                "MDQS0#"
+            ]
+        },
+        "MDQS1": {
+            "Diff Pair": [
+                "MDQS1",
+                "MDQS1#"
+            ]
+        },
+        "MDQS2": {
+            "Diff Pair": [
+                "MDQS2",
+                "MDQS2#"
+            ]
+        },
+        "MDQS3": {
+            "Diff Pair": [
+                "MDQS3",
+                "MDQS3#"
+            ]
+        }
+    },
+    "DCL": {
+        "DCLIN": [
+            "DCLIN",
+            "DCLIN_A",
+            "DCLIN_D"
+        ],
+        "DCLOUT": [
+            "DCLOUT"
+        ]
+    },
+    "DCTL": [
+        "DCTL"
+    ],
+    "DDCOUT": [
+        "DDCOUT",
+        "DDC_OUT"
+    ],
+    "DEBUG": [
+        "DCK",
+        "DDI",
+        "DDO",
+        "DMS",
+        "DRST#"
+    ],
+    "DEBUG_DCU": [
+        "DCURDY",
+        "DCUTCK",
+        "DCUTDI",
+        "DCUTDO",
+        "DCUTMS",
+        "DCUTRST"
+    ],
+    "DET3OR5": [
+        "DET3OR5"
+    ],
+    "DEVSEL": [
+        "DEVSEL#"
+    ],
+    "DQML": [
+        "DQMLL",
+        "DQMLU"
+    ],
+    "DQMU": [
+        "DQMUL",
+        "DQMUU"
+    ],
+    "DRDY": [
+        "DRDY",
+        "DRDY#"
+    ],
+    "DREQ*": [
+        "DREQ0#",
+        "DREQ1#"
+    ],
+    "DRV*": [
+        "DRV0",
+        "DRV1",
+        "DRV2",
+        "DRV3"
+    ],
+    "DSAN": {
+        "DSAN0": [
+            "DSAN0N",
+            "DSAN0P"
+        ],
+        "DSAN1": [
+            "DSAN1N",
+            "DSAN1P"
+        ]
+    },
+    "DU0*": {
+        "DACK": [
+            "DACK0",
+            "DACK1"
+        ],
+        "DRACK": [
+            "DRACK0"
+        ],
+        "DRAK": [
+            "DRAK0",
+            "DRAK1"
+        ],
+        "DU0_CDE": [
+            "DU0_CDE"
+        ],
+        "DU0_DB*": [
+            "DU0_DB0",
+            "DU0_DB1",
+            "DU0_DB2",
+            "DU0_DB3",
+            "DU0_DB4",
+            "DU0_DB5",
+            "DU0_DB6",
+            "DU0_DB7"
+        ],
+        "DU0_DG*": [
+            "DU0_DG0",
+            "DU0_DG1",
+            "DU0_DG2",
+            "DU0_DG3",
+            "DU0_DG4",
+            "DU0_DG5",
+            "DU0_DG6",
+            "DU0_DG7"
+        ],
+        "DU0_DISP": [
+            "DU0_DISP"
+        ],
+        "DU0_DOTCLK": [
+            "DU0_DOTCLKIN",
+            "DU0_DOTCLKOUT"
+        ],
+        "DU0_DR*": [
+            "DU0_DR0",
+            "DU0_DR1",
+            "DU0_DR2",
+            "DU0_DR3",
+            "DU0_DR4",
+            "DU0_DR5",
+            "DU0_DR6",
+            "DU0_DR7"
+        ],
+        "DU0_EXHSYNC": [
+            "DU0_EXHSYNC"
+        ],
+        "DU0_EXODDF": [
+            "DU0_EXODDF"
+        ],
+        "DU0_EXVSYNC": [
+            "DU0_EXVSYNC"
+        ]
+    },
+    "Data Pins": {
+        "D*": [
+            "D0",
+            "D1",
+            "D2",
+            "D3",
+            "D4",
+            "D5",
+            "D6",
+            "D7",
+            "D8",
+            "D9"
+        ],
+        "D**": [
+            "D00",
+            "D01",
+            "D02",
+            "D03",
+            "D04",
+            "D05",
+            "D06",
+            "D07",
+            "D08",
+            "D09",
+            "D10",
+            "D11",
+            "D12",
+            "D13",
+            "D14",
+            "D15",
+            "D16",
+            "D17",
+            "D18",
+            "D19",
+            "D20",
+            "D21",
+            "D22",
+            "D23",
+            "D24",
+            "D25",
+            "D26",
+            "D27",
+            "D28",
+            "D29",
+            "D30",
+            "D31",
+            "D32",
+            "D33",
+            "D34",
+            "D35",
+            "D36",
+            "D37",
+            "D38",
+            "D39",
+            "D40",
+            "D41",
+            "D42",
+            "D43",
+            "D44",
+            "D45",
+            "D46",
+            "D47",
+            "D48",
+            "D49",
+            "D50",
+            "D51",
+            "D52",
+            "D53",
+            "D54",
+            "D55",
+            "D56",
+            "D57",
+            "D58",
+            "D59",
+            "D60",
+            "D61",
+            "D62",
+            "D63"
+        ]
+    },
+    "Digital video*": {
+        "BIAS": [
+            "BIAS"
+        ],
+        "VCM": [
+            "VCM",
+            "VCMTX"
+        ],
+        "VIDEO_X": [
+            "VIDEO_X1",
+            "VIDEO_X2"
+        ],
+        "VIN": [
+            "VIN",
+            "VIN1",
+            "VIN2",
+            "VINN",
+            "VINP"
+        ],
+        "VRB": [
+            "VRB"
+        ],
+        "VRT": [
+            "VRT"
+        ]
+    },
+    "E10T*": [
+        "E10T_0",
+        "E10T_1",
+        "E10T_2"
+    ],
+    "EHMD": [
+        "EHMD"
+    ],
+    "EMLE": [
+        "EMLE"
+    ],
+    "EPTVOUT": [
+        "EPTVOUT"
+    ],
+    "ERAMRES": {
+        "ERAMRES2": [
+            "ERAMRES2#",
+            "ERAMRES2Z"
+        ],
+        "ERAMRESPD": [
+            "ERAMRESPD#",
+            "ERAMRESPDZ"
+        ]
+    },
+    "ERROROUT": [
+        "ERROROUT",
+        "ERROROUT#",
+        "ERROROUTZ",
+        "ERROROUT_M",
+        "ERROROUT_M#"
+    ],
+    "ETX-ERX": {
+        "EXD0*": [
+            "ERXD0",
+            "ETXD0"
+        ],
+        "EXD1*": [
+            "ERXD1",
+            "ETXD1"
+        ],
+        "EXD2*": [
+            "ERXD2",
+            "ETXD2"
+        ],
+        "EXD3*": [
+            "ERXD3",
+            "ETXD3"
+        ]
+    },
+    "EVT*": {
+        "EVTI": [
+            "EVTI",
+            "EVTI#",
+            "EVTIZ"
+        ],
+        "EVTO": [
+            "EVTO",
+            "EVTO#",
+            "EVTOZ"
+        ]
+    },
+    "EXRES1": [
+        "EXRES1"
+    ],
+    "EX_CS*": [
+        "EX_CS0#",
+        "EX_CS1#",
+        "EX_CS2#",
+        "EX_CS3#",
+        "EX_CS4#",
+        "EX_CS5#"
+    ],
+    "EX_WAIT*": [
+        "EX_WAIT0",
+        "EX_WAIT1",
+        "EX_WAIT2"
+    ],
+    "FEW": [
+        "FEW"
+    ],
+    "FLMD*": [
+        "FLMD0",
+        "FLMD1",
+        "FLMD2",
+        "\\FLMD0"
+    ],
+    "FLMODE": [
+        "FLMODE"
+    ],
+    "FWE": [
+        "FWE"
+    ],
+    "FWP": [
+        "FWP"
+    ],
+    "GPIO*": [
+        "GPIO0",
+        "GPIO1",
+        "GPIO10",
+        "GPIO11",
+        "GPIO12",
+        "GPIO2",
+        "GPIO3",
+        "GPIO4",
+        "GPIO5",
+        "GPIO6",
+        "GPIO7",
+        "GPIO8",
+        "GPIO9"
+    ],
+    "HDRV": {
+        "Diff Pair": [
+            "HDRVM",
+            "HDRVP"
+        ]
+    },
+    "HSTBY": [
+        "HSTBY#"
+    ],
+    "HT0*": [
+        "HCTS0_A#",
+        "HRTS0_A#",
+        "HSCK0_A"
+    ],
+    "HVAIN*": [
+        "HVAIN0",
+        "HVAIN1",
+        "HVAIN2",
+        "HVAIN3"
+    ],
+    "HX": {
+        "HX0": [
+            "HRX0_A",
+            "HTX0_A"
+        ],
+        "HXD": [
+            "HRXD",
+            "HTXD"
+        ],
+        "HxD0": [
+            "HRxD0",
+            "HTxD0"
+        ],
+        "HxD1": [
+            "HRxD1",
+            "HTxD1"
+        ]
+    },
+    "I2C_*": {
+        "I2C_0": [
+            "SCL0",
+            "SDA0"
+        ],
+        "I2C_1": [
+            "SCL1",
+            "SDA1"
+        ],
+        "I2C_3": [
+            "SWCLK",
+            "SWDIO"
+        ],
+        "I2C_C": [
+            "SCL",
+            "SDA"
+        ]
+    },
+    "IDSEL": [
+        "IDSEL"
+    ],
+    "IFRX": {
+        "Diff Pair": [
+            "IFRXTN",
+            "IFRXTP"
+        ]
+    },
+    "INT*": [
+        "INTA#",
+        "INTOUT"
+    ],
+    "IOIS16": [
+        "IOIS16#"
+    ],
+    "IP0_0": [
+        "IP0_0"
+    ],
+    "IRL": [
+        "IRL0#",
+        "IRL1#",
+        "IRL2#",
+        "IRL3#"
+    ],
+    "IRQ": {
+        "IRQ*": [
+            "IRQ0",
+            "IRQ1",
+            "IRQ2",
+            "IRQ3",
+            "IRQ4"
+        ],
+        "IRQOUT": [
+            "IRQOUT#"
+        ],
+        "IRQ_A": [
+            "IRQ0_A",
+            "IRQ1_A",
+            "IRQ2_A",
+            "IRQ3_A"
+        ]
+    },
+    "IVECF": [
+        "IVECF#"
+    ],
+    "JIT*": [
+        "JIT0",
+        "JIT1"
+    ],
+    "JP0_*": [
+        "JP0_0",
+        "JP0_1",
+        "JP0_2",
+        "JP0_3",
+        "JP0_4",
+        "JP0_5",
+        "JP0_6"
+    ],
+    "JTAG*": {
+        "JTAG_*": [
+            "TCK",
+            "TDI",
+            "TDO",
+            "TMS",
+            "TRCLK",
+            "TRST",
+            "TRST#",
+            "TRSTZ"
+        ],
+        "JTAG_Sync*": [
+            "TRSYNC",
+            "TRSYNC#",
+            "TRSYNC1"
+        ]
+    },
+    "L*": [
+        "LX",
+        "LY",
+        "LZ"
+    ],
+    "LCD*": [
+        "LCD0",
+        "LCD1",
+        "LCD10",
+        "LCD11",
+        "LCD12",
+        "LCD13",
+        "LCD14",
+        "LCD15",
+        "LCD2",
+        "LCD3",
+        "LCD4",
+        "LCD5",
+        "LCD6",
+        "LCD7",
+        "LCD8",
+        "LCD9"
+    ],
+    "LCLK": [
+        "LCLK"
+    ],
+    "LED": [
+        "LED1",
+        "LED2",
+        "LED3"
+    ],
+    "LSW": [
+        "LSW"
+    ],
+    "MBKPRST#": [
+        "MBKPRST#"
+    ],
+    "MD_CLK": [
+        "MD_CLK",
+        "MD_CLK0",
+        "MD_CLK2",
+        "MD_CLKP"
+    ],
+    "MIPI": {
+        "MIPI_CL": {
+            "Diff Pair": [
+                "MIPI_CL_N",
+                "MIPI_CL_P"
+            ]
+        },
+        "MIPI_DL0": {
+            "Diff Pair": [
+                "MIPI_DL0_N",
+                "MIPI_DL0_P"
+            ]
+        },
+        "MIPI_DL1": {
+            "Diff Pair": [
+                "MIPI_DL1_N",
+                "MIPI_DL1_P"
+            ]
+        }
+    },
+    "MODE*": {
+        "MD*": [
+            "MD",
+            "MD/FINED",
+            "MD0",
+            "MD1",
+            "MD2",
+            "MD3",
+            "MD4",
+            "MD5",
+            "MD6",
+            "MD7",
+            "MD8",
+            "MDA",
+            "MDB",
+            "MDC",
+            "MDD",
+            "MDE",
+            "MDIO",
+            "MODE",
+            "MODE0",
+            "MODE1",
+            "MODE14",
+            "MODE2",
+            "MODE5",
+            "MODE6"
+        ]
+    },
+    "MPMD": {
+        "MPMD": [
+            "MPMD"
+        ]
+    },
+    "MRAS*": [
+        "MODT",
+        "MRESET",
+        "MRESET#",
+        "MZQ"
+    ],
+    "MSYNZ": [
+        "MSYN#",
+        "MSYNZ"
+    ],
+    "MTDO*": [
+        "MTDO1_DRV0",
+        "MTDO2_DRV0",
+        "MTDO4_DRV1",
+        "MTDO5_DRV1",
+        "MTDO6_DRV1",
+        "MTDO7_DRV2",
+        "MTDO8_DRV2",
+        "MTDO9_DRV2"
+    ],
+    "NC": {
+        "NC1": [
+            "(N.C)",
+            "NC"
+        ],
+        "NC2": [
+            "CAP1",
+            "CAP2"
+        ],
+        "NC3": [
+            "IC",
+            "IC0",
+            "IC1",
+            "IC2",
+            "IC3",
+            "IC4",
+            "IC5"
+        ],
+        "NC4": [
+            "Notused"
+        ],
+        "NC6": [
+            "RESERVE",
+            "Reserved"
+        ]
+    },
+    "NMI": [
+        "NMI#"
+    ],
+    "NSD": [
+        "NSD"
+    ],
+    "Negative": {
+        "A*VREF": {
+            "ADSVREFL": [
+                "ADSVREFL"
+            ]
+        },
+        "Y_AGND": [
+            "AGND"
+        ],
+        "AVREF*": {
+            "AVREFL": [
+                "AVREFL"
+            ],
+            "AVREF_Diff": [
+                "AVREFM"
+            ]
+        },
+        "Y_BUCKGND": [
+            "BUCKGND"
+        ],
+        "Z_EPAD": [
+            "EPAD"
+        ],
+        "Y_GND_BOOST": [
+            "GND_BOOST"
+        ],
+        "Y_GND_BUCK": [
+            "GND_BUCK"
+        ],
+        "Y_GND_SDADO": [
+            "GND_SDADO"
+        ],
+        "Y_GND_VAD": [
+            "GND_VAD"
+        ],
+        "Y_GND_XTAL": [
+            "GND_XTAL1",
+            "GND_XTAL2",
+            "GND_XTAL3"
+        ],
+        "Y_HDRVGND": [
+            "HDRVGND"
+        ],
+        "HVCOM": [
+            "HVCOM"
+        ],
+        "PGND": [
+            "PGND0",
+            "PGND1",
+            "PGND11",
+            "PGND12",
+            "PGND2",
+            "PGND3"
+        ],
+        "REFRIN": [
+            "REFRIN"
+        ],
+        "VB": [
+            "VBN"
+        ],
+        "VCOMDS": [
+            "VCOMDS"
+        ],
+        "VREFDSL": [
+            "VREFDSL"
+        ],
+        "VREFL": [
+            "VREFL",
+            "VREFL0",
+            "VREFL1",
+            "VREFL2"
+        ],
+        "VREGO": [
+            "VREGO1",
+            "VREGO2",
+            "VREGO3"
+        ],
+        "VREGOUT": [
+            "VREGOUT1",
+            "VREGOUT2",
+            "VREGOUT3"
+        ],
+        "VSC_GND": [
+            "VSC_GND"
+        ],
+        "X_VSS": {
+            "A*VSS-NC": [
+                "A0VSS(N.C.)",
+                "A0VSS(NC)",
+                "A1VSS (N.C.)",
+                "A1VSS(N.C.)",
+                "A2VSS(N.C.)"
+            ],
+            "ADSVSS": [
+                "ADSVSS"
+            ],
+            "ADSVSS-NC": [
+                "ADSVSS(NC)"
+            ],
+            "AVREF": [
+                "AVREFVSS"
+            ],
+            "AVSS": [
+                "A0VSS",
+                "A1VSS",
+                "A2VSS",
+                "A3VSS",
+                "AVSS",
+                "AVSS0",
+                "AVSS1",
+                "AVSS2"
+            ],
+            "AVSS*": [
+                "AVSSA",
+                "AVSSD",
+                "AVSSP"
+            ],
+            "AVSS_RF": [
+                "AVSS_RF"
+            ],
+            "AVSS_USB": [
+                "AVSS_USB",
+                "AVSS_USBA"
+            ],
+            "AVSS_USBHS": [
+                "AVSS_USBHS"
+            ],
+            "AWOVSS": [
+                "AWOVSS"
+            ],
+            "B*VSS": [
+                "B0VSS",
+                "B1VSS",
+                "B2VSS",
+                "B3VSS",
+                "B4VSS",
+                "B5VSS",
+                "BVSS"
+            ],
+            "CNVSS": [
+                "CNVSS",
+                "CNVSS(BYTE)"
+            ],
+            "CVSS": [
+                "CVSS"
+            ],
+            "DRVSS": [
+                "DRVSS"
+            ],
+            "DVSS": [
+                "DVSS"
+            ],
+            "EMUVSS": [
+                "EMUVSS"
+            ],
+            "ERAM*VSS": [
+                "ERAM0VSS",
+                "ERAM1VSS"
+            ],
+            "EVSS": [
+                "E0VSS",
+                "E1VSS",
+                "EVSS",
+                "EVSS0",
+                "EVSS1"
+            ],
+            "ISMVSS": [
+                "ISMVSS"
+            ],
+            "ISOVSS": [
+                "ISOVSS"
+            ],
+            "IVSS": [
+                "IVSS"
+            ],
+            "LVDVSS": [
+                "LVDVSS"
+            ],
+            "MVSS": [
+                "MVSS"
+            ],
+            "OSCVSS": [
+                "OSCVSS"
+            ],
+            "PGAVSS": [
+                "PGAVSS0",
+                "PGAVSS1"
+            ],
+            "PLLVSS": [
+                "PLLVSS",
+                "PLLVSS0",
+                "PLLVSS1"
+            ],
+            "PVSS": [
+                "PVSS"
+            ],
+            "PVSS_USBA": [
+                "PVSS_USBA"
+            ],
+            "PVSS_USBHS": [
+                "PVSS_USBHS"
+            ],
+            "PWMVSS": [
+                "PWMVSS"
+            ],
+            "REG*VSS": [
+                "REG0VSS",
+                "REG1VSS"
+            ],
+            "RVSS": [
+                "RVSS"
+            ],
+            "SDRAVSS": [
+                "SDRAVSS"
+            ],
+            "SDRBCKVSS": [
+                "SDRBCKVSS"
+            ],
+            "SDRBVSS": [
+                "SDRBVSS"
+            ],
+            "SFVSS": [
+                "SFVSS"
+            ],
+            "SMVSS": [
+                "SMVSS",
+                "SMVSS0",
+                "SMVSS1"
+            ],
+            "SVRAVSS": [
+                "SVRAVSS"
+            ],
+            "SVRDRVSS": [
+                "SVRDRVSS"
+            ],
+            "USBAPVss": [
+                "USBAPVss"
+            ],
+            "USBAVss": [
+                "USBAVss"
+            ],
+            "USBDPVss": [
+                "USBDPVss"
+            ],
+            "USBDVss": [
+                "USBDVss"
+            ],
+            "USBUVss": [
+                "USBUVss"
+            ],
+            "VDAVss": [
+                "VDAVss"
+            ],
+            "VSS-CPG": [
+                "VSS-CPG"
+            ],
+            "VSS-NC": [
+                "VSS (N.C.)",
+                "VSS(N.C.)",
+                "VSS(NC)",
+                "VSSNC"
+            ],
+            "VSS-PLL": [
+                "VSS (PLL1)",
+                "VSS (PLL2)",
+                "VSS-PLL1",
+                "VSS-PLL2",
+                "VSSA-PLL1"
+            ],
+            "VSS-RTC": [
+                "VSS-RTC"
+            ],
+            "VSS1_USB": [
+                "VSS1_USBA",
+                "VSS1_USBHS"
+            ],
+            "VSS2_USB": [
+                "VSS2_USBA",
+                "VSS2_USBHS"
+            ],
+            "VSSA": [
+                "VSSA"
+            ],
+            "VSS_DCDC": [
+                "VSS_DCDC"
+            ],
+            "VSS_DDC": [
+                "VSS_DDC"
+            ],
+            "VSS_MIPI": [
+                "VSS_MIPI"
+            ],
+            "VSS_RF": [
+                "VSS_RF"
+            ],
+            "VSS_USB": [
+                "VSS_USB"
+            ],
+            "VSS_USBHS": [
+                "VSS_USBHS"
+            ],
+            "VssA": [
+                "Vss1A",
+                "Vss2A"
+            ],
+            "ZPins": [
+                "VSS",
+                "VSS0",
+                "VSS1",
+                "VSS2",
+                "VSS3",
+                "VSS5"
+            ]
+        },
+        "VSSD": [
+            "VSSD1",
+            "VSSD2",
+            "VSSD3",
+            "VSSD4",
+            "VSSD5"
+        ],
+        "VSSDDC": [
+            "VSSDDC"
+        ],
+        "VSSIO": [
+            "VSSIOOQ",
+            "VSSIOQ"
+        ],
+        "VSSQ": {
+            "VSSQ-PLL": [
+                "VSSQ-PLL1",
+                "VSSQ-PLL2"
+            ],
+            "VSSQ-TD": [
+                "VSSQ-TD"
+            ],
+            "_pins": [
+                "VSSQ"
+            ]
+        },
+        "VSSRF": [
+            "VSSRF",
+            "VSSRF1",
+            "VSSRF2"
+        ],
+        "XTAL32M_GND": [
+            "XTAL32M_GND"
+        ],
+        "ZPDVSS": {
+            "ZPDVREVSS": [
+                "ZPDVREVSS"
+            ],
+            "_pins": [
+                "ZPDVSS"
+            ]
+        }
+    },
+    "OC*": [
+        "OC",
+        "OC_EN"
+    ],
+    "OQSPIF*": [
+        "OQSPIF_CLK",
+        "OQSPIF_CS",
+        "OQSPIF_D1",
+        "OQSPIF_D2",
+        "OQSPIF_D3",
+        "OQSPIF_DO"
+    ],
+    "PAR": [
+        "PAR"
+    ],
+    "PCC0*": {
+        "PCC0BVD": [
+            "PCC0BVD1",
+            "PCC0BVD2"
+        ],
+        "PCC0CD": [
+            "PCC0CD1#",
+            "PCC0CD2#"
+        ],
+        "PCC0DRV": [
+            "PCC0DRV#"
+        ],
+        "PCC0RESET": [
+            "PCC0RESET"
+        ],
+        "PCC0VS": [
+            "PCC0VS1#",
+            "PCC0VS2#"
+        ],
+        "PCC0WAIT": [
+            "PCC0WAIT#"
+        ],
+        "PCCREG": [
+            "PCCREG#"
+        ]
+    },
+    "PCD*": [
+        "PCD0",
+        "PCD1",
+        "PCD2",
+        "PCD3"
+    ],
+    "PCI*": {
+        "IRDY": [
+            "IRDY#"
+        ],
+        "PCICLK": [
+            "PCICLK"
+        ],
+        "PCIFRAME": [
+            "PCIFRAME#"
+        ],
+        "PCIGNT*": [
+            "PCIGNT1#",
+            "PCIGNT2#",
+            "PCIGNT3#",
+            "PCIGNT4#"
+        ],
+        "PCILOCK": [
+            "PCILOCK#"
+        ],
+        "PCIREQ*": [
+            "PCIREQ1#",
+            "PCIREQ2#",
+            "PCIREQ3#",
+            "PCIREQ4#"
+        ],
+        "PCIRESET#": [
+            "PCIRESET#"
+        ],
+        "PCIRST": [
+            "PCIRST#"
+        ],
+        "PCISTOP": [
+            "PCISTOP#"
+        ],
+        "PERR": [
+            "PERR#"
+        ],
+        "SERR": [
+            "SERR#"
+        ],
+        "SLEEP": [
+            "SLEEP#"
+        ],
+        "TRDY": [
+            "TRDY#"
+        ]
+    },
+    "PCLBUZ": [
+        "PCLBUZ0_A",
+        "PCLBUZ0_B",
+        "PCLBUZ0_C"
+    ],
+    "PECI": [
+        "PECI"
+    ],
+    "PENC": [
+        "PENC0",
+        "PENC1"
+    ],
+    "PGA": {
+        "PGA0": {
+            "Diff Pair": [
+                "PGA0N",
+                "PGA0P"
+            ]
+        },
+        "PGA00": {
+            "Diff Pair": [
+                "PGA00N",
+                "PGA00P"
+            ]
+        },
+        "PGA1": {
+            "Diff Pair": [
+                "PGA1N",
+                "PGA1P"
+            ]
+        },
+        "PGA10": {
+            "Diff Pair": [
+                "PGA10N",
+                "PGA10P"
+            ]
+        },
+        "PGA11": {
+            "Diff Pair": [
+                "PGA11N",
+                "PGA11P"
+            ]
+        },
+        "PGA1O": [
+            "PGA1O"
+        ],
+        "PGA2": {
+            "Diff Pair": [
+                "PGA2N",
+                "PGA2P"
+            ]
+        },
+        "PGA3": {
+            "Diff Pair": [
+                "PGA3N",
+                "PGA3P"
+            ]
+        }
+    },
+    "PLLCAP*": [
+        "PLLCAP",
+        "PLLCAP1",
+        "PLLCAP2"
+    ],
+    "PLLSEL": [
+        "PLLSEL"
+    ],
+    "PM_RES1_DRV0": [
+        "PM_RES1_DRV0"
+    ],
+    "PRESET": [
+        "MRESETOUT#",
+        "PRESET",
+        "PRESET#",
+        "PRESETOUT#"
+    ],
+    "PWC*": [
+        "VCPWC",
+        "VEPWC"
+    ],
+    "PWRC*": [
+        "PWRCTL",
+        "PWRGD"
+    ],
+    "Port Pins": {
+        "Port PA": {
+            "PA*": [
+                "PA0",
+                "PA00",
+                "PA01",
+                "PA02",
+                "PA03",
+                "PA04",
+                "PA05",
+                "PA06",
+                "PA07",
+                "PA08",
+                "PA09",
+                "PA1",
+                "PA10",
+                "PA11",
+                "PA12",
+                "PA13",
+                "PA14",
+                "PA15",
+                "PA16",
+                "PA17",
+                "PA18",
+                "PA19",
+                "PA2",
+                "PA20",
+                "PA21",
+                "PA22",
+                "PA23",
+                "PA24",
+                "PA25",
+                "PA3",
+                "PA4",
+                "PA5",
+                "PA6",
+                "PA7",
+                "PA8",
+                "PA9"
+            ]
+        },
+        "Port PAH": {
+            "PAH*": [
+                "PAH0",
+                "PAH1",
+                "PAH2",
+                "PAH3",
+                "PAH4",
+                "PAH5",
+                "PAH6",
+                "PAH7",
+                "PAH8",
+                "PAH9"
+            ]
+        },
+        "Port PAL": {
+            "PAL": [
+                "PAL0",
+                "PAL1"
+            ]
+        },
+        "Port PB": {
+            "PB*": [
+                "PB0",
+                "PB00",
+                "PB01",
+                "PB02",
+                "PB03",
+                "PB04",
+                "PB05",
+                "PB06",
+                "PB07",
+                "PB08",
+                "PB09",
+                "PB1",
+                "PB10",
+                "PB11",
+                "PB12",
+                "PB13",
+                "PB14",
+                "PB15",
+                "PB16",
+                "PB17",
+                "PB18",
+                "PB19",
+                "PB2",
+                "PB20",
+                "PB21",
+                "PB22",
+                "PB23",
+                "PB24",
+                "PB25",
+                "PB26",
+                "PB27",
+                "PB28",
+                "PB29",
+                "PB3",
+                "PB30",
+                "PB4",
+                "PB5",
+                "PB6",
+                "PB7",
+                "PB8",
+                "PB9"
+            ]
+        },
+        "Port PC": {
+            "PC*": [
+                "PC0",
+                "PC00",
+                "PC01",
+                "PC02",
+                "PC03",
+                "PC04",
+                "PC05",
+                "PC06",
+                "PC07",
+                "PC08",
+                "PC09",
+                "PC1",
+                "PC10",
+                "PC11",
+                "PC12",
+                "PC13",
+                "PC14",
+                "PC15",
+                "PC16",
+                "PC17",
+                "PC18",
+                "PC19",
+                "PC2",
+                "PC20",
+                "PC21",
+                "PC22",
+                "PC23",
+                "PC24",
+                "PC25",
+                "PC3",
+                "PC4",
+                "PC5",
+                "PC6",
+                "PC7",
+                "PC8",
+                "PC9"
+            ]
+        },
+        "Port PCM": {
+            "PCM*": [
+                "PCM0",
+                "PCM1",
+                "PCM2",
+                "PCM3",
+                "PCM4",
+                "PCM5"
+            ]
+        },
+        "Port PCS": {
+            "PCS*": [
+                "PCS0",
+                "PCS1",
+                "PCS2",
+                "PCS3",
+                "PCS4",
+                "PCS5",
+                "PCS6",
+                "PCS7"
+            ]
+        },
+        "Port PCT": {
+            "PCT*": [
+                "PCT0",
+                "PCT1",
+                "PCT2",
+                "PCT3",
+                "PCT4",
+                "PCT5",
+                "PCT6",
+                "PCT7"
+            ]
+        },
+        "Port PD": {
+            "PD*": [
+                "PD0",
+                "PD00",
+                "PD01",
+                "PD02",
+                "PD03",
+                "PD04",
+                "PD05",
+                "PD06",
+                "PD07",
+                "PD08",
+                "PD09",
+                "PD1",
+                "PD10",
+                "PD11",
+                "PD12",
+                "PD13",
+                "PD14",
+                "PD15",
+                "PD16",
+                "PD17",
+                "PD18",
+                "PD19",
+                "PD2",
+                "PD20",
+                "PD21",
+                "PD22",
+                "PD23",
+                "PD24",
+                "PD25",
+                "PD26",
+                "PD27",
+                "PD28",
+                "PD29",
+                "PD3",
+                "PD30",
+                "PD31",
+                "PD4",
+                "PD5",
+                "PD6",
+                "PD7",
+                "PD8",
+                "PD9"
+            ]
+        },
+        "Port PDH": {
+            "PDH*": [
+                "PDH0",
+                "PDH1",
+                "PDH10",
+                "PDH11",
+                "PDH12",
+                "PDH13",
+                "PDH14",
+                "PDH15",
+                "PDH2",
+                "PDH3",
+                "PDH4",
+                "PDH5",
+                "PDH6",
+                "PDH7",
+                "PDH8",
+                "PDH9"
+            ]
+        },
+        "Port PDL": {
+            "PDL*": [
+                "PDL0",
+                "PDL1",
+                "PDL10",
+                "PDL11",
+                "PDL12",
+                "PDL13",
+                "PDL14",
+                "PDL15",
+                "PDL2",
+                "PDL3",
+                "PDL4",
+                "PDL5",
+                "PDL6",
+                "PDL7",
+                "PDL8",
+                "PDL9"
+            ]
+        },
+        "Port PE": {
+            "PE*": [
+                "PE0",
+                "PE00",
+                "PE01",
+                "PE02",
+                "PE03",
+                "PE04",
+                "PE05",
+                "PE06",
+                "PE07",
+                "PE08",
+                "PE09",
+                "PE1",
+                "PE10",
+                "PE11",
+                "PE12",
+                "PE13",
+                "PE14",
+                "PE15",
+                "PE16",
+                "PE17",
+                "PE18",
+                "PE19",
+                "PE2",
+                "PE20",
+                "PE21",
+                "PE22",
+                "PE23",
+                "PE24",
+                "PE3",
+                "PE4",
+                "PE5",
+                "PE6",
+                "PE7",
+                "PE8",
+                "PE9"
+            ]
+        },
+        "Port PF": {
+            "PF*": [
+                "PF0",
+                "PF00",
+                "PF01",
+                "PF02",
+                "PF07",
+                "PF1",
+                "PF10",
+                "PF11",
+                "PF12",
+                "PF13",
+                "PF14",
+                "PF15",
+                "PF16",
+                "PF17",
+                "PF18",
+                "PF19",
+                "PF2",
+                "PF20",
+                "PF21",
+                "PF22",
+                "PF23",
+                "PF3",
+                "PF4",
+                "PF5",
+                "PF6",
+                "PF7",
+                "PF8",
+                "PF9"
+            ]
+        },
+        "Port PG": {
+            "PG*": [
+                "PG0",
+                "PG00",
+                "PG01",
+                "PG02",
+                "PG03",
+                "PG1",
+                "PG10",
+                "PG11",
+                "PG12",
+                "PG13",
+                "PG14",
+                "PG15",
+                "PG16",
+                "PG17",
+                "PG18",
+                "PG19",
+                "PG2",
+                "PG20",
+                "PG21",
+                "PG22",
+                "PG23",
+                "PG24",
+                "PG25",
+                "PG26",
+                "PG27",
+                "PG29",
+                "PG3",
+                "PG30",
+                "PG31",
+                "PG4",
+                "PG5",
+                "PG6",
+                "PG7",
+                "PG8",
+                "PG9"
+            ]
+        },
+        "Port PH": {
+            "PH*": [
+                "PH0",
+                "PH1",
+                "PH10",
+                "PH11",
+                "PH12",
+                "PH13",
+                "PH14",
+                "PH15",
+                "PH2",
+                "PH3",
+                "PH4",
+                "PH5",
+                "PH6",
+                "PH7",
+                "PH8",
+                "PH9"
+            ]
+        },
+        "Port PI": {
+            "PI*": [
+                "PI0",
+                "PI1",
+                "PI2",
+                "PI3",
+                "PI4",
+                "PI5",
+                "PI6",
+                "PI7"
+            ]
+        },
+        "Port PJ": {
+            "PJ*": [
+                "PJ0",
+                "PJ00",
+                "PJ01",
+                "PJ02",
+                "PJ03",
+                "PJ04",
+                "PJ05",
+                "PJ06",
+                "PJ07",
+                "PJ08",
+                "PJ09",
+                "PJ1",
+                "PJ10",
+                "PJ11",
+                "PJ12",
+                "PJ13",
+                "PJ14",
+                "PJ15",
+                "PJ16",
+                "PJ17",
+                "PJ18",
+                "PJ19",
+                "PJ2",
+                "PJ20",
+                "PJ21",
+                "PJ22",
+                "PJ23",
+                "PJ24",
+                "PJ25",
+                "PJ26",
+                "PJ27",
+                "PJ28",
+                "PJ29",
+                "PJ3",
+                "PJ30",
+                "PJ31",
+                "PJ4",
+                "PJ5",
+                "PJ6",
+                "PJ7",
+                "PJ8",
+                "PJ9"
+            ]
+        },
+        "Port PK": {
+            "PK*": [
+                "PK0",
+                "PK00",
+                "PK01",
+                "PK08",
+                "PK09",
+                "PK1",
+                "PK10",
+                "PK11",
+                "PK12",
+                "PK13",
+                "PK14",
+                "PK15",
+                "PK2",
+                "PK3",
+                "PK4",
+                "PK5",
+                "PK6",
+                "PK7",
+                "PK8",
+                "PK9"
+            ]
+        },
+        "Port PL": {
+            "PL*": [
+                "PL0",
+                "PL1",
+                "PL10",
+                "PL11",
+                "PL12",
+                "PL13",
+                "PL14",
+                "PL15",
+                "PL2",
+                "PL3",
+                "PL4",
+                "PL5",
+                "PL6",
+                "PL7",
+                "PL8",
+                "PL9"
+            ]
+        },
+        "Port PM": {
+            "PM*": [
+                "PM0",
+                "PM1",
+                "PM10",
+                "PM11",
+                "PM12",
+                "PM13",
+                "PM14",
+                "PM15",
+                "PM2",
+                "PM3",
+                "PM4",
+                "PM5",
+                "PM6",
+                "PM7",
+                "PM8",
+                "PM9"
+            ]
+        },
+        "Port PN": {
+            "PN*": [
+                "PN0",
+                "PN1",
+                "PN2",
+                "PN3",
+                "PN4",
+                "PN5",
+                "PN6",
+                "PN7"
+            ],
+            "PN0*": [
+                "PN00",
+                "PN01",
+                "PN02",
+                "PN03",
+                "PN04",
+                "PN05"
+            ]
+        },
+        "Port PP": {
+            "PP*": [
+                "PP0",
+                "PP1",
+                "PP2",
+                "PP3",
+                "PP4",
+                "PP5"
+            ]
+        },
+        "Port PQ": {
+            "PQ*": [
+                "PQ0",
+                "PQ1",
+                "PQ2",
+                "PQ3",
+                "PQ4",
+                "PQ5",
+                "PQ6",
+                "PQ7"
+            ]
+        },
+        "Port PR": {
+            "PR*": [
+                "PR0",
+                "PR1",
+                "PR2",
+                "PR3"
+            ]
+        },
+        "Port PS": {
+            "PS*": [
+                "PS0",
+                "PS1",
+                "PS10",
+                "PS11",
+                "PS12",
+                "PS13",
+                "PS14",
+                "PS15",
+                "PS2",
+                "PS3",
+                "PS4",
+                "PS5",
+                "PS6",
+                "PS7",
+                "PS8",
+                "PS9"
+            ]
+        },
+        "Port PT": {
+            "PT*": [
+                "PT0",
+                "PT1",
+                "PT2",
+                "PT3",
+                "PT4",
+                "PT5",
+                "PT6"
+            ]
+        },
+        "Port PTD": {
+            "PTD*": [
+                "PTD5",
+                "PTD7",
+                "PTD[5]",
+                "PTD[7]"
+            ]
+        },
+        "Port PTE": {
+            "PTE*": [
+                "PTE0",
+                "PTE1",
+                "PTE2",
+                "PTE3",
+                "PTE6",
+                "PTE7",
+                "PTE[0]",
+                "PTE[1]",
+                "PTE[2]",
+                "PTE[3]",
+                "PTE[6]",
+                "PTE[7]"
+            ]
+        },
+        "Port PTF": {
+            "PTF*": [
+                "PTF3",
+                "PTF4",
+                "PTF5",
+                "PTF6",
+                "PTF7",
+                "PTF[3]",
+                "PTF[4]",
+                "PTF[5]",
+                "PTF[6]",
+                "PTF[7]"
+            ]
+        },
+        "Port PTG": {
+            "PTG*": [
+                "PTG4",
+                "PTG5",
+                "PTG[4]",
+                "PTG[5]"
+            ]
+        },
+        "Port PTJ": {
+            "PTJ*": [
+                "PTJ1",
+                "PTJ3",
+                "PTJ4",
+                "PTJ5"
+            ]
+        },
+        "Port PTM": {
+            "PTM*": [
+                "PTM4",
+                "PTM5",
+                "PTM6",
+                "PTM7",
+                "PTM[4]",
+                "PTM[5]",
+                "PTM[6]",
+                "PTM[7]"
+            ]
+        },
+        "Port PU": {
+            "PU7": [
+                "PU7"
+            ]
+        },
+     "00": [
+      "P00",
+      "P000",
+      "P001",
+      "P002",
+      "P003",
+      "P004",
+      "P005",
+      "P006",
+      "P007",
+      "P008",
+      "P009",
+      "P00_0",
+      "P00_00",
+      "P00_01",
+      "P00_02",
+      "P00_03",
+      "P00_04",
+      "P00_05",
+      "P00_06",
+      "P00_07",
+      "P00_08",
+      "P00_09",
+      "P00_1",
+      "P00_10",
+      "P00_11",
+      "P00_12",
+      "P00_13",
+      "P00_2",
+      "P00_3",
+      "P00_4",
+      "P00_5",
+      "P00_6",
+      "P00_7",
+      "P00_8",
+      "P00_9",
+      "POO",
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P09",
+      "P010",
+      "P011",
+      "P012",
+      "P013",
+      "P014",
+      "P015",
+      "P016",
+      "P017",
+      "P018",
+      "P019",
+      "P0_0",
+      "P0_0",
+      "P0_00",
+      "P0_01",
+      "P0_02",
+      "P0_03",
+      "P0_04",
+      "P0_05",
+      "P0_06",
+      "P0_07",
+      "P0_08",
+      "P0_09",
+      "P0_1",
+      "P0_1",
+      "P0_10",
+      "P0_11",
+      "P0_12",
+      "P0_13",
+      "P0_14",
+      "P0_15",
+      "P0_16",
+      "P0_17",
+      "P0_18",
+      "P0_19",
+      "P0_2",
+      "P0_2",
+      "P0_20",
+      "P0_21",
+      "P0_22",
+      "P0_23",
+      "P0_24",
+      "P0_25",
+      "P0_26",
+      "P0_27",
+      "P0_28",
+      "P0_29",
+      "P0_3",
+      "P0_3",
+      "P0_30",
+      "P0_31",
+      "P0_4",
+      "P0_4",
+      "P0_5",
+      "P0_5",
+      "P0_6",
+      "P0_6",
+      "P0_7",
+      "P0_7",
+      "P0_8",
+      "P0_9"
+    ],
+    "01": [
+      "P10",
+      "P100",
+      "P101",
+      "P102",
+      "P103",
+      "P104",
+      "P105",
+      "P106",
+      "P107",
+      "P108",
+      "P109",
+      "P110",
+      "P111",
+      "P112",
+      "P113",
+      "P114",
+      "P115",
+      "P116",
+      "P01_00",
+      "P01_01",
+      "P01_02",
+      "P01_03",
+      "P01_04",
+      "P01_05",
+      "P01_06",
+      "P01_07",
+      "P01_08",
+      "P01_09",
+      "P01_10",
+      "P01_11",
+      "P01_12",
+      "P01_13",
+      "P01_14",
+      "P01_15",
+      "P01_3",
+      "P01_4",
+      "P01_5",
+      "P01_6",
+      "P01_7",
+      "P01_8",
+      "P01_9",
+      "P1_10",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14",
+      "P15",
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P1_0",
+      "P1_00",
+      "P1_01",
+      "P1_02",
+      "P1_03",
+      "P1_04",
+      "P1_05",
+      "P1_06",
+      "P1_07",
+      "P1_08",
+      "P1_09",
+      "P1_0",
+      "P1_10",
+      "P1_10",
+      "P1_11",
+      "P1_11",
+      "P1_12",
+      "P1_13",
+      "P1_14",
+      "P1_15",
+      "P1_16",
+      "P1_17",
+      "P1_18",
+      "P1_19",
+      "P1_1",
+      "P1_2",
+      "P1_20",
+      "P1_21",
+      "P1_22",
+      "P1_23",
+      "P1_24",
+      "P1_25",
+      "P1_26",
+      "P1_27",
+      "P1_28",
+      "P1_29",
+      "P1_2",
+      "P1_3",
+      "P1_30",
+      "P1_31",
+      "P1_3",
+      "P1_4",
+      "P1_4",
+      "P1_5",
+      "P1_6",
+      "P1_7",
+      "P1_8",
+      "P1_9"
+    ],
+    "02": [
+      "P02_0",
+      "P02_00",
+      "P02_01",
+      "P02_02",
+      "P02_03",
+      "P02_04",
+      "P02_05",
+      "P02_06",
+      "P02_07",
+      "P02_1",
+      "P02_10",
+      "P02_11",
+      "P02_2",
+      "P02_3",
+      "P02_4",
+      "P02_5",
+      "P02_6",
+      "P02_7",
+      "P02_8",
+      "P02_9",
+      "P200",
+      "P201",
+      "P202",
+      "P203",
+      "P204",
+      "P205",
+      "P206",
+      "P207",
+      "P208",
+      "P209",
+      "P210",
+      "P211",
+      "P212",
+      "P213",
+      "P214",
+      "P215",
+      "P216",
+      "P20",
+      "P21",
+      "P22",
+      "P23",
+      "P24",
+      "P25",
+      "P26",
+      "P27",
+      "P28",
+      "P29",
+      "P2_00",
+      "P2_01",
+      "P2_02",
+      "P2_03",
+      "P2_04",
+      "P2_05",
+      "P2_06",
+      "P2_07",
+      "P2_08",
+      "P2_09",
+      "P2_0",
+      "P2_1",
+      "P2_10",
+      "P2_11",
+      "P2_12",
+      "P2_13",
+      "P2_14",
+      "P2_15",
+      "P2_1",
+      "P2_2",
+      "P2_2",
+      "P2_3",
+      "P2_3",
+      "P2_4",
+      "P2_5",
+      "P2_6",
+      "P2_7",
+      "P2_8",
+      "P2_9"
+    ],
+    "03": [
+      "P03_0",
+      "P03_00",
+      "P03_01",
+      "P03_02",
+      "P03_03",
+      "P03_04",
+      "P03_05",
+      "P03_06",
+      "P03_07",
+      "P03_08",
+      "P03_09",
+      "P03_10",
+      "P03_11",
+      "P03_12",
+      "P03_13",
+      "P03_14",
+      "P03_15",
+      "P03_2",
+      "P03_3",
+      "P03_4",
+      "P03_5",
+      "P03_6",
+      "P03_7",
+      "P30",
+      "P31",
+      "P32",
+      "P33",
+      "P34",
+      "P35",
+      "P36",
+      "P36 (PUDP+)",
+      "P36 (PUPD+)",
+      "P36(PUDP+)",
+      "P36(PUPD+)",
+      "P37",
+      "P38",
+      "P39",
+      "P310",
+      "P311",
+      "P312",
+      "P313",
+      "P314",
+      "P315",
+      "P316",
+      "P30",
+      "P300",
+      "P301",
+      "P302",
+      "P303",
+      "P304",
+      "P305",
+      "P306",
+      "P307",
+      "P308",
+      "P309",
+      "P3_0",
+      "P3_1",
+      "P3_10",
+      "P3_11",
+      "P3_12",
+      "P3_13",
+      "P3_14",
+      "P3_2",
+      "P3_3",
+      "P3_4",
+      "P3_5",
+      "P3_6",
+      "P3_7",
+      "P3_8",
+      "P3_9"
+    ],
+    "04": [
+      "P04_0",
+      "P04_00",
+      "P04_01",
+      "P04_02",
+      "P04_03",
+      "P04_04",
+      "P04_05",
+      "P04_06",
+      "P04_07",
+      "P04_1",
+      "P04_2",
+      "P04_3",
+      "P04_4",
+      "P04_5",
+      "P04_6",
+      "P04_7",
+      "P40",
+      "P41",
+      "P42",
+      "P43",
+      "P44",
+      "P45",
+      "P46",
+      "P47",
+      "P48",
+      "P49",
+      "P410",
+      "P411",
+      "P412",
+      "P413",
+      "P414",
+      "P415",
+      "P416",
+      "P400",
+      "P401",
+      "P402",
+      "P403",
+      "P404",
+      "P405",
+      "P406",
+      "P407",
+      "P408",
+      "P409",
+      "P4_0",
+      "P4_1",
+      "P4_10",
+      "P4_11",
+      "P4_12",
+      "P4_13",
+      "P4_14",
+      "P4_15",
+      "P4_16",
+      "P4_17",
+      "P4_18",
+      "P4_19",
+      "P4_2",
+      "P4_20",
+      "P4_3",
+      "P4_4",
+      "P4_5",
+      "P4_6",
+      "P4_7",
+      "P4_8",
+      "P4_9"
+    ],
+    "05": [
+      "P05_0",
+      "P05_00",
+      "P05_01",
+      "P05_02",
+      "P05_03",
+      "P05_1",
+      "P05_2",
+      "P05_3",
+      "P05_4",
+      "P05_5",
+      "P05_6",
+      "P05_7",
+      "P50",
+      "P50",
+      "P500",
+      "P501",
+      "P502",
+      "P503",
+      "P504",
+      "P505",
+      "P506",
+      "P507",
+      "P508",
+      "P509",
+      "P51",
+      "P51",
+      "P510",
+      "P511",
+      "P511",
+      "P512",
+      "P512",
+      "P513",
+      "P514",
+      "P515",
+      "P52",
+      "P53",
+      "P54",
+      "P55",
+      "P56",
+      "P57",
+      "P5_0",
+      "P5_0",
+      "P5_1",
+      "P5_1",
+      "P5_10",
+      "P5_11",
+      "P5_12",
+      "P5_13",
+      "P5_14",
+      "P5_15",
+      "P5_2",
+      "P5_2",
+      "P5_3",
+      "P5_3",
+      "P5_4",
+      "P5_4",
+      "P5_5",
+      "P5_5",
+      "P5_6",
+      "P5_6",
+      "P5_7",
+      "P5_7",
+      "P5_8",
+      "P5_9"
+    ],
+    "06": [
+      "P06_0",
+      "P06_00",
+      "P06_01",
+      "P06_02",
+      "P06_03",
+      "P06_04",
+      "P06_05",
+      "P06_06",
+      "P06_07",
+      "P06_08",
+      "P06_09",
+      "P06_1",
+      "P06_10",
+      "P06_11",
+      "P06_2",
+      "P06_3",
+      "P06_4",
+      "P06_5",
+      "P06_6",
+      "P06_7",
+      "P60",
+      "P60",
+      "P60(Nch-OD)",
+      "P600",
+      "P601",
+      "P602",
+      "P603",
+      "P604",
+      "P605",
+      "P606",
+      "P607",
+      "P608",
+      "P609",
+      "P61",
+      "P61",
+      "P61(Nch-OD)",
+      "P610",
+      "P611",
+      "P612",
+      "P613",
+      "P614",
+      "P615",
+      "P62",
+      "P62(Nch-OD)",
+      "P63",
+      "P63(Nch-OD)",
+      "P64",
+      "P65",
+      "P66",
+      "P67",
+      "P6_0",
+      "P6_0",
+      "P6_1",
+      "P6_1",
+      "P6_10",
+      "P6_11",
+      "P6_12",
+      "P6_13",
+      "P6_14",
+      "P6_15",
+      "P6_16",
+      "P6_17",
+      "P6_18",
+      "P6_19",
+      "P6_2",
+      "P6_2",
+      "P6_20",
+      "P6_3",
+      "P6_3",
+      "P6_4",
+      "P6_4",
+      "P6_5",
+      "P6_5",
+      "P6_6",
+      "P6_6",
+      "P6_7",
+      "P6_7",
+      "P6_8",
+      "P6_9"
+    ],
+    "07": [
+      "P07_0",
+      "P07_00",
+      "P07_01",
+      "P07_02",
+      "P07_03",
+      "P07_04",
+      "P07_05",
+      "P07_1",
+      "P07_2",
+      "P07_3",
+      "P07_4",
+      "P07_5",
+      "P07_6",
+      "P07_7",
+      "P70",
+      "P70",
+      "P700",
+      "P701",
+      "P702",
+      "P703",
+      "P704",
+      "P705",
+      "P706",
+      "P707",
+      "P708",
+      "P709",
+      "P71",
+      "P71",
+      "P71",
+      "P710",
+      "P711",
+      "P712",
+      "P713",
+      "P714",
+      "P715",
+      "P72",
+      "P73",
+      "P74",
+      "P75",
+      "P76",
+      "P77",
+      "P78",
+      "P79",
+      "P7_0",
+      "P7_0",
+      "P7_0",
+      "P7_0",
+      "P7_1",
+      "P7_1",
+      "P7_1",
+      "P7_10",
+      "P7_11",
+      "P7_12",
+      "P7_13",
+      "P7_14",
+      "P7_15",
+      "P7_1",
+      "P7_2",
+      "P7_2",
+      "P7_2",
+      "P7_2",
+      "P7_3",
+      "P7_3",
+      "P7_3",
+      "P7_3",
+      "P7_4",
+      "P7_4",
+      "P7_4",
+      "P7_4",
+      "P7_5",
+      "P7_6",
+      "P7_7",
+      "P7_7",
+      "P7_8",
+      "P7_9"
+    ],
+    "08": [
+      "P08_0",
+      "P08_00",
+      "P08_01",
+      "P08_02",
+      "P08_03",
+      "P08_04",
+      "P08_05",
+      "P08_06",
+      "P08_07",
+      "P08_1",
+      "P08_2",
+      "P08_3",
+      "P08_4",
+      "P08_5",
+      "P08_6",
+      "P08_7",
+      "P80",
+      "P80",
+      "P800",
+      "P801",
+      "P802",
+      "P803",
+      "P804",
+      "P805",
+      "P806",
+      "P807",
+      "P808",
+      "P809",
+      "P81",
+      "P810",
+      "P811",
+      "P812",
+      "P813",
+      "P814",
+      "P815",
+      "P82",
+      "P83",
+      "P84",
+      "P85",
+      "P86",
+      "P87",
+      "P8_0",
+      "P8_0",
+      "P8_0",
+      "P8_0",
+      "P8_1",
+      "P8_1",
+      "P8_1",
+      "P8_10",
+      "P8_11",
+      "P8_12",
+      "P8_13",
+      "P8_14",
+      "P8_15",
+      "P8_1",
+      "P8_2",
+      "P8_2",
+      "P8_2",
+      "P8_2",
+      "P8_3",
+      "P8_3",
+      "P8_3",
+      "P8_3",
+      "P8_4",
+      "P8_4",
+      "P8_4",
+      "P8_4",
+      "P8_5",
+      "P8_6",
+      "P8_7",
+      "P8_8",
+      "P8_9"
+    ],
+    "09": [
+      "P09_0",
+      "P09_00",
+      "P09_01",
+      "P09_02",
+      "P09_03",
+      "P09_04",
+      "P09_05",
+      "P09_06",
+      "P09_07",
+      "P09_1",
+      "P09_2",
+      "P09_3",
+      "P09_4",
+      "P09_5",
+      "P09_6",
+      "P09_7",
+      "P90",
+      "P900",
+      "P901",
+      "P902",
+      "P903",
+      "P904",
+      "P905",
+      "P906",
+      "P907",
+      "P908",
+      "P909",
+      "P91",
+      "P910",
+      "P911",
+      "P912",
+      "P913",
+      "P914",
+      "P915",
+      "P92",
+      "P93",
+      "P94",
+      "P95",
+      "P96",
+      "P97",
+      "P98",
+      "P99",
+      "P9_0",
+      "P9_0",
+      "P9_0",
+      "P9_0",
+      "P9_1",
+      "P9_1",
+      "P9_1",
+      "P9_1",
+      "P9_2",
+      "P9_2",
+      "P9_2",
+      "P9_2",
+      "P9_3",
+      "P9_3",
+      "P9_3",
+      "P9_3",
+      "P9_4",
+      "P9_5",
+      "P9_5",
+      "P9_6",
+      "P9_7",
+      "P9_8"
+    ],
+    "10": [
+      "P10_0",
+      "P10_0",
+      "P10_0",
+      "P10_00",
+      "P10_01",
+      "P10_02",
+      "P10_03",
+      "P10_04",
+      "P10_05",
+      "P10_06",
+      "P10_07",
+      "P10_08",
+      "P10_0",
+      "P10_1",
+      "P10_1",
+      "P10_1",
+      "P10_10",
+      "P10_11",
+      "P10_12",
+      "P10_13",
+      "P10_14",
+      "P10_15",
+      "P10_1",
+      "P10_2",
+      "P10_2",
+      "P10_2",
+      "P10_2",
+      "P10_3",
+      "P10_3",
+      "P10_3",
+      "P10_3",
+      "P10_4",
+      "P10_4",
+      "P10_4",
+      "P10_4",
+      "P10_5",
+      "P10_5",
+      "P10_6",
+      "P10_7",
+      "P10_8",
+      "P10_9"
+    ],
+    "11": [
+      "P110",
+      "P111",
+      "P112",
+      "P113",
+      "P114",
+      "P115",
+      "P116",
+      "P117",
+      "P11_0",
+      "P11_0",
+      "P11_00",
+      "P11_01",
+      "P11_02",
+      "P11_03",
+      "P11_04",
+      "P11_05",
+      "P11_06",
+      "P11_07",
+      "P11_08",
+      "P11_1",
+      "P11_10",
+      "P11_11",
+      "P11_12",
+      "P11_13",
+      "P11_14",
+      "P11_15",
+      "P11_2",
+      "P11_2",
+      "P11_3",
+      "P11_3",
+      "P11_4",
+      "P11_4",
+      "P11_5",
+      "P11_6",
+      "P11_7",
+      "P11_8",
+      "P11_9"
+    ],
+    "12": [
+      "P120",
+      "P121",
+      "P122",
+      "P123",
+      "P124",
+      "P125",
+      "P126",
+      "P127",
+      "P12_0",
+      "P12_0",
+      "P12_00",
+      "P12_01",
+      "P12_02",
+      "P12_03",
+      "P12_1",
+      "P12_1",
+      "P12_2",
+      "P12_2",
+      "P12_3",
+      "P12_3",
+      "P12_4",
+      "P12_4",
+      "P12_5",
+      "P12_5",
+      "P12_6",
+      "P12_6",
+      "P12_7",
+      "P12_7",
+      "P12_8",
+      "P12_9",
+      "P1_20",
+      "P1_21",
+      "P1_22",
+      "P1_23",
+      "P1_24",
+      "P1_25",
+      "P1_26",
+      "P1_27"
+    ],
+    "13": [
+      "P130",
+      "P131",
+      "P132",
+      "P133",
+      "P134",
+      "P135",
+      "P136",
+      "P137",
+      "P138",
+      "P139",
+      "P13_0",
+      "P13_0",
+      "P13_00",
+      "P13_01",
+      "P13_02",
+      "P13_03",
+      "P13_04",
+      "P13_05",
+      "P13_06",
+      "P13_07",
+      "P13_08",
+      "P13_09",
+      "P13_1",
+      "P13_1",
+      "P13_10",
+      "P13_11",
+      "P13_12",
+      "P13_13",
+      "P13_14",
+      "P13_2",
+      "P13_2",
+      "P13_3",
+      "P13_3",
+      "P13_4",
+      "P13_4",
+      "P13_5",
+      "P13_5",
+      "P13_6",
+      "P13_6",
+      "P13_7",
+      "P13_7",
+      "P13_8",
+      "P13_9",
+      "P1_31"
+    ],
+    "14": [
+      "P140",
+      "P141",
+      "P142",
+      "P143",
+      "P144",
+      "P145",
+      "P146",
+      "P147",
+      "P14_0",
+      "P14_00",
+      "P14_01",
+      "P14_02",
+      "P14_03",
+      "P14_04",
+      "P14_05",
+      "P14_06",
+      "P14_07",
+      "P14_1",
+      "P14_10",
+      "P14_11",
+      "P14_12",
+      "P14_13",
+      "P14_14",
+      "P14_15",
+      "P14_2",
+      "P14_3",
+      "P14_4",
+      "P14_4",
+      "P14_5",
+      "P14_5",
+      "P14_6",
+      "P14_7",
+      "P14_8",
+      "P14_9"
+    ],
+    "15": [
+      "P150",
+      "P151",
+      "P152",
+      "P153",
+      "P154",
+      "P155",
+      "P156",
+      "P157",
+      "P15_0",
+      "P15_0",
+      "P15_00",
+      "P15_01",
+      "P15_02",
+      "P15_03",
+      "P15_04",
+      "P15_05",
+      "P15_06",
+      "P15_07",
+      "P15_08",
+      "P15_09",
+      "P15_1",
+      "P15_1",
+      "P15_10",
+      "P15_11",
+      "P15_12",
+      "P15_13",
+      "P15_14",
+      "P15_15",
+      "P15_2",
+      "P15_2",
+      "P15_3",
+      "P15_3",
+      "P15_4",
+      "P15_4",
+      "P15_5",
+      "P15_5",
+      "P15_6",
+      "P15_7",
+      "P15_8"
+    ],
+    "16": [
+      "P160",
+      "P161",
+      "P162",
+      "P163",
+      "P164",
+      "P165",
+      "P166",
+      "P167",
+      "P16_0",
+      "P16_00",
+      "P16_01",
+      "P16_02",
+      "P16_03",
+      "P16_04",
+      "P16_05",
+      "P16_06",
+      "P16_07",
+      "P16_08",
+      "P16_09",
+      "P16_1",
+      "P16_10",
+      "P16_11",
+      "P16_12",
+      "P16_13",
+      "P16_2",
+      "P16_3",
+      "P16_4",
+      "P16_5",
+      "P16_6",
+      "P16_7",
+      "P16_8",
+      "P16_9"
+    ],
+    "17": [
+      "P17_0",
+      "P17_00",
+      "P17_1",
+      "P17_10",
+      "P17_11",
+      "P17_2",
+      "P17_3",
+      "P17_4",
+      "P17_5",
+      "P17_6",
+      "P17_7",
+      "P17_8",
+      "P17_9"
+    ],
+    "18": [
+      "P18_0",
+      "P18_1",
+      "P18_10",
+      "P18_11",
+      "P18_12",
+      "P18_13",
+      "P18_14",
+      "P18_15",
+      "P18_2",
+      "P18_3",
+      "P18_4",
+      "P18_5",
+      "P18_6",
+      "P18_7",
+      "P18_8",
+      "P18_9"
+    ],
+    "19": [
+      "P19_0",
+      "P19_1",
+      "P19_2",
+      "P19_3",
+      "P19_4",
+      "P19_5",
+      "P19_6",
+      "P19_7"
+    ],
+    "20": [
+      "P20_0",
+      "P20_0",
+      "P20_00",
+      "P20_01",
+      "P20_02",
+      "P20_1",
+      "P20_1",
+      "P20_10",
+      "P20_11",
+      "P20_12",
+      "P20_13",
+      "P20_14",
+      "P20_15",
+      "P20_2",
+      "P20_2",
+      "P20_3",
+      "P20_4",
+      "P20_5",
+      "P20_6",
+      "P20_7",
+      "P20_8",
+      "P20_9"
+    ],
+    "21": [
+      "P21_0",
+      "P21_0",
+      "P21_00",
+      "P21_1",
+      "P21_1",
+      "P21_10",
+      "P21_11",
+      "P21_12",
+      "P21_13",
+      "P21_14",
+      "P21_2",
+      "P21_3",
+      "P21_4",
+      "P21_5",
+      "P21_6",
+      "P21_7",
+      "P21_8",
+      "P21_9"
+    ],
+    "22": [
+      "P22_0",
+      "P22_0",
+      "P22_1",
+      "P22_1",
+      "P22_10",
+      "P22_11",
+      "P22_12",
+      "P22_13",
+      "P22_14",
+      "P22_15",
+      "P22_2",
+      "P22_3",
+      "P22_4",
+      "P22_5",
+      "P22_6",
+      "P22_7",
+      "P22_8",
+      "P22_9"
+    ],
+    "23": [
+      "P23_0",
+      "P23_0",
+      "P23_1",
+      "P23_1",
+      "P23_10",
+      "P23_11",
+      "P23_12",
+      "P23_13",
+      "P23_2",
+      "P23_3",
+      "P23_4",
+      "P23_5",
+      "P23_6",
+      "P23_7",
+      "P23_8",
+      "P23_9"
+    ],
+    "24": [
+      "P24_0",
+      "P24_0",
+      "P24_1",
+      "P24_1",
+      "P24_10",
+      "P24_11",
+      "P24_12",
+      "P24_13",
+      "P24_14",
+      "P24_15",
+      "P24_2",
+      "P24_3",
+      "P24_4",
+      "P24_5",
+      "P24_6",
+      "P24_7",
+      "P24_8",
+      "P24_9"
+    ],
+    "25": [
+      "P25_0",
+      "P25_0",
+      "P25_1",
+      "P25_1",
+      "P25_10",
+      "P25_11",
+      "P25_12",
+      "P25_13",
+      "P25_14",
+      "P25_15",
+      "P25_2",
+      "P25_3",
+      "P25_4",
+      "P25_5",
+      "P25_6",
+      "P25_7",
+      "P25_8",
+      "P25_9"
+    ],
+    "26": [
+      "P26_0",
+      "P26_0",
+      "P26_1",
+      "P26_1"
+    ],
+    "27": [
+      "P27_0",
+      "P27_0",
+      "P27_1",
+      "P27_1"
+    ],
+    "28": [
+      "P28_0",
+      "P28_0",
+      "P28_1",
+      "P28_1"
+    ],
+    "29": [
+      "P29_0",
+      "P29_0",
+      "P29_1",
+      "P29_1"
+    ],
+    "30": [
+      "P30_0",
+      "P30_0",
+      "P30_1",
+      "P30_1",
+      "P30_10",
+      "P30_11",
+      "P30_12",
+      "P30_13",
+      "P30_14",
+      "P30_15",
+      "P30_2",
+      "P30_3",
+      "P30_4",
+      "P30_5",
+      "P30_6",
+      "P30_7",
+      "P30_8",
+      "P30_9"
+    ],
+    "31": [
+      "P31_0",
+      "P31_0",
+      "P31_1",
+      "P31_1",
+      "P31_10",
+      "P31_11",
+      "P31_12",
+      "P31_13",
+      "P31_14",
+      "P31_15",
+      "P31_2",
+      "P31_3",
+      "P31_4",
+      "P31_5",
+      "P31_6",
+      "P31_7",
+      "P31_8",
+      "P31_9"
+    ],
+    "32": [
+      "P32_0",
+      "P32_0",
+      "P32_1",
+      "P32_1",
+      "P32_2",
+      "P32_3",
+      "P32_4",
+      "P32_5",
+      "P32_6"
+
+    ],
+    "33": [
+      "P33_0",
+      "P33_0",
+      "P33_1",
+      "P33_1",
+      "P33_10",
+      "P33_11",
+      "P33_12",
+      "P33_13",
+      "P33_2",
+      "P33_3",
+      "P33_4",
+      "P33_5",
+      "P33_6",
+      "P33_7",
+      "P33_8",
+      "P33_9"
+    ],
+    "34": [
+      "P34_0",
+      "P34_0",
+      "P34_1",
+      "P34_1",
+      "P34_2",
+      "P34_3",
+      "P34_4"
+    ],
+    "35": [
+      "P35_0",
+      "P35_0",
+      "P35_1",
+      "P35_1"
+    ],
+    "36": [
+      "P36_0",
+      "P36_0",
+      "P36_1",
+      "P36_1"
+    ],
+    "37": [
+      "P37_0",
+      "P37_0",
+      "P37_1",
+      "P37_1",
+      "P37_2",
+      "P37_2"
+    ],
+    "38": [
+      "P38_0",
+      "P38_1"
+    ],
+    "39": [
+      "P39_0",
+      "P39_1",
+      "P39_2"
+    ],
+    "40": [
+      "P40_0",
+      "P40_1",
+      "P40_2",
+      "P40_3",
+      "P40_4",
+      "P40_5"
+    ],
+    "41": [
+      "P41_0",
+      "P41_1"
+    ],
+    "42": [
+      "P42_0",
+      "P42_1",
+      "P42_10",
+      "P42_11",
+      "P42_12",
+      "P42_13",
+      "P42_14",
+      "P42_15",
+      "P42_2",
+      "P42_3",
+      "P42_4",
+      "P42_5",
+      "P42_6",
+      "P42_7",
+      "P42_8",
+      "P42_9"
+    ],
+    "43": [
+      "P43_0",
+      "P43_1",
+      "P43_10",
+      "P43_11",
+      "P43_12",
+      "P43_2",
+      "P43_3",
+      "P43_4",
+      "P43_5",
+      "P43_6",
+      "P43_7",
+      "P43_8",
+      "P43_9"
+    ],
+    "44": [
+      "P44_0",
+      "P44_1",
+      "P44_10",
+      "P44_11",
+      "P44_2",
+      "P44_3",
+      "P44_4",
+      "P44_5",
+      "P44_6",
+      "P44_7",
+      "P44_8",
+      "P44_9"
+    ],
+    "45": [
+      "P45_0",
+      "P45_1",
+      "P45_10",
+      "P45_11",
+      "P45_12",
+      "P45_13",
+      "P45_2",
+      "P45_3",
+      "P45_4",
+      "P45_5",
+      "P45_6",
+      "P45_7",
+      "P45_8",
+      "P45_9"
+    ],
+    "46": [
+      "P46_0",
+      "P46_1",
+      "P46_10",
+      "P46_11",
+      "P46_12",
+      "P46_13",
+      "P46_14",
+      "P46_15",
+      "P46_2",
+      "P46_3",
+      "P46_4",
+      "P46_5",
+      "P46_6",
+      "P46_7",
+      "P46_8",
+      "P46_9"
+    ],
+    "47": [
+      "P47_0",
+      "P47_1",
+      "P47_10",
+      "P47_2",
+      "P47_3",
+      "P47_4",
+      "P47_5",
+      "P47_6",
+      "P47_7",
+      "P47_8",
+      "P47_9"
+    ],
+    "48": [
+      "P48_0",
+      "P48_1",
+      "P48_2",
+      "P48_3",
+      "P48_4"
+    ]
+},
+
+    "Positive": {
+        "A*VREF": {
+            "A*VREFH": [
+                "A0VREFH",
+                "A0VREFP",
+                "A1VREFH",
+                "A2VREFH",
+                "A3VREFH"
+            ],
+            "ADSVREFH": [
+                "ADSVREFH"
+            ],
+            "Ref_pins": [
+                "A0VREF",
+                "A1VREF"
+            ]
+        },
+        "ADREG": [
+            "ADREG"
+        ],
+        "ADSVCL": [
+            "ADSVCL"
+        ],
+        "AG": [
+            "AG"
+        ],
+        "AV": {
+            "AV12": [
+                "AV12"
+            ],
+            "AV33": [
+                "AV33"
+            ],
+            "AVCM": [
+                "AVCM"
+            ]
+        },
+        "AVREF*": {
+            "AVREFB": [
+                "AVREFB"
+            ],
+            "AVREFH": [
+                "AVREFH"
+            ],
+            "AVREFIO": [
+                "AVREFIO"
+            ],
+            "AVREFT": [
+                "AVREFT"
+            ],
+            "AVREF_Diff": [
+                "AVREFP"
+            ],
+            "_pins": [
+                "AVREF",
+                "AVREF0",
+                "AVREF1"
+            ]
+        },
+        "AVRT": [
+            "AVRT"
+        ],
+        "AVS*": [
+            "AVS1",
+            "AVS2",
+            "AVS3"
+        ],
+        "BGR": [
+            "BGR#",
+            "BGR_BO"
+        ],
+        "LVDVBAT": [
+            "LVDVBAT"
+        ],
+        "MVREF": {
+            "MVREFCA": [
+                "MVREFCA"
+            ],
+            "MVREFDQ": [
+                "MVREFDQ"
+            ],
+            "_pins": [
+                "MVREF"
+            ]
+        },
+        "NC": [
+            "IC (VPP)",
+            "RES(Vpp)#"
+        ],
+        "PEVREF": [
+            "PEVREF"
+        ],
+        "Z_REG": {
+            "AREGC": [
+                "AREGC"
+            ],
+            "REGA": [
+                "REGA"
+            ],
+            "REGC": [
+                "REG0C",
+                "REG1C",
+                "REG1C1",
+                "REG1C2",
+                "REG1C3",
+                "REG1C4",
+                "REGC"
+            ],
+            "REGIN": [
+                "REGIN"
+            ],
+            "USBREGC": [
+                "USBREGC"
+            ]
+        },
+        "SDRBVREF": [
+            "SDRBVREF"
+        ],
+        "USB_RREF": {
+            "USBA_RREF": [
+                "USBA_RREF"
+            ],
+            "USBHS_RREF": [
+                "USBHS_RREF"
+            ],
+            "USB_RREF": [
+                "USB_RREF"
+            ]
+        },
+        "V1": [
+            "V1"
+        ],
+        "V12": [
+            "V12"
+        ],
+        "V14": {
+            "V14RF": [
+                "V14RF"
+            ],
+            "_pins": [
+                "V14"
+            ]
+        },
+        "V18": {
+            "V18F": [
+                "V18F"
+            ],
+            "V18P": [
+                "V18P"
+            ],
+            "_pins": [
+                "V18"
+            ]
+        },
+        "V2": [
+            "V2"
+        ],
+        "V3": [
+            "V3"
+        ],
+        "V30": [
+            "V30"
+        ],
+        "VAD": [
+            "VAD"
+        ],
+        "VPM": [
+        "VPM"
+        ],
+        "VBAT": {
+            "VBATT": [
+                "VBATT"
+            ],
+            "VBATWIO0": [
+                "VBATWIO0"
+            ],
+            "VBAT_EHC": [
+                "VBAT_EHC"
+            ],
+            "_pins": [
+                "VBAT",
+                "VBAT1",
+                "VBAT2"
+            ]
+        },
+        "VBP": [
+            "VBP"
+        ],
+        "VBUS": [
+            "VBUS",
+            "VBUS0",
+            "VBUS1"
+        ],
+        "AA_VCC": {
+            "ADSVCC": [
+                "ADSVCC"
+            ],
+            "AVCC*": [
+                "A0VCC",
+                "A1VCC",
+                "A2VCC",
+                "A3VCC",
+                "AVCC",
+                "AVCC0",
+                "AVCC1",
+                "AVCC2",
+                "AVCCA",
+                "AVCCD",
+                "AVCCP"
+            ],
+            "AVCC-USB": [
+                "AVCC-USB"
+            ],
+            "AVCC_MIPI": [
+                "AVCC_MIPI"
+            ],
+            "AVCC_RF": [
+                "AVCC_RF"
+            ],
+            "AVCC_USB": [
+                "AVCC_USB"
+            ],
+            "AVCC_USBA": [
+                "AVCC_USBA"
+            ],
+            "AVCC_USBHS": [
+                "AVCC_USBHS"
+            ],
+            "B*VCC": [
+                "B0VCC",
+                "B1VCC",
+                "B2VCC",
+                "B3VCC",
+                "B4VCC",
+                "B5VCC",
+                "BVCC"
+            ],
+            "CVCC": [
+                "CVCC"
+            ],
+            "DRVCC": [
+                "DRVCC",
+                "DRVCC (VCCQ)"
+            ],
+            "DVCC": [
+                "DVCC"
+            ],
+            "E*VCC": [
+                "E0VCC",
+                "E1VCC",
+                "E2VCC",
+                "EVCC"
+            ],
+            "EMUVCC": [
+                "EMUVCC"
+            ],
+            "ERAMVCC": [
+                "ERAM0VCC",
+                "ERAM1VCC",
+                "ERAMVCC"
+            ],
+            "GETH0*VCC": [
+                "GETH0BVCC",
+                "GETH0PVCC",
+                "GETH0RVCC"
+            ],
+            "IOVCC*": [
+                "IOVCC0",
+                "IOVCC1",
+                "IOVCC2",
+                "IOVCC3"
+            ],
+            "ISMVCC": [
+                "ISMVCC"
+            ],
+            "LPVCC": [
+                "LPVCC"
+            ],
+            "LVDVCC": [
+                "LVDVCC"
+            ],
+            "MVCC": [
+                "MVCC"
+            ],
+            "OSCVCC": [
+                "OSCVCC"
+            ],
+            "PLLVCC": [
+                "PLLVCC"
+            ],
+            "PVCC": [
+                "PVCC",
+                "PVCC1",
+                "PVCC2"
+            ],
+            "PWMVCC": [
+                "PWMVCC"
+            ],
+            "REG*VCC": [
+                "REG0VCC",
+                "REG1VCC",
+                "REGVCC"
+            ],
+            "RVCC": [
+                "RVCC"
+            ],
+            "SDR*VCC": [
+                "SDRAVCC",
+                "SDRBVCC"
+            ],
+            "SDRBCKVCC": [
+                "SDRBCKVCC"
+            ],
+            "SFVCC": [
+                "SFVCC"
+            ],
+            "SVRAVCC": [
+                "SVRAVCC"
+            ],
+            "SVRDRVCC": [
+                "SVRDRVCC"
+            ],
+            "SYSVCC": [
+                "SYSVCC"
+            ],
+            "TTLVCC": [
+                "TTLVCC"
+            ],
+            "USB*PVcc": [
+                "USBAPVcc",
+                "USBDPVcc"
+            ],
+            "USB*Vcc": [
+                "USBAVcc",
+                "USBDVcc",
+                "USBUVcc"
+            ],
+            "UVCC": [
+                "UVCC"
+            ],
+            "VCC*": [
+                "VCC0",
+                "VCC1",
+                "VCC2",
+                "VCCA",
+                "VCCB",
+                "Vcc1A",
+                "Vcc2A",
+                "Vcc3A"
+            ],
+            "VCC-PLL": [
+                "VCC (PLL1)",
+                "VCC (PLL2)",
+                "VCC-PLL1",
+                "VCC-PLL2"
+            ],
+            "VCC-RTC": [
+                "VCC-RTC"
+            ],
+            "VCC15": [
+                "VCC15"
+            ],
+            "VCC18_MIPI": [
+                "VCC18_MIPI"
+            ],
+            "VCCDDC": [
+                "VCCDDC"
+            ],
+            "VCCRF": [
+                "VCCRF"
+            ],
+            "VCC_A": [
+                "VCC_A"
+            ],
+            "VCC_D": [
+                "VCC_D"
+            ],
+            "VCC_DA": [
+                "VCC_DA"
+            ],
+            "VCC_DCDC": [
+                "VCC_DCDC"
+            ],
+            "VCC_DDC": [
+                "VCC_DDC"
+            ],
+            "VCC_RF": [
+                "VCC_RF"
+            ],
+            "VCC_SU": [
+                "VCC_SU"
+            ],
+            "VCC_USB": [
+                "VCC_USB"
+            ],
+            "VCC_USBA": [
+                "VCC_USBA"
+            ],
+            "VCC_USBHS": [
+                "VCC_USBHS"
+            ],
+            "VCC_USB_LDO": [
+                "VCC_USB_LDO"
+            ],
+            "VDAVcc": [
+                "VDAVcc"
+            ],
+            "VSC_VCC": [
+                "VSC_VCC"
+            ],
+            "ZPDVCC": [
+                "ZPDVCC"
+            ],
+            "APins": [
+                "VCC"
+            ]
+        },
+        "AB_VCCQ": {
+            "VCCQ-PLL": [
+                "VCCQ-PLL"
+            ],
+            "VCCQ33": [
+                "VCCQ33"
+            ],
+            "_pins": [
+                "VCCQ"
+            ]
+        },
+        "Z_VCL": {
+            "AWOVCL": [
+                "AWOVCL"
+            ],
+            "GETH0VCL": [
+                "GETH0VCL"
+            ],
+            "ISOVCL": [
+                "ISOVCL"
+            ],
+            "PLLVCL": [
+                "PLLVCL"
+            ],
+            "RAMSVCL": [
+                "RAMSVCL"
+            ],
+            "RAMVCL": [
+                "RAMVCL"
+            ],
+            "_pins": [
+                "VCL",
+                "VCL0",
+                "VCL1",
+                "VCL2"
+            ]
+        },
+        "VDC": [
+            "VDC0",
+            "VDC1"
+        ],
+        "AD_VDD": {
+            "AVDD*": [
+                "AVDD",
+                "AVDD0",
+                "AVDD1"
+            ],
+            "AVDD_RF": [
+                "AVDD_RF"
+            ],
+            "BVDD": [
+                "BVDD"
+            ],
+            "CVDD*": [
+                "CVDD",
+                "CVDD0",
+                "CVDD1",
+                "CVDD2"
+            ],
+            "DVDD": [
+                "DVDD"
+            ],
+            "DVDD_USB": [
+                "DVDD_USB"
+            ],
+            "E*VDD": [
+                "E0VDD",
+                "E1VDD"
+            ],
+            "EMUVDD": [
+                "EMUVDD"
+            ],
+            "ERAMVDD": [
+                "ERAMVDD"
+            ],
+            "EVDD*": [
+                "EVDD",
+                "EVDD0",
+                "EVDD1"
+            ],
+            "I0VDD": [
+                "I0VDD"
+            ],
+            "ISOVDD": [
+                "ISOVDD"
+            ],
+            "IVDD": [
+                "IVDD"
+            ],
+            "LVDD": [
+                "LVDD"
+            ],
+            "OSCVDD": [
+                "OSCVDD"
+            ],
+            "PLLVDD*": [
+                "PLLVDD",
+                "PLLVDD0",
+                "PLLVDD1"
+            ],
+            "REG*VDD": [
+                "REG0VDD",
+                "REG1VDD"
+            ],
+            "RVDD": [
+                "RVDD"
+            ],
+            "SMVDD": [
+                "SMVDD",
+                "SMVDD0",
+                "SMVDD1"
+            ],
+            "UVDD": [
+                "UVDD"
+            ],
+            "VDD*": [
+                "VDD0",
+                "VDD1",
+                "VDD3",
+                "VDD5"
+            ],
+            "VDD-CPG": [
+                "VDD-CPG",
+                "VDD-CPG(3.3V)"
+            ],
+            "VDD-DDR": [
+                "VDD-DDR"
+            ],
+            "VDD-NC": [
+                "VDD (N.C.)",
+                "VDD(N.C.)",
+                "VDD(NC)"
+            ],
+            "VDD-PLL": [
+                "VDD-PLL",
+                "VDD-PLL1",
+                "VDD-PLL1(3.3V)",
+                "VDD-PLL2",
+                "VDD-PLL2(3.3V)"
+            ],
+            "VDD-RTC": [
+                "VDD-RTC",
+                "VDD-RTC(3.3V)"
+            ],
+            "VDD33_USB": [
+                "VDD33_USB"
+            ],
+            "VDDA-PLL1": [
+                "VDDA-PLL1"
+            ],
+            "VDD_RF": [
+                "VDD_RF"
+            ],
+            "_pins": [
+                "VDD"
+            ]
+        },
+        "VDDQ": {
+            "VDDQ-PLL": [
+                "VDDQ-PLL1",
+                "VDDQ-PLL2"
+            ],
+            "VDDQ-TD": [
+                "VDDQ-TD"
+            ],
+            "_pins": [
+                "VDDQ"
+            ]
+        },
+        "VL*": [
+            "VL1",
+            "VL2",
+            "VL3",
+            "VL4"
+        ],
+        "VLC*": [
+            "VLC0",
+            "VLC1",
+            "VLC2",
+            "VLC3"
+        ],
+        "VLED": [
+            "VLED"
+        ],
+        "VLO": [
+            "VLO"
+        ],
+        "VPP": [
+            "VPP"
+        ],
+        "VREF": {
+            "VREFDSH": [
+                "VREFDSH"
+            ],
+            "VREFH": [
+                "VREFH",
+                "VREFH0",
+                "VREFH1",
+                "VREFH2"
+            ],
+            "VREFI": [
+                "VREFI"
+            ],
+            "VREFOUT": [
+                "VREFOUT"
+            ],
+            "_pins": [
+                "VREF"
+            ]
+        },
+        "VREG*": {
+            "VREG_DIG": [
+                "VREG_DIG"
+            ],
+            "VREG_PLL": [
+                "VREG_PLL"
+            ],
+            "VREG_RF": [
+                "VREG_RF"
+            ],
+            "VREG_TXPA": [
+                "VREG_TXPA"
+            ],
+            "VREG_VCO": [
+                "VREG_VCO"
+            ],
+            "_pins": [
+                "VREG1",
+                "VREG2",
+                "VREG3",
+                "VREG4"
+            ]
+        },
+        "VRTC": [
+            "VRTC"
+        ],
+        "VSL": [
+            "VSL"
+        ],
+        "VSYS_BUCK": [
+            "VSYS_BUCK"
+        ],
+        "ZPDVREF": [
+            "ZPDVREF"
+        ],
+        "VCL_pins": [
+            "UREGC",
+            "VCLH",
+            "VCL_F"
+        ]
+    },
+    "QSPIF*": [
+        "QSPIF_CLK",
+        "QSPIF_CS",
+        "QSPIF_D0",
+        "QSPIF_D1",
+        "QSPIF_D2",
+        "QSPIF_D3"
+    ],
+    "RD": [
+        "R",
+        "RD",
+        "RD#",
+        "RD#",
+        "RD2#",
+        "RDY#",
+        "RDY#"
+    ],
+    "RDC2*": {
+        "RDC20S*": [
+            "RDC20S1",
+            "RDC20S2",
+            "RDC20S3",
+            "RDC20S4"
+        ],
+        "RDC21COM": [
+            "RDC21COM"
+        ],
+        "RDC21RSO": [
+            "RDC21RSO"
+        ],
+        "RDC21S*": [
+            "RDC21S1",
+            "RDC21S2",
+            "RDC21S3",
+            "RDC21S4"
+        ]
+    },
+    "RDC20COM": [
+        "RDC20COM"
+    ],
+    "RDC20RSO": [
+        "RDC20RSO"
+    ],
+    "RDC3A": {
+        "RDC3A0COM": [
+            "RDC3A0COM"
+        ],
+        "RDC3A0RSO": [
+            "RDC3A0RSO"
+        ],
+        "RDC3A0S*": [
+            "RDC3A0S1",
+            "RDC3A0S2",
+            "RDC3A0S3",
+            "RDC3A0S4"
+        ],
+        "RDC3A1COM": [
+            "RDC3A1COM"
+        ],
+        "RDC3A1RSO": [
+            "RDC3A1RSO"
+        ],
+        "RDC3A1S*": [
+            "RDC3A1S1",
+            "RDC3A1S2",
+            "RDC3A1S3",
+            "RDC3A1S4"
+        ]
+    },
+    "REF": {
+        "REF0": {
+            "Diff Pair": [
+                "REF0N",
+                "REF0P"
+            ]
+        },
+        "REF1": {
+            "Diff Pair": [
+                "REF1N",
+                "REF1P"
+            ]
+        },
+        "REFCK*": [
+            "REF125CK",
+            "REF50CK"
+        ],
+        "REFOUT": [
+            "REFOUT"
+        ]
+    },
+    "REGOUT": [
+        "REGOUT"
+    ],
+    "RESET": {
+        "Diff Pair": [
+            "RESETM#",
+            "RESETP#"
+        ],
+        "_pins": [
+            "#RES",
+            "RES",
+            "RES#",
+            "RESET",
+            "RESET#",
+            "RESETOUT",
+            "RESETOUT#",
+            "RESETOUTZ",
+            "RESETZ",
+            "RESETZ#",
+            "RESO#",
+            "RESOUT#",
+            "RES_IN#",
+            "RES_OUT",
+            "RSTB",
+            "RSTN",
+            "RSTOUT#",
+            "nRST"
+        ]
+    },
+    "REXT": [
+        "REXT"
+    ],
+    "RF": {
+        "GND_RF": [
+            "GND_RF1",
+            "GND_RF2"
+        ],
+        "RF1": {
+            "AGNDRF": [
+                "AGNDRF1",
+                "AGNDRF2"
+            ],
+            "ESDN": [
+                "ESDN"
+            ],
+            "PSUB": [
+                "PSUB",
+                "PSUBRF",
+                "PSUB_RF"
+            ],
+            "RFIO": [
+                "RFION",
+                "RFIOP"
+            ],
+            "RFIOM": [
+                "RFIOM",
+                "RFIOM1",
+                "RFIOM2"
+            ],
+            "VSUP_RF": [
+                "VSUP_RF"
+            ]
+        },
+        "RF2": {
+            "RFIN": [
+                "RFIN"
+            ],
+            "RFIP": [
+                "RFIP"
+            ],
+            "RFOUT": [
+                "RFOUT"
+            ]
+        }
+    },
+    "RHSB": {
+        "RHSB0FCL": {
+            "Diff Pair": [
+                "RHSB0FCLN",
+                "RHSB0FCLP"
+            ]
+        },
+        "RHSB0SO": {
+            "Diff Pair": [
+                "RHSB0SON",
+                "RHSB0SOP"
+            ]
+        },
+        "RHSB1FCL": {
+            "Diff Pair": [
+                "RHSB1FCLN",
+                "RHSB1FCLP"
+            ]
+        },
+        "RHSB1SO": {
+            "Diff Pair": [
+                "RHSB1SON",
+                "RHSB1SOP"
+            ]
+        }
+    },
+    "RT": [
+        "RT"
+    ],
+    "RTC1HZ": [
+        "RTC1HZ"
+    ],
+    "RTS2": [
+        "RTS2#"
+    ],
+    "RX-DV": [
+        "RX-DV"
+    ],
+    "RX-TX-DATA": {
+        "RX_DATA": [
+            "RX_DATAN",
+            "RX_DATAP"
+        ],
+        "TX_DATA": [
+            "TX_DATAN",
+            "TX_DATAP"
+        ]
+    },
+    "RX_CLK": [
+        "RX_CLKN",
+        "RX_CLKP"
+    ],
+    "Read_Write": {
+        "WE*": [
+            "WE0#",
+            "WE0#",
+            "WE1#",
+            "WE1#",
+            "WE2#",
+            "WE2#",
+            "WE3#",
+            "WE3#",
+            "WE4#",
+            "WE5#",
+            "WE6#",
+            "WE7#"
+        ]
+    },
+    "Rx": {
+        "Diff Pair": [
+            "RxM",
+            "RxP"
+        ]
+    },
+    "SBIAS": [
+        "SBIAS"
+    ],
+    "SCIF2_RXD": [
+        "SCIF2_RXD"
+    ],
+    "SCIF_CLK_A": [
+        "SCIF_CLK_A"
+    ],
+    "SCPT7": [
+        "SCPT7",
+        "SCPT[7]"
+    ],
+    "SD2_*": {
+        "SD2_CD": [
+            "SD2_CD_A"
+        ],
+        "SD2_CLK": [
+            "SD2_CLK_A"
+        ],
+        "SD2_CMD": [
+            "SD2_CMD_A"
+        ],
+        "SD2_DAT": [
+            "SD2_DAT0_A",
+            "SD2_DAT1_A",
+            "SD2_DAT2_A",
+            "SD2_DAT3_A"
+        ],
+        "SD2_WP": [
+            "SD2_WP_A"
+        ]
+    },
+    "SDB*": [
+        "SDBUP",
+        "SDSELF"
+    ],
+    "SDRA*": {
+        "SDRAA*": [
+            "SDRAA0",
+            "SDRAA1",
+            "SDRAA10",
+            "SDRAA10PC",
+            "SDRAA11",
+            "SDRAA12",
+            "SDRAA2",
+            "SDRAA3",
+            "SDRAA4",
+            "SDRAA5",
+            "SDRAA6",
+            "SDRAA7",
+            "SDRAA8",
+            "SDRAA9"
+        ],
+        "SDRABA*": [
+            "SDRABA0",
+            "SDRABA1"
+        ],
+        "SDRACAS*": [
+            "SDRACAS",
+            "SDRACAS#"
+        ],
+        "SDRACK": [
+            "SDRACK"
+        ],
+        "SDRACKE": [
+            "SDRACKE"
+        ],
+        "SDRACS*": [
+            "SDRACS",
+            "SDRACS#"
+        ],
+        "SDRADM": [
+            "SDRADM0",
+            "SDRADM1",
+            "SDRADM2",
+            "SDRADM3"
+        ],
+        "SDRADQ": [
+            "SDRADQ0",
+            "SDRADQ1",
+            "SDRADQ10",
+            "SDRADQ11",
+            "SDRADQ12",
+            "SDRADQ13",
+            "SDRADQ14",
+            "SDRADQ15",
+            "SDRADQ16",
+            "SDRADQ17",
+            "SDRADQ18",
+            "SDRADQ19",
+            "SDRADQ2",
+            "SDRADQ20",
+            "SDRADQ21",
+            "SDRADQ22",
+            "SDRADQ23",
+            "SDRADQ24",
+            "SDRADQ25",
+            "SDRADQ26",
+            "SDRADQ27",
+            "SDRADQ28",
+            "SDRADQ29",
+            "SDRADQ3",
+            "SDRADQ30",
+            "SDRADQ31",
+            "SDRADQ4",
+            "SDRADQ5",
+            "SDRADQ6",
+            "SDRADQ7",
+            "SDRADQ8",
+            "SDRADQ9"
+        ],
+        "SDRARAS*": [
+            "SDRARAS",
+            "SDRARAS#"
+        ],
+        "SDRAWE*": [
+            "SDRAWE",
+            "SDRAWE#"
+        ]
+    },
+    "SDRB*": {
+        "SDRBA*": [
+            "SDRBA0",
+            "SDRBA1",
+            "SDRBA10",
+            "SDRBA11",
+            "SDRBA12",
+            "SDRBA13",
+            "SDRBA2",
+            "SDRBA3",
+            "SDRBA4",
+            "SDRBA5",
+            "SDRBA6",
+            "SDRBA7",
+            "SDRBA8",
+            "SDRBA9"
+        ],
+        "SDRBBA*": [
+            "SDRBBA0",
+            "SDRBBA1",
+            "SDRBBA2"
+        ],
+        "SDRBCAS": [
+            "SDRBCAS"
+        ],
+        "SDRBCK": [
+            "SDRBCK"
+        ],
+        "SDRBCKB": [
+            "SDRBCKB"
+        ],
+        "SDRBCKE": [
+            "SDRBCKE"
+        ],
+        "SDRBCS": [
+            "SDRBCS"
+        ],
+        "SDRBDM": [
+            "SDRBDM0",
+            "SDRBDM1",
+            "SDRBDM2",
+            "SDRBDM3"
+        ],
+        "SDRBDQ": [
+            "SDRBDQ0",
+            "SDRBDQ1",
+            "SDRBDQ10",
+            "SDRBDQ11",
+            "SDRBDQ12",
+            "SDRBDQ13",
+            "SDRBDQ14",
+            "SDRBDQ15",
+            "SDRBDQ16",
+            "SDRBDQ17",
+            "SDRBDQ18",
+            "SDRBDQ19",
+            "SDRBDQ2",
+            "SDRBDQ20",
+            "SDRBDQ21",
+            "SDRBDQ22",
+            "SDRBDQ23",
+            "SDRBDQ24",
+            "SDRBDQ25",
+            "SDRBDQ26",
+            "SDRBDQ27",
+            "SDRBDQ28",
+            "SDRBDQ29",
+            "SDRBDQ3",
+            "SDRBDQ30",
+            "SDRBDQ31",
+            "SDRBDQ4",
+            "SDRBDQ5",
+            "SDRBDQ6",
+            "SDRBDQ7",
+            "SDRBDQ8",
+            "SDRBDQ9"
+        ],
+        "SDRBDQS0": {
+            "Diff Pair": [
+                "SDRBDQS0",
+                "SDRBDQS0B"
+            ]
+        },
+        "SDRBDQS1": {
+            "Diff Pair": [
+                "SDRBDQS1",
+                "SDRBDQS1B"
+            ]
+        },
+        "SDRBDQS2": {
+            "Diff Pair": [
+                "SDRBDQS2",
+                "SDRBDQS2B"
+            ]
+        },
+        "SDRBDQS3": {
+            "Diff Pair": [
+                "SDRBDQS3",
+                "SDRBDQS3B"
+            ]
+        },
+        "SDRBODT": [
+            "SDRBODT"
+        ],
+        "SDRBRAS": [
+            "SDRBRAS"
+        ],
+        "SDRBVSB": [
+            "SDRBVSB"
+        ],
+        "SDRBWE": [
+            "SDRBWE"
+        ]
+    },
+    "SEG*": [
+        "SEG0",
+        "SEG1",
+        "SEG10",
+        "SEG11",
+        "SEG12",
+        "SEG13",
+        "SEG14",
+        "SEG15",
+        "SEG16",
+        "SEG17",
+        "SEG18",
+        "SEG19",
+        "SEG2",
+        "SEG20",
+        "SEG21",
+        "SEG22",
+        "SEG23",
+        "SEG24",
+        "SEG25",
+        "SEG26",
+        "SEG27",
+        "SEG28",
+        "SEG29",
+        "SEG3",
+        "SEG30",
+        "SEG31",
+        "SEG32",
+        "SEG33",
+        "SEG34",
+        "SEG35",
+        "SEG36",
+        "SEG37",
+        "SEG38",
+        "SEG39",
+        "SEG4",
+        "SEG40",
+        "SEG5",
+        "SEG6",
+        "SEG7",
+        "SEG8",
+        "SEG9"
+    ],
+    "SEN": [
+        "SEN"
+    ],
+    "SENS": {
+        "SENSA*": [
+            "SENSA0",
+            "SENSA1",
+            "SENSA2",
+            "SENSA3"
+        ],
+        "SENSB*": [
+            "SENSB0",
+            "SENSB1",
+            "SENSB2",
+            "SENSB3"
+        ]
+    },
+    "SIN-OUT": [
+        "SIN",
+        "SOUT"
+    ],
+    "SIO*": [
+        "SCK_SIO",
+        "SIOFSYNC",
+        "SIOMCLK"
+    ],
+    "SSEL*": [
+        "SSEL0",
+        "SSEL1"
+    ],
+    "SSI*": {
+        "SSI_SCK": [
+            "SSI_SCK0_A",
+            "SSI_SCK1_A",
+            "SSI_SCK23"
+        ],
+        "SSI_SDATA": [
+            "SSI_SDATA0_A",
+            "SSI_SDATA1_A",
+            "SSI_SDATA2",
+            "SSI_SDATA3"
+        ],
+        "SSI_WS": [
+            "SSI_WS0_A",
+            "SSI_WS1_A",
+            "SSI_WS23"
+        ]
+    },
+    "STATUS": [
+        "STATUS0",
+        "STATUS1"
+    ],
+    "STBY": [
+        "STANDBY",
+        "STBY#",
+        "STBY#"
+    ],
+    "SVR_GATE": {
+        "Diff Pair": [
+            "SVRNGATE",
+            "SVRPGATE"
+        ]
+    },
+    "Scan_testen": [
+        "Scan_testen#"
+    ],
+    "TDATA": {
+        "TDATA*": [
+            "TDATA0"
+        ],
+        "TRDATA*": [
+            "TRDATA0",
+            "TRDATA1",
+            "TRDATA2",
+            "TRDATA3",
+            "TRDATA4",
+            "TRDATA5",
+            "TRDATA6",
+            "TRDATA7"
+        ],
+        "_pins": [
+            "TDATA1",
+            "TDATA2",
+            "TDATA3"
+        ]
+    },
+    "TEST*": {
+        "Diff Pair": [
+            "TESTN",
+            "TESTP"
+        ],
+        "TESTMD": [
+            "TESTMD",
+            "TESTMD#",
+            "TESTOUT#",
+            "TESTOUT2"
+        ],
+        "TSTBUSA": [
+            "TSTBUSA"
+        ],
+        "_pins": [
+            "TEST",
+            "TEST1#",
+            "TEST2"
+        ]
+    },
+    "TO*": {
+        "TO0*": [
+            "TO000",
+            "TO001",
+            "TO002",
+            "TO003",
+            "TO004",
+            "TO005",
+            "TO010",
+            "TO011",
+            "TO012",
+            "TO013",
+            "TO014",
+            "TO015"
+        ],
+        "TOD0": [
+            "TODN0",
+            "TODP0"
+        ],
+        "TOD1": [
+            "TODN1",
+            "TODP1"
+        ],
+        "TOD2": [
+            "TODN2",
+            "TODP2"
+        ],
+        "TOD3": [
+            "TODN3",
+            "TODP3"
+        ]
+    },
+    "TRACE*": [
+        "TRCCLK",
+        "TRCDATA0",
+        "TRCDATA1",
+        "TRCDATA2",
+        "TRCDATA3",
+        "TRCEND"
+    ],
+    "TS*": {
+        "TMOD": [
+            "TMOD"
+        ],
+        "TS": [
+            "TS"
+        ]
+    },
+    "TX-EN": [
+        "TX-EN"
+    ],
+    "TX-RX": [
+        "RX0_A",
+        "RXD",
+        "RxD0",
+        "RxD2",
+        "TX0_A",
+        "TXD",
+        "TxD0",
+        "TxD2"
+    ],
+    "TX-RX-SIO": [
+        "RxD_SIO",
+        "TxD_SIO"
+    ],
+    "Thermal_Diode*": [
+        "THDAG",
+        "THDAS",
+        "THDCD",
+        "THDCTL"
+    ],
+    "Tx": [
+        "TxM",
+        "TxP"
+    ],
+    "UB": [
+        "UB",
+        "UB#",
+        "UPSEL"
+    ],
+    "UD*": {
+        "UD": [
+            "UDM",
+            "UDP",
+            "UVBUS"
+        ],
+        "UD0": [
+            "UDM0",
+            "UDP0"
+        ],
+        "UD1": [
+            "UDM1",
+            "UDP1"
+        ]
+    },
+    "UROM_EN": [
+        "UROM_EN"
+    ],
+    "USB": {
+        "OVC": [
+            "OVC0",
+            "OVC1"
+        ],
+        "USB*_ovr_CURRENT": [
+            "USB1_ovr_CURRENT#",
+            "USB2_ovr_CURRENT#"
+        ],
+        "USBHS_D": [
+            "USBHS_DM",
+            "USBHS_DP"
+        ],
+        "USBPUC": [
+            "USBPUC"
+        ],
+        "USB_*": [
+            "USBM",
+            "USBP"
+        ],
+        "USB_D": [
+            "USB_DM",
+            "USB_DP"
+        ],
+        "USB_OVC": [
+            "USB_OVC0",
+            "USB_OVC1"
+        ]
+    },
+    "USB*": {
+        "USB0*": {
+            "USB0_D": [
+                "USB0_DM",
+                "USB0_DP"
+            ],
+            "USB0_DPUPE": [
+                "USB0_DPUPE"
+            ]
+        },
+        "USB1*": {
+            "USB1_D": [
+                "USB1_DM",
+                "USB1_DP",
+                "USB1_M",
+                "USB1_M(ANALOG)",
+                "USB1_P",
+                "USB1_P(ANALOG)",
+                "USB1d_SUSPEND"
+            ]
+        },
+        "USB2*": {
+            "USB2_D": [
+                "USB2_M",
+                "USB2_M(ANALOG)",
+                "USB2_P",
+                "USB2_P(ANALOG)"
+            ]
+        }
+    },
+    "USBA_D": [
+        "USBA_DM",
+        "USBA_DP"
+    ],
+    "USB_DIFF*": {
+        "USB_D": [
+            "DM",
+            "DP"
+        ],
+        "USB_D0": [
+            "DM0",
+            "DP0"
+        ],
+        "USB_D1": [
+            "DM1",
+            "DP1"
+        ]
+    },
+    "USD": {
+        "UBPM": [
+            "UBPM#"
+        ],
+        "USB*": [
+            "USD+",
+            "USD-"
+        ],
+        "USPND": [
+            "USPND"
+        ]
+    },
+    "VI1_*": [
+        "VI1_0_A",
+        "VI1_1_A",
+        "VI1_2_A",
+        "VI1_3_A",
+        "VI1_4_A",
+        "VI1_5_A",
+        "VI1_6_A",
+        "VI1_7_A",
+        "VI1_CLK_A"
+    ],
+    "VMONOUT": [
+        "VMONOUT",
+        "VMONOUT#"
+    ],
+    "VOUT": {
+        "Diff Pair": [
+            "VOUTN",
+            "VOUTP"
+        ]
+    },
+    "WAIT": [
+        "WAIT#"
+    ],
+    "WDTOVF": [
+        "WDTOVF",
+        "WDTOVF#",
+        "WDTOVF#"
+    ],
+    "WE*": [
+        "WE0#",
+        "WE1#"
+    ],
+    "WKUP": [
+        "WKUP0",
+        "WKUP0#",
+        "WKUP1"
+    ],
+    "X-ER*": [
+        "RX-ER",
+        "TX-ER"
+    ]
+}

@@ -1,61 +1,81 @@
 from .base_functions import general_funct
 import json
+import re
 
-
-def grouping_as_per_database(old_df, json_paths, SENSITIVITY=True):
-    df = old_df.copy()
+def sensitivity_match(name1, name2):
+    """
+    Normalize and compare two strings by removing special characters and ignoring case.
+    """
+    def normalize(s):
+        return re.sub(r'[\\/_#.\s]', '', s).lower().strip()
     
-    try:
-        # Load all JSON files
-        with open(json_paths['Input'], 'r') as f:
-            input_label_map = general_funct.flatten_label_map(json.load(f))
-        with open(json_paths['Power'], 'r') as f:
-            power_label_map = general_funct.flatten_label_map(json.load(f))
-        with open(json_paths['Output'], 'r') as f:
-            output_label_map = general_funct.flatten_label_map(json.load(f))
-        with open(json_paths['I/O'], 'r') as f:
-            io_label_map = general_funct.flatten_label_map(json.load(f))
-        with open(json_paths['Passive'], 'r') as f:
-            passive_label_map = general_funct.flatten_label_map(json.load(f))
+    return normalize(name1) == normalize(name2)
 
-        # Define a generic function to search for a label in all JSON files
-        def get_label(name, label_maps):
+
+def grouping_as_per_database(old_df, json_paths, SENSITIVITY=True, SINGLE_FILE=False):
+    df = old_df.copy()
+
+    try:
+        if SINGLE_FILE:
+            # Flatten only one single JSON file
+            with open(json_paths['Single'], 'r') as f:
+                single_label_map = general_funct.flatten_label_map(json.load(f))
+            label_maps = [single_label_map]
+        else:
+            # Flatten all JSON files
+            with open(json_paths['Input'], 'r') as f:
+                input_label_map = general_funct.flatten_label_map(json.load(f))
+            with open(json_paths['Power'], 'r') as f:
+                power_label_map = general_funct.flatten_label_map(json.load(f))
+            with open(json_paths['Output'], 'r') as f:
+                output_label_map = general_funct.flatten_label_map(json.load(f))
+            with open(json_paths['I/O'], 'r') as f:
+                io_label_map = general_funct.flatten_label_map(json.load(f))
+            with open(json_paths['Passive'], 'r') as f:
+                passive_label_map = general_funct.flatten_label_map(json.load(f))
+
+        # Helper to get label from maps
+        def get_label(name, maps_to_check):
             name = name.strip()
-            
-            # First attempt: Normal case-sensitive matching
-            for label_map in label_maps:
+
+            # Try case-sensitive match
+            for label_map in maps_to_check:
                 for label, names in label_map.items():
                     if name in [item.strip() for item in names]:
                         return label
-            
-            # Second attempt: If SENSITIVITY=False and no match found, try normalized matching
+
+            # Try normalized match if case-insensitive
             if not SENSITIVITY:
-                normalized_name = general_funct.normalize_string(name)
                 for label_map in label_maps:
                     for label, names in label_map.items():
-                        normalized_names = [general_funct.normalize_string(item.strip()) for item in names]
-                        if normalized_name in normalized_names:
-                            return label
-            
-            print(f"Warning: Could not find a matching label for {name} in any JSON file.")
+                        for item in names:
+                            if sensitivity_match(name, item):
+                                return label
+
+
+            print(f"Warning: Could not find a matching label for '{name}' in JSON file(s).")
             return None
 
-        # Apply the correct function based on Electrical Type
-        df['Grouping'] = None  # Initialize the Grouping column with None
+        # Initialize new column
+        df['Grouping'] = None
 
+        # Assign labels
         for index, row in df.iterrows():
-            if row['Electrical Type'] == "Input":
-                label = get_label(row['Pin Display Name'], [input_label_map, io_label_map, power_label_map, output_label_map, passive_label_map])
-            elif row['Electrical Type'] == "Power":
-                label = get_label(row['Pin Display Name'], [power_label_map, io_label_map, input_label_map, output_label_map, passive_label_map])
-            elif row['Electrical Type'] == "Output":
-                label = get_label(row['Pin Display Name'], [output_label_map, io_label_map, input_label_map, power_label_map, passive_label_map])
-            elif row['Electrical Type'] == "I/O":
-                label = get_label(row['Pin Display Name'], [io_label_map, input_label_map, power_label_map, output_label_map, passive_label_map])
-            elif row['Electrical Type'] == "Passive":
-                label = get_label(row['Pin Display Name'], [passive_label_map, io_label_map, input_label_map, power_label_map, output_label_map])
+            if SINGLE_FILE:
+                label = get_label(row['Pin Display Name'], label_maps)
             else:
-                label = None  # Handle unknown Electrical Types
+                if row['Electrical Type'] == "Input":
+                    label = get_label(row['Pin Display Name'], [input_label_map, io_label_map, power_label_map, output_label_map, passive_label_map])
+                elif row['Electrical Type'] == "Power":
+                    label = get_label(row['Pin Display Name'], [power_label_map, io_label_map, input_label_map, output_label_map, passive_label_map])
+                elif row['Electrical Type'] == "Output":
+                    label = get_label(row['Pin Display Name'], [output_label_map, io_label_map, input_label_map, power_label_map, passive_label_map])
+                elif row['Electrical Type'] == "I/O":
+                    label = get_label(row['Pin Display Name'], [io_label_map, input_label_map, power_label_map, output_label_map, passive_label_map])
+                elif row['Electrical Type'] == "Passive":
+                    label = get_label(row['Pin Display Name'], [passive_label_map, io_label_map, input_label_map, power_label_map, output_label_map])
+                else:
+                    label = None
 
             if label is not None:
                 df.at[index, 'Grouping'] = label
@@ -63,6 +83,6 @@ def grouping_as_per_database(old_df, json_paths, SENSITIVITY=True):
         print("✅ Labels assigned to Grouping column successfully.")
 
     except Exception as e:
-        print(f"Error processing files: {e}")
+        print(f"❌ Error processing files: {e}")
 
     return df
