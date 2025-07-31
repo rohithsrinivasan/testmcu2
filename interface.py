@@ -42,6 +42,8 @@ ui_widgets.header_intro_2()
 if "input_buffer" not in st.session_state:
     st.session_state.input_buffer = None
 
+input_buffer = None
+
 input_method = st.radio("Choose input method:", ["Upload File", "Enter URL"])
 
 if input_method == "Upload File":
