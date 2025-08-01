@@ -952,11 +952,13 @@
             "X2[CL2]"
         ],
         "BXC*": [
-            "XCIN",
-            "XCOUT",
             "XIN",
             "XOUT",
             "XOUT#"
+        ],
+        "BXD*":[
+            "XCIN",
+            "XCOUT"
         ],
         "CXT*": [
             "XT1",
@@ -1282,9 +1284,7 @@
             "D6",
             "D7",
             "D8",
-            "D9"
-        ],
-        "D**": [
+            "D9",
             "D00",
             "D01",
             "D02",
@@ -4649,7 +4649,7 @@
             "ADSVCC": [
                 "ADSVCC"
             ],
-            "AVCC*": [
+            "L_AVCC*": [
                 "A0VCC",
                 "A1VCC",
                 "A2VCC",
@@ -4662,22 +4662,22 @@
                 "AVCCD",
                 "AVCCP"
             ],
-            "AVCC-USB": [
+            "L_AVCC-USB": [
                 "AVCC-USB"
             ],
-            "AVCC_MIPI": [
+            "L_AVCC_MIPI": [
                 "AVCC_MIPI"
             ],
-            "AVCC_RF": [
+            "L_AVCC_RF": [
                 "AVCC_RF"
             ],
-            "AVCC_USB": [
+            "L_AVCC_USB": [
                 "AVCC_USB"
             ],
-            "AVCC_USBA": [
+            "L_AVCC_USBA": [
                 "AVCC_USBA"
             ],
-            "AVCC_USBHS": [
+            "L_AVCC_USBHS": [
                 "AVCC_USBHS"
             ],
             "B*VCC": [
@@ -4865,7 +4865,7 @@
             "ZPDVCC": [
                 "ZPDVCC"
             ],
-            "APins": [
+            "AA_Pins": [
                 "VCC"
             ]
         },
@@ -5705,7 +5705,10 @@
     ],
     "TDATA": {
         "TDATA*": [
-            "TDATA0"
+            "TDATA0",
+            "TDATA1",
+            "TDATA2",
+            "TDATA3"
         ],
         "TRDATA*": [
             "TRDATA0",
@@ -5716,11 +5719,6 @@
             "TRDATA5",
             "TRDATA6",
             "TRDATA7"
-        ],
-        "_pins": [
-            "TDATA1",
-            "TDATA2",
-            "TDATA3"
         ]
     },
     "TEST*": {
