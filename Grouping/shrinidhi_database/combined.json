@@ -5353,11 +5353,15 @@
             "WE7#"
         ]
     },
-    "Rx": {
-        "Diff Pair": [
+    "Rx-Tx": {
+        "Rx-Diff Pair": [
             "RxM",
             "RxP"
-        ]
+        ],
+        "Tx-Diff Pair": [
+        "TxM",
+        "TxP"
+    ]
     },
     "SBIAS": [
         "SBIAS"
@@ -5811,10 +5815,6 @@
         "THDAS",
         "THDCD",
         "THDCTL"
-    ],
-    "Tx": [
-        "TxM",
-        "TxP"
     ],
     "UB": [
         "UB",

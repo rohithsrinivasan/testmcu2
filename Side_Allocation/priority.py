@@ -4,6 +4,11 @@ import json
 def assigning_priority(df,priority_mapping_json):
     df_copy = df.copy()  
     df_copy['Priority'] = df_copy.apply(lambda row: priority_order(row, df_copy,priority_mapping_json,SWAP = False), axis=1)
+    # Sort the dataframe by Priority in ascending order
+    df_copy = df_copy.sort_values('Priority', ascending=True)  
+    # Optional: Reset index if you want a clean sequential index
+    df_copy = df_copy.reset_index(drop=True)
+    
     return df_copy
 
 
@@ -53,16 +58,16 @@ def priority_order(row, df, priority_mapping_json, SWAP = True):
             # Example: "P 10"
             try:
                 port_number = int(parts[1])
-                return f"P_Port_{port_number:02d}"
+                return f"P_Port Pins_{port_number:02d}"
             except ValueError:
-                return f"P_Port_{parts[1]}"
+                return f"P_Port Pins_{parts[1]}"
 
         elif len(parts) == 1:
             # Example: "Port_00"
             sub_parts = parts[0].split("_")
             if len(sub_parts) == 2 and sub_parts[1].isdigit():
                 port_number = int(sub_parts[1])
-                return f"P_Port_{port_number:02d}"
+                return f"P_Port Pins_{port_number:02d}"
 
 
     # 4. Prefix-based mapping fallback
@@ -142,10 +147,10 @@ def handle_mixed_port_assignment(pin_display_name, grouping_value, df):
         if len(pin) == 3 and pin.startswith('P'):  # PXX case
             port_num = int(pin[1])  # Take first digit after P
             print(f"Assigning {pin} to P_Port {port_num:02d} (PXX rule: first digit)")
-            return f"P_Port_{port_num:02d}"
+            return f"P_Port Pins_{port_num:02d}"
         elif len(pin) == 4 and pin.startswith('P'):  # PXXX case
             port_num = int(pin[1:3])  # Take first two digits after P
             print(f"Assigning {pin} to P_Port {port_num:02d} (PXXX rule: first two digits)")
-            return f"P_Port_{port_num:02d}"
+            return f"P_Port Pins_{port_num:02d}"
     
     return None
