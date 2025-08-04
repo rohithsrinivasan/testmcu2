@@ -48,8 +48,8 @@ if 'grouped_pin_table' in st.session_state:
     priority_mapping_json = f"Side_Allocation/priority_map.json"
     priority_mapping_json_new = f"Side_Allocation/priority_map_shrinidhi.json"
     priority_added = priority.assigning_priority(added_empty_priority_column,priority_mapping_json_new)
-    st.text(f"Priority Column Added")
-    st.dataframe(priority_added)
+    #st.text(f"Priority Column Added")
+    #st.dataframe(priority_added)
 
     required_columns = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name', 'Grouping','Priority']
     ooptional_column = 'Side'

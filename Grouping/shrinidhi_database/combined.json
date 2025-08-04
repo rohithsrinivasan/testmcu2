@@ -1759,6 +1759,10 @@
         "NC6": [
             "RESERVE",
             "Reserved"
+        ],
+        "Positive_NC": [
+            "IC (VPP)",
+            "RES(Vpp)#"
         ]
     },
     "NMI": [
@@ -4453,7 +4457,7 @@
 },
 
     "Positive": {
-        "A*VREF": {
+        "RefVol3_A*VREF": {
             "A*VREFH": [
                 "A0VREFH",
                 "A0VREFP",
@@ -4489,7 +4493,7 @@
                 "AVCM"
             ]
         },
-        "AVREF*": {
+        "RefVol2_AVREF*": {
             "AVREFB": [
                 "AVREFB"
             ],
@@ -4523,27 +4527,7 @@
             "BGR#",
             "BGR_BO"
         ],
-        "LVDVBAT": [
-            "LVDVBAT"
-        ],
-        "MVREF": {
-            "MVREFCA": [
-                "MVREFCA"
-            ],
-            "MVREFDQ": [
-                "MVREFDQ"
-            ],
-            "_pins": [
-                "MVREF"
-            ]
-        },
-        "NC": [
-            "IC (VPP)",
-            "RES(Vpp)#"
-        ],
-        "PEVREF": [
-            "PEVREF"
-        ],
+
         "Z_REG": {
             "AREGC": [
                 "AREGC"
@@ -4567,9 +4551,6 @@
                 "USBREGC"
             ]
         },
-        "SDRBVREF": [
-            "SDRBVREF"
-        ],
         "USB_RREF": {
             "USBA_RREF": [
                 "USBA_RREF"
@@ -4622,7 +4603,7 @@
         "VPM"
         ],
         "VBAT": {
-            "VBATT": [
+            "B_VBATT": [
                 "VBATT"
             ],
             "VBATWIO0": [
@@ -4631,10 +4612,13 @@
             "VBAT_EHC": [
                 "VBAT_EHC"
             ],
-            "_pins": [
+            "A_pins": [
                 "VBAT",
                 "VBAT1",
                 "VBAT2"
+            ],
+            "LVDVBAT": [
+            "LVDVBAT"
             ]
         },
         "VBP": [
@@ -4648,37 +4632,6 @@
         "AA_VCC": {
             "ADSVCC": [
                 "ADSVCC"
-            ],
-            "L_AVCC*": [
-                "A0VCC",
-                "A1VCC",
-                "A2VCC",
-                "A3VCC",
-                "AVCC",
-                "AVCC0",
-                "AVCC1",
-                "AVCC2",
-                "AVCCA",
-                "AVCCD",
-                "AVCCP"
-            ],
-            "L_AVCC-USB": [
-                "AVCC-USB"
-            ],
-            "L_AVCC_MIPI": [
-                "AVCC_MIPI"
-            ],
-            "L_AVCC_RF": [
-                "AVCC_RF"
-            ],
-            "L_AVCC_USB": [
-                "AVCC_USB"
-            ],
-            "L_AVCC_USBA": [
-                "AVCC_USBA"
-            ],
-            "L_AVCC_USBHS": [
-                "AVCC_USBHS"
             ],
             "B*VCC": [
                 "B0VCC",
@@ -4880,6 +4833,39 @@
                 "VCCQ"
             ]
         },
+        "AC_AVCC" : {
+            "L_AVCC*": [
+                "A0VCC",
+                "A1VCC",
+                "A2VCC",
+                "A3VCC",
+                "AVCC",
+                "AVCC0",
+                "AVCC1",
+                "AVCC2",
+                "AVCCA",
+                "AVCCD",
+                "AVCCP"
+            ],
+            "L_AVCC-USB": [
+                "AVCC-USB"
+            ],
+            "L_AVCC_MIPI": [
+                "AVCC_MIPI"
+            ],
+            "L_AVCC_RF": [
+                "AVCC_RF"
+            ],
+            "L_AVCC_USB": [
+                "AVCC_USB"
+            ],
+            "L_AVCC_USBA": [
+                "AVCC_USBA"
+            ],
+            "L_AVCC_USBHS": [
+                "AVCC_USBHS"
+            ]
+        },
         "Z_VCL": {
             "AWOVCL": [
                 "AWOVCL"
@@ -5026,7 +5012,7 @@
                 "VDD"
             ]
         },
-        "VDDQ": {
+        "AE_VDDQ": {
             "VDDQ-PLL": [
                 "VDDQ-PLL1",
                 "VDDQ-PLL2"
@@ -5059,7 +5045,7 @@
         "VPP": [
             "VPP"
         ],
-        "VREF": {
+        "RefVol1_VREF": {
             "VREFDSH": [
                 "VREFDSH"
             ],
@@ -5075,8 +5061,28 @@
             "VREFOUT": [
                 "VREFOUT"
             ],
-            "_pins": [
+            "A_pins": [
                 "VREF"
+            ],
+            "ZPDVREF": [
+            "ZPDVREF"
+            ],
+            "SDRBVREF": [
+            "SDRBVREF"
+            ],
+            "MVREF": {
+            "MVREFCA": [
+                "MVREFCA"
+            ],
+            "MVREFDQ": [
+                "MVREFDQ"
+            ],
+            "_pins": [
+                "MVREF"
+            ]
+            },
+            "PEVREF": [
+            "PEVREF"
             ]
         },
         "VREG*": {
@@ -5110,9 +5116,6 @@
         ],
         "VSYS_BUCK": [
             "VSYS_BUCK"
-        ],
-        "ZPDVREF": [
-            "ZPDVREF"
         ],
         "VCL_pins": [
             "UREGC",
