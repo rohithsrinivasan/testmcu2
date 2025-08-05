@@ -631,9 +631,7 @@
             "ANI5",
             "ANI6",
             "ANI7",
-            "ANI9"
-        ],
-        "ANI0*": [
+            "ANI9",
             "ANI0",
             "ANI00",
             "ANI01",
@@ -2167,12 +2165,6 @@
             "PCCREG#"
         ]
     },
-    "PCD*": [
-        "PCD0",
-        "PCD1",
-        "PCD2",
-        "PCD3"
-    ],
     "PCI*": {
         "IRDY": [
             "IRDY#"
@@ -2550,6 +2542,12 @@
                 "PDH9"
             ]
         },
+        "Port PCD*": [
+        "PCD0",
+        "PCD1",
+        "PCD2",
+        "PCD3"
+        ],
         "Port PDL": {
             "PDL*": [
                 "PDL0",
@@ -5826,21 +5824,6 @@
         "UB#",
         "UPSEL"
     ],
-    "UD*": {
-        "UD": [
-            "UDM",
-            "UDP",
-            "UVBUS"
-        ],
-        "UD0": [
-            "UDM0",
-            "UDP0"
-        ],
-        "UD1": [
-            "UDM1",
-            "UDP1"
-        ]
-    },
     "UROM_EN": [
         "UROM_EN"
     ],
@@ -5901,7 +5884,34 @@
                 "USB2_P",
                 "USB2_P(ANALOG)"
             ]
-        }
+        },
+            "UD*": {
+        "UD": [
+            "UDM",
+            "UDP",
+            "UVBUS"
+        ],
+        "UD0": [
+            "UDM0",
+            "UDP0"
+        ],
+        "UD1": [
+            "UDM1",
+            "UDP1"
+        ]
+    },
+        "USD": {
+        "UBPM": [
+            "UBPM#"
+        ],
+        "USB*": [
+            "USD+",
+            "USD-"
+        ],
+        "USPND": [
+            "USPND"
+        ]
+    }
     },
     "USBA_D": [
         "USBA_DM",
@@ -5919,18 +5929,6 @@
         "USB_D1": [
             "DM1",
             "DP1"
-        ]
-    },
-    "USD": {
-        "UBPM": [
-            "UBPM#"
-        ],
-        "USB*": [
-            "USD+",
-            "USD-"
-        ],
-        "USPND": [
-            "USPND"
         ]
     },
     "VI1_*": [
