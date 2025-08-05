@@ -171,9 +171,7 @@
             "A6",
             "A7",
             "A8",
-            "A9"
-        ],
-        "A0*": [
+            "A9",
             "A00",
             "A01",
             "A02",
@@ -4473,16 +4471,10 @@
                 "A1VREF"
             ]
         },
-        "ADREG": [
-            "ADREG"
-        ],
-        "ADSVCL": [
-            "ADSVCL"
-        ],
         "AG": [
             "AG"
         ],
-        "AV": {
+        "General AV": {
             "AV12": [
                 "AV12"
             ],
@@ -4549,6 +4541,9 @@
             ],
             "USBREGC": [
                 "USBREGC"
+            ],
+            "UREGC" : [
+                "UREGC"
             ]
         },
         "USB_RREF": {
@@ -4562,6 +4557,7 @@
                 "USB_RREF"
             ]
         },
+        "General V" : {
         "V1": [
             "V1"
         ],
@@ -4595,7 +4591,8 @@
         ],
         "V30": [
             "V30"
-        ],
+        ]
+        },
         "VAD": [
             "VAD"
         ],
@@ -4890,6 +4887,13 @@
                 "VCL0",
                 "VCL1",
                 "VCL2"
+            ],
+            "ADSVCL": [
+                "ADSVCL"
+            ],
+            "VCLpair": [
+            "VCLH",
+            "VCL_F"
             ]
         },
         "VDC": [
@@ -5008,7 +5012,7 @@
             "VDD_RF": [
                 "VDD_RF"
             ],
-            "_pins": [
+            "-pins": [
                 "VDD"
             ]
         },
@@ -5020,7 +5024,7 @@
             "VDDQ-TD": [
                 "VDDQ-TD"
             ],
-            "_pins": [
+            "-pins": [
                 "VDDQ"
             ]
         },
@@ -5101,12 +5105,15 @@
             "VREG_VCO": [
                 "VREG_VCO"
             ],
-            "_pins": [
+            "-pins": [
                 "VREG1",
                 "VREG2",
                 "VREG3",
                 "VREG4"
-            ]
+            ],
+            "ADREG": [
+                "ADREG"
+            ]   
         },
         "VRTC": [
             "VRTC"
@@ -5116,11 +5123,6 @@
         ],
         "VSYS_BUCK": [
             "VSYS_BUCK"
-        ],
-        "VCL_pins": [
-            "UREGC",
-            "VCLH",
-            "VCL_F"
         ]
     },
     "QSPIF*": [
@@ -5221,7 +5223,7 @@
             "RESETM#",
             "RESETP#"
         ],
-        "_pins": [
+        "-pins": [
             "#RES",
             "RES",
             "RES#",
@@ -5742,7 +5744,7 @@
         "TSTBUSA": [
             "TSTBUSA"
         ],
-        "_pins": [
+        "-pins": [
             "TEST",
             "TEST1#",
             "TEST2"

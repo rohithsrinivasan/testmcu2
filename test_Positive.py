@@ -1,38 +1,25 @@
 import json
 
-def print_tree(data, indent=""):
-    if isinstance(data, dict):
-        for i, key in enumerate(data):
-            is_last = i == len(data) - 1
-            branch = "└── " if is_last else "├── "
-            print(indent + branch + str(key))
-            extension = "    " if is_last else "│   "
-            print_tree(data[key], indent + extension)
-    elif isinstance(data, list):
-        for i, item in enumerate(data):
-            is_last = i == len(data) - 1
-            branch = "└── " if is_last else "├── "
-            print(indent + branch + f"[{i}]")
-            extension = "    " if is_last else "│   "
-            print_tree(item, indent + extension)
+# Path to your JSON file
+file_path = "Grouping\shrinidhi_database\combined.json"
+
+# Load the JSON data
+with open(file_path, 'r') as f:
+    data = json.load(f)
+
+my_list = []
+
+# Navigate to 'Positives' and print first-level subkeys
+if "Positive" in data:
+    positive = data["Positive"]
+    if isinstance(positive, dict):
+        print("Subkeys under 'Positive':")
+        for key in positive.keys():
+            my_list.append(key)
+        new_list = sorted(my_list)
+        for key in new_list:
+            print("-", key)
     else:
-        # For terminal values (e.g., strings, numbers)
-        print(indent + "└── " + str(data))
-
-def main():
-    # === Replace this path with your actual JSON file path
-    file_path = r"Grouping\shrinidhi_database\combined.json"
-
-    with open(file_path, "r", encoding="utf-8") as f:
-        json_data = json.load(f)
-
-    if "Positive" not in json_data:
-        print("❌ 'Positive' key not found in the JSON file.")
-        return
-
-    print("📂 Tree structure under 'Positive':\n")
-    print("Positive")
-    print_tree(json_data["Positive"])
-
-if __name__ == "__main__":
-    main()
+        print("'Positive' is not a dictionary.")
+else:
+    print("'Positive' key not found in the JSON.")
