@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 import pandas as pd
-import glob
+import json
 
 #import grouping_functions
 from Extraction.base_functions import ui_widgets
@@ -101,7 +101,7 @@ if 'pin_table' in st.session_state:
         pin_table = st.session_state['pin_table']
         required_cols = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name']
         before_grouping_flag, added_empty_grouping_column = general_funct.check_excel_format(pin_table,  required_cols, optional_column='Grouping')
-        pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths_Single, SENSITIVITY= False, SINGLE_FILE=True)  
+        pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths_Single, SENSITIVITY= False,SMARTSEARCH= False, SINGLE_FILE=True)  
 
     # Common operations after grouping
         st.dataframe(pin_grouping_table)
@@ -114,22 +114,43 @@ if 'pin_table' in st.session_state:
             st.session_state['grouped_pin_table'] = pin_grouping_table            
 
         else:
+
             st.info("Please fill in group values for these:")
-            edited_df = st.data_editor(no_grouping_assigned)
-            edit_database = st.toggle("Edit Database", value=False)
 
             with st.sidebar:
-                st.header("Help Box")
-                user_input = st.text_input("Enter Pin Name to get suggestions:")
+                st.header("Dynamic Database")
+                show_suggestions_automatic = st.toggle("Enable Pin Suggestions Automatic")
+                show_suggestions_manual = st.toggle("Enable Pin Suggestions Manual")
+                threshold = st.slider("Minimum Match Percentage", min_value=80, max_value=100, value=100)
+                edit_database = st.toggle("Edit Database", value=False)
+                with open(json_paths_Single['Single'], 'r') as f:
+                    json_data = json.load(f)
 
-                json_file_paths = glob.glob(os.path.join('mcu_database', '*.json'))
-                json_data = helper_funct.load_json_files(json_file_paths)
+            # Conditionally apply auto-fill logic
+            if show_suggestions_automatic:
+                no_grouping_assigned = helper_funct.auto_fill_grouping_if_exact_match(no_grouping_assigned, json_data,threshold)
+
+            # Show the editor after applying any suggestions
+            edited_df = st.data_editor(no_grouping_assigned)
+
+
+            if show_suggestions_manual:
+                user_input = st.text_input("Enter Pin Name:")
 
                 if user_input:
                     suggestions = helper_funct.get_suggestions(user_input, json_data)
-                    st.write("Suggestions:")
-                    for suggestion, score in suggestions:
-                        st.write(f"{suggestion} (Match: {score}%)")
+
+                    if suggestions:
+                        closest_pin, score, group = suggestions[0]
+                        st.success(f"Closest Pin: **{closest_pin}** (Match: {score}%)")
+                        st.info(f"Group: **{group}**")
+
+                        if len(suggestions) > 1:
+                            st.write("Other close matches:")
+                            for pin, s_score, s_group in suggestions[1:]:
+                                st.write(f"- {pin} (Match: {s_score}%, Group: {s_group})")
+                    else:
+                        st.warning("No matching pins found.")
 
             if edit_database:
                 json_data_labelled = helper_funct.load_json_files_with_type_labels('mcu_database')

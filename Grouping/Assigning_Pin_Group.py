@@ -1,6 +1,7 @@
 from .base_functions import general_funct
 import json
 import re
+import difflib
 
 def sensitivity_match(name1, name2):
     """
@@ -12,7 +13,28 @@ def sensitivity_match(name1, name2):
     return normalize(name1) == normalize(name2)
 
 
-def grouping_as_per_database(old_df, json_paths, SENSITIVITY=True, SINGLE_FILE=False):
+import difflib
+
+def smart_search_match(name, names, cutoff=0.7):
+    """
+    Find the closest matching name from a list of names using string similarity.
+
+    Parameters:
+        name (str): The input name to match.
+        names (list): A list of candidate names to compare against.
+        cutoff (float): Similarity threshold (0 to 1), default is 0.7.
+
+    Returns:
+        str or None: The closest matching name if found, otherwise None.
+    """
+    name = name.strip()
+    candidates = [item.strip() for item in names]
+    matches = difflib.get_close_matches(name, candidates, n=1, cutoff=cutoff)
+    return matches[0] if matches else None
+
+
+
+def grouping_as_per_database(old_df, json_paths, SENSITIVITY=True,SMARTSEARCH= False, SINGLE_FILE=False):
     df = old_df.copy()
 
     try:
@@ -51,6 +73,13 @@ def grouping_as_per_database(old_df, json_paths, SENSITIVITY=True, SINGLE_FILE=F
                         for item in names:
                             if sensitivity_match(name, item):
                                 return label
+                            
+            if SMARTSEARCH:
+                for label_map in maps_to_check:
+                    for label, names in label_map.items():
+                        match = smart_search_match(name, names)
+                        if match:
+                            return label
 
 
             print(f"Warning: Could not find a matching label for '{name}' in JSON file(s).")
