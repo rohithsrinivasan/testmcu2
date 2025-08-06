@@ -4741,16 +4741,17 @@
             "UVCC": [
                 "UVCC"
             ],
-            "VCC*": [
-                "VCC0",
-                "VCC1",
-                "VCC2",
-                "VCCA",
-                "VCCB",
-                "Vcc1A",
-                "Vcc2A",
-                "Vcc3A"
-            ],
+            "VCC*": {
+
+                "0" : ["VCC0"],
+                "1" : ["VCC1","Vcc1A"],
+                "2" : ["VCC2","Vcc2A"],
+                "3" : ["VCC3","Vcc3A"],
+                "AB" : [
+                    "VCCA",
+                    "VCCB"
+                ]
+        },
             "VCC-PLL": [
                 "VCC (PLL1)",
                 "VCC (PLL2)",
@@ -5800,16 +5801,24 @@
     "TX-EN": [
         "TX-EN"
     ],
-    "TX-RX": [
+    "TX-RX": {
+        "0A" : [
         "RX0_A",
+        "TX0_A"
+        ],
+        "D" :[
         "RXD",
+        "TXD"
+        ],
+        "D0" :[
         "RxD0",
+        "TxD0"
+        ],
+        "D2" :[
         "RxD2",
-        "TX0_A",
-        "TXD",
-        "TxD0",
         "TxD2"
-    ],
+        ]
+    },
     "TX-RX-SIO": [
         "RxD_SIO",
         "TxD_SIO"
@@ -5870,19 +5879,27 @@
         "USB1*": {
             "USB1_D": [
                 "USB1_DM",
-                "USB1_DP",
+                "USB1_DP"
+            ],
+            "1" :[
                 "USB1_M",
-                "USB1_M(ANALOG)",
-                "USB1_P",
+                "USB1_P"
+            ],
+            "1_Analog" : [
                 "USB1_P(ANALOG)",
+                "USB1_M(ANALOG)"
+            ],
+            "1d_Suspend" :[
                 "USB1d_SUSPEND"
             ]
         },
         "USB2*": {
-            "USB2_D": [
+            "USB2": [
                 "USB2_M",
+                "USB2_P"
+            ],
+            "USB2_Analog" :[
                 "USB2_M(ANALOG)",
-                "USB2_P",
                 "USB2_P(ANALOG)"
             ]
         },
