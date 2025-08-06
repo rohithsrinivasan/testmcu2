@@ -131,10 +131,20 @@ if 'pin_table' in st.session_state:
                 no_grouping_assigned = helper_funct.auto_fill_grouping_if_exact_match(no_grouping_assigned, json_data,threshold)
 
             # Show the editor after applying any suggestions
-            edited_df = st.data_editor(no_grouping_assigned, help= "after_input -> IX\nafter_io ->RX\nafter_output ->TX\nafter_power+ ->AX\nafter_power- ->ZX")
+            edited_df = st.data_editor(no_grouping_assigned)
 
 
             if show_suggestions_manual:
+                with st.sidebar:
+                    with st.expander("Priority Mapping Rules"):
+                        st.markdown("""
+                        - `after_input` → **Placement After Input Section**
+                        - `after_io` → **Placement After IO Section**
+                        - `after_output` → **Placement After Output Section**
+                        - `after_power+` → **Placement After Power Positive Section**
+                        - `after_power-` → **Placement After Power negetive Section**
+                        """)
+
                 user_input = st.text_input("Enter Pin Name:")
 
                 if user_input:
