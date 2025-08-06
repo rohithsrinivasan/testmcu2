@@ -318,7 +318,8 @@ def distributed_view(parts, n_parts, max_rows):
 
     # Calculate target size per part
     total_rows = len(all_data)
-    target_size = total_rows // n_parts
+    target_size = min(total_rows // n_parts, max_rows)
+
 
     new_parts = []
     current_part = []
@@ -328,7 +329,9 @@ def distributed_view(parts, n_parts, max_rows):
         group_size = len(group)
 
         # If adding this group exceeds target size (and not last part) -> cut here
-        if current_count + group_size > target_size and len(new_parts) < n_parts - 1:
+        #if current_count + group_size > target_size and len(new_parts) < n_parts - 1:
+        if current_count + group_size > max_rows and len(new_parts) < n_parts - 1:
+
             new_parts.append(pd.concat(current_part, ignore_index=True))
             current_part = []
             current_count = 0

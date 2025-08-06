@@ -115,7 +115,11 @@ def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balance
 
         # If we run out of parts, just append to the last part
         if current_part >= n_parts:
-            current_part = n_parts - 1
+            print(f"⚠️ Creating extra part to hold {group_size} pins (overflow from planned {n_parts} parts)")
+            parts.append(pd.DataFrame())
+            part_row_counts.append(0)
+            n_parts += 1  # Update total count to reflect extra part
+
 
         # Add group to current part
         parts[current_part] = pd.concat([parts[current_part], group])

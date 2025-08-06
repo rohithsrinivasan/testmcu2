@@ -198,7 +198,7 @@ if 'pin_table' in st.session_state:
 
             else:
                 pin_grouping_table.update(edited_df)
-                st.text("Final Grouping Table")
+                st.header("Final Grouping Table")
                 st.dataframe(pin_grouping_table)
                 st.success("Done!")
                 st.session_state["page"] = "SideAlloc" 
