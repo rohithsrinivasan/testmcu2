@@ -75,8 +75,22 @@ def priority_order(row, df, priority_mapping_json, SWAP = True):
         if value.startswith(key):
             return f"{prefix}_{value}"
 
-    # 5. Final fallback
-    return f"ZZ_{value}"
+    # 5. Special substring-based fallback
+    value_lower = value.lower()
+
+    if "after_input" in value_lower:
+        return f"IX_{value}"
+    if "after_io" in value_lower:
+        return f"RX_{value}"
+    if "after_output" in value_lower:
+        return f"TX_{value}"
+    if "after_power+" in value_lower:
+        return f"AX_{value}"
+    if "after_power-" in value_lower:
+        return f"ZX_{value}"
+
+    # 6. Final fallback
+    return f"XX_{value}"
 
 def swap_pins_for_that_row(df, index, swap_conditions):
     print(f"🔍 Processing row: {index}")

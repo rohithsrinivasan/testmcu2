@@ -131,7 +131,7 @@ if 'pin_table' in st.session_state:
                 no_grouping_assigned = helper_funct.auto_fill_grouping_if_exact_match(no_grouping_assigned, json_data,threshold)
 
             # Show the editor after applying any suggestions
-            edited_df = st.data_editor(no_grouping_assigned)
+            edited_df = st.data_editor(no_grouping_assigned, help= "after_input -> IX\nafter_io ->RX\nafter_output ->TX\nafter_power+ ->AX\nafter_power- ->ZX")
 
 
             if show_suggestions_manual:

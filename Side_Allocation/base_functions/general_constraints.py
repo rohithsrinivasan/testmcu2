@@ -92,7 +92,7 @@ def side_for_one_symbol(df):
 
     return parts'''
 
-'''def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balanced_Assignment=False):
+def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balanced_Assignment=False):
     """
     Split df into n_parts without breaking Priority groups.
     Maintains original order of df (row order), not sorted by numeric key.
@@ -127,10 +127,10 @@ def side_for_one_symbol(df):
         parts = gridspace_constraints.distributed_view(parts, n_parts, max_rows)
 
     return parts
-    '''
+    
 
 
-def split_into_n_parts(df, n_parts, max_rows=80 ,Strict_Population=True, Balanced_Assignment=False):
+'''def split_into_n_parts(df, n_parts, max_rows=80 ,Strict_Population=True, Balanced_Assignment=False):
     """
     Split df into n_parts without breaking Priority groups.
     If any part ends up with <=5 rows, automatically rebalance.
@@ -165,7 +165,7 @@ def split_into_n_parts(df, n_parts, max_rows=80 ,Strict_Population=True, Balance
     if Balanced_Assignment:
         parts = gridspace_constraints.distributed_view(parts, n_parts, max_rows)
 
-    return parts
+    return parts'''
 
 
 
