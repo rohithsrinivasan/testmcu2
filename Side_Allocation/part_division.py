@@ -120,7 +120,7 @@ def handle_special_pin_separation(unfilled_df, df):
         raise
 
 
-def process_main_parts(unfilled_df, Strict_Population):
+def process_main_parts(unfilled_df, Strict_Population, Balanced_Assignment):
     """
     Step 6: Split remaining pins and assign sides
     """
@@ -149,7 +149,7 @@ def process_main_parts(unfilled_df, Strict_Population):
             print(f"🔍 Input to split_into_n_parts: {len(unfilled_df)} rows, indices: {unfilled_df.index.min()}-{unfilled_df.index.max()}")
 
             unfilled_df = unfilled_df.reset_index(drop=True)
-            split_parts = general_constraints.split_into_n_parts(unfilled_df, n_parts, max_rows=80, Strict_Population=Strict_Population, Balanced_Assignment=False)
+            split_parts = general_constraints.split_into_n_parts(unfilled_df, n_parts, max_rows=80, Strict_Population=Strict_Population, Balanced_Assignment=Balanced_Assignment)
             print(f"✅ Splitting complete: {len(split_parts)} parts returned")
             
             for i, part in enumerate(split_parts):
@@ -260,7 +260,7 @@ def validate_final_results(df_dict, original_df):
         raise
 
 
-def partitioning(df_last, Strict_Population):
+def partitioning(df_last, Strict_Population,Balanced_Assignment):
     """
     Main partitioning function - orchestrates the entire process
     """
@@ -279,7 +279,7 @@ def partitioning(df_last, Strict_Population):
     unfilled_df, gpio_parts, sdrb_parts, ddr_parts = handle_special_pin_separation(unfilled_df, df)
     
     # Step 6: Process main parts
-    main_parts = process_main_parts(unfilled_df, Strict_Population)
+    main_parts = process_main_parts(unfilled_df, Strict_Population,Balanced_Assignment)
     
     # Step 7: Build result dictionary
     df_dict = build_result_dictionary(power_parts, main_parts, gpio_parts, sdrb_parts, ddr_parts)

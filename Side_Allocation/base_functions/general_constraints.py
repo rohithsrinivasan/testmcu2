@@ -115,7 +115,11 @@ def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balance
 
         # If we run out of parts, just append to the last part
         if current_part >= n_parts:
-            current_part = n_parts - 1
+            print(f"⚠️ Creating extra part to hold {group_size} pins (overflow from planned {n_parts} parts)")
+            parts.append(pd.DataFrame())
+            part_row_counts.append(0)
+            n_parts += 1  # Update total count to reflect extra part
+
 
         # Add group to current part
         parts[current_part] = pd.concat([parts[current_part], group])
@@ -127,6 +131,46 @@ def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balance
         parts = gridspace_constraints.distributed_view(parts, n_parts, max_rows)
 
     return parts
+    
+
+
+'''def split_into_n_parts(df, n_parts, max_rows=80 ,Strict_Population=True, Balanced_Assignment=False):
+    """
+    Split df into n_parts without breaking Priority groups.
+    If any part ends up with <=5 rows, automatically rebalance.
+    """
+
+    # ✅ Group by 'Priority' (preserve row order)
+    grouped = [(priority, group) for priority, group in df.groupby('Priority', sort=True)]
+
+    parts = [pd.DataFrame() for _ in range(n_parts)]
+    part_row_counts = [0] * n_parts
+    current_part = 0
+
+    for priority, group in grouped:
+        group_size = len(group)
+
+        if part_row_counts[current_part] > 0 and part_row_counts[current_part] + group_size > max_rows:
+            current_part += 1
+
+        if current_part >= n_parts:
+            current_part = n_parts - 1
+
+        parts[current_part] = pd.concat([parts[current_part], group])
+        part_row_counts[current_part] += group_size
+
+    # 🔍 Check for too-small parts and auto-trigger rebalancing
+    min_rows = min(part_row_counts)
+    if min_rows <= min_rows:
+        print(f"⚠️ Auto-balancing triggered: One of the parts has ≤ 5 rows (min: {min_rows}).")
+        Balanced_Assignment = True
+
+    # ✅ Final Rebalancing if required
+    if Balanced_Assignment:
+        parts = gridspace_constraints.distributed_view(parts, n_parts, max_rows)
+
+    return parts'''
+
 
 
 def final_filter(df):

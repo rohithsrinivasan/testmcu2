@@ -1,15 +1,10 @@
 import pdfplumber
 import pandas as pd
-
+import tabula
 import numpy as np
-#import streamlit as st
+import streamlit as st
+import tempfile 
 import subprocess
-
-
-import tempfile
-
-
-
 def find_pages_between_keywords(pdf_path, start_keyword, end_keyword):
     with pdfplumber.open(pdf_path) as pdf:
         start_page, end_page = None, None
@@ -47,8 +42,7 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
     Returns:
         List of matched and cleaned DataFrames
     """
-
-    # Create a temporary file for storing the extracted DataFrame
+     # Create a temporary file for storing the extracted DataFrame
     with tempfile.NamedTemporaryFile(suffix='.pkl', delete=False) as tmp:
         tmp_path = tmp.name
     # tmp_path is the filename you should pass to both your subprocess script and later for pd.read_pickle()
@@ -82,9 +76,9 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
     #     #st.error(f"📄 Error reading PDF: {e}")
     #     return []
     print("yes")
+
     dfs = [df for df in dfs if not df.empty and df.dropna(how='all').shape[0] > 0]
-    print("Extracted tables: len(dfs) =", len(dfs))
-    #st.write(f"📄 Found {len(dfs)} non-empty tables.")
+    st.write(f"📄 Found {len(dfs)} non-empty tables.")
     
     modified_dfs = []
     
@@ -125,8 +119,8 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
                 
         else:
             print(f"⚠️ Table {i + 1} skipped: Keyword not found")
-    print(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
-    #st.write(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
+    
+    st.write(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
     return modified_dfs
 
 

@@ -3,11 +3,16 @@ import json
 
 def assigning_priority(df,priority_mapping_json):
     df_copy = df.copy()  
-    df_copy['Priority'] = df_copy.apply(lambda row: priority_order(row, df_copy,priority_mapping_json), axis=1)
+    df_copy['Priority'] = df_copy.apply(lambda row: priority_order(row, df_copy,priority_mapping_json,SWAP = False), axis=1)
+    # Sort the dataframe by Priority in ascending order
+    df_copy = df_copy.sort_values('Priority', ascending=True)  
+    # Optional: Reset index if you want a clean sequential index
+    df_copy = df_copy.reset_index(drop=True)
+    
     return df_copy
 
 
-def priority_order(row, df, priority_mapping_json):
+def priority_order(row, df, priority_mapping_json, SWAP = True):
     with open(priority_mapping_json, 'r') as file:
         mappings = json.load(file)
 
@@ -18,8 +23,11 @@ def priority_order(row, df, priority_mapping_json):
     electrical_type = str(row.get('Electrical Type', ''))
 
     # 1. Highest priority: Direct mapping
+    # if value in mappings.get('priority_map', {}):
+    #     return mappings['priority_map'][value]
     if value in mappings.get('priority_map', {}):
-        return mappings['priority_map'][value]
+        return f"{mappings['priority_map'][value]}{value}"
+
 
     # 2. Input + Port check 
     is_input_or_io_or_output = electrical_type in ['Input', 'I/O','Output']
@@ -32,13 +40,13 @@ def priority_order(row, df, priority_mapping_json):
             print(f"Step 2A: Mixed port assignment returned: {port_assignment}")
             return port_assignment
 
-        # 2B. Swap conditions
-        pin_names = [name.strip() for name in value_alternative.split('/')]
-        for alt_name, priority in mappings.get('swap_conditions', {}).items():
-            if alt_name in pin_names:
-                print(f"Swap match: '{alt_name}' found in '{value_alternative}' → Priority: {priority}")
-                swap_pins_for_that_row(df, index, mappings['swap_conditions'])
-                return priority
+        if SWAP == True :
+            pin_names = [name.strip() for name in value_alternative.split('/')]
+            for alt_name, priority in mappings.get('swap_conditions', {}).items():
+                if alt_name in pin_names:
+                    print(f"Swap match: '{alt_name}' found in '{value_alternative}' → Priority: {priority}")
+                    swap_pins_for_that_row(df, index, mappings['swap_conditions'])
+                    return priority
 
         return f"P_{value}"
 
@@ -50,16 +58,16 @@ def priority_order(row, df, priority_mapping_json):
             # Example: "P 10"
             try:
                 port_number = int(parts[1])
-                return f"P_Port_{port_number:02d}"
+                return f"P_Port Pins_{port_number:02d}"
             except ValueError:
-                return f"P_Port_{parts[1]}"
+                return f"P_Port Pins_{parts[1]}"
 
         elif len(parts) == 1:
             # Example: "Port_00"
             sub_parts = parts[0].split("_")
             if len(sub_parts) == 2 and sub_parts[1].isdigit():
                 port_number = int(sub_parts[1])
-                return f"P_Port_{port_number:02d}"
+                return f"P_Port Pins_{port_number:02d}"
 
 
     # 4. Prefix-based mapping fallback
@@ -67,8 +75,22 @@ def priority_order(row, df, priority_mapping_json):
         if value.startswith(key):
             return f"{prefix}_{value}"
 
-    # 5. Final fallback
-    return f"ZZ_{value}"
+    # 5. Special substring-based fallback
+    value_lower = value.lower()
+
+    if "after_input" in value_lower:
+        return f"IX_{value}"
+    if "after_io" in value_lower:
+        return f"RX_{value}"
+    if "after_output" in value_lower:
+        return f"TX_{value}"
+    if "after_power+" in value_lower:
+        return f"AX_{value}"
+    if "after_power-" in value_lower:
+        return f"ZX_{value}"
+
+    # 6. Final fallback
+    return f"XX_{value}"
 
 def swap_pins_for_that_row(df, index, swap_conditions):
     print(f"🔍 Processing row: {index}")
@@ -139,10 +161,10 @@ def handle_mixed_port_assignment(pin_display_name, grouping_value, df):
         if len(pin) == 3 and pin.startswith('P'):  # PXX case
             port_num = int(pin[1])  # Take first digit after P
             print(f"Assigning {pin} to P_Port {port_num:02d} (PXX rule: first digit)")
-            return f"P_Port_{port_num:02d}"
+            return f"P_Port Pins_{port_num:02d}"
         elif len(pin) == 4 and pin.startswith('P'):  # PXXX case
             port_num = int(pin[1:3])  # Take first two digits after P
             print(f"Assigning {pin} to P_Port {port_num:02d} (PXXX rule: first two digits)")
-            return f"P_Port_{port_num:02d}"
+            return f"P_Port Pins_{port_num:02d}"
     
     return None

@@ -49,7 +49,8 @@ def extract_numeric_key(pin_name):
         except (ValueError, IndexError):
             return 999999
     
-    match = re.match(r'^([A-Za-z]+)(\d+)$', pin_name)
+    #match = re.match(r'^([A-Za-z]+)(\d+)$', pin_name)
+    match = re.search(r'([A-Za-z]+)(\d+)', pin_name)
     if match:
         return int(match.group(2))
     

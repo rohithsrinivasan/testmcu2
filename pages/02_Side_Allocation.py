@@ -46,7 +46,8 @@ if 'grouped_pin_table' in st.session_state:
     #st.text(f"Before Side Allocation Flag :{before_priority_flag}")
     #st.dataframe(added_empty_priority_column)
     priority_mapping_json = f"Side_Allocation/priority_map.json"
-    priority_added = priority.assigning_priority(added_empty_priority_column,priority_mapping_json)
+    priority_mapping_json_new = f"Side_Allocation/priority_map_shrinidhi.json"
+    priority_added = priority.assigning_priority(added_empty_priority_column,priority_mapping_json_new)
     #st.text(f"Priority Column Added")
     #st.dataframe(priority_added)
 
@@ -61,7 +62,30 @@ if 'grouped_pin_table' in st.session_state:
     
     else:
         st.text(f"Executing Partioning")
-        df_dict = part_division.partitioning(added_empty_side_column, Strict_Population = False)
+        with st.sidebar:
+            st.sidebar.subheader("Customize")
+
+            # Reset to default button
+            if st.sidebar.button("Reset to Default"):
+                st.session_state.strict_population = False
+                st.session_state.balanced_assignment = False
+
+            # Initialize session state if not exists
+            if 'strict_population' not in st.session_state:
+                st.session_state.strict_population = False
+            if 'balanced_assignment' not in st.session_state:
+                st.session_state.balanced_assignment = False
+
+            # Toggle switches
+            strict_population = st.sidebar.toggle("Strict Population", value=st.session_state.strict_population,help="Enable strict population mode")
+            balanced_assignment = st.sidebar.toggle("Balanced Assignment", value=st.session_state.balanced_assignment,help="Enable balanced assignment mode")
+
+            # Update session state
+            st.session_state.strict_population = strict_population
+            st.session_state.balanced_assignment = balanced_assignment
+
+        #df_dict = part_division.partitioning(added_empty_side_column, Strict_Population = False, Balanced_Assignment= True)
+        df_dict = part_division.partitioning(added_empty_side_column, Strict_Population=st.session_state.strict_population, Balanced_Assignment=st.session_state.balanced_assignment)
         side_added_dict = side.side_for_multipart(df_dict)
         #st.text(f"Side Column Added")
         #for subheader, dataframe in side_added_dict.items():
