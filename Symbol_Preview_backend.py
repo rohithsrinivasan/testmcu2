@@ -25,9 +25,12 @@ def assign_grouping(partnumber_dict, pdf_path):
 			'I/O': submodule_path('Grouping','mcu_database', 'mcu_io.json'),
 			'Passive': submodule_path('Grouping','mcu_database', 'mcu_passive.json')
 		}
+	json_paths_Single = {
+    'Single': submodule_path('Grouping', 'shrinidhi_database', 'combined.json')
+    }
 	before_grouping_flag, added_empty_grouping_column = general_funct.check_excel_format(pin_table,  required_cols, optional_column='Grouping')
 	print("Checked grouping format")
-	pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths, SENSITIVITY= False)  
+	pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths_Single, SENSITIVITY= False,SMARTSEARCH= False, SINGLE_FILE=True)  
 	df_with_no_grouping = general_funct.check_empty_groupings(pin_grouping_table)
 	if not df_with_no_grouping.empty:
 		#Write logic for empty groupings
@@ -58,7 +61,7 @@ def assign_side(pin_grouping_table):
 		side_added_dict["Single_Part"] = side_added_df
 	else:
 		print(f"Executing Partioning")
-		df_dict = part_division.partitioning(added_empty_side_column, Strict_Population = False)
+		df_dict = part_division.partitioning(added_empty_side_column, Strict_Population = False, Balanced_Assignment=False)
 		side_added_dict = side.side_for_multipart(df_dict)
 		side_added_dict = {k: v for k, v in side_added_dict.items() if not v.empty}
 		for key in side_added_dict:

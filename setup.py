@@ -10,7 +10,7 @@ setup(
     description="An utility for extraction of component package information of a give datasheet",
     license="MIT",
     long_description=long_description,
-    url="https://gitlab.apac.eng.renesas.com/ecad/ecad-automation-project",
+    url="https://gitlab.apac.eng.renesas.com/ecad/symbolgen_streamlit",
     packages=[
         "Extraction",
         "Grouping",
