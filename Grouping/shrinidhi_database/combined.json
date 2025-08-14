@@ -380,6 +380,21 @@
             "ADCG1I8",
             "ADCG1I9"
         ],
+
+        "ADC*": {
+        "CH": ["ADC_CH0", "ADC_CH1", "ADC_CH2", "ADC_CH3", "ADC_CH4", "ADC_CH5", "ADC_CH6", "ADC_CH7"],
+        "IN00": ["ADC_IN0", "ADC_IN1", "ADC_IN2", "ADC_IN3", "ADC_IN4", "ADC_IN5", "ADC_IN6", "ADC_IN7"],
+        "Special": ["ADC_AVDD18", "ADC_AVSS"]
+        },
+        "ADC1*": {
+        "00": ["ADC1_IN0", "ADC1_IN1", "ADC1_IN2", "ADC1_IN3", "ADC1_IN4", "ADC1_IN6", "ADC1_IN7", "ADC1_IN8"],
+        "Special": ["ADC1_AGND", "ADC1_AVDD", "ADC1_VREFN", "ADC1_VREFP"]
+        },
+        "ADC2*": {
+        "00": ["ADC2_IN0", "ADC2_IN1", "ADC2_IN2", "ADC2_IN3", "ADC2_IN4", "ADC2_IN6", "ADC2_IN7", "ADC2_IN8"],
+        "Special": ["ADC2_AGND", "ADC2_AVDD", "ADC2_VREFN", "ADC2_VREFP"]
+        },
+
         "MA*": [
             "MA0",
             "MA1",
@@ -613,6 +628,18 @@
             "AN372",
             "AN373"
         ],
+        "AD0AIN*": {
+        "00": ["AD0AIN0", "AD0AIN1", "AD0AIN2", "AD0AIN3", "AD0AIN4", "AD0AIN5", "AD0AIN6", "AD0AIN7", "AD0AIN8", "AD0AIN9"],
+        "10": ["AD0AIN10", "AD0AIN11"],
+        "AVCCA": ["AD0AVCCA"],
+        "AVSSA": ["AD0AVSSA"]
+        },
+        "AD1AIN*": {
+        "00": ["AD1AIN0", "AD1AIN1", "AD1AIN2", "AD1AIN3", "AD1AIN4", "AD1AIN5", "AD1AIN6", "AD1AIN7"],
+        "AVCCA": ["AD1AVCCA"],
+        "AVSSA": ["AD1AVSSA"]
+        },
+
         "ANI*": [
             "ANI1",
             "ANI10",
@@ -1347,6 +1374,113 @@
             "D63"
         ]
     },
+
+
+  "DDR*": {
+ "General": {
+    "ADDR": [
+      "DDR_ADDR0", "DDR_ADDR1", "DDR_ADDR2", "DDR_ADDR3",
+      "DDR_ADDR4", "DDR_ADDR5", "DDR_ADDR6", "DDR_ADDR7",
+      "DDR_ADDR8", "DDR_ADDR9", "DDR_ADDR10", "DDR_ADDR11",
+      "DDR_ADDR12", "DDR_ADDR13", "DDR_ADDR14", "DDR_ADDR15"
+    ],
+    "BA": ["DDR_BA0", "DDR_BA1", "DDR_BA2"],
+    "CALIBRATION": ["DDR_CALIBRATION"],
+    "CAS": ["DDR_CAS"],
+    "CKE": ["DDR_CKE"],
+    "CLK_N": ["DDR_CLK_N"],
+    "CLK_P": ["DDR_CLK_P"],
+    "CLKEN": ["DDR_CLKEN"],
+    "CLKN": ["DDR_CLKN"],
+    "CLKP": ["DDR_CLKP"],
+    "CS": ["DDR_CS0", "DDR_CS1"],
+    "DM": ["DDR_DM0", "DDR_DM1"],
+    "DQ": [
+      "DDR_DQ0", "DDR_DQ1", "DDR_DQ2", "DDR_DQ3",
+      "DDR_DQ4", "DDR_DQ5", "DDR_DQ6", "DDR_DQ7",
+      "DDR_DQ8", "DDR_DQ9", "DDR_DQ10", "DDR_DQ11",
+      "DDR_DQ12", "DDR_DQ13", "DDR_DQ14", "DDR_DQ15"
+    ],
+    "DQS_N": ["DDR_DQS_N0", "DDR_DQS_N1"],
+    "DQS0": ["DDR_DQS0", "DDR_DQS0_N", "DDR_DQS0_P"],
+    "DQS1": ["DDR_DQS1", "DDR_DQS1_N", "DDR_DQS1_P"],
+    "MZQ": ["DDR_MZQ"],
+    "ODT": ["DDR_ODT0", "DDR_ODT1"],
+    "RAS": ["DDR_RAS"],
+    "RESET_N": ["DDR_RESET_N"],
+    "VAA": ["DDR_VAA"],
+    "VDDQ": ["DDR_VDDQ"],
+    "VREF": ["DDR_VREF"],
+    "WE": ["DDR_WE", "DDR_WE\\"]
+  },
+    "DDR0": {
+      "ATEST": ["DDR0_ATEST"],
+      "CAA": ["DDR0_CAA0", "DDR0_CAA1", "DDR0_CAA2", "DDR0_CAA3", "DDR0_CAA4", "DDR0_CAA5"],
+      "CAB": ["DDR0_CAB0", "DDR0_CAB1", "DDR0_CAB2", "DDR0_CAB3", "DDR0_CAB4", "DDR0_CAB5"],
+      "CK": ["DDR0_CKAC", "DDR0_CKAT", "DDR0_CKBC", "DDR0_CKBT"],
+      "CKE": ["DDR0_CKEA0", "DDR0_CKEA1", "DDR0_CKEB0", "DDR0_CKEB1"],
+      "CSA": ["DDR0_CSA0", "DDR0_CSA1"],
+      "CSB": ["DDR0_CSB0", "DDR0_CSB1"],
+      "DMIA": ["DDR0_DMIA0", "DDR0_DMIA1"],
+      "DMIB": ["DDR0_DMIB0", "DDR0_DMIB1"],
+      "DQA": [
+        "DDR0_DQA0", "DDR0_DQA1", "DDR0_DQA2", "DDR0_DQA3",
+        "DDR0_DQA4", "DDR0_DQA5", "DDR0_DQA6", "DDR0_DQA7",
+        "DDR0_DQA8", "DDR0_DQA9", "DDR0_DQA10", "DDR0_DQA11",
+        "DDR0_DQA12", "DDR0_DQA13", "DDR0_DQA14", "DDR0_DQA15"
+      ],
+      "DQB": [
+        "DDR0_DQB0", "DDR0_DQB1", "DDR0_DQB2", "DDR0_DQB3",
+        "DDR0_DQB4", "DDR0_DQB5", "DDR0_DQB6", "DDR0_DQB7",
+        "DDR0_DQB8", "DDR0_DQB9", "DDR0_DQB10", "DDR0_DQB11",
+        "DDR0_DQB12", "DDR0_DQB13", "DDR0_DQB14", "DDR0_DQB15"
+      ],
+      "DQSAC": ["DDR0_DQSAC0", "DDR0_DQSAC1"],
+      "DQSAT": ["DDR0_DQSAT0", "DDR0_DQSAT1"],
+      "DQSBC": ["DDR0_DQSBC0", "DDR0_DQSBC1"],
+      "DQSBT": ["DDR0_DQSBT0", "DDR0_DQSBT1"],
+      "DTEST": ["DDR0_DTEST"],
+      "RESETN": ["DDR0_RESETN"],
+      "VAA": ["DDR0_VAA"],
+      "VDDQ": ["DDR0_VDDQ"],
+      "VDDQLP": ["DDR0_VDDQLP"],
+      "ZN": ["DDR0_ZN"]
+    },
+    "DDR1": {
+      "ATEST": ["DDR1_ATEST"],
+      "CAA": ["DDR1_CAA0", "DDR1_CAA1", "DDR1_CAA2", "DDR1_CAA3", "DDR1_CAA4", "DDR1_CAA5"],
+      "CAB": ["DDR1_CAB0", "DDR1_CAB1", "DDR1_CAB2", "DDR1_CAB3", "DDR1_CAB4", "DDR1_CAB5"],
+      "CK": ["DDR1_CKAC", "DDR1_CKAT", "DDR1_CKBC", "DDR1_CKBT"],
+      "CKE": ["DDR1_CKEA0", "DDR1_CKEA1", "DDR1_CKEB0", "DDR1_CKEB1"],
+      "CSA": ["DDR1_CSA0", "DDR1_CSA1"],
+      "CSB": ["DDR1_CSB0", "DDR1_CSB1"],
+      "DMIA": ["DDR1_DMIA0", "DDR1_DMIA1"],
+      "DMIB": ["DDR1_DMIB0", "DDR1_DMIB1"],
+      "DQA": [
+        "DDR1_DQA0", "DDR1_DQA1", "DDR1_DQA2", "DDR1_DQA3",
+        "DDR1_DQA4", "DDR1_DQA5", "DDR1_DQA6", "DDR1_DQA7",
+        "DDR1_DQA8", "DDR1_DQA9", "DDR1_DQA10", "DDR1_DQA11",
+        "DDR1_DQA12", "DDR1_DQA13", "DDR1_DQA14", "DDR1_DQA15"
+      ],
+      "DQB": [
+        "DDR1_DQB0", "DDR1_DQB1", "DDR1_DQB2", "DDR1_DQB3",
+        "DDR1_DQB4", "DDR1_DQB5", "DDR1_DQB6", "DDR1_DQB7",
+        "DDR1_DQB8", "DDR1_DQB9", "DDR1_DQB10", "DDR1_DQB11",
+        "DDR1_DQB12", "DDR1_DQB13", "DDR1_DQB14", "DDR1_DQB15"
+      ],
+      "DQSAC": ["DDR1_DQSAC0", "DDR1_DQSAC1"],
+      "DQSAT": ["DDR1_DQSAT0", "DDR1_DQSAT1"],
+      "DQSBC": ["DDR1_DQSBC0", "DDR1_DQSBC1"],
+      "DQSBT": ["DDR1_DQSBT0", "DDR1_DQSBT1"],
+      "DTEST": ["DDR1_DTEST"],
+      "RESETN": ["DDR1_RESETN"],
+      "VAA": ["DDR1_VAA"],
+      "VDDQ": ["DDR1_VDDQ"],
+      "VDDQLP": ["DDR1_VDDQLP"],
+      "ZN": ["DDR1_ZN"]
+    }
+  },
+
     "Digital video*": {
         "BIAS": [
             "BIAS"
@@ -1468,21 +1602,26 @@
     "FWP": [
         "FWP"
     ],
-    "GPIO*": [
-        "GPIO0",
-        "GPIO1",
-        "GPIO10",
-        "GPIO11",
-        "GPIO12",
-        "GPIO2",
-        "GPIO3",
-        "GPIO4",
-        "GPIO5",
-        "GPIO6",
-        "GPIO7",
-        "GPIO8",
-        "GPIO9"
-    ],
+    "GPIO*": {
+    "00": ["GPIO0","GPIO1","GPIO2","GPIO3","GPIO4","GPIO5","GPIO6","GPIO7","GPIO8","GPIO9"],
+    "01": ["GPIO10","GPIO11","GPIO12"],
+    "02": ["GPIO21", "GPIO22","GPIO23","GPIO24","GPIO25","GPIO26","GPIO27","GPIO28","GPIO29"], 
+    "03": ["GPIOO31", "GPIOO32", "GPIO33","GPIO34","GPIO35","GPIO36","GPIO37","GPIO38","GPIO39"],
+    "04": ["GPIOO41", "GPIOO42","GPIO43","GPIO44","GPIO45","GPIO46","GPIO47","GPIO48","GPIO49"],
+    "05": ["GPIO51", "GPIO52","GPIO53","GPIO54","GPIO55","GPIO56","GPIO57","GPIO58","GPIO59"],
+    "06": ["GPIO61", "GPIO62","GPIO63","GPIO64","GPIO65","GPIO66","GPIO67","GPIO68","GPIO69"],
+    "07": ["GPIO71", "GPIO72","GPIO73","GPIO74","GPIO75","GPIO76","GPIO77","GPIO78","GPIO79"],
+    "08": ["GPIO81", "GPIO82","GPIO83","GPIO84","GPIO85","GPIO86","GPIO87","GPIO88","GPIO89"],
+    "09": ["GPIO91", "GPIO92","GPIO93","GPIO94","GPIO95","GPIO96","GPIO97","GPIO98","GPIO99"],
+    "10": ["GPIO100","GPIO101","GPIO102","GPIO103","GPIO104","GPIO105","GPIO106","GPIO107","GPIO108","GPIO109"],
+    "11": ["GPIO110","GPIO111","GPIO112","GPIO113","GPIO114","GPIO115","GPIO116","GPIO117","GPIO118","GPIO119"],
+    "12": ["GPIO120","GPIO121","GPIO122","GPIO123","GPIO124","GPIO125","GPIO126","GPIO127","GPIO128","GPIO129"],
+    "13": ["GPIO130","GPIO131","GPIO132","GPIO133","GPIO134","GPIO135","GPIO136","GPIO137","GPIO138","GPIO139"],
+    "14": ["GPIO140","GPIO141","GPIO142","GPIO143","GPIO144","GPIO145","GPIO146","GPIO147","GPIO148","GPIO149"],
+    "15": ["GPIO150","GPIO151","GPIO152","GPIO153","GPIO154","GPIO155","GPIO156","GPIO157","GPIO158","GPIO159"],
+    "16": ["GPIO160","GPIO161","GPIO162","GPIO163","GPIO164","GPIO165","GPIO166","GPIO167","GPIO168","GPIO169"]
+
+    },
     "HDRV": {
         "Diff Pair": [
             "HDRVM",
@@ -1539,6 +1678,63 @@
             "SDA"
         ]
     },
+
+    "PCIE*": {
+        "REFCLK": [
+        "PCIE_REFCLKN0",
+        "PCIE_REFCLKN1",
+        "PCIE_REFCLKP0",
+        "PCIE_REFCLKP1"
+        ],
+        "RX": [
+        "PCIE_RX_DN",
+        "PCIE_RX_DP"
+        ],
+        "RXDNL": [
+        "PCIE_RXDNL0",
+        "PCIE_RXDNL1",
+        "PCIE_RXDNL2",
+        "PCIE_RXDNL3"
+        ],
+        "RXDPL": [
+        "PCIE_RXDPL0",
+        "PCIE_RXDPL1",
+        "PCIE_RXDPL2",
+        "PCIE_RXDPL3"
+        ],
+        "TX": [
+        "PCIE_TX_DN",
+        "PCIE_TX_DP"
+        ],
+        "TXDNL": [
+        "PCIE_TXDNL0",
+        "PCIE_TXDNL1",
+        "PCIE_TXDNL2",
+        "PCIE_TXDNL3"
+        ],
+        "TXDPL": [
+        "PCIE_TXDPL0",
+        "PCIE_TXDPL1",
+        "PCIE_TXDPL2",
+        "PCIE_TXDPL3"
+        ],
+        "VCC": [
+        "PCIE_VCC08AL01",
+        "PCIE_VCC08AL23",
+        "PCIE_VCC18ACMN",
+        "PCIE_VCC18AL01",
+        "PCIE_VCC18AL23"
+        ],
+        "VDD": [
+        "PCIE_VDD09",
+        "PCIE_VDD18"
+        ],
+        "RSTOUTB": [
+        "PCIE0_RSTOUTB",
+        "PCIE1_RSTOUTB"
+        ]
+    },
+
     "IDSEL": [
         "IDSEL"
     ],
@@ -1554,9 +1750,6 @@
     ],
     "IOIS16": [
         "IOIS16#"
-    ],
-    "IP0_0": [
-        "IP0_0"
     ],
     "IRL": [
         "IRL0#",
@@ -1588,15 +1781,6 @@
     "JIT*": [
         "JIT0",
         "JIT1"
-    ],
-    "JP0_*": [
-        "JP0_0",
-        "JP0_1",
-        "JP0_2",
-        "JP0_3",
-        "JP0_4",
-        "JP0_5",
-        "JP0_6"
     ],
     "JTAG*": {
         "JTAG_*": [
@@ -2129,14 +2313,39 @@
         "OC",
         "OC_EN"
     ],
-    "OQSPIF*": [
-        "OQSPIF_CLK",
-        "OQSPIF_CS",
-        "OQSPIF_D1",
-        "OQSPIF_D2",
-        "OQSPIF_D3",
-        "OQSPIF_DO"
+    "QSPI*" : {
+        "OQSPIF*": [
+            "OQSPIF_CLK",
+            "OQSPIF_CS",
+            "OQSPIF_D1",
+            "OQSPIF_D2",
+            "OQSPIF_D3",
+            "OQSPIF_DO"
+        ],
+
+    "QSPI0": [
+        "QSPI0_IO0",
+        "QSPI0_IO1",
+        "QSPI0_IO2",
+        "QSPI0_IO3",
+        "QSPI0_MISO_IO1",
+        "QSPI0_MOSI_IO0",
+        "QSPI0_SPCLK",
+        "QSPI0_SSL"
     ],
+    "QSPI1": [
+        "QSPI1_IO0",
+        "QSPI1_IO1",
+        "QSPI1_IO2",
+        "QSPI1_IO3",
+        "QSPI1_MISO_IO1",
+        "QSPI1_MOSI_IO0",
+        "QSPI1_SPCLK",
+        "QSPI1_SSL"
+    ]
+
+
+    },
     "PAR": [
         "PAR"
     ],
@@ -2709,8 +2918,11 @@
                 "PI5",
                 "PI6",
                 "PI7"
-            ]
-        },
+            ],
+                "IP0_0": [
+                    "IP0_0"
+                ]
+            },
         "Port PJ": {
             "PJ*": [
                 "PJ0",
@@ -2755,6 +2967,15 @@
                 "PJ7",
                 "PJ8",
                 "PJ9"
+            ],
+                "JP0_*": [
+                "JP0_0",
+                "JP0_1",
+                "JP0_2",
+                "JP0_3",
+                "JP0_4",
+                "JP0_5",
+                "JP0_6"
             ]
         },
         "Port PK": {
@@ -3099,6 +3320,16 @@
       "P114",
       "P115",
       "P116",
+      "P01_0",
+      "P01_1",
+      "P01_2",
+      "P01_3",
+      "P01_4",
+      "P01_5",
+      "P01_6",
+      "P01_7",
+      "P01_8",
+      "P01_9",
       "P01_00",
       "P01_01",
       "P01_02",
@@ -5014,6 +5245,22 @@
             ],
             "-pins": [
                 "VDD"
+            ],
+
+              "VDD1833_PRE18_OTHERS": [
+                "VDD1833_PRE18_OTHERS_A",
+                "VDD1833_PRE18_OTHERS_B",
+                "VDD1833_PRE18_OTHERS_C",
+                "VDD1833_PRE18_OTHERS_D"
+            ],
+            "VDD1833_PRE18_SD": [
+                "VDD1833_PRE18_SD0",
+                "VDD1833_PRE18_SD1",
+                "VDD1833_PRE18_SD2"
+            ],
+              "VDD1833_PRE18_ET": [
+                "VDD1833_PRE18_ET0",
+                "VDD1833_PRE18_ET1"
             ]
         },
         "AE_VDDQ": {
@@ -5026,7 +5273,29 @@
             ],
             "-pins": [
                 "VDDQ"
-            ]
+            ],
+            "VDDQ": [
+            "VDDQ_CK",
+            "VDDQ_DDR",
+            "VDDQ_DU",
+            "VDDQ_MAPLL",
+            "VDDQ_MDPLL0",
+            "VDDQ_MDPLL1",
+            "VDDQ_VIN01"
+        ],
+        "VDDQ18": [
+            "VDDQ18_ADC",
+            "VDDQ18_CSI0",
+            "VDDQ18_DIGRF",
+            "VDDQ18_ISO",
+            "VDDQ18_LVDS"
+        ],
+        "VDDQ25": [
+            "VDDQ25_AVB0"
+        ],
+        "VDDQ33": [
+            "VDDQ33"
+        ]
         },
         "VL*": [
             "VL1",
@@ -5241,7 +5510,8 @@
             "RSTB",
             "RSTN",
             "RSTOUT#",
-            "nRST"
+            "nRST",
+            "PRST"
         ]
     },
     "REXT": [
@@ -5929,7 +6199,66 @@
         "USPND": [
             "USPND"
         ]
-    }
+    },
+
+        "USB20": [
+      "USB20_DM",
+      "USB20_DP",
+      "USB20_OTGEXICEN",
+      "USB20_OTGID",
+      "USB20_TXRTUNE",
+      "USB20_USDVDD",
+      "USB20_USVDD18",
+      "USB20_USVDD33",
+      "USB20_VUBUSIN"
+    ],
+    "USB21": [
+      "USB21_DM",
+      "USB21_DP",
+      "USB21_TXRTUNE",
+      "USB21_USDVDD",
+      "USB21_USVDD18",
+      "USB21_USVDD33"
+    ],
+    "USB3": [
+      "USB3_USRESREF"
+    ],
+    "USB30": [
+      "USB30_DM",
+      "USB30_DP",
+      "USB30_RX0M",
+      "USB30_RX0P",
+      "USB30_TX0M",
+      "USB30_TX0P",
+      "USB30_TXRTUNE",
+      "USB30_USDVDD",
+      "USB30_USVDD18",
+      "USB30_USVDD33",
+      "USB30_USVPH",
+      "USB30_USVPTX"
+    ],
+    "USB31": [
+      "USB31_DM",
+      "USB31_DP",
+      "USB31_RX0M",
+      "USB31_RX0P",
+      "USB31_TX0M",
+      "USB31_TX0P",
+      "USB31_TXRTUNE",
+      "USB31_USDVDD",
+      "USB31_USVDD18",
+      "USB31_USVDD33",
+      "USB31_USVPH",
+      "USB31_USVPTX"
+    ],
+    "USBAPVcc": [
+      "USBAPVcc0",
+      "USBAPVcc1"
+    ],
+    "USBDPVcc": [
+      "USBDPVcc0",
+      "USBDPVcc1"
+    ]
     },
     "USBA_D": [
         "USBA_DM",
@@ -5949,6 +6278,7 @@
             "DP1"
         ]
     },
+    "VI_*" : {
     "VI1_*": [
         "VI1_0_A",
         "VI1_1_A",
@@ -5960,6 +6290,28 @@
         "VI1_7_A",
         "VI1_CLK_A"
     ],
+    "VI0_DATA": [
+        "VI0_DATA0",
+        "VI0_DATA1",
+        "VI0_DATA2",
+        "VI0_DATA3",
+        "VI0_DATA4",
+        "VI0_DATA5",
+        "VI0_DATA6",
+        "VI0_DATA7",
+        "VI0_DATA8",
+        "VI0_DATA9",
+        "VI0_DATA10",
+        "VI0_DATA11"
+      ],
+      "VI0_*": [
+        "VI0_CLK",
+        "VI0_CLKENB",
+        "VI0_FIELD",
+        "VI0_HSYNC#",
+        "VI0_VSYNC#"
+      ]
+    },
     "VMONOUT": [
         "VMONOUT",
         "VMONOUT#"
