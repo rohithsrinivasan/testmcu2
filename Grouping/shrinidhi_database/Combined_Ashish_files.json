@@ -844,6 +844,76 @@
             "MBA2"
         ]
     },
+
+    "Bus Interface": {
+        "BP_Address": {
+            "BP_A*": [
+                "BP_A0",
+                "BP_A10",
+                "BP_A11",
+                "BP_A12",
+                "BP_A13",
+                "BP_A14",
+                "BP_A15",
+                "BP_A16",
+                "BP_A17",
+                "BP_A2",
+                "BP_A24",
+                "BP_A25",
+                "BP_A26",
+                "BP_A28",
+                "BP_A29",
+                "BP_A3",
+                "BP_A30",
+                "BP_A31",
+                "BP_A33",
+                "BP_A34",
+                "BP_A35",
+                "BP_A36",
+                "BP_A4",
+                "BP_A5",
+                "BP_A6",
+                "BP_A7",
+                "BP_A8",
+                "BP_A9"
+            ]
+        },
+        "BP_Data": {
+            "BP_D*": [
+                "BP_D0",
+                "BP_D1",
+                "BP_D10",
+                "BP_D12",
+                "BP_D13",
+                "BP_D14",
+                "BP_D15",
+                "BP_D16",
+                "BP_D17",
+                "BP_D18",
+                "BP_D19",
+                "BP_D2",
+                "BP_D20",
+                "BP_D21",
+                "BP_D22",
+                "BP_D3",
+                "BP_D4",
+                "BP_D5",
+                "BP_D6",
+                "BP_D7",
+                "BP_D8",
+                "BP_D9"
+            ]
+        },
+        "BP_Control": {
+            "BP_MEMRESET": [
+                "BP_MEMRESET#"
+            ],
+            "BP_ZN": [
+                "BP_ZN"
+            ]
+        }
+    },
+
     "CA": [
         "CA"
     ],
@@ -1023,7 +1093,52 @@
             "RFCTLEN",
             "XTAL1_RF",
             "XTAL2_RF"
-        ]
+        ],
+
+        "System": {
+            "CLK": [
+                "CLK"
+            ]
+        },
+        "EM_XTAL": [
+            "EMEXTAL",
+            "EMXTAL"
+        ],
+        "XTAL": {
+            "EXTALR": [
+                "EXTALR"
+            ]
+        },
+        "EXTCLK": {
+            "EXTCLKIN": [
+                "EXTCLKIN"
+            ]
+        },
+        "Main Clock": [
+            "MCLK_XI",
+            "MCLK_XO"
+        ],
+        "Oscillator": [
+            "OSCTH"
+        ],
+        "QSPI Clock": [
+            "QXTAL"
+        ],
+        "Crystal": [
+            "RTXIN",
+            "RTXOUT"
+        ],
+                "IM0": {
+            "IM*CLK": [
+                "IM0CLK"
+            ]
+        },
+        "IM1": {
+            "IM*CLK": [
+                "IM1CLK"
+            ]
+        }
+
     },
     "CLKOUT": {
         "CK": [
@@ -1070,6 +1185,512 @@
         "CS6#",
         "CS6#"
     ],
+        "CSI Interface": {
+        "CSI_CLK": {
+            "Diff Pair": [
+                "CSI_CLKN",
+                "CSI_CLKP"
+            ]
+        },
+        "CSI_DATA0*": {
+            "Diff Pair": [
+                "CSI_DATA0_N",
+                "CSI_DATA0_P"
+            ]
+        },
+        "CSI_DATA0": {
+            "Diff Pair": [
+                "CSI_DATA0N",
+                "CSI_DATA0P"
+            ]
+        },
+        "CSI_DATA1*": {
+            "Diff Pair": [
+                "CSI_DATA1_N",
+                "CSI_DATA1_P"
+            ]
+        },
+        "CSI_DATA1": {
+            "Diff Pair": [
+                "CSI_DATA1N",
+                "CSI_DATA1P"
+            ]
+        },
+        "CSI_DATA2": {
+            "Diff Pair": [
+                "CSI_DATA2_N",
+                "CSI_DATA2_P"
+            ]
+        },
+        "CSI_DATA3": {
+            "Diff Pair": [
+                "CSI_DATA3_N",
+                "CSI_DATA3_P"
+            ]
+        },
+        "CSI0_CLK": {
+            "Diff Pair": [
+                "CSI0_CLKN",
+                "CSI0_CLKP"
+            ]
+        },
+        "CSI0_DATA0": {
+            "Diff Pair": [
+                "CSI0_DATA0N",
+                "CSI0_DATA0P"
+            ]
+        },
+        "CSI0_DATA1": {
+            "Diff Pair": [
+                "CSI0_DATA1N",
+                "CSI0_DATA1P"
+            ]
+        },
+        "CSI0_DATA2": {
+            "Diff Pair": [
+                "CSI0_DATA2N",
+                "CSI0_DATA2P"
+            ]
+        },
+        "CSI0_DATA3": {
+            "Diff Pair": [
+                "CSI0_DATA3N",
+                "CSI0_DATA3P"
+            ]
+        },
+        "CSI0_DATA0*": {
+            "Diff Pair": [
+                "CSI0_DATAN0",
+                "CSI0_DATAP0"
+            ]
+        },
+        "CSI0_DATA1*": {
+            "Diff Pair": [
+                "CSI0_DATAN1",
+                "CSI0_DATAP1"
+            ]
+        },
+        "CSI0_DATA2*": {
+            "Diff Pair": [
+                "CSI0_DATAN2",
+                "CSI0_DATAP2"
+            ]
+        },
+        "CSI0_DATA3*": {
+            "Diff Pair": [
+                "CSI0_DATAN3",
+                "CSI0_DATAP3"
+            ]
+        },
+        "CSI0_Control": {
+            "CSI0_REXT": [
+                "CSI0_REXT"
+            ]
+        },
+        "CSI1_CLK": {
+            "Diff Pair": [
+                "CSI1_CLKN",
+                "CSI1_CLKP"
+            ]
+        },
+        "CSI1_DATA0": {
+            "Diff Pair": [
+                "CSI1_DATA0N",
+                "CSI1_DATA0P"
+            ]
+        },
+        "CSI1_DATA1": {
+            "Diff Pair": [
+                "CSI1_DATA1N",
+                "CSI1_DATA1P"
+            ]
+        },
+        "CSI1_DATA2": {
+            "Diff Pair": [
+                "CSI1_DATA2N",
+                "CSI1_DATA2P"
+            ]
+        },
+        "CSI1_DATA3": {
+            "Diff Pair": [
+                "CSI1_DATA3N",
+                "CSI1_DATA3P"
+            ]
+        },
+        "VDD": {
+            "CSI1_MSVDD0P8": [
+                "CSI1_MSVDD0P8"
+            ],
+            "CSI2_MSVDD0P8": [
+                "CSI2_MSVDD0P8"
+            ]
+        },
+        "CSI2_CLK": {
+            "Diff Pair": [
+                "CSI2_CLKN",
+                "CSI2_CLKP"
+            ]
+        },
+        "CSI2_DATA0": {
+            "Diff Pair": [
+                "CSI2_DATA0N",
+                "CSI2_DATA0P"
+            ]
+        },
+        "CSI2_DATA1": {
+            "Diff Pair": [
+                "CSI2_DATA1N",
+                "CSI2_DATA1P"
+            ]
+        },
+        "CSI2_DATA2": {
+            "Diff Pair": [
+                "CSI2_DATA2N",
+                "CSI2_DATA2P"
+            ]
+        },
+        "CSI2_DATA3": {
+            "Diff Pair": [
+                "CSI2_DATA3N",
+                "CSI2_DATA3P"
+            ]
+        },
+        "CSI3_CLK": {
+            "Diff Pair": [
+                "CSI3_CLKN",
+                "CSI3_CLKP"
+            ]
+        },
+        "CSI3_DATA0": {
+            "Diff Pair": [
+                "CSI3_DATA0N",
+                "CSI3_DATA0P"
+            ]
+        },
+        "CSI3_DATA1": {
+            "Diff Pair": [
+                "CSI3_DATA1N",
+                "CSI3_DATA1P"
+            ]
+        },
+        "CSI3_DATA2": {
+            "Diff Pair": [
+                "CSI3_DATA2N",
+                "CSI3_DATA2P"
+            ]
+        },
+        "CSI3_DATA3": {
+            "Diff Pair": [
+                "CSI3_DATA3N",
+                "CSI3_DATA3P"
+            ]
+        }
+    },
+
+
+        "Display Unit": {
+        "DU_DB*": [
+            "DU_DB2",
+            "DU_DB3",
+            "DU_DB4",
+            "DU_DB5",
+            "DU_DB6",
+            "DU_DB7"
+        ],
+        "DU_DG*": [
+            "DU_DG2",
+            "DU_DG3",
+            "DU_DG4",
+            "DU_DG5",
+            "DU_DG6",
+            "DU_DG7"
+        ],
+        "DU_DOTCLK": [
+            "DU_DOTCLKIN",
+            "DU_DOTCLKOUT"
+        ],
+        "DU_DR*": {
+            "DU_DR*": [
+                "DU_DR2",
+                "DU_DR3",
+                "DU_DR4",
+                "DU_DR5",
+                "DU_DR6",
+                "DU_DR7"
+            ]
+        },
+        
+        "DU_Control": {
+            "DU_EXHSYNC": [
+                "DU_EXHSYNC"
+            ],
+            "DU_EXODDF": [
+                "DU_EXODDF"
+            ],
+            "DU_EXVSYNC": [
+                "DU_EXVSYNC"
+            ]
+        }
+    },
+        "DSI Interface": {
+        "DSI Clock": {
+            "Diff Pair": [
+                "DSI_CLKN",
+                "DSI_CLKP",
+                "DSI_DNCLK",
+                "DSI_DPCLK"
+            ]
+        },
+        "DSI_DATA0": {
+            "Diff Pair": [
+                "DSI_DATA0_N",
+                "DSI_DATA0_P",
+                "DSI_DNDATA0",
+                "DSI_DPDATA0"
+            ]
+        },
+        "DSI_DATA1": {
+            "Diff Pair": [
+                "DSI_DATA1_N",
+                "DSI_DATA1_P",
+                "DSI_DNDATA1",
+                "DSI_DPDATA1"
+            ]
+        },
+        "DSI_DATA2": {
+            "Diff Pair": [
+                "DSI_DATA2_N",
+                "DSI_DATA2_P",
+                "DSI_DNDATA2",
+                "DSI_DPDATA2"
+            ]
+        },
+        "DSI_DATA3": {
+            "Diff Pair": [
+                "DSI_DATA3_N",
+                "DSI_DATA3_P",
+                "DSI_DNDATA3",
+                "DSI_DPDATA3"
+            ]
+        }
+    },
+    "DSM Interface": {
+        "DSM Clock": {
+            "Diff Pair": [
+                "DSMDNCLK",
+                "DSMDPCLK"
+            ]
+        },
+        "DSM_DATA0": {
+            "Diff Pair": [
+                "DSMDNDATA0",
+                "DSMDPDATA0"
+            ]
+        },
+        "DSM_DATA1": {
+            "Diff Pair": [
+                "DSMDNDATA1",
+                "DSMDPDATA1"
+            ]
+        },
+        "DSM_DATA2": {
+            "Diff Pair": [
+                "DSMDNDATA2",
+                "DSMDPDATA2"
+            ]
+        },
+        "DSM_DATA3": {
+            "Diff Pair": [
+                "DSMDNDATA3",
+                "DSMDPDATA3"
+            ]
+        }
+    },
+    "DSS Interface": {
+        "DSS Clock": {
+            "Diff Pair": [
+                "DSSDNCLK",
+                "DSSDPCLK"
+            ]
+        },
+        "DSS_DATA0": {
+            "Diff Pair": [
+                "DSSDNDATA0",
+                "DSSDPDATA0"
+            ]
+        }
+    },
+    "Ethernet": {
+        "AVB0*": {
+            "AVB0_AVTP": [
+                "AVB0_AVTP_CAPTURE",
+                "AVB0_AVTP_MATCH"
+            ],
+            "AVB0_LINK": [
+                "AVB0_LINK"
+            ],
+            "AVB0_MAGIC": [
+                "AVB0_MAGIC"
+            ],
+            "AVB0_MDC": [
+                "AVB0_MDC"
+            ],
+            "AVB0_MDIO": [
+                "AVB0_MDIO"
+            ],
+            "AVB0_PHY_INT": [
+                "AVB0_PHY_INT"
+            ],
+            "AVB0_RD*": [
+                "AVB0_RD0",
+                "AVB0_RD1",
+                "AVB0_RD2",
+                "AVB0_RD3"
+            ],
+            "AVB0_CTL": [
+                "AVB0_RX_CTL",
+                "AVB0_TX_CTL"
+            ],
+            "AVB0_XC": [
+                "AVB0_RXC",
+                "AVB0_TXC"
+            ],
+            "AVB0_TD*": [
+                "AVB0_TD0",
+                "AVB0_TD1",
+                "AVB0_TD2",
+                "AVB0_TD3"
+            ],
+            "AVB0_TXCREFCLK": [
+                "AVB0_TXCREFCLK"
+            ]
+        },
+        "ET0*": {
+            "ET0_COL": [
+                "ET0_COL"
+            ],
+            "ET0_CRS": [
+                "ET0_CRS"
+            ],
+            "ET0_MDC": [
+                "ET0_MDC"
+            ],
+            "ET0_MDIO": [
+                "ET0_MDIO"
+            ],
+            "ET0_PHYINTR": [
+                "ET0_PHYINTR"
+            ],
+            "ET0_RXC_RXCLK": [
+                "ET0_RXC_RXCLK"
+            ],
+            "ET0_RXCTL_RXDV": [
+                "ET0_RXCTL_RXDV"
+            ],
+            "ET0_RXD*": [
+                "ET0_RXD0",
+                "ET0_RXD1",
+                "ET0_RXD2",
+                "ET0_RXD3"
+            ],
+            "ET0_RXER": [
+                "ET0_RXER"
+            ],
+            "ET0_TXC_TXCLK": [
+                "ET0_TXC_TXCLK"
+            ],
+            "ET0_TXCTL_TXEN": [
+                "ET0_TXCTL_TXEN"
+            ],
+            "ET0_TXD*": [
+                "ET0_TXD0",
+                "ET0_TXD1",
+                "ET0_TXD2",
+                "ET0_TXD3"
+            ],
+            "ET0_TXER": [
+                "ET0_TXER"
+            ]
+        },
+        "ET1*": {
+            "ET1_COL": [
+                "ET1_COL"
+            ],
+            "ET1_CRS": [
+                "ET1_CRS"
+            ],
+            "ET1_MDC": [
+                "ET1_MDC"
+            ],
+            "ET1_MDIO": [
+                "ET1_MDIO"
+            ],
+            "ET1_PHYINTR": [
+                "ET1_PHYINTR"
+            ],
+            "ET1_RXC_RXCLK": [
+                "ET1_RXC_RXCLK"
+            ],
+            "ET1_RXCTL_RXDV": [
+                "ET1_RXCTL_RXDV"
+            ],
+            "ET1_RXD*": [
+                "ET1_RXD0",
+                "ET1_RXD1",
+                "ET1_RXD2",
+                "ET1_RXD3"
+            ],
+            "ET1_RXER": [
+                "ET1_RXER"
+            ],
+            "ET1_TXC_TXCLK": [
+                "ET1_TXC_TXCLK"
+            ],
+            "ET1_TXCTL_TXEN": [
+                "ET1_TXCTL_TXEN"
+            ],
+            "ET1_TXD*": [
+                "ET1_TXD0",
+                "ET1_TXD1",
+                "ET1_TXD2",
+                "ET1_TXD3"
+            ],
+            "ET1_TXER": [
+                "ET1_TXER"
+            ]
+        }
+    },
+    "HDMI Interface": {
+        "HD Control": {
+            "HDREXT": [
+                "HDREXT"
+            ]
+        },
+        "HDTX0": {
+            "Diff Pair": [
+                "HDTX0M",
+                "HDTX0P"
+            ]
+        },
+        "HDTX1": {
+            "Diff Pair": [
+                "HDTX1M",
+                "HDTX1P"
+            ]
+        },
+        "HDTX2": {
+            "Diff Pair": [
+                "HDTX2M",
+                "HDTX2P"
+            ]
+        },
+        "HDTXC": {
+            "Diff Pair": [
+                "HDTXCM",
+                "HDTXCP"
+            ]
+        }
+    },
     "CT": [
         "CT",
         "CTS2#"
@@ -1197,13 +1818,34 @@
         "DDCOUT",
         "DDC_OUT"
     ],
-    "DEBUG": [
-        "DCK",
-        "DDI",
-        "DDO",
-        "DMS",
-        "DRST#"
-    ],
+    "DEBUG": {
+       "D": [
+            "DCK",
+            "DDI",
+            "DDO",
+            "DMS",
+            "DRST#"
+        ],
+        "Debug Control": {
+            "DEBUGEN": [
+                "DEBUGEN"
+            ]
+        },
+        "Debug Reset": {
+            "DESRSTN": [
+                "DESRSTN#"
+            ],
+            "DETSRSTN": [
+                "DETRSTN#"
+            ]
+        },
+        "JTAG_*": [
+            "DETCK",
+            "DETDI",
+            "DETDO",
+            "DETMS"
+        ]        
+},
     "DEBUG_DCU": [
         "DCURDY",
         "DCUTCK",
@@ -1426,7 +2068,25 @@
     "VAA": ["DDR_VAA"],
     "VDDQ": ["DDR_VDDQ"],
     "VREF": ["DDR_VREF"],
-    "WE": ["DDR_WE", "DDR_WE\\"]
+    "WE": ["DDR_WE", "DDR_WE\\"],
+            "DDR Control": {
+            "CAS": [
+                "\\DDR_CAS"
+            ],
+            "CS*": [
+                "\\DDR_CS0",
+                "\\DDR_CS1"
+            ],
+            "RAS": [
+                "\\DDR_RAS"
+            ],
+            "DDR_RESET": [
+                "\\DDR_RESET"
+            ],
+            "WE*": [
+                "\\DDR_WE"
+            ]
+        }
   },
     "DDR0": {
       "ATEST": ["DDR0_ATEST"],
@@ -1496,6 +2156,62 @@
     }
   },
 
+      "Flash HM Controller": {
+        "HM Clock": [
+            "HM_CK",
+            "HM_CK#"
+        ],
+        "HM Control": {
+            "HM_CS*": [
+                "HM_CS0#",
+                "HM_CS1#"
+            ],
+            "HM_RESET": [
+                "HM_RESET#"
+            ],
+            "HM_RWDS": [
+                "HM_RWDS"
+            ]
+        },
+        "HM Data": {
+            "HM_DQ*": [
+                "HM_DQ0",
+                "HM_DQ1",
+                "HM_DQ2",
+                "HM_DQ3",
+                "HM_DQ4",
+                "HM_DQ5",
+                "HM_DQ6",
+                "HM_DQ7"
+            ]
+        }
+    },
+        "Memory Interface": {
+        "Clock Enable": [
+            "MCKE0"
+        ],
+        "Chip Select": [
+            "MCS0#"
+        ],
+        "Data": [
+            "MDX"
+        ],
+        "Control": [
+            "MN"
+        ],
+        "ODT": [
+            "MODT0"
+        ],
+        "Reset": {
+            "MRESET_N": [
+                "MRESET_N"
+            ],
+            "MRESET_OUT": [
+                "MRESET_OUT"
+            ]
+        }
+    },
+
     "Digital video*": {
         "BIAS": [
             "BIAS"
@@ -1515,6 +2231,19 @@
             "VINN",
             "VINP"
         ],
+        "VIN1": {
+            "Diff Pair": [
+                "VIN1A",
+                "VIN1B"
+            ]
+        },
+        "VIN2": {
+            "Diff Pair": [
+                "VIN2A",
+                "VIN2B"
+            ]
+        },
+
         "VRB": [
             "VRB"
         ],
@@ -1691,9 +2420,48 @@
         "I2C_C": [
             "SCL",
             "SDA"
+        ],
+                "RIIC0": {
+            "RIIC*_SCL": [
+                "RIIC0_SCL",
+                "RIIC0_SCL"
+            ],
+            "RIIC1_SDA": [
+                "RIIC0_SDA"
+            ]
+        },
+        "RIIC1": {
+            "RIIC*_SCL": [
+                "RIIC1_SCL",
+                "RIIC1_SCL"
+            ],
+            "RIIC*_SDA": [
+                "RIIC1_SDA"
+            ]
+        },
+        "I3C": [
+            "I3C_SCL",
+            "I3C_SDA"
         ]
     },
-
+    "OctalSPI Interface": {
+        "Chip Select": [
+            "OM_CS1_N"
+        ],
+        "Data Strobe": {
+            "OM_DQS": [
+                "OM_DQS"
+            ]
+        },
+        "Data": {
+            "OM_SIO*": [
+                "OM_SIO4",
+                "OM_SIO5",
+                "OM_SIO6",
+                "OM_SIO7"
+            ]
+        }
+    },
     "PCIE*": {
         "REFCLK": [
         "PCIE_REFCLKN0",
@@ -1747,7 +2515,43 @@
         "RSTOUTB": [
         "PCIE0_RSTOUTB",
         "PCIE1_RSTOUTB"
-        ]
+        ],
+        "Reference Clock": {
+            "Diff Pair": [
+                "PCREFCKM",
+                "PCREFCKP"
+            ]
+        },
+        "External Reference": [
+            "PCREXT"
+        ],
+        "Reset Output": [
+            "PCRSTOUTB#"
+        ],
+        "RX Data 0": {
+            "Diff Pair": [
+                "PCRXD0M",
+                "PCRXD0P"
+            ]
+        },
+        "RX Data 1": {
+            "Diff Pair": [
+                "PCRXD1M",
+                "PCRXD1P"
+            ]
+        },
+        "TX Data 0": {
+            "Diff Pair": [
+                "PCTXD0M",
+                "PCTXD0P"
+            ]
+        },
+        "TX Data 1": {
+            "Diff Pair": [
+                "PCTXD1M",
+                "PCTXD1P"
+            ]
+        }
     },
 
     "IDSEL": [
@@ -1812,6 +2616,17 @@
             "TRSYNC",
             "TRSYNC#",
             "TRSYNC1"
+        ],
+                "Clock": [
+            "TCK/SWDCLK",
+            "TCK_SWCLK"
+        ],
+        "Mode Select": [
+            "TMS/SWDIO",
+            "TMS_SWDIO"
+        ],
+        "Reset": [
+            "TRSTN"
         ]
     },
     "L*": [
@@ -1848,6 +2663,244 @@
     "LSW": [
         "LSW"
     ],
+        "LPDDR Interface": {
+        "Test": [
+            "LPDTEST"
+        ],
+        "Address A": {
+            "LPCAA*": [
+                "LPCAA0",
+                "LPCAA1",
+                "LPCAA2",
+                "LPCAA3",
+                "LPCAA4",
+                "LPCAA5"
+            ]
+        },
+        "Address B": {
+            "LPCAB*": [
+                "LPCAB0",
+                "LPCAB1",
+                "LPCAB2",
+                "LPCAB3",
+                "LPCAB4",
+                "LPCAB5"
+            ]
+        },
+        "Clock Enable": {
+            "LPCKEA*": [
+                "LPCKEA0",
+                "LPCKEA1"
+            ],
+            "LPCKEB*": [
+                "LPCKEB0",
+                "LPCKEB1"
+            ]
+        },
+        "Clock A": {
+            "Diff Pair": [
+                "LPCLKAC",
+                "LPCLKAT"
+            ]
+        },
+        "Clock B": {
+            "Diff Pair": [
+                "LPCLKBC",
+                "LPCLKBT"
+            ]
+        },
+        "Chip Select": {
+            "LPCSA*": [
+                "LPCSA0",
+                "LPCSA1"
+            ],
+            "LPCSB*": [
+                "LPCSB0",
+                "LPCSB1"
+            ]
+        },
+        "Data Mask A": {
+            "LPDMDBIA*": [
+                "LPDMDBIA0",
+                "LPDMDBIA1"
+            ]
+        },
+        "Data Mask B": {
+            "LPDMDBIB*": [
+                "LPDMDBIB0",
+                "LPDMDBIB1"
+            ]
+        },
+        "Data A": {
+            "LPDQA*": [
+                "LPDQA0",
+                "LPDQA1",
+                "LPDQA10",
+                "LPDQA11",
+                "LPDQA12",
+                "LPDQA13",
+                "LPDQA14",
+                "LPDQA15",
+                "LPDQA2",
+                "LPDQA3",
+                "LPDQA4",
+                "LPDQA5",
+                "LPDQA6",
+                "LPDQA7",
+                "LPDQA8",
+                "LPDQA9"
+            ]
+        },
+        "Data B": {
+            "LPDQB*": [
+                "LPDQB0",
+                "LPDQB1",
+                "LPDQB10",
+                "LPDQB11",
+                "LPDQB12",
+                "LPDQB13",
+                "LPDQB14",
+                "LPDQB15",
+                "LPDQB2",
+                "LPDQB3",
+                "LPDQB4",
+                "LPDQB5",
+                "LPDQB6",
+                "LPDQB7",
+                "LPDQB8",
+                "LPDQB9"
+            ]
+        },
+        "Data Strobe A0": {
+            "Diff Pair": [
+                "LPDQSAC0",
+                "LPDQSAT0"
+            ]
+        },
+        "Data Strobe A1": {
+            "Diff Pair": [
+                "LPDQSAC1",
+                "LPDQSAT1"
+            ]
+        },
+        "Data Strobe B0": {
+            "Diff Pair": [
+                "LPDQSBC0",
+                "LPDQSBT0"
+            ]
+        },
+        "Data Strobe B1": {
+            "Diff Pair": [
+                "LPDQSBC1",
+                "LPDQSBT1"
+            ]
+        },
+        "Reset": [
+            "LPMRESETL"
+        ],
+        "Impedance": [
+            "LPZN"
+        ]
+    },
+    "LVDS Interface": {
+        "Channel 0": {
+            "Diff Pair": [
+                "LVDS_CH0_N",
+                "LVDS_CH0_P"
+            ]
+        },
+        "Channel 1": {
+            "Diff Pair": [
+                "LVDS_CH1_N",
+                "LVDS_CH1_P"
+            ]
+        },
+        "Channel 2": {
+            "Diff Pair": [
+                "LVDS_CH2_N",
+                "LVDS_CH2_P"
+            ]
+        },
+        "Channel 3": {
+            "Diff Pair": [
+                "LVDS_CH3_N",
+                "LVDS_CH3_P"
+            ]
+        },
+        "Clock": {
+            "Diff Pair": [
+                "LVDS_CLK_N",
+                "LVDS_CLK_P"
+            ]
+        }
+    },
+    "LVDS RX Interface": {
+        "Clock 0": {
+            "Diff Pair": [
+                "LVRXCK0M",
+                "LVRXCK0P"
+            ]
+        },
+        "Clock 1": {
+            "Diff Pair": [
+                "LVRXCK1M",
+                "LVRXCK1P"
+            ]
+        },
+        "Data 0": {
+            "Diff Pair": [
+                "LVRXD0M",
+                "LVRXD0P"
+            ]
+        },
+        "Data 1": {
+            "Diff Pair": [
+                "LVRXD1M",
+                "LVRXD1P"
+            ]
+        },
+        "Data 2": {
+            "Diff Pair": [
+                "LVRXD2M",
+                "LVRXD2P"
+            ]
+        },
+        "Data 3": {
+            "Diff Pair": [
+                "LVRXD3M",
+                "LVRXD3P"
+            ]
+        },
+        "Data 4": {
+            "Diff Pair": [
+                "LVRXD4M",
+                "LVRXD4P"
+            ]
+        },
+        "Data 5": {
+            "Diff Pair": [
+                "LVRXD5M",
+                "LVRXD5P"
+            ]
+        },
+        "Data 6": {
+            "Diff Pair": [
+                "LVRXD6M",
+                "LVRXD6P"
+            ]
+        },
+        "Data 7": {
+            "Diff Pair": [
+                "LVRXD7M",
+                "LVRXD7P"
+            ]
+        },
+        "Reference": {
+            "LVRXREXT": [
+                "LVRXREXT"
+            ]
+        }
+    },
     "MBKPRST#": [
         "MBKPRST#"
     ],
@@ -1962,7 +3015,8 @@
     },
     "NMI": [
         "NMI#",
-        "NMI"
+        "NMI",
+        "INTR"
     ],
     "NSD": [
         "NSD"
@@ -1975,6 +3029,79 @@
         },
         "Y_AGND": [
             "AGND"
+        ],
+        "Y_GND": [
+            "GND",
+            "GND0",
+            "GND1",
+            "GND2",
+            "GND3",
+            "GND4",
+            "GND5",
+            "GND6",
+            "GND7",
+            "GND8",
+            "GND9"
+        ],
+        "Y_UGND": {
+            "U2GND*": [
+                "U2GND0",
+                "U2GND1",
+                "U2GND2",
+                "U2GND3",
+                "U2GND4",
+                "U2GND5",
+                "U2GND6",
+                "U2GND7",
+                "U2GND8",
+                "U2GND9"
+            ],
+            "U2GND1*": [
+                "U2GND10",
+                "U2GND11",
+                "U2GND12",
+                "U2GND13",
+                "U2GND14",
+                "U2GND15",
+                "U2GND16",
+                "U2GND17",
+                "U2GND18",
+                "U2GND19"
+            ],
+            "U3GND*": [
+                "U3GND0",
+                "U3GND1",
+                "U3GND2",
+                "U3GND3"
+            ],
+            "U5GND*": [
+                "U5GND0",
+                "U5GND1",
+                "U5GND10",
+                "U5GND11",
+                "U5GND2",
+                "U5GND3",
+                "U5GND4",
+                "U5GND5",
+                "U5GND6",
+                "U5GND7",
+                "U5GND8",
+                "U5GND9"
+            ],
+            "U6GND*": [
+                "U6GND0",
+                "U6GND1",
+                "U6GND2",
+                "U6GND3",
+                "U6GND4",
+                "U6GND5",
+                "U6GND6",
+                "U6GND7"
+            ]
+        },        
+
+        "PLL_AGND": [
+            "PLL_AGND"
         ],
         "AVREF*": {
             "AVREFL": [
@@ -2024,6 +3151,10 @@
         "REFRIN": [
             "REFRIN"
         ],
+        "LVDSREFRIN": [
+            "LVDSREFRIN",
+            "LVDSRE-FRIN"
+        ],
         "VB": [
             "VBN"
         ],
@@ -2059,6 +3190,57 @@
                 "A1VSS (N.C.)",
                 "A1VSS(N.C.)",
                 "A2VSS(N.C.)"
+            ],
+                        "ADC_VSS": [
+                "ADAVSS18"
+            ],
+            "DIGRF_PLL_VSS": [
+                "DIGRF_PLL_VSS"
+            ],
+            "LVDS_PLL_VSS": [
+                "LVDS_PLL_VSS"
+            ],
+            "LVDSAPVss": [
+                "LVDSAPVss"
+            ],
+            "LVRXAVSS": [
+                "LVRXAVSS"
+            ],
+            "PLVSS_PLLCA55": [
+                "PLVSS_PLLCA55"
+            ],
+            "PLVSS_PLLCLN_DTY_DRP": [
+                "PLVSS_PLLCLN_DTY_DRP"
+            ],
+            "PLVSS_PLLCM33": [
+                "PLVSS_PLLCM33"
+            ],
+            "PLVSS_PLLDDR*": [
+                "PLVSS_PLLDDR0",
+                "PLVSS_PLLDDR1"
+            ],
+            "PLVSS_PLLETH_GPU": [
+                "PLVSS_PLLETH_GPU"
+            ],
+            "PLVSS_PLLVDO_DSI": [
+                "PLVSS_PLLVDO_DSI"
+            ],
+            "PLVSS*": [
+                "PLVSS1",
+                "PLVSS2",
+                "PLVSS3",
+                "PLVSS4",
+                "PLVSS6",
+                "PLVSS7"
+            ],
+            "U*VSS": [
+                "U2VSS",
+                "U5VSS",
+                "U6VSS",
+                "U7VSS"
+            ],
+            "USBVss": [
+                "USBVss"
             ],
             "ADSVSS": [
                 "ADSVSS"
