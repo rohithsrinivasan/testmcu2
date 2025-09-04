@@ -101,7 +101,7 @@ if 'pin_table' in st.session_state:
         pin_table = st.session_state['pin_table']
         required_cols = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name']
         before_grouping_flag, added_empty_grouping_column = general_funct.check_excel_format(pin_table,  required_cols, optional_column='Grouping')
-        pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths_Single, SENSITIVITY= False,SMARTSEARCH= False, SINGLE_FILE=True)  
+        pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths_Single, SENSITIVITY= True,SMARTSEARCH= False, SINGLE_FILE=True)  
 
     # Common operations after grouping
         st.dataframe(pin_grouping_table)

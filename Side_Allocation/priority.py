@@ -2,8 +2,8 @@ import json
 
 
 def assigning_priority(df,priority_mapping_json):
-    df_copy = df.copy()  
-    df_copy['Priority'] = df_copy.apply(lambda row: priority_order(row, df_copy,priority_mapping_json,SWAP = False), axis=1)
+    df_copy = df.copy()
+    df_copy['Priority'] = df_copy.apply(lambda row: priority_order(row, df_copy,priority_mapping_json,SWAP = True), axis=1)
     # Sort the dataframe by Priority in ascending order
     df_copy = df_copy.sort_values('Priority', ascending=True)  
     # Optional: Reset index if you want a clean sequential index
@@ -19,6 +19,7 @@ def priority_order(row, df, priority_mapping_json, SWAP = True):
     value = str(row.get('Grouping', '')).strip()  # Ensure value is a string, avoid None
     index = row.name
     value_alternative = str(row.get('Pin Alternate Name', ''))
+    
     pin_display_name = str(row.get('Pin Display Name', ''))
     electrical_type = str(row.get('Electrical Type', ''))
 
@@ -105,7 +106,6 @@ def swap_pins_for_that_row(df, index, swap_conditions):
     
     # Check swap conditions
     for key, details in swap_conditions.items():      
-        
         if key in pin_names or key == current_display:
             matched_part = key
             matched = True

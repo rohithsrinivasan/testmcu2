@@ -1,10 +1,11 @@
 import pdfplumber
 import pandas as pd
-import tabula
+#import tabula
 import numpy as np
-import streamlit as st
+#import streamlit as st
 import tempfile 
-import subprocess
+#import subprocess
+#import os, sys
 def find_pages_between_keywords(pdf_path, start_keyword, end_keyword):
     with pdfplumber.open(pdf_path) as pdf:
         start_page, end_page = None, None
@@ -42,26 +43,38 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
     Returns:
         List of matched and cleaned DataFrames
     """
-     # Create a temporary file for storing the extracted DataFrame
-    with tempfile.NamedTemporaryFile(suffix='.pkl', delete=False) as tmp:
-        tmp_path = tmp.name
-    # tmp_path is the filename you should pass to both your subprocess script and later for pd.read_pickle()
 
     print("Extracting tables from PDF...", file_path)
-    pages_str = ",".join(str(page) for page in my_list_of_pages)
-    try:
-        res = subprocess.run(
-            ['python', 'extract_pdf_tables.py', file_path, pages_str,  tmp_path],
-            capture_output=True, text=True, timeout=120)
-        if res.returncode != 0:
-            # Could not extract
-            print(res.stderr)
-            return []
-        dfs = pd.read_pickle(tmp_path)
+    #  # Create a temporary file for storing the extracted DataFrame
+    # with tempfile.NamedTemporaryFile(suffix='.pkl', delete=False) as tmp:
+    #     tmp_path = tmp.name
+    # # tmp_path is the filename you should pass to both your subprocess script and later for pd.read_pickle()
+
+   
+    # print("Console encoding:", sys.stdout.encoding)
+    # pages_str = ",".join(str(page) for page in my_list_of_pages)
+    # env = os.environ.copy()
+    # env["PYTHONUTF8"] = "1"  # force UTF-8 mode
+
+    # try:
+    #     res = subprocess.run(
+    #         [sys.executable, 'extract_pdf_tables.py', file_path, pages_str,  tmp_path],
+    #         capture_output=True, 
+    #         env = env,
+    #         encoding="utf-8", 
+    #         timeout=120)
+    #     if res.returncode != 0:
+    #         # Could not extract
+    #         print(res.stderr)
+    #         return []
+    #     print("STDOUT:", res.stdout)
+    #     print("STDERR:", res.stderr)
+    #     print("RETURN CODE:", res.returncode)
+    #     dfs = pd.read_pickle(tmp_path)
       
-    except Exception as e:
-        print("Subprocess failed:", e)
-        return []
+    # except Exception as e:
+    #     print("Subprocess failed:", e)
+    #     return []
     # try:
     #     dfs = tabula.read_pdf(
     #         file_path,
@@ -75,10 +88,30 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
     #     print("Error reading PDF:", e)
     #     #st.error(f"📄 Error reading PDF: {e}")
     #     return []
+    # print("yes")
+    dfs = []
+    try:
+        with pdfplumber.open(file_path) as pdf:
+            num_pages = len(pdf.pages)
+            print(f"PDF opened successfully with {num_pages} pages.")
+            for page_num in range(num_pages):
+                page = pdf.pages[page_num]
+                tables = page.extract_tables()
+                for table in tables:
+                    if table:
+                        df = pd.DataFrame(table[1:], columns=table[0])
+                    
+                        dfs.append(df)
+        
+            dfs = [df for df in dfs if not df.empty and df.dropna(how='all').shape[0] > 0]
+              
+        print("Extracted non empty tables:", len(dfs))
+    except Exception as e:
+        print("Error reading PDF:", e)
+        #st.error(f"📄 Error reading PDF: {e}")
+        return []
     print("yes")
-
-    dfs = [df for df in dfs if not df.empty and df.dropna(how='all').shape[0] > 0]
-    st.write(f"📄 Found {len(dfs)} non-empty tables.")
+    #st.write(f"📄 Found {len(dfs)} non-empty tables.")
     
     modified_dfs = []
     
@@ -120,7 +153,7 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
         else:
             print(f"⚠️ Table {i + 1} skipped: Keyword not found")
     
-    st.write(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
+    #st.write(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
     return modified_dfs
 
 
