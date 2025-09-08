@@ -24,73 +24,73 @@ def side_for_one_symbol(df):
     return df_new.reset_index(drop=True)
 
 
-'''def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balanced_Assignment=False):
+# def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balanced_Assignment=False):
   
-    # Step 1: Sort groups by numeric key to ensure ordered processing
-    def extract_numeric_key(pin_name):
-        """Extract numeric part from pin name for sorting."""
-        if '_' in pin_name:
-            parts = pin_name.split('_')
-            try:
-                return int(parts[-1])
-            except (ValueError, IndexError):
-                return 999999
+#     # Step 1: Sort groups by numeric key to ensure ordered processing
+#     def extract_numeric_key(pin_name):
+#         """Extract numeric part from pin name for sorting."""
+#         if '_' in pin_name:
+#             parts = pin_name.split('_')
+#             try:
+#                 return int(parts[-1])
+#             except (ValueError, IndexError):
+#                 return 999999
         
-        match = re.match(r'^([A-Za-z]+)(\d+)$', pin_name)
-        if match:
-            return int(match.group(2))
+#         match = re.match(r'^([A-Za-z]+)(\d+)$', pin_name)
+#         if match:
+#             return int(match.group(2))
         
-        return 999999
+#         return 999999
 
-    grouped_indices = {
-        k: v for k, v in sorted(
-            df.groupby('Priority').indices.items(),
-            key=lambda item: extract_numeric_key(item[0])
-        )
-    }
+#     grouped_indices = {
+#         k: v for k, v in sorted(
+#             df.groupby('Priority').indices.items(),
+#             key=lambda item: extract_numeric_key(item[0])
+#         )
+#     }
 
-    parts = [pd.DataFrame() for _ in range(n_parts)]
-    part_row_counts = [0] * n_parts
+#     parts = [pd.DataFrame() for _ in range(n_parts)]
+#     part_row_counts = [0] * n_parts
 
-    if Strict_Population:
-        # Original behavior
-        for priority, indices in grouped_indices.items():
-            group = df.loc[indices]
-            if Balanced_Assignment:
-                # Find the most balanced part that still has room
-                eligible_parts = [
-                    (i, part_row_counts[i]) for i in range(n_parts)
-                    if part_row_counts[i] + len(group) <= max_rows
-                ]
+#     if Strict_Population:
+#         # Original behavior
+#         for priority, indices in grouped_indices.items():
+#             group = df.loc[indices]
+#             if Balanced_Assignment:
+#                 # Find the most balanced part that still has room
+#                 eligible_parts = [
+#                     (i, part_row_counts[i]) for i in range(n_parts)
+#                     if part_row_counts[i] + len(group) <= max_rows
+#                 ]
 
-                if eligible_parts:
-                    target_idx = min(eligible_parts, key=lambda x: x[1])[0]
-                    parts[target_idx] = pd.concat([parts[target_idx], group])
-                    part_row_counts[target_idx] += len(group)
-                else:
-                    # Force append to the last part if no one can hold it
-                    parts[-1] = pd.concat([parts[-1], group])
-                    part_row_counts[-1] += len(group)
-    else:
-        # Strict ordered part population (non-balanced)
-        current_part = 0
-        for priority, indices in grouped_indices.items():
-            group = df.loc[indices]
+#                 if eligible_parts:
+#                     target_idx = min(eligible_parts, key=lambda x: x[1])[0]
+#                     parts[target_idx] = pd.concat([parts[target_idx], group])
+#                     part_row_counts[target_idx] += len(group)
+#                 else:
+#                     # Force append to the last part if no one can hold it
+#                     parts[-1] = pd.concat([parts[-1], group])
+#                     part_row_counts[-1] += len(group)
+#     else:
+#         # Strict ordered part population (non-balanced)
+#         current_part = 0
+#         for priority, indices in grouped_indices.items():
+#             group = df.loc[indices]
 
-            if part_row_counts[current_part] + len(group) > max_rows:
-                current_part += 1
-                if current_part >= n_parts:
-                    print(f"⚠️ Not enough parts to hold all groups within max_rows limit.")
-                    break
+#             if part_row_counts[current_part] + len(group) > max_rows:
+#                 current_part += 1
+#                 if current_part >= n_parts:
+#                     print(f"⚠️ Not enough parts to hold all groups within max_rows limit.")
+#                     break
 
-            parts[current_part] = pd.concat([parts[current_part], group])
-            part_row_counts[current_part] += len(group)
+#             parts[current_part] = pd.concat([parts[current_part], group])
+#             part_row_counts[current_part] += len(group)
 
-    # ✅ Lighthouse View: Final Rebalancing if Balanced_Assignment=True
-    if Balanced_Assignment:
-        parts = gridspace_constraints.lighthouse_view(parts, n_parts, max_rows)
+#     # ✅ Lighthouse View: Final Rebalancing if Balanced_Assignment=True
+#     if Balanced_Assignment:
+#         parts = gridspace_constraints.lighthouse_view(parts, n_parts, max_rows)
 
-    return parts'''
+#     return parts
 
 def split_into_n_parts(df, n_parts, max_rows=80, Strict_Population=True, Balanced_Assignment=False):
     """

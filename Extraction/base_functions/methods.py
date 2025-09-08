@@ -1,7 +1,6 @@
 import pdfplumber
 import pandas as pd
 #import tabula
-import numpy as np
 #import streamlit as st
 import tempfile 
 #import subprocess
@@ -114,9 +113,9 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
     #st.write(f"📄 Found {len(dfs)} non-empty tables.")
     
     modified_dfs = []
-    
+    nan = float('nan')
     for i, df in enumerate(dfs):
-        df = df.replace(to_replace=r'^Unnamed:.*', value=np.nan, regex=True)
+        df = df.replace(to_replace=r'^Unnamed:.*', value=nan, regex=True)
         
         # Handle completely unnamed headers
         if all(df.columns.to_series().astype(str).str.contains('^Unnamed')):

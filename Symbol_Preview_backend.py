@@ -8,7 +8,7 @@ from Side_Allocation import side
 from Side_Allocation import part_division
 from Grouping import Assigning_Electrical_Type , Assigning_Pin_Group
 from Grouping.base_functions import general_funct
-
+from Grouping.base_functions import helper_funct
 def extracting_pin_tables_pdf(partnumber_dict, pdf_path):
 	part_number = partnumber_dict.get('Orderable Part Number')
 	number_of_pins = partnumber_dict.get('Number of Pins')
@@ -30,19 +30,19 @@ def assign_grouping(pin_table):
 			'Passive': submodule_path('Grouping','mcu_database', 'mcu_passive.json')
 		}
 	json_paths_Single = {
-    'Single': resource_path("Symbol_Automation/Grouping/shrinidhi_database/combined.json")
+    'Single': resource_path("Symbol_Automation/Grouping/mcu_database/combined.json")
     }
-	#submodule_path("Symbol_Automation", 'Grouping', 'shrinidhi_database', 'combined.json')
+	#submodule_path("Symbol_Automation", 'Grouping', 'mcu_database', 'combined.json')
 	before_grouping_flag, added_empty_grouping_column = general_funct.check_excel_format(pin_table,  required_cols, optional_column='Grouping')
 	print("Checked grouping format")
 	pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths_Single, SENSITIVITY= False,SMARTSEARCH= False, SINGLE_FILE=True)  
 	df_with_no_grouping = general_funct.check_empty_groupings(pin_grouping_table)
-	if not df_with_no_grouping.empty:
-		#Write logic for empty groupings
-		print("No logic written for empty groupins")
+		
 	print(f"Pin Grouping Table: {pin_grouping_table}")
 	return pin_grouping_table
 
+def assign_auto_grouping(pin_table, json_path):
+	helper_funct.auto_fill_grouping_if_exact_match(df=pin_table, json_data= json_path, match_percentage=90)
 def assign_side(pin_grouping_table):
 
 	#Side alloc
@@ -51,9 +51,9 @@ def assign_side(pin_grouping_table):
 	before_priority_flag, added_empty_priority_column = general_funct.check_excel_format(pin_grouping_table,required_columns, optional_column=optional_column)
 	#st.text(f"Before Side Allocation Flag :{before_priority_flag}")
 	#st.dataframe(added_empty_priority_column)
-	priority_mapping_json = resource_path("Symbol_Automation/Side_Allocation/priority_map_Shrinidhi.json")
+	priority_mapping_json = resource_path("Symbol_Automation/Side_Allocation/priority_map_new.json")
 	
-	#submodule_path("Symbol_Automation", "Side_Allocation","priority_map_Shrinidhi.json")
+	#submodule_path("Symbol_Automation", "Side_Allocation","priority_map_new.json")
 	priority_added = priority.assigning_priority(added_empty_priority_column,priority_mapping_json)
 
 	required_columns = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name', 'Grouping','Priority']

@@ -78,16 +78,16 @@ def priority_order(row, df, priority_mapping_json, SWAP = True):
 
     # 5. Special substring-based fallback
     value_lower = value.lower()
-
-    if "after_input" in value_lower:
+   
+    if "input block" in value_lower:
         return f"IX_{value}"
-    if "after_io" in value_lower:
+    if "output block" in value_lower:
         return f"RX_{value}"
-    if "after_output" in value_lower:
+    if "port block" in value_lower:
         return f"TX_{value}"
-    if "after_power+" in value_lower:
+    if "power+ block" in value_lower:
         return f"AX_{value}"
-    if "after_power-" in value_lower:
+    if "power- block" in value_lower:
         return f"ZX_{value}"
 
     # 6. Final fallback
