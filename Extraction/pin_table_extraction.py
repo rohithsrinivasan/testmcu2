@@ -52,4 +52,4 @@ def extracting_pin_tables(file_path, part_number, number_of_pins, package_type, 
         #create_navigation_button(merged_df)
         #st.session_state["page"] = "grouping"    
 
-    return merged_df
+    return merged_df, pin_table_pages

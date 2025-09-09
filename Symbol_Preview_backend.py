@@ -14,9 +14,9 @@ def extracting_pin_tables_pdf(partnumber_dict, pdf_path):
 	number_of_pins = partnumber_dict.get('Number of Pins')
 	package_type = partnumber_dict.get('Package')
 	package_code = partnumber_dict.get('Package Code/POD Number')
-	pin_table = pin_table_extraction.extracting_pin_tables(pdf_path, part_number, number_of_pins, package_type, package_code)
+	pin_table, pin_table_pages= pin_table_extraction.extracting_pin_tables(pdf_path, part_number, number_of_pins, package_type, package_code)
 	print("eXtracted pin table")
-	return pin_table
+	return pin_table, pin_table_pages
 
 
 def assign_grouping(pin_table):

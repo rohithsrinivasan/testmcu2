@@ -1,5 +1,5 @@
 import pandas as pd
-import streamlit as st
+#import streamlit as st
 
 def load_uploaded_file(uploaded_file):
     """Load CSV or Excel file and return DataFrame"""
@@ -8,11 +8,12 @@ def load_uploaded_file(uploaded_file):
             df = pd.read_excel(uploaded_file)
         else:
             df = pd.read_csv(uploaded_file)
-        return df, None
+        return df
     except Exception as e:
-        return None, f"An error occurred while processing the uploaded file: {e}"
+        print(f"An error occurred while processing the uploaded file: {e}")
+        return None 
 
-def process_pin_dataframe(df, testing_electrical_type=False):
+def process_pin_dataframe(df):
     """Process and clean the pin DataFrame"""
     # Convert column names to lowercase for case-insensitive handling
     df.columns = df.columns.str.lower()
@@ -54,53 +55,42 @@ def process_pin_dataframe(df, testing_electrical_type=False):
             df = df[~df["Pin Alternate Name"].apply(lambda x: isinstance(x, str) and term.lower() in x.lower())]
 
     
-    # Handle electrical type testing toggle
-    electrical_type_status = ""
-    if testing_electrical_type and "Electrical Type" in df.columns:
-        df = df.drop(columns=["Electrical Type"])
-        electrical_type_status = "'Electrical Type' column has been removed."
-    elif "Electrical Type" not in df.columns:
-        electrical_type_status = "'Electrical Type' column is not present in the DataFrame."
-    else:
-        electrical_type_status = "'Electrical Type' column is retained."
-    
     # Clean DataFrame
     df = df.dropna(how='all')
     df = df[~df.apply(lambda x: x.astype(str).str.isspace().all() or (x.astype(str) == '').all(), axis=1)]
     df = df.reset_index(drop=True)
     
-    return df, warnings, electrical_type_status
+    return df
 
-def handle_file_upload():
-    """Main function to handle file upload UI and processing"""
-    uploaded_csv = st.file_uploader("Upload a excel file", type=["csv","xlsx"])
-    
-    if uploaded_csv is not None:
-        # Load file
-        df, error = load_uploaded_file(uploaded_csv)
-        if error:
-            st.error(error)
-            st.stop()
+# def handle_file_upload(csv_path):
+#     """Main function to handle file upload UI and processing"""
+#     csv_path = st.file_uploader("Upload a excel file", type=["csv","xlsx"])
+#     print(csv_path)
+#     if csv_path is not None:
+#         # Load file
+#         df = load_uploaded_file(csv_path)
+#         # if error:
+#         #     st.error(error)
+#         #     st.stop()
         
-        st.write("File uploaded successfully.")
-        st.session_state["uploaded_csv_name"] = uploaded_csv.name
-        st.session_state["part number"] = df.loc[0, 'comment'] if 'comment' in df.columns else None
+#         #st.write("File uploaded successfully.")
+#         #st.session_state["csv_path_name"] = csv_path.name
+#         #st.session_state["part number"] = df.loc[0, 'comment'] if 'comment' in df.columns else None
         
-        # Process DataFrame
-        testing_electrical_type = st.toggle("Testing Electrical Type", value=False)
-        df, warnings, electrical_type_status = process_pin_dataframe(df, testing_electrical_type)
+#         # Process DataFrame
+#         #testing_electrical_type = st.toggle("Testing Electrical Type", value=False)
+#         df = process_pin_dataframe(df)
         
-        # Display status and warnings
-        st.write(electrical_type_status)
-        if warnings:
-            for warning in warnings:
-                st.warning(warning)
+#         # Display status and warnings
+#         #st.write(electrical_type_status)
         
-        # Display results
-        st.write("Processed Data:")
-        st.dataframe(df)
+#         return df
         
-        # Update session state
-        st.session_state['pin_table'] = df
-        st.write("Pin table uploaded successfully.")
-        st.rerun()
+#         # Display results
+#         #st.write("Processed Data:")
+#         #st.dataframe(df)
+        
+#         # Update session state
+#         # st.session_state['pin_table'] = df
+#         # st.write("Pin table uploaded successfully.")
+#         # st.rerun()

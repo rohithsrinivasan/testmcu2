@@ -91,10 +91,9 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
     dfs = []
     try:
         with pdfplumber.open(file_path) as pdf:
-            num_pages = len(pdf.pages)
-            print(f"PDF opened successfully with {num_pages} pages.")
-            for page_num in range(num_pages):
-                page = pdf.pages[page_num]
+            print(f"My list of pages: {my_list_of_pages}")
+            for page_num in my_list_of_pages:
+                page = pdf.pages[page_num-1]
                 tables = page.extract_tables()
                 for table in tables:
                     if table:
@@ -151,7 +150,7 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
                 
         else:
             print(f"⚠️ Table {i + 1} skipped: Keyword not found")
-    
+    print(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
     #st.write(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
     return modified_dfs
 
