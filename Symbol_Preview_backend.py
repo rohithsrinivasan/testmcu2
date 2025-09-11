@@ -1,14 +1,14 @@
-from Extraction import pin_table_extraction
-from utils.path import submodule_path
+from .Extraction import pin_table_extraction
+from .utils.path import submodule_path
 import pandas as pd
 from resource_path import resource_path
-from Side_Allocation.base_functions import general_constraints
-from Side_Allocation import priority
-from Side_Allocation import side
-from Side_Allocation import part_division
-from Grouping import Assigning_Electrical_Type , Assigning_Pin_Group
-from Grouping.base_functions import general_funct
-from Grouping.base_functions import helper_funct
+from .Side_Allocation.base_functions import general_constraints
+from .Side_Allocation import priority
+from .Side_Allocation import side
+from .Side_Allocation import part_division
+from .Grouping import Assigning_Electrical_Type , Assigning_Pin_Group
+from .Grouping.base_functions import general_funct
+from .Grouping.base_functions import helper_funct
 def extracting_pin_tables_pdf(partnumber_dict, pdf_path):
 	part_number = partnumber_dict.get('Orderable Part Number')
 	number_of_pins = partnumber_dict.get('Number of Pins')
