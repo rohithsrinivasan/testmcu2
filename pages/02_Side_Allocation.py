@@ -46,7 +46,7 @@ if 'grouped_pin_table' in st.session_state:
     #st.text(f"Before Side Allocation Flag :{before_priority_flag}")
     #st.dataframe(added_empty_priority_column)
     priority_mapping_json = f"Side_Allocation/priority_map.json"
-    priority_mapping_json_new = f"Side_Allocation/priority_map_new.json"
+    priority_mapping_json_new = f"Side_Allocation/priority_map_shrinidhi.json"
     priority_added = priority.assigning_priority(added_empty_priority_column,priority_mapping_json_new)
     #st.text(f"Priority Column Added")
     #st.dataframe(priority_added)
