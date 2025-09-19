@@ -83,7 +83,7 @@ if 'pin_table' in st.session_state:
         'Passive': 'Grouping/mcu_database/mcu_passive.json'
     }
     json_paths_Single = {
-    'Single': 'Grouping/shrinidhi_database/combined.json'
+    'Single': 'Grouping/shrinidhi_database/Combined_Ashish_files.json'
     }
 
     if database_for_pin_type:
