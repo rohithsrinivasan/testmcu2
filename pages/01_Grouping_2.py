@@ -82,9 +82,6 @@ if 'pin_table' in st.session_state:
         'I/O': 'Grouping/mcu_database/mcu_io.json',
         'Passive': 'Grouping/mcu_database/mcu_passive.json'
     }
-    json_paths_Single = {
-    'Single': 'Grouping/shrinidhi_database/Combined_Ashish_files.json'
-    }
 
     if database_for_pin_type:
         st.success("Using database for Type Assignment")
@@ -100,20 +97,71 @@ if 'pin_table' in st.session_state:
         st.success("Using database for grouping")
         pin_table = st.session_state['pin_table']
         required_cols = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name']
-        before_grouping_flag, added_empty_grouping_column = general_funct.check_excel_format(pin_table,  required_cols, optional_column='Grouping')
-        pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(added_empty_grouping_column, json_paths_Single, SENSITIVITY= False,SMARTSEARCH= False, SINGLE_FILE=True)  
+        before_grouping_flag, added_empty_grouping_column = general_funct.check_excel_format(pin_table, required_cols, optional_column='Grouping')
 
-    # Common operations after grouping
+        # Define the databases for each category
+        json_paths_Single = {
+            'MCU Devices': 'Grouping\\mcu&mpu_database\\Combined_Added_mpu.json',
+            'Power': {
+                "Buck": 'Grouping\\power_database\\Buck.json',
+                "Boost": 'Grouping\\power_database\\Boost.json',
+                "Buck-Boost": 'Grouping\\power_database\\Buck-Boost.json',
+                "LDO": 'Grouping\\power_database\\LDO.json',
+                "FlyBack": 'Grouping\\power_database\\FlyBack.json',
+                "PMIC": 'Grouping\\power_database\\PMIC.json'
+            }
+        }
+
+        # Add a selectbox for category selection
+        selected_category = st.sidebar.selectbox(
+            "Select a Category",
+            options=list(json_paths_Single.keys()),
+            index=0  # 'MCU Devices' is the default
+        )
+        st.session_state['selected_category'] = selected_category
+
+        # Initialize the selected_database variable
+        selected_database = None
+
+        # Conditional logic for sub-category radio buttons and state management
+        if selected_category == 'Power':
+            sub_category = st.sidebar.radio(
+                "Select Power Sub-Category",
+                options=list(json_paths_Single['Power'].keys())
+            )
+            selected_database = {sub_category: json_paths_Single['Power'][sub_category]}
+            st.session_state["sub_category"] = sub_category
+        else:
+            # If MCU Devices is selected, use its database
+            selected_database = {'Single': json_paths_Single['MCU Devices']}
+            # Hard-code sub_category to None when it's not a Power device
+            st.session_state["sub_category"] = None
+
+        # Assigning the pin grouping based on the selected database
+        pin_grouping_table = Assigning_Pin_Group.grouping_as_per_database(
+            added_empty_grouping_column,
+            selected_database,
+            SENSITIVITY=False,
+            SMARTSEARCH=False,
+            SINGLE_FILE=True
+        )
+        
+        # Common operations after grouping
         st.dataframe(pin_grouping_table)
         no_grouping_assigned = general_funct.check_empty_groupings(pin_grouping_table)
-        
-        if no_grouping_assigned.empty:
-            st.info("All grouping values are filled.") 
-            st.success("Done!")
-            st.session_state["page"] = "SideAlloc" 
-            st.session_state['grouped_pin_table'] = pin_grouping_table            
 
-        else:
+        is_error_message = any("❌" in str(val) for val in pin_grouping_table['Grouping'].values)
+
+        if is_error_message:
+            st.error("Error encountered during grouping. Please check the dataframe above for details.")
+            st.info("Please fix the JSON file path or content and try again.")
+        elif no_grouping_assigned.empty:
+            st.info("All grouping values are filled.")
+            st.success("Done!")
+            st.session_state["page"] = "SideAlloc"
+            st.session_state['grouped_pin_table'] = pin_grouping_table           
+
+        elif not no_grouping_assigned.empty and st.session_state['selected_category'] == 'MCU Devices':
 
             st.info("Please fill in group values for these:")
 
@@ -123,8 +171,23 @@ if 'pin_table' in st.session_state:
                 show_suggestions_manual = st.toggle("Enable Pin Suggestions Manual")
                 threshold = st.slider("Minimum Match Percentage", min_value=80, max_value=100, value=100)
                 edit_database = st.toggle("Edit Database", value=False)
-                with open(json_paths_Single['Single'], 'r') as f:
-                    json_data = json.load(f)
+                category = st.session_state.get('selected_category', 'MCU Devices') # Get the stored category, or default to 'MCU Devices'
+                #category = st.session_state.get('selected_category', 'MCU Devices')
+                json_info = json_paths_Single.get(category)
+
+                if isinstance(json_info, dict):
+                    # This block handles the 'Power' category and its sub-categories.
+                    sub_category = st.session_state.get('selected_sub_category')
+                    file_path = json_info.get(sub_category)
+                else:
+                    # This block handles simple string categories like 'MCU Devices'.
+                    file_path = json_info
+
+                if file_path:
+                    with open(file_path, 'r') as f:
+                        json_data = json.load(f)
+                else:
+                    st.error("Invalid category or sub-category selected.")
 
             # Conditionally apply auto-fill logic
             if show_suggestions_automatic:
@@ -203,6 +266,10 @@ if 'pin_table' in st.session_state:
                 st.success("Done!")
                 st.session_state["page"] = "SideAlloc" 
                 st.session_state['grouped_pin_table'] = pin_grouping_table 
+
+        else:
+            st.warning("Some grouping values are still missing. The following pins could not be assigned to a group:")
+            st.dataframe(no_grouping_assigned)
 
     else:
         st.info("Please the checkbox for using database")

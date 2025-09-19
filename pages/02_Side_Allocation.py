@@ -32,6 +32,15 @@ if "uploaded_csv_name" in st.session_state:
 ui_widgets.header_intro()
 ui_widgets.header_intro_2()
 
+
+st.sidebar.markdown("### Your Selections")
+category = st.session_state.get('selected_category')
+sub_category = st.session_state.get('sub_category')
+if category:
+    st.sidebar.info(f"**Category:** {category}")
+    if sub_category:
+        st.sidebar.info(f"**Sub-Category:** {sub_category}")
+
 st.subheader("Side Allocation Page")
 if 'grouped_pin_table' in st.session_state:
     grouped_pin_table = st.session_state['grouped_pin_table']
@@ -43,58 +52,96 @@ if 'grouped_pin_table' in st.session_state:
     required_columns = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name', 'Grouping']
     optional_column = 'Priority'
     before_priority_flag, added_empty_priority_column = general_funct.check_excel_format(grouped_pin_table,required_columns, optional_column=optional_column)
-    #st.text(f"Before Side Allocation Flag :{before_priority_flag}")
-    #st.dataframe(added_empty_priority_column)
-    priority_mapping_json = f"Side_Allocation/priority_map.json"
-    priority_mapping_json_new = f"Side_Allocation/priority_map_shrinidhi.json"
-    priority_added = priority.assigning_priority(added_empty_priority_column,priority_mapping_json_new)
-    #st.text(f"Priority Column Added")
-    #st.dataframe(priority_added)
+    st.text(f"Before Side Allocation Flag :{before_priority_flag}")
+    st.dataframe(added_empty_priority_column)
+    #priority_mapping_json = f"Side_Allocation/priority_map.json"
+
+    #priority_mapping_json_new = f"Side_Allocation\priority_map_mpuadded.json"
+    #priority_added = priority.assigning_priority(added_empty_priority_column,priority_mapping_json_new)
+
+    priority_mapping = {
+        'MCU Devices': "Side_Allocation/priority_map_mpuadded.json",
+        'Power': {
+            "Buck": "Side_Allocation/priority_map_buck.json",
+            "Boost": "Side_Allocation/priority_map_boost.json",
+        }
+    }
+
+    category = st.session_state.get('selected_category')
+    #st.text(category)
+    if category == 'Power':
+        sub_category = st.session_state.get('sub_category')
+        priority_file_path = priority_mapping['Power'][sub_category]
+    else:
+        priority_file_path = priority_mapping['MCU Devices']
+
+    priority_added = priority.assigning_priority(added_empty_priority_column, priority_file_path)
+
+    st.text(f"Priority Column Added")
+    st.dataframe(priority_added)
+
+    ### Adding Side ###
 
     required_columns = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name', 'Grouping','Priority']
     ooptional_column = 'Side'
     before_side_flag, added_empty_side_column = general_funct.check_excel_format(priority_added,required_columns, optional_column=optional_column)
 
-    if len(added_empty_side_column) <= 80:
-        side_added = side.side_for_singlepart(added_empty_side_column)
-        #st.text(f"Side Column Added")
-        #st.dataframe(side_added)
-    
-    else:
-        st.text(f"Executing Partioning")
-        with st.sidebar:
-            st.sidebar.subheader("Customize")
+    if category == 'MCU Devices' :
 
-            # Reset to default button
-            if st.sidebar.button("Reset to Default"):
-                st.session_state.strict_population = False
-                st.session_state.balanced_assignment = False
+        if len(added_empty_side_column) <= 80:
+            side_added = side.side_for_singlepart(added_empty_side_column)
+            #st.text(f"Side Column Added")
+            #st.dataframe(side_added)
+        
+        else:
+            st.text(f"Executing Partioning")
+            with st.sidebar:
+                st.sidebar.subheader("Customize")
 
-            # Initialize session state if not exists
-            if 'strict_population' not in st.session_state:
-                st.session_state.strict_population = False
-            if 'balanced_assignment' not in st.session_state:
-                st.session_state.balanced_assignment = False
+                # Reset to default button
+                if st.sidebar.button("Reset to Default"):
+                    st.session_state.strict_population = False
+                    st.session_state.balanced_assignment = False
 
-            # Toggle switches
-            strict_population = st.sidebar.toggle("Strict Population", value=st.session_state.strict_population,help="Enable strict population mode")
-            balanced_assignment = st.sidebar.toggle("Balanced Assignment", value=st.session_state.balanced_assignment,help="Enable balanced assignment mode")
+                # Initialize session state if not exists
+                if 'strict_population' not in st.session_state:
+                    st.session_state.strict_population = False
+                if 'balanced_assignment' not in st.session_state:
+                    st.session_state.balanced_assignment = False
 
-            # Update session state
-            st.session_state.strict_population = strict_population
-            st.session_state.balanced_assignment = balanced_assignment
+                # Toggle switches
+                strict_population = st.sidebar.toggle("Strict Population", value=st.session_state.strict_population,help="Enable strict population mode")
+                balanced_assignment = st.sidebar.toggle("Balanced Assignment", value=st.session_state.balanced_assignment,help="Enable balanced assignment mode")
 
-        #df_dict = part_division.partitioning(added_empty_side_column, Strict_Population = False, Balanced_Assignment= True)
-        df_dict = part_division.partitioning(added_empty_side_column, Strict_Population=st.session_state.strict_population, Balanced_Assignment=st.session_state.balanced_assignment)
-        side_added_dict = side.side_for_multipart(df_dict)
-        #st.text(f"Side Column Added")
-        #for subheader, dataframe in side_added_dict.items():
-        #    st.subheader(subheader)
-        #    st.dataframe(dataframe)
+                # Update session state
+                st.session_state.strict_population = strict_population
+                st.session_state.balanced_assignment = balanced_assignment
+
+            #df_dict = part_division.partitioning(added_empty_side_column, Strict_Population = False, Balanced_Assignment= True)
+            df_dict = part_division.partitioning(added_empty_side_column, Strict_Population=st.session_state.strict_population, Balanced_Assignment=st.session_state.balanced_assignment)
+            side_added_dict = side.side_for_multipart(df_dict)
+            #st.text(f"Side Column Added")
+            #for subheader, dataframe in side_added_dict.items():
+            #    st.subheader(subheader)
+            #    st.dataframe(dataframe)
 
 
-        #side_added = SideAllocation_functions.convert_dict_to_list(df_dict)
-        side_added = side_added_dict
+            #side_added = SideAllocation_functions.convert_dict_to_list(df_dict)
+            side_added = side_added_dict
+
+
+    elif category == "Power":
+        # side_added is initialized from the priority_added DataFrame
+        side_added = priority_added.copy()
+
+        # Create the 'Side' column and set it to a default value (e.g., None)
+        side_added['Side'] = None
+        
+        # Use .loc to conditionally assign 'Left' and 'Right'
+        side_added.loc[side_added['Priority'].str.startswith('L'), 'Side'] = 'Left'
+        side_added.loc[side_added['Priority'].str.startswith('R'), 'Side'] = 'Right'
+
+
 
     if isinstance(side_added, pd.DataFrame):
         side_added = general_constraints.final_filter(side_added) 
