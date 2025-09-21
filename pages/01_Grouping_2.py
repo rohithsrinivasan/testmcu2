@@ -101,14 +101,14 @@ if 'pin_table' in st.session_state:
 
         # Define the databases for each category
         json_paths_Single = {
-            'MCU Devices': 'Grouping\\mcu&mpu_database\\Combined_Added_mpu.json',
+            'MCU Devices': 'Grouping/mcu&mpu_database/Combined_Added_mpu.json',
             'Power': {
-                "Buck": 'Grouping\\power_database\\Buck.json',
-                "Boost": 'Grouping\\power_database\\Boost.json',
-                "Buck-Boost": 'Grouping\\power_database\\Buck-Boost.json',
-                "LDO": 'Grouping\\power_database\\LDO.json',
-                "FlyBack": 'Grouping\\power_database\\FlyBack.json',
-                "PMIC": 'Grouping\\power_database\\PMIC.json'
+                "Buck": 'Grouping/power_database/Buck.json',
+                "Boost": 'Grouping/power_database/Boost.json',
+                "Buck-Boost": 'Grouping/power_database/Buck-Boost.json',
+                "LDO": 'Grouping/power_database/LDO.json',
+                "FlyBack": 'Grouping/power_database/FlyBack.json',
+                "PMIC": 'Grouping/power_database/PMIC.json'
             }
         }
 
