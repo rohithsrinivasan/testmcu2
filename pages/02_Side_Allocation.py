@@ -64,6 +64,7 @@ if 'grouped_pin_table' in st.session_state:
         'Power': {
             "Buck": "Side_Allocation/priority_map_buck.json",
             "Boost": "Side_Allocation/priority_map_boost.json",
+            "LDO" : "Side_Allocation/priority_map_ldo.json"
         }
     }
 

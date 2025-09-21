@@ -1,0 +1,142 @@
+{
+
+
+    "Left"  : {
+
+  "Control": {
+    "Current_LImiter": [
+      "ILIM"
+    ],
+    "Current_Set": [
+      "ISET"
+    ],
+    "Enable": [
+      "EN",
+      "EN1",
+      "EN2",
+      "ENABLE"
+    ],
+    "Mode_Select": [
+      "TMODE"
+    ],
+    "OCP*": [
+      "OCP"
+    ],
+    "Soft_Start": [
+      "SS",
+      "SS1",
+      "SS2",
+      "SS_CNR"
+    ]
+  },
+  "Power_Input": [
+    "VIN",
+    "VIN1",
+    "VIN2"
+  ],
+  "Supply": {
+    "BYP": [
+      "BYP",
+      "CBYP"
+    ],
+    "VCC": [
+      "VBIAS",
+      "VCC1",
+      "VCCX"
+    ]
+  },
+  "Timing": {
+    "FS*": [
+      "FS1"
+    ],
+    "SD": [
+      "SD"
+    ],
+    "Sync": [
+      "SYNC",
+      "SYNC1"
+    ]
+  }
+},
+
+
+
+"Right": {
+
+
+  "Adjust": [
+    "ADJ",
+    "VADJ"
+  ],
+  "BOOT*": [
+    "BOOT",
+    "BOOT1"
+  ],
+  "CSET*": [
+    "CSET"
+  ],
+  "Compensation": [
+    "COMP",
+    "COMP1"
+  ],
+  "EPAD*": [
+    "EPAD"
+  ],
+  "Feedback": [
+    "FB",
+    "FB1",
+    "FB2",
+    "FBO"
+  ],
+
+  "Ground": {
+    "GND":  [
+    "GND",
+    "GND1",
+    "GND2"
+  ],
+    "Other_Voltages": [
+      "1.6V",
+      "100mV",
+      "200mV",
+      "400mV",
+      "50mV",
+      "800mV"
+    ]
+  },
+  "NC*": [
+    "NC"
+  ],
+  "Output": [
+    "VO",
+    "VO1",
+    "VO2",
+    "VOUT",
+    "VOUT1",
+    "VOUT2"
+  ],
+  "Overcurrent_Fault": [
+    "OCFF"
+  ],
+  "Sensing": [
+    "SENSE/ADJ",
+    "SNS"
+  ],
+  "Status": {
+    "Power_Good": [
+      "PG",
+      "PG1"
+    ],
+    "Power_On_Reset": [
+      "POR",
+      "POR1",
+      "POR2"
+    ]
+  },
+  "Switching_Node": [
+    "LX1"
+  ]
+}
+}
+
+
