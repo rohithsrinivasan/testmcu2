@@ -1,0 +1,226 @@
+{
+
+"Left" : {
+
+  "BYPS*": [
+    "BYPS"
+  ],
+  "Communication": {
+    "Addresses": [
+      "ADDR0",
+      "ADDR1"
+    ],
+    "I2C": [
+      "SCL",
+      "SDA"
+    ]
+  },
+  "Control": {
+    "ADP*": [
+      "ADP"
+    ],
+    "Feedback": [
+      "FB_IN"
+    ],
+    "MODE*": [
+      "MODE",
+      "MODE/SYNC"
+    ],
+    "Programming": [
+      "PROG"
+    ],
+    "Reference": [
+      "REF"
+    ],
+    "SYNC*": [
+      "RT/SYNC",
+      "SYNC"
+    ],
+    "Soft_Start": [
+      "SS",
+      "SS/TRK"
+    ]
+  },
+  "EXT*": [
+    "EXTBIAS",
+    "EXT_BOOST"
+  ],
+  "Enable": {
+    "Enable": [
+      "EN",
+      "EN/UVLO"
+    ]
+  },
+  "Input_Power": {
+    "DCIN*": [
+      "DCIN"
+    ],
+    "PVIN*": [
+      "PVIN"
+    ],
+    "VBAT": [
+      "BAT",
+      "VBAT",
+      "\\BAT"
+    ],
+    "VIN*": [
+      "VIN"
+    ]
+  },
+  "Status_and_Fault": {
+    "FRWEN*": [
+      "FRWEN"
+    ],
+    "RVSEN" : [
+      "RVSEN"
+    ],
+    "Power_Good": [
+      "PG",
+      "PGOOD"
+    ],
+    "FRWPG*": [
+      "FRWPG"
+    ],
+    "PROCHOT*": [
+      "PROCHOT#"
+    ],
+    "RVSPG*": [
+      "RVSPG"
+    ]
+  },
+  "Supply": {
+    "AUXVCC*": [
+      "AUXVCC"
+    ],
+    "VCC*": [
+      "VCC",
+      "VCC5V"
+    ],
+    "VDD*": [
+      "VDD",
+      "VDDP"
+    ]
+  },
+  "Timing": {
+    "BSTEN*": [
+      "BSTEN"
+    ],
+    "CLKEN*": [
+      "CLKEN"
+    ],
+    "Frequency_Select": [
+      "FS"
+    ]
+  }
+},
+
+
+"Right" : {
+  "BOOT*": [
+    "BOOT",
+    "BOOT1",
+    "BOOT2"
+  ],
+  "COMP*": {
+    "-pins": [
+      "COMP",
+      "COMPF",
+      "COMPR"
+    ],
+    "PLL*": [
+      "PLL_COMP"
+    ]
+  },
+  "EPAD*": [
+    "EPAD"
+  ],
+  "Feedback*": [
+    "FB",
+    "FB_OUT"
+  ],
+  "Gate_Drivers": {
+    "LGATE*": [
+      "LGATE",
+      "LGATE1",
+      "LGATE2"
+    ],
+    "LG_Drive_Modes": [
+      "LG1/PWM_MODE",
+      "LG2/OC_MODE"
+    ],
+    "UGATE*": [
+      "UGATE1",
+      "UGATE2"
+    ]
+  },
+  "Ground": {
+    "GND": [
+      "GND"
+    ],
+    "PGND": [
+      "PGND"
+    ],
+    "SGND": [
+      "SGND"
+    ]
+  },
+  "OutClock": [
+    "CLKOUT/DITHER"
+  ],
+  "Output_Voltage": [
+    "VOUT"
+  ],
+  "Sense": {
+    "CSO*": [
+      "CSON",
+      "CSOP"
+    ],
+    "IMON_OUT*": [
+      "IMON_OUT"
+    ],
+    "ISEN*": [
+      "ISEN+",
+      "ISEN-",
+      "VOUTS"
+    ],
+    "Input_Sensing": [
+      "ADPS"
+    ],
+    "Overvoltage_Protection": [
+      "OV"
+    ],
+
+    "CS": [
+      "CS+",
+      "CS-"
+    ],
+    "CSI*": [
+      "CSIN",
+      "CSIP"
+    ],
+    "Current_Limit": [
+      "ILIMIT"
+    ],
+    "IMON_IN*": [
+      "IMON_IN"
+    ]
+
+  },
+  "Switching_Nodes": {
+    "LX*": [
+      "LX",
+      "LX1",
+      "LX2"
+    ],
+    "PHASE*": [
+      "PHASE",
+      "PHASE1",
+      "PHASE2"
+    ]
+  }
+}
+
+
+
+
+}
