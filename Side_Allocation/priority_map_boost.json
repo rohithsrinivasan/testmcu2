@@ -1,0 +1,31 @@
+{
+    "priority_map": {
+
+    "Power_Input" : "LA",
+    "Supply" : "LB",
+    "Control" : "LC",
+    "VSEL*" : "LD",
+    "Status_and_Fault" : "LE",
+    "Timing" : "LF",
+    "Interface*" : "LG",
+    "Address" : "LH",
+    "BYPS*" : "LI",
+
+
+    "Power_Output" :"RA",
+    "Bootstrap" : "RB",
+    "Switching_Node" : "RC",
+    "Gate_Drivers" : "RD",
+    "Feedback" : "RE",
+    "OutTiming" : "RF",
+    "Current_Sense" : "RG",
+    "COMP*" : "RH",
+    "Blanking" : "RI",
+    "Ground" : "RJ",
+    "NC*" : "RK",
+    "EPAD*" : "RL"
+
+
+
+    }
+}

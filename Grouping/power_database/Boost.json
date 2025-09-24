@@ -1,0 +1,242 @@
+{
+
+"Left" :{
+
+    "Power_Input":{ 
+       "VBAT*"  : [
+            "VBAT"
+        ],
+        "VIN*" : [
+            "VIN"
+        ],
+        "PVIN*" : [
+            "PVIN"
+        ]
+    },
+    "Supply": {
+       "VCC*" : [
+        "VCC",
+        "VCC5V"
+       ],
+      "VDD*" : [
+        "VDD"
+       ],
+       "PVCC*" : [
+        "PVCC"
+       ]
+    },
+
+  "Control": {
+    "Enable": [
+      "EN",
+      "NEN",
+      "EN/UVLO1",
+      "EN/UVLO2"
+    ],
+    "Soft_Start": [
+      "SS",
+      "SS/TRK1",
+      "SS/TRK2/OV"
+    ],
+    "Tracking": [
+      "TRACK",
+      "ATRK/DTRK"
+    ],
+    "Select": [
+      "VSEL"
+    ],
+    "Mode": [
+      "MODE"
+    ],
+    "XTBias": [
+    "EXTBIAS"
+    ],
+    "MODE*" : [
+        "MODE"
+    ],
+    "HIC" : [
+        "HIC/LATCH",
+        "HIC"
+    ],
+    "DE/PHDRP" : [
+        "DE/PHDRP"
+    ],
+    "ALERT" : [
+        "SALERT"
+    ]
+  },
+  "Timing": {
+    "FREQ*": [
+      "FREQ"
+    ],
+    "SYNC*" : [
+      "RT/SYNC",
+      "FSYNC",
+      "NSYNC"
+    ],
+    "Slope": [
+      "SLOPE"
+    ],
+    "RDT*" : [
+        "RDT"
+    ]
+  },
+  "Status_and_Fault": {
+    "PG*": [
+      "PG",
+      "PGOOD"
+    ],
+    "FAULT" : [
+        "FAULT"
+    ],
+    "RBLANK*": [
+      "RBLANK"
+    ],
+    "Thermal": [
+      "NTC"
+    ]
+  },
+    "BYPS*" : [
+    "BYPS"
+    ],
+    "VSEL*" : [
+    "VSEL"
+    ],
+
+    "Interface*" :{
+        "I2C" : [
+            "SDA",
+            "SCL"
+        ]
+    },
+    "Address" : [
+        "ADDR0",
+        "ADDR1"
+    ]
+},
+
+"Right" : {
+
+    "Power_Output": {
+       "V" : [
+            "VOUT"
+        ],
+      "VDD" : [
+        "VDDOUT"
+      ]
+    },
+
+    "Switching_Node":{
+        "SW*" : [
+            "SW"
+        ],
+        "LX*" : [
+            "LX"
+        ],
+        "PH*" : [
+            "PH1",
+            "PH2"           
+        ],
+        "PHASE*" : [
+            "PHASE1",
+            "PHASE2"
+        ]
+    },
+
+    "Feedback": [
+      "FB",
+      "FB1",
+      "FB2/BSTEN"
+    ],
+    "COMP*": {
+        "-pins" : [
+            "COMP",
+            "COMP1",
+            "COMP2/CLKEN"
+            ],
+        "PLL" :[
+            "PLLCOMP",
+            "PLL_COMP"
+            ]
+        },
+    "Gate_Drivers": {
+
+        "UG*" : [
+            "UG1",
+            "UG2"
+        ],
+        "LG*" :[
+            "LG1/PWM_MODE",
+            "LG2/OC_MODE",
+            "LG1",
+            "LG2"
+        ]
+    },
+    "Current_Sense": {
+        "CS1*" : [
+            "CS1-",
+            "CS1+"
+        ],
+        "CS2*" : [
+            "CS2-",
+            "CS2+"
+        ],
+        "ISEN1" :[
+            "ISEN1N",
+            "ISEN1P"
+        ],
+        "ISEN2" : [
+            "ISEN2N",
+            "ISEN2P"
+        ],
+        "IMON" : [
+            "IMON",
+            "IMON1",
+            "IMON2"
+        ]
+    },
+
+  "OutTiming": {
+    "Clock_Output": [
+      "CLKOUT",
+      "CLKOUT/DITHER"
+    ],
+    "Modes": [
+      "PWM_MODE",
+      "OC_MODE"
+    ]
+    },
+    "Blanking": [
+        "BLKG"
+    ],
+    "Bootstrap": [
+      "BOOT1",
+      "BOOT2"
+    ],
+    "NC*" :[
+        "NC"
+    ],
+    "Ground": {
+        "-pins" : [
+            "GND"
+        ],
+        "PGND*" : [
+            "PGND"            
+        ],
+        "AGND*" : [
+            "AGND"
+        ],
+        "SGND*" : [
+            "SGND"          
+        ]   
+    },
+    "EPAD*" : [
+        "EPAD",
+        "EP"
+    ]
+}
+
+
+
+
+}
