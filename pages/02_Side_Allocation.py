@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from tabula import read_pdf
 import datetime
+import re
 
 from Extraction.base_functions import ui_widgets
 from Grouping.base_functions import general_funct
@@ -133,18 +134,55 @@ if 'grouped_pin_table' in st.session_state:
             side_added = side_added_dict
 
 
+    # elif category == "Power":
+    #     # side_added is initialized from the priority_added DataFrame
+    #     side_added = priority_added.copy()
+
+    #     # Create the 'Side' column and set it to a default value (e.g., None)
+    #     side_added['Side'] = None
+        
+    #     # Use .loc to conditionally assign 'Left' and 'Right'
+    #     side_added.loc[side_added['Priority'].str.startswith('L'), 'Side'] = 'Left'
+    #     side_added.loc[side_added['Priority'].str.startswith('R'), 'Side'] = 'Right'
+
+
+
     elif category == "Power":
-        # side_added is initialized from the priority_added DataFrame
+        # side_added is a copy of the priority_added DataFrame
         side_added = priority_added.copy()
 
         # Create the 'Side' column and set it to a default value (e.g., None)
         side_added['Side'] = None
         
-        # Use .loc to conditionally assign 'Left' and 'Right'
+        # Use .loc to conditionally assign 'Left' and 'Right' based on the Priority
         side_added.loc[side_added['Priority'].str.startswith('L'), 'Side'] = 'Left'
         side_added.loc[side_added['Priority'].str.startswith('R'), 'Side'] = 'Right'
 
+        # --- The requested Streamlit toggle button ---
+        # This toggle controls whether the new logic is applied.
+        is_fixed_channelwise = st.sidebar.toggle("Fixed (Channelwise)")
 
+        # --- Core Logic: Conditionally modify Priority based on the toggle ---
+        if is_fixed_channelwise:
+            # 1. Identify rows that meet both conditions:
+            #    - 'Pin Display Name' ends with a number
+            #    - 'Priority' begins with 'R'
+            mask = (
+                side_added['Pin Display Name'].str.match(r'.*\d$', na=False) &
+                side_added['Priority'].str.startswith('R')
+            )
+
+            # 2. Use a loop to iterate through the filtered rows and update them.
+            # This is simple and easy to debug.
+            for index, row in side_added[mask].iterrows():
+                # Extract the number from 'Pin Display Name' using a regular expression
+                # re.search finds the last digit(s) at the end of the string
+                match = re.search(r'(\d+)$', row['Pin Display Name'])
+                if match:
+                    number = match.group(1)
+                    # Prepend the number to the existing 'Priority' value
+                    new_priority = f"{number}_{row['Priority']}"
+                    side_added.at[index, 'Priority'] = new_priority
 
     if isinstance(side_added, pd.DataFrame):
         side_added = general_constraints.final_filter(side_added) 

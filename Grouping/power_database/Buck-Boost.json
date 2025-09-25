@@ -36,6 +36,9 @@
       "RT/SYNC",
       "SYNC"
     ],
+    "RT*": [
+      "RT"
+    ],
     "Soft_Start": [
       "SS",
       "SS/TRK"
@@ -142,7 +145,9 @@
     "LGATE*": [
       "LGATE",
       "LGATE1",
-      "LGATE2"
+      "LGATE2",
+      "LG1",
+      "LG2"
     ],
     "LG_Drive_Modes": [
       "LG1/PWM_MODE",
@@ -150,7 +155,9 @@
     ],
     "UGATE*": [
       "UGATE1",
-      "UGATE2"
+      "UGATE2",
+      "UG1",
+      "UG2"
     ]
   },
   "Ground": {
@@ -165,7 +172,8 @@
     ]
   },
   "OutClock": [
-    "CLKOUT/DITHER"
+    "CLKOUT/DITHER",
+    "CLKOUT"
   ],
   "Output_Voltage": [
     "VOUT"
@@ -217,7 +225,10 @@
       "PHASE1",
       "PHASE2"
     ]
-  }
+  },
+  "NC*" : [
+    "NC"
+  ]
 }
 
 

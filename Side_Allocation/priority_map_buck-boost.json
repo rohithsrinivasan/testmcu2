@@ -20,7 +20,8 @@
         "OutClock" : "RG",
         "Sense" : "RH",
         "Ground" :"RI",
-        "EPAD*" : "RJ"
+        "NC*" : "RJ",
+        "EPAD*" : "RK"
 
 
 
