@@ -17,7 +17,7 @@
       "PVIN5",
       "PVIN6"
     ],
-    "VIN*": [
+    "-pins-VIN*": [
       "VIN",
       "VIN1",
       "VIN2",
@@ -218,6 +218,9 @@
       "ISET1",
       "ISET2"
     ],
+    "ISHARE*" : [
+      "ISHARE"
+    ],
     "Multi-Phase_Current_Threshold": [
       "MPCT"
     ],
@@ -228,6 +231,18 @@
       "OCSET3"
     ]
   },
+
+  "VSET*": {
+        "1" :[
+        "V1SET1",
+        "V1SET2"
+        ],
+        "2": [
+        "V2SET1",
+        "V2SET2"
+        ]
+    },
+
   "EN*": {
     "-pins": [
       "ENABLE"
@@ -357,7 +372,9 @@
       "SS/TRK2/OV"
     ],
     "pins": [
-      "SS"
+      "SS",
+      "SS1",
+      "SS2"
     ]
   },
   "SYNC*": {
@@ -790,13 +807,7 @@
       "VSEN-"
     ]
   },
-  "VSET*": [
-    "V1SET1",
-    "V1SET2",
-    "V2SET1",
-    "V2SET2"
-  ],
-  "Volatge_Monitors": {
+  "Voltage_Monitors": {
     "Power": [
       "PMON"
     ],

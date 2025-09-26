@@ -10,7 +10,7 @@
     "Current_Set": [
       "ISET"
     ],
-    "Enable": [
+    "A-Enable": [
       "EN",
       "EN1",
       "EN2",
@@ -27,6 +27,19 @@
       "SS1",
       "SS2",
       "SS_CNR"
+    ],
+    "CNR*" : [
+      "CNR"
+    ],
+    "CBYP*" : [
+      "CBYP"
+    ],
+    "CPOR*" : [
+      "CPOR"
+    ],
+    "Power_Good": [
+      "PG",
+      "PG1"
     ]
   },
   "Power_Input": [
@@ -36,8 +49,7 @@
   ],
   "Supply": {
     "BYP": [
-      "BYP",
-      "CBYP"
+      "BYP"
     ],
     "VCC": [
       "VBIAS",
@@ -120,13 +132,10 @@
   ],
   "Sensing": [
     "SENSE/ADJ",
-    "SNS"
+    "SNS",
+    "SENSE"
   ],
   "Status": {
-    "Power_Good": [
-      "PG",
-      "PG1"
-    ],
     "Power_On_Reset": [
       "POR",
       "POR1",

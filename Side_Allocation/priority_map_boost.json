@@ -12,9 +12,9 @@
     "BYPS*" : "LI",
 
 
-    "Power_Output" :"RA",
     "Bootstrap" : "RB",
     "Switching_Node" : "RC",
+    "Power_Output" :"RCA",
     "Gate_Drivers" : "RD",
     "Feedback" : "RE",
     "OutTiming" : "RF",

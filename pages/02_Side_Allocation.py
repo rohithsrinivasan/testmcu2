@@ -8,6 +8,7 @@ from Extraction.base_functions import ui_widgets
 from Grouping.base_functions import general_funct
 
 from Side_Allocation.base_functions import general_constraints
+from Side_Allocation.base_functions import single80pin_constraints
 
 from Side_Allocation import priority
 from Side_Allocation import side
@@ -53,8 +54,8 @@ if 'grouped_pin_table' in st.session_state:
     required_columns = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name', 'Grouping']
     optional_column = 'Priority'
     before_priority_flag, added_empty_priority_column = general_funct.check_excel_format(grouped_pin_table,required_columns, optional_column=optional_column)
-    st.text(f"Before Side Allocation Flag :{before_priority_flag}")
-    st.dataframe(added_empty_priority_column)
+    #st.text(f"Before Side Allocation Flag :{before_priority_flag}")
+    #st.dataframe(added_empty_priority_column)
     #priority_mapping_json = f"Side_Allocation/priority_map.json"
 
     #priority_mapping_json_new = f"Side_Allocation\priority_map_mpuadded.json"
@@ -81,8 +82,8 @@ if 'grouped_pin_table' in st.session_state:
 
     priority_added = priority.assigning_priority(added_empty_priority_column, priority_file_path)
 
-    st.text(f"Priority Column Added")
-    st.dataframe(priority_added)
+    #st.text(f"Priority Column Added")
+    #st.dataframe(priority_added)
 
     ### Adding Side ###
 
@@ -160,29 +161,42 @@ if 'grouped_pin_table' in st.session_state:
 
         # --- The requested Streamlit toggle button ---
         # This toggle controls whether the new logic is applied.
-        is_fixed_channelwise = st.sidebar.toggle("Fixed (Channelwise)")
+        #is_fixed_channelwise = st.sidebar.toggle("Fixed (Channelwise)")
+        is_fixed_channelwise = st.sidebar.toggle("Fixed (Channelwise)", value=True)
 
         # --- Core Logic: Conditionally modify Priority based on the toggle ---
         if is_fixed_channelwise:
-            # 1. Identify rows that meet both conditions:
-            #    - 'Pin Display Name' ends with a number
-            #    - 'Priority' begins with 'R'
+            # 1. Create a mask to filter rows based on a combination of conditions.
+            # The 'Priority' must start with 'R'.
+            # The 'Pin Display Name' must either end with a digit OR begin with 'ISEN' and have a digit in the second-to-last position.
+
             mask = (
-                side_added['Pin Display Name'].str.match(r'.*\d$', na=False) &
-                side_added['Priority'].str.startswith('R')
+                side_added['Priority'].str.startswith('R', na=False) &
+                (
+                    side_added['Pin Display Name'].str.match(r'.*\d$', na=False) |
+                    (
+                        side_added['Pin Display Name'].str.startswith('ISEN', na=False) &
+                        side_added['Pin Display Name'].str.get(-2).str.isdigit()
+                    )
+                )
             )
 
-            # 2. Use a loop to iterate through the filtered rows and update them.
-            # This is simple and easy to debug.
+            # 2. Iterate through the filtered rows and update the 'Priority' column.
             for index, row in side_added[mask].iterrows():
-                # Extract the number from 'Pin Display Name' using a regular expression
-                # re.search finds the last digit(s) at the end of the string
-                match = re.search(r'(\d+)$', row['Pin Display Name'])
+                pin_name = row['Pin Display Name']
+                
+                # Extract the number based on which condition was met.
+                # The first pattern '(\d+)$' captures a number at the end of the string.
+                # The second pattern '^ISEN(\d)[A-Z]?$' captures the digit after 'ISEN' and before an optional letter.
+                match = re.search(r'(\d+)$', pin_name) or re.search(r'^ISEN(\d)[A-Z]?$', pin_name)
+                
                 if match:
                     number = match.group(1)
-                    # Prepend the number to the existing 'Priority' value
+                    # Prepend the extracted number to the existing 'Priority' value.
                     new_priority = f"{number}_{row['Priority']}"
                     side_added.at[index, 'Priority'] = new_priority
+
+        side_added = single80pin_constraints.assigning_ascending_order_for_similar_group(side_added)        
 
     if isinstance(side_added, pd.DataFrame):
         side_added = general_constraints.final_filter(side_added) 

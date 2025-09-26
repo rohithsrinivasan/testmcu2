@@ -40,7 +40,9 @@
     ],
     "Tracking": [
       "TRACK",
-      "ATRK/DTRK"
+      "ATRK/DTRK",
+      "ATRK",
+      "DTRK"
     ],
     "Select": [
       "VSEL"
@@ -59,7 +61,8 @@
         "HIC"
     ],
     "DE/PHDRP" : [
-        "DE/PHDRP"
+        "DE/PHDRP",
+        "DE"
     ],
     "ALERT" : [
         "SALERT"
@@ -73,6 +76,9 @@
       "RT/SYNC",
       "FSYNC",
       "NSYNC"
+    ],
+    "RT*" : [
+      "RT"
     ],
     "Slope": [
       "SLOPE"
@@ -111,7 +117,8 @@
     },
     "Address" : [
         "ADDR0",
-        "ADDR1"
+        "ADDR1",
+        "ADDR2"
     ]
 },
 
@@ -146,13 +153,15 @@
     "Feedback": [
       "FB",
       "FB1",
+      "FB2",
       "FB2/BSTEN"
     ],
     "COMP*": {
         "-pins" : [
             "COMP",
             "COMP1",
-            "COMP2/CLKEN"
+            "COMP2/CLKEN",
+            "COMP2"
             ],
         "PLL" :[
             "PLLCOMP",
@@ -232,7 +241,8 @@
     },
     "EPAD*" : [
         "EPAD",
-        "EP"
+        "EP",
+        "PAD"
     ]
 }
 

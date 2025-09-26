@@ -11,9 +11,9 @@
         "Communication" : "LH",
         "BYPS*" :"LI",
 
-        "Output_Voltage" : "RA",
         "BOOT*" : "RB",
         "Switching_Nodes" : "RC",
+        "Output_Voltage" : "RCA",
         "Gate_Drivers" : "RD",
         "Feedback*" : "RE",
         "COMP*" : "RF",
