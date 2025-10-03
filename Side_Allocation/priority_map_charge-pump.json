@@ -5,6 +5,9 @@
         "Input_Capacitors" : "LB",
         "OSC" : "LC",
         "LV*" : "LD",
+        "EN" :"LE",
+        "Interface" :"LF",
+        "GPIO" :"LG",
 
         "VOUT*" : "RA",
         "NC*" : "RB",

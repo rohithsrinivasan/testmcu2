@@ -3,13 +3,38 @@
 
     "Left"  : {
 
-        "Voltage_Input" : [
-            "V+"
-        ],
+        "Voltage_Input" : {
+            "V+*" :   [
+                "V+"
+            ],
+            "VIN*" :[
+                "VIN"
+            ],
+            "VBAT*" :[
+                "VBAT"
+            ]
+        },
 
-        "Input_Capacitors" :[
-            "CAP+",
-            "CAP-"
+        "Input_Capacitors" :{
+             "CAP*"  : [
+                "CAP+",
+                "CAP-"
+            ],
+            "C1*" : [
+                "C1P",
+                "CIN",
+                "BS1"
+            ],
+            "C2*" : [
+                "C2P",
+                "C2N",
+                "BSP"
+            ]
+    
+        },
+
+        "EN" :[
+            "EN"
         ],
 
         "OSC" : [
@@ -18,22 +43,46 @@
 
         "LV*" : [
             "LV"
-        ]
+        ],
+        "GPIO" : [
+            "GPIO_0",
+            "GPIO_1"
+        ],
+        "Interface" : {
+            "I2C" :[
+                "SCL",
+                "SDA"
+            ]
+        }
 },
 
 
 
 "Right": {
 
-    "VOUT*" : [
+    "VOUT*" :{
+
+    "-pins" : [
         "VOUT"
     ],
+    "CORE" : [
+        "VCORE"
+    ]
+    },
     "NC*" : [
         "NC"
     ],
-    "GND*" : [
+    "GND*" : {
+      "-pins" :  [
         "GND"
     ],
+    "PGND*" : [
+        "PGND"
+    ],
+    "AGND" : [
+        "AGND"
+    ]
+    },
     "EPAD*" : [
         "EPAD",
         "PAD"
