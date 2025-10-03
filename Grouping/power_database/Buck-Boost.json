@@ -46,7 +46,8 @@
   },
   "EXT*": [
     "EXTBIAS",
-    "EXT_BOOST"
+    "EXT_BOOST",
+    "BOOST"
   ],
   "Enable": {
     "Enable": [

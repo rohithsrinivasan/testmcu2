@@ -1,0 +1,16 @@
+{
+    "priority_map": {
+
+        "Voltage_Input" : "LA",
+        "Input_Capacitors" : "LB",
+        "OSC" : "LC",
+        "LV*" : "LD",
+
+        "VOUT*" : "RA",
+        "NC*" : "RB",
+        "GND*" : "RC",
+        "EPAD*" : "RD"
+
+
+    }
+}

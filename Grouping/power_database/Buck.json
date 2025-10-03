@@ -318,7 +318,8 @@
     "GPI3",
     "GPIO",
     "GPIO1",
-    "GPIO2"
+    "GPIO2",
+    "GPIO3"
   ],
   "OFS*": {
     "-pins": [
@@ -426,6 +427,11 @@
       "PVCC3",
       "UVCC",
       "VCC",
+      "VCC0",
+      "VCC1",
+      "VCC2",
+      "VCC3",
+      "VCC4",
       "VCC5",
       "VCC5V",
       "VCCP",
@@ -662,7 +668,10 @@
     "-pins": [
       "CPGND",
       "GND",
-      "VGND"
+      "VGND",
+      "GND0",
+      "GND1",
+      "GND2"
     ],
     "Analog_Ground": [
       "AGND"
@@ -730,7 +739,8 @@
     "BOOST*": [
       "BOOST1",
       "BOOST2",
-      "BST"
+      "BST",
+      "BOOST"
     ],
     "BOOT*": [
       "BOOT",

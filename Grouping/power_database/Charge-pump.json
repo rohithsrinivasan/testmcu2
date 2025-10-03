@@ -1,0 +1,46 @@
+{
+
+
+    "Left"  : {
+
+        "Voltage_Input" : [
+            "V+"
+        ],
+
+        "Input_Capacitors" :[
+            "CAP+",
+            "CAP-"
+        ],
+
+        "OSC" : [
+            "OSC"
+        ],
+
+        "LV*" : [
+            "LV"
+        ]
+},
+
+
+
+"Right": {
+
+    "VOUT*" : [
+        "VOUT"
+    ],
+    "NC*" : [
+        "NC"
+    ],
+    "GND*" : [
+        "GND"
+    ],
+    "EPAD*" : [
+        "EPAD",
+        "PAD"
+    ]
+
+
+}
+}
+
+

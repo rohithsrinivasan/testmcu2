@@ -107,6 +107,7 @@ if 'pin_table' in st.session_state:
                 "Boost": 'Grouping/power_database/Boost.json',
                 "Buck-Boost": 'Grouping/power_database/Buck-Boost.json',
                 "LDO": 'Grouping/power_database/LDO.json',
+                "Charge-Pump" : 'Grouping/power_database/Charge-pump.json',
                 "FlyBack": 'Grouping/power_database/FlyBack.json',
                 "PMIC": 'Grouping/power_database/PMIC.json'
             }

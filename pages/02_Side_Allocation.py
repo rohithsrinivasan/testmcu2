@@ -68,6 +68,7 @@ if 'grouped_pin_table' in st.session_state:
             "Boost": "Side_Allocation/priority_map_boost.json",
             "LDO" : "Side_Allocation/priority_map_ldo.json",
             "Buck-Boost": "Side_Allocation/priority_map_buck-boost.json",
+            "Charge-Pump": "Side_Allocation/priority_map_charge-pump.json"
 
         }
     }
@@ -169,13 +170,16 @@ if 'grouped_pin_table' in st.session_state:
             # 1. Create a mask to filter rows based on a combination of conditions.
             # The 'Priority' must start with 'R'.
             # The 'Pin Display Name' must either end with a digit OR begin with 'ISEN' and have a digit in the second-to-last position.
-
             mask = (
                 side_added['Priority'].str.startswith('R', na=False) &
                 (
                     side_added['Pin Display Name'].str.match(r'.*\d$', na=False) |
                     (
                         side_added['Pin Display Name'].str.startswith('ISEN', na=False) &
+                        side_added['Pin Display Name'].str.get(-2).str.isdigit()
+                    ) |
+                    (
+                        side_added['Pin Display Name'].str.startswith('VSEN', na=False) &
                         side_added['Pin Display Name'].str.get(-2).str.isdigit()
                     )
                 )
@@ -188,7 +192,8 @@ if 'grouped_pin_table' in st.session_state:
                 # Extract the number based on which condition was met.
                 # The first pattern '(\d+)$' captures a number at the end of the string.
                 # The second pattern '^ISEN(\d)[A-Z]?$' captures the digit after 'ISEN' and before an optional letter.
-                match = re.search(r'(\d+)$', pin_name) or re.search(r'^ISEN(\d)[A-Z]?$', pin_name)
+                #match = re.search(r'(\d+)$', pin_name) or re.search(r'^ISEN(\d)[A-Z]?$', pin_name) or re.search(r'^VSEN(\d)[A-Z]?$', pin_name)
+                match = re.search(r'(\d+)$', pin_name) or re.search(r'^ISEN(\d).+$', pin_name) or re.search(r'^VSEN(\d).+$', pin_name)
                 
                 if match:
                     number = match.group(1)
