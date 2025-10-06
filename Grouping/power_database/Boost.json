@@ -65,7 +65,8 @@
         "DE"
     ],
     "ALERT" : [
-        "SALERT"
+        "SALERT",
+        "ALERT#"
     ]
   },
   "Timing": {

@@ -710,10 +710,15 @@
     "NC",
     "DNC"
   ],
-  "POK*": [
+  "POK*": {
+    "POK*" : [
     "POK1",
     "POK2"
   ],
+  "TERM*" : [
+    "TERM"
+  ]
+},
   "PWM_Signals": [
     "PWM",
     "PWM1",

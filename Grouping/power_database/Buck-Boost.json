@@ -19,6 +19,19 @@
     "ADP*": [
       "ADP"
     ],
+    "ADP-ACIN*" : [
+      "ACIN"
+    ],
+    "ACOK*" :[
+      "ACOK"
+    ],
+    "ALERT" : [
+    "SALERT",
+    "ALERT#"
+    ],
+    "-Enable-External-switch" : [
+      "ASGATE"
+    ],
     "Feedback": [
       "FB_IN"
     ],
@@ -42,7 +55,16 @@
     "Soft_Start": [
       "SS",
       "SS/TRK"
+    ],
+    "CSInput*": [
+      "CSIN",
+      "CSIP"
+    ],
+    "CMONInput*" :[
+      "AMON",
+      "BMON"
     ]
+
   },
   "EXT*": [
     "EXTBIAS",
@@ -90,6 +112,9 @@
     ],
     "RVSPG*": [
       "RVSPG"
+    ],
+    "OntheGo" : [
+      "OTGEN"
     ]
   },
   "Supply": {
@@ -176,9 +201,19 @@
     "CLKOUT/DITHER",
     "CLKOUT"
   ],
-  "Output_Voltage": [
-    "VOUT"
-  ],
+  "Output_Voltage": {
+      "-pins" :  [
+        "VOUT"
+      ],
+      "S1" : [
+        "VOUTS1"
+      ],
+      "S2" : [
+        "VOUTS2"
+      ]
+
+
+  },
   "Sense": {
     "CSO*": [
       "CSON",
@@ -203,10 +238,7 @@
       "CS+",
       "CS-"
     ],
-    "CSI*": [
-      "CSIN",
-      "CSIP"
-    ],
+
     "Current_Limit": [
       "ILIMIT"
     ],
@@ -227,9 +259,14 @@
       "PHASE2"
     ]
   },
-  "NC*" : [
+  "NC*" : {
+    "-pins" :[
     "NC"
+  ],
+  "RESERVED" :[
+    "RESERVED"
   ]
+}
 }
 
 
