@@ -72,6 +72,7 @@ if 'grouped_pin_table' in st.session_state:
 
         }
     }
+    mpu_splitting = "Side_Allocation/mpu_splitting.json"
 
     category = st.session_state.get('selected_category')
     #st.text(category)
@@ -114,17 +115,21 @@ if 'grouped_pin_table' in st.session_state:
                     st.session_state.strict_population = False
                 if 'balanced_assignment' not in st.session_state:
                     st.session_state.balanced_assignment = False
+                if 'MPU_type' not in st.session_state:
+                    st.session_state.MPU_type= False
 
                 # Toggle switches
                 strict_population = st.sidebar.toggle("Strict Population", value=st.session_state.strict_population,help="Enable strict population mode")
                 balanced_assignment = st.sidebar.toggle("Balanced Assignment", value=st.session_state.balanced_assignment,help="Enable balanced assignment mode")
+                MPU_type = st.sidebar.toggle("MPU Type", value=st.session_state.MPU_type, help= "Split tables based on Functional Grouping")
 
                 # Update session state
                 st.session_state.strict_population = strict_population
                 st.session_state.balanced_assignment = balanced_assignment
+                st.session_state.MPU_type = MPU_type
 
             #df_dict = part_division.partitioning(added_empty_side_column, Strict_Population = False, Balanced_Assignment= True)
-            df_dict = part_division.partitioning(added_empty_side_column, Strict_Population=st.session_state.strict_population, Balanced_Assignment=st.session_state.balanced_assignment)
+            df_dict = part_division.partitioning(added_empty_side_column,mpu_splitting, Strict_Population=st.session_state.strict_population, Balanced_Assignment=st.session_state.balanced_assignment , MPU_type = st.session_state.MPU_type )
             side_added_dict = side.side_for_multipart(df_dict)
             #st.text(f"Side Column Added")
             #for subheader, dataframe in side_added_dict.items():

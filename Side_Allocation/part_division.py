@@ -3,6 +3,7 @@ from .base_functions import power_pins_constaints
 from .base_functions import functional_block_constraints
 from .base_functions import general_constraints
 
+import json
 
 def filter_and_prepare_dataframe(df_last):
     """
@@ -75,148 +76,69 @@ def identify_unfilled_pins(df):
         raise
 
 
-'''
-def handle_special_pin_separation(unfilled_df, df):
-    """
-    Step 5: Handle GPIO/SDRB/DDR separation
-    """
-    gpio_parts = []
-    sdrb_parts = []
-    ddr_parts = []
-
-    lower_threshold = 10
-
-    try:
-        print("🎯 Step 5: Handling GPIO/SDRB/DDR separation...")
-
-        gpio_pins = unfilled_df[unfilled_df['Priority'].str.contains('GPIO_Pins', na=False)]
-        sdrb_pins = unfilled_df[unfilled_df['Priority'].str.contains('SDRB_Pins', na=False)]
-        ddr_pins  = unfilled_df[unfilled_df['Priority'].str.contains('DDR_Pins', na=False)]
-
-        print(f"🔍 GPIO pins found: {len(gpio_pins)}")
-        print(f"🔍 SDRB pins found: {len(sdrb_pins)}")
-        print(f"🔍 DDR pins found: {len(ddr_pins)}")
-
-        if len(gpio_pins) > lower_threshold:
-            print(f"🔄 Separating {len(gpio_pins)} GPIO pins (>40)")
-            gpio_parts = functional_block_constraints.test_one_GPIOcase(unfilled_df, df)
-            unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('GPIO_Pins', na=False)]
-            print(f"✅ GPIO separation complete: {len(gpio_parts)} parts")
-
-        if len(sdrb_pins) > lower_threshold:
-            print(f"🔄 Separating {len(sdrb_pins)} SDRB pins (>40)")
-            sdrb_parts = functional_block_constraints.test_two_SRDBcase(unfilled_df, df)
-            unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('SDRB_Pins', na=False)]
-            print(f"✅ SDRB separation complete: {len(sdrb_parts)} parts")
-
-        if len(ddr_pins) > lower_threshold:
-            print(f"🔄 Separating {len(ddr_pins)} DDR pins (>40)")
-            ddr_parts = functional_block_constraints.test_three_DDRcase(unfilled_df, df)
-            unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('DDR_Pins', na=False)]
-            print(f"✅ DDR separation complete: {len(ddr_parts)} parts")
-
-        print(f"✅ Step 5 Complete: {len(unfilled_df)} pins remaining for main processing")
-        return unfilled_df, gpio_parts, sdrb_parts, ddr_parts
-
-    except Exception as e:
-        print(f"❌ Step 5 FAILED: {e}")
-        raise
-    '''
-
 def handle_special_pin_separation(
     unfilled_df,
     df,
+    mpu_functional_groups,
     functional_separation=False,
     lower_threshold=8
 ):
-    """
-    Step 5: Handle special pin separations.
-    Always returns a fixed 6-tuple in this exact order:
-        (unfilled_df, gpio_parts, sdrb_parts, ddr_parts, csi_interface_parts, lvds_interface_parts)
+    core_groups = {
+        'GPIO Table': ('GPIO_Pins', functional_block_constraints.test_one_GPIOcase),
+        'SDRB Table': ('SDRB_Pins', functional_block_constraints.test_two_SRDBcase),
+        'DDR Table':  ('DDR_Pins',  functional_block_constraints.test_three_DDRcase),
+    }
 
-    Notes:
-    - gpio/sdrb/ddr behavior preserved.
-    - When functional_separation is True, also process CSI_Interface and LVDS_Interface.
-    - When functional_separation is False, csi_interface_parts and lvds_interface_parts are empty lists, preserving arity.
-    """
-    gpio_parts = []
-    sdrb_parts = []
-    ddr_parts = []
-    csi_interface_parts = []
-    lvds_interface_parts = []
+    # Load functional groups dynamically from JSON-loaded global dict
+    # Assumes variable `functional_groups` is loaded externally
+
+    parts_dict = {name: [] for name in core_groups.keys()}
+    for name in mpu_functional_groups.keys():
+        parts_dict[name] = []
 
     try:
-        print("🎯 Step 5: Handling GPIO/SDRB/DDR separation...")
+        print("🎯 Step 5: Handling pin separations...")
 
-        # Core masks
-        gpio_mask = unfilled_df['Priority'].str.contains('GPIO_Pins', na=False)
-        sdrb_mask = unfilled_df['Priority'].str.contains('SDRB_Pins', na=False)
-        ddr_mask  = unfilled_df['Priority'].str.contains('DDR_Pins',  na=False)
+        for table_name, (priority_key, handler_func) in core_groups.items():
+            mask = unfilled_df['Priority'].str.contains(priority_key, na=False)
+            pins = unfilled_df[mask]
+            print(f"🔍 {table_name} pins found: {len(pins)}")
+            if len(pins) > lower_threshold:
+                print(f"🔄 Separating {len(pins)} {table_name} pins")
+                parts_dict[table_name] = handler_func(unfilled_df, df)
+                unfilled_df = unfilled_df[~mask]
+                print(f"✅ {table_name} separation complete: {len(parts_dict[table_name])} parts")
 
-        gpio_pins = unfilled_df[gpio_mask]
-        sdrb_pins = unfilled_df[sdrb_mask]
-        ddr_pins  = unfilled_df[ddr_mask]
-
-        print(f"🔍 GPIO_Pins pins found: {len(gpio_pins)}")
-        print(f"🔍 SDRB_Pins pins found: {len(sdrb_pins)}")
-        print(f"🔍 DDR_Pins pins found: {len(ddr_pins)}")
-
-        if len(gpio_pins) > lower_threshold:
-            print(f"🔄 Separating {len(gpio_pins)} GPIO pins")
-            gpio_parts = functional_block_constraints.test_one_GPIOcase(unfilled_df, df)
-            unfilled_df = unfilled_df[~gpio_mask]
-            print(f"✅ GPIO separation complete: {len(gpio_parts)} parts")
-
-        if len(sdrb_pins) > lower_threshold:
-            print(f"🔄 Separating {len(sdrb_pins)} SDRB pins")
-            sdrb_parts = functional_block_constraints.test_two_SRDBcase(unfilled_df, df)
-            unfilled_df = unfilled_df[~sdrb_mask]
-            print(f"✅ SDRB separation complete: {len(sdrb_parts)} parts")
-
-        if len(ddr_pins) > lower_threshold:
-            print(f"🔄 Separating {len(ddr_pins)} DDR pins")
-            ddr_parts = functional_block_constraints.test_three_DDRcase(unfilled_df, df)
-            unfilled_df = unfilled_df[~ddr_mask]
-            print(f"✅ DDR separation complete: {len(ddr_parts)} parts")
-
-        # Optional functional separation
         if functional_separation:
-            #print(f"🎯 Step 5a: {unfilled_df['Priority'].unique()}")
-
-            # CSI_Interface
-            csi_mask = unfilled_df['Priority'].str.contains('CSI Interface', na=False)
-            csi_pins = unfilled_df[csi_mask]
-            print(f"🔍 CSI Interface pins found: {len(csi_pins)}")
-            if len(csi_pins) > lower_threshold:
-                print(f"🔄 Separating {len(csi_pins)} CSI Interface pins")
-                csi_interface_parts = _generic_interface_handler(unfilled_df, df, csi_mask, "CSI Interface")
-                unfilled_df = unfilled_df[~csi_mask]
-                print(f"✅ CSI Interface separation complete: {len(csi_interface_parts)} parts")
-
-            # LVDS_Interface
-            lvds_mask = unfilled_df['Priority'].str.contains('LVDS Interface', na=False)
-            lvds_pins = unfilled_df[lvds_mask]
-            print(f"🔍 LVDS Interface pins found: {len(lvds_pins)}")
-            if len(lvds_pins) > lower_threshold:
-                print(f"🔄 Separating {len(lvds_pins)} LVDS Interface pins")
-                lvds_interface_parts = _generic_interface_handler(unfilled_df, df, lvds_mask, "LVDS Interface")
-                unfilled_df = unfilled_df[~lvds_mask]
-                print(f"✅ LVDS Interface separation complete: {len(lvds_interface_parts)} parts")
+            for table_name, priority_key in mpu_functional_groups.items():
+                mask = unfilled_df['Priority'].str.contains(priority_key, na=False)
+                pins = unfilled_df[mask]
+                print(f"🔍 {table_name} pins found: {len(pins)}")
+                if len(pins) > lower_threshold:
+                    print(f"🔄 Separating {len(pins)} {table_name} pins")
+                    parts_dict[table_name] = _generic_interface_handler(unfilled_df, df, mask, priority_key)
+                    unfilled_df = unfilled_df[~mask]
+                    print(f"✅ {table_name} separation complete: {len(parts_dict[table_name])} parts")
 
         print(f"✅ Step 5 Complete: {len(unfilled_df)} pins remaining for main processing")
-        # Fixed 6-tuple to avoid unpacking errors regardless of flag settings
-        return (
+
+        # Build return tuple starting with fixed core + dynamic functional parts in order
+        ret = [
             unfilled_df,
-            gpio_parts,
-            sdrb_parts,
-            ddr_parts,
-            csi_interface_parts,
-            lvds_interface_parts,
-        )
+            parts_dict.get('GPIO Table', []),
+            parts_dict.get('SDRB Table', []),
+            parts_dict.get('DDR Table', [])
+        ]
+        # Append functional parts in JSON order to maintain consistency
+        for table_name in mpu_functional_groups.keys():
+            ret.append(parts_dict.get(table_name, []))
+
+        return tuple(ret)
 
     except Exception as e:
         print(f"❌ Step 5 FAILED: {e}")
         raise
+
 
 
 def _generic_interface_handler(unfilled_df, df, mask, interface_name):
@@ -309,60 +231,6 @@ def process_main_parts(unfilled_df, Strict_Population, Balanced_Assignment):
         raise
 
 
-'''def build_result_dictionary(power_parts, main_parts, gpio_parts, sdrb_parts, ddr_parts):
-    """
-    Step 7: Build final dictionary
-    """
-    try:
-        print("🏗️ Step 7: Building result dictionary...")
-        df_dict = {}
-        
-        # Add power tables
-        for i, power_part in enumerate(power_parts):
-            if not power_part.empty:
-                if len(power_parts) == 1:
-                    df_dict['Power Table'] = power_part
-                    print(f"📦 Added Power Table: {len(power_part)} rows")
-                else:
-                    df_dict[f'Power Table - {i+1}'] = power_part
-                    print(f"📦 Added Power Table - {i+1}: {len(power_part)} rows")
-        
-        # Add main parts
-        for i, main_part in enumerate(main_parts):
-            if not main_part.empty:
-                if any(main_part['Priority'].str.startswith('P_Port', na=False)):
-                    df_dict[f'Port Table - {i+1}'] = main_part
-                    print(f"📦 Added Port Table - {i+1}: {len(main_part)} rows")
-                else:
-                    df_dict[f'Part Table - {i+1}'] = main_part
-                    print(f"📦 Added Part Table - {i+1}: {len(main_part)} rows")
-        
-        # Add GPIO tables
-        for i, gpio_part in enumerate(gpio_parts):
-            if not gpio_part.empty:
-                df_dict[f'GPIO Table - {i+1}'] = gpio_part
-                print(f"📦 Added GPIO Table - {i+1}: {len(gpio_part)} rows")
-        
-        # Add SDRB tables
-        for i, sdrb_part in enumerate(sdrb_parts):
-            if not sdrb_part.empty:
-                df_dict[f'SDRB Table - {i+1}'] = sdrb_part
-                print(f"📦 Added SDRB Table - {i+1}: {len(sdrb_part)} rows")
-
-        # Add DDR tables
-        for i, ddr_part in enumerate(ddr_parts):
-            if not ddr_part.empty:
-                df_dict[f'DDR Table - {i+1}'] = ddr_part
-                print(f"📦 Added DDR Table - {i+1}: {len(ddr_part)} rows")
-        
-        print(f"✅ Step 7 Complete: {len(df_dict)} tables in final dictionary")
-        return df_dict
-
-    except Exception as e:
-        print(f"❌ Step 7 FAILED: {e}")
-        raise'''
-
-
 def build_result_dictionary(
     power_parts,
     main_parts,
@@ -371,22 +239,15 @@ def build_result_dictionary(
     ddr_parts,
     csi_interface_parts=None,
     lvds_interface_parts=None,
+    **extra_parts  # catch additional dynamic tables here
 ):
-    """
-    Step 7: Build final dictionary.
-
-    Accepts additional optional parts for CSI_Interface and LVDS_Interface.
-    If those are None, they are treated as empty lists.
-    """
     try:
         print("🏗️ Step 7: Building result dictionary...")
         df_dict = {}
 
-        # Normalize optional lists
         csi_interface_parts = csi_interface_parts or []
         lvds_interface_parts = lvds_interface_parts or []
 
-        # Helper to add a list of DataFrames under a base label
         def _add_parts(parts_list, base_label):
             for i, part in enumerate(parts_list):
                 if hasattr(part, "empty") and not part.empty:
@@ -394,29 +255,26 @@ def build_result_dictionary(
                     df_dict[key] = part
                     print(f"📦 Added {key}: {len(part)} rows")
 
-        # Power tables
         _add_parts(power_parts, "Power Table")
 
-        # Main parts: decide Port Table vs Part Table by Priority prefix
         for i, main_part in enumerate(main_parts):
             if hasattr(main_part, "empty") and not main_part.empty:
                 if any(main_part['Priority'].str.startswith('P_Port', na=False)):
-                    key = f"Port Table - {i+1}"
-                    df_dict[key] = main_part
-                    print(f"📦 Added {key}: {len(main_part)} rows")
+                    df_dict[f"Port Table - {i+1}"] = main_part
                 else:
-                    key = f"Part Table - {i+1}"
-                    df_dict[key] = main_part
-                    print(f"📦 Added {key}: {len(main_part)} rows")
+                    df_dict[f"Part Table - {i+1}"] = main_part
 
-        # GPIO / SDRB / DDR
         _add_parts(gpio_parts, "GPIO Table")
         _add_parts(sdrb_parts, "SDRB Table")
         _add_parts(ddr_parts, "DDR Table")
 
-        # New: CSI / LVDS
+        # Known functional parts handled explicitly for backward compatibility
         _add_parts(csi_interface_parts, "CSI Interface Table")
         _add_parts(lvds_interface_parts, "LVDS Interface Table")
+
+        # Add all extra dynamic parts passed in kwargs
+        for key, parts_list in extra_parts.items():
+            _add_parts(parts_list, key.replace('_parts', '').replace('_', ' ').title())
 
         print(f"✅ Step 7 Complete: {len(df_dict)} tables in final dictionary")
         return df_dict
@@ -451,11 +309,15 @@ def validate_final_results(df_dict, original_df):
         raise
 
 
-def partitioning(df_last, Strict_Population,Balanced_Assignment):
+def partitioning(df_last, json_file_path , Strict_Population,Balanced_Assignment, MPU_type):
     """
     Main partitioning function - orchestrates the entire process
     """
     print("🚀 === PARTITIONING START ===")
+    # Step 0: Read json
+    with open(json_file_path, 'r') as f:
+        functional_groups = json.load(f)
+
     
     # Step 1: Filter and prepare DataFrame
     df = filter_and_prepare_dataframe(df_last)
@@ -469,17 +331,38 @@ def partitioning(df_last, Strict_Population,Balanced_Assignment):
     # Step 5: Handle special pin separation (GPIO/SDRB/DDR)
     #unfilled_df, gpio_parts, sdrb_parts, ddr_parts = handle_special_pin_separation(unfilled_df, df)
 
-    unfilled_df, gpio_parts, sdrb_parts, ddr_parts, csi_interface_parts, lvds_interface_parts = handle_special_pin_separation(
-        unfilled_df, df, functional_separation=True
-    )
+    results = handle_special_pin_separation(unfilled_df, df, functional_groups, MPU_type)
 
+    # Unpack known core parts explicitly:
+    unfilled_df = results[0]
+    gpio_parts = results[1]
+    sdrb_parts = results[2]
+    ddr_parts = results[3]
 
+    
     # Step 6: Process main parts
     main_parts = process_main_parts(unfilled_df, Strict_Population,Balanced_Assignment)
-    
+
+    # Dynamically assign extra parts based on your json order:
+    functional_keys = list(functional_groups.keys())  # ['CSI Interface Table', 'LVDS Interface Table', ...]
+    extra_parts = results[4:]  # remaining tuple parts
+
+    # Map dynamic parts by name:
+    dynamic_parts_dict = dict(zip(functional_keys, extra_parts))
+
     # Step 7: Build result dictionary
-    df_dict = build_result_dictionary(power_parts, main_parts, gpio_parts, sdrb_parts, ddr_parts, csi_interface_parts, lvds_interface_parts)
-    
+    # Pass dynamic parts to build_result_dictionary using argument unpacking
+    df_dict = build_result_dictionary(
+        power_parts,
+        main_parts,
+        gpio_parts,
+        sdrb_parts,
+        ddr_parts,
+        csi_interface_parts=dynamic_parts_dict.get('CSI Interface Table', []),
+        lvds_interface_parts=dynamic_parts_dict.get('LVDS Interface Table', []),
+        **{k.lower().replace(' ', '_') + "_parts": v for k, v in dynamic_parts_dict.items() if k not in ['CSI Interface Table', 'LVDS Interface Table']}
+    )
+       
     # Step 8: Validate results
     validate_final_results(df_dict, df)
     

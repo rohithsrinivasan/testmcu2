@@ -1,0 +1,12 @@
+{
+    "CSI Interface Table": "CSI Interface",
+    "LVDS Interface Table": "LVDS Interface",
+    "Display Unit Table": "Display Unit",
+    "DIGRF Interface Table": "DIGRF Interface",
+    "USB Interface Table": "USB",
+    "QSPI Interface Table" : "QSPI*", 
+    "DBSC3 Table" : "DBSC3",
+    "VI Table" : "VI_*",
+    "Ethernet Table" : "Ethernet",
+    "Address Bit Table" : "Address Bit"
+}
