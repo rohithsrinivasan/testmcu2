@@ -75,6 +75,7 @@ def identify_unfilled_pins(df):
         raise
 
 
+'''
 def handle_special_pin_separation(unfilled_df, df):
     """
     Step 5: Handle GPIO/SDRB/DDR separation
@@ -82,6 +83,8 @@ def handle_special_pin_separation(unfilled_df, df):
     gpio_parts = []
     sdrb_parts = []
     ddr_parts = []
+
+    lower_threshold = 10
 
     try:
         print("🎯 Step 5: Handling GPIO/SDRB/DDR separation...")
@@ -94,19 +97,19 @@ def handle_special_pin_separation(unfilled_df, df):
         print(f"🔍 SDRB pins found: {len(sdrb_pins)}")
         print(f"🔍 DDR pins found: {len(ddr_pins)}")
 
-        if len(gpio_pins) > 40:
+        if len(gpio_pins) > lower_threshold:
             print(f"🔄 Separating {len(gpio_pins)} GPIO pins (>40)")
             gpio_parts = functional_block_constraints.test_one_GPIOcase(unfilled_df, df)
             unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('GPIO_Pins', na=False)]
             print(f"✅ GPIO separation complete: {len(gpio_parts)} parts")
 
-        if len(sdrb_pins) > 40:
+        if len(sdrb_pins) > lower_threshold:
             print(f"🔄 Separating {len(sdrb_pins)} SDRB pins (>40)")
             sdrb_parts = functional_block_constraints.test_two_SRDBcase(unfilled_df, df)
             unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('SDRB_Pins', na=False)]
             print(f"✅ SDRB separation complete: {len(sdrb_parts)} parts")
 
-        if len(ddr_pins) > 40:
+        if len(ddr_pins) > lower_threshold:
             print(f"🔄 Separating {len(ddr_pins)} DDR pins (>40)")
             ddr_parts = functional_block_constraints.test_three_DDRcase(unfilled_df, df)
             unfilled_df = unfilled_df[~unfilled_df['Priority'].str.contains('DDR_Pins', na=False)]
@@ -118,6 +121,130 @@ def handle_special_pin_separation(unfilled_df, df):
     except Exception as e:
         print(f"❌ Step 5 FAILED: {e}")
         raise
+    '''
+
+def handle_special_pin_separation(
+    unfilled_df,
+    df,
+    functional_separation=False,
+    lower_threshold=8
+):
+    """
+    Step 5: Handle special pin separations.
+    Always returns a fixed 6-tuple in this exact order:
+        (unfilled_df, gpio_parts, sdrb_parts, ddr_parts, csi_interface_parts, lvds_interface_parts)
+
+    Notes:
+    - gpio/sdrb/ddr behavior preserved.
+    - When functional_separation is True, also process CSI_Interface and LVDS_Interface.
+    - When functional_separation is False, csi_interface_parts and lvds_interface_parts are empty lists, preserving arity.
+    """
+    gpio_parts = []
+    sdrb_parts = []
+    ddr_parts = []
+    csi_interface_parts = []
+    lvds_interface_parts = []
+
+    try:
+        print("🎯 Step 5: Handling GPIO/SDRB/DDR separation...")
+
+        # Core masks
+        gpio_mask = unfilled_df['Priority'].str.contains('GPIO_Pins', na=False)
+        sdrb_mask = unfilled_df['Priority'].str.contains('SDRB_Pins', na=False)
+        ddr_mask  = unfilled_df['Priority'].str.contains('DDR_Pins',  na=False)
+
+        gpio_pins = unfilled_df[gpio_mask]
+        sdrb_pins = unfilled_df[sdrb_mask]
+        ddr_pins  = unfilled_df[ddr_mask]
+
+        print(f"🔍 GPIO_Pins pins found: {len(gpio_pins)}")
+        print(f"🔍 SDRB_Pins pins found: {len(sdrb_pins)}")
+        print(f"🔍 DDR_Pins pins found: {len(ddr_pins)}")
+
+        if len(gpio_pins) > lower_threshold:
+            print(f"🔄 Separating {len(gpio_pins)} GPIO pins")
+            gpio_parts = functional_block_constraints.test_one_GPIOcase(unfilled_df, df)
+            unfilled_df = unfilled_df[~gpio_mask]
+            print(f"✅ GPIO separation complete: {len(gpio_parts)} parts")
+
+        if len(sdrb_pins) > lower_threshold:
+            print(f"🔄 Separating {len(sdrb_pins)} SDRB pins")
+            sdrb_parts = functional_block_constraints.test_two_SRDBcase(unfilled_df, df)
+            unfilled_df = unfilled_df[~sdrb_mask]
+            print(f"✅ SDRB separation complete: {len(sdrb_parts)} parts")
+
+        if len(ddr_pins) > lower_threshold:
+            print(f"🔄 Separating {len(ddr_pins)} DDR pins")
+            ddr_parts = functional_block_constraints.test_three_DDRcase(unfilled_df, df)
+            unfilled_df = unfilled_df[~ddr_mask]
+            print(f"✅ DDR separation complete: {len(ddr_parts)} parts")
+
+        # Optional functional separation
+        if functional_separation:
+            #print(f"🎯 Step 5a: {unfilled_df['Priority'].unique()}")
+
+            # CSI_Interface
+            csi_mask = unfilled_df['Priority'].str.contains('CSI Interface', na=False)
+            csi_pins = unfilled_df[csi_mask]
+            print(f"🔍 CSI Interface pins found: {len(csi_pins)}")
+            if len(csi_pins) > lower_threshold:
+                print(f"🔄 Separating {len(csi_pins)} CSI Interface pins")
+                csi_interface_parts = _generic_interface_handler(unfilled_df, df, csi_mask, "CSI Interface")
+                unfilled_df = unfilled_df[~csi_mask]
+                print(f"✅ CSI Interface separation complete: {len(csi_interface_parts)} parts")
+
+            # LVDS_Interface
+            lvds_mask = unfilled_df['Priority'].str.contains('LVDS Interface', na=False)
+            lvds_pins = unfilled_df[lvds_mask]
+            print(f"🔍 LVDS Interface pins found: {len(lvds_pins)}")
+            if len(lvds_pins) > lower_threshold:
+                print(f"🔄 Separating {len(lvds_pins)} LVDS Interface pins")
+                lvds_interface_parts = _generic_interface_handler(unfilled_df, df, lvds_mask, "LVDS Interface")
+                unfilled_df = unfilled_df[~lvds_mask]
+                print(f"✅ LVDS Interface separation complete: {len(lvds_interface_parts)} parts")
+
+        print(f"✅ Step 5 Complete: {len(unfilled_df)} pins remaining for main processing")
+        # Fixed 6-tuple to avoid unpacking errors regardless of flag settings
+        return (
+            unfilled_df,
+            gpio_parts,
+            sdrb_parts,
+            ddr_parts,
+            csi_interface_parts,
+            lvds_interface_parts,
+        )
+
+    except Exception as e:
+        print(f"❌ Step 5 FAILED: {e}")
+        raise
+
+
+def _generic_interface_handler(unfilled_df, df, mask, interface_name):
+    """
+    Generic handler that mirrors 40<cnt<80 side assignment else split into parts.
+    """
+    pins_df = unfilled_df[mask]
+    if pins_df.empty:
+        print(f"No {interface_name} pins found — passing for now.")
+        return []
+
+    count = len(pins_df)
+    print(f"Found {count} {interface_name} pins")
+
+    if 40 < count < 80:
+        port_df_side_added = general_constraints.side_for_one_symbol(pins_df)
+        df.loc[pins_df.index, 'Side'] = port_df_side_added['Side'].values
+        return [port_df_side_added]
+    else:
+        n_parts_needed = (len(pins_df) + 79) // 80  # ceiling for 80 rows
+        parts = general_constraints.split_into_n_parts(
+            pins_df,
+            n_parts_needed,
+            max_rows=80,
+            Strict_Population=False,
+            Balanced_Assignment=False
+        )
+        return parts
 
 
 def process_main_parts(unfilled_df, Strict_Population, Balanced_Assignment):
@@ -182,7 +309,7 @@ def process_main_parts(unfilled_df, Strict_Population, Balanced_Assignment):
         raise
 
 
-def build_result_dictionary(power_parts, main_parts, gpio_parts, sdrb_parts, ddr_parts):
+'''def build_result_dictionary(power_parts, main_parts, gpio_parts, sdrb_parts, ddr_parts):
     """
     Step 7: Build final dictionary
     """
@@ -233,7 +360,71 @@ def build_result_dictionary(power_parts, main_parts, gpio_parts, sdrb_parts, ddr
 
     except Exception as e:
         print(f"❌ Step 7 FAILED: {e}")
+        raise'''
+
+
+def build_result_dictionary(
+    power_parts,
+    main_parts,
+    gpio_parts,
+    sdrb_parts,
+    ddr_parts,
+    csi_interface_parts=None,
+    lvds_interface_parts=None,
+):
+    """
+    Step 7: Build final dictionary.
+
+    Accepts additional optional parts for CSI_Interface and LVDS_Interface.
+    If those are None, they are treated as empty lists.
+    """
+    try:
+        print("🏗️ Step 7: Building result dictionary...")
+        df_dict = {}
+
+        # Normalize optional lists
+        csi_interface_parts = csi_interface_parts or []
+        lvds_interface_parts = lvds_interface_parts or []
+
+        # Helper to add a list of DataFrames under a base label
+        def _add_parts(parts_list, base_label):
+            for i, part in enumerate(parts_list):
+                if hasattr(part, "empty") and not part.empty:
+                    key = f"{base_label} - {i+1}" if len(parts_list) > 1 else base_label
+                    df_dict[key] = part
+                    print(f"📦 Added {key}: {len(part)} rows")
+
+        # Power tables
+        _add_parts(power_parts, "Power Table")
+
+        # Main parts: decide Port Table vs Part Table by Priority prefix
+        for i, main_part in enumerate(main_parts):
+            if hasattr(main_part, "empty") and not main_part.empty:
+                if any(main_part['Priority'].str.startswith('P_Port', na=False)):
+                    key = f"Port Table - {i+1}"
+                    df_dict[key] = main_part
+                    print(f"📦 Added {key}: {len(main_part)} rows")
+                else:
+                    key = f"Part Table - {i+1}"
+                    df_dict[key] = main_part
+                    print(f"📦 Added {key}: {len(main_part)} rows")
+
+        # GPIO / SDRB / DDR
+        _add_parts(gpio_parts, "GPIO Table")
+        _add_parts(sdrb_parts, "SDRB Table")
+        _add_parts(ddr_parts, "DDR Table")
+
+        # New: CSI / LVDS
+        _add_parts(csi_interface_parts, "CSI Interface Table")
+        _add_parts(lvds_interface_parts, "LVDS Interface Table")
+
+        print(f"✅ Step 7 Complete: {len(df_dict)} tables in final dictionary")
+        return df_dict
+
+    except Exception as e:
+        print(f"❌ Step 7 FAILED: {e}")
         raise
+
 
 
 def validate_final_results(df_dict, original_df):
@@ -276,13 +467,18 @@ def partitioning(df_last, Strict_Population,Balanced_Assignment):
     unfilled_df = identify_unfilled_pins(df)
     
     # Step 5: Handle special pin separation (GPIO/SDRB/DDR)
-    unfilled_df, gpio_parts, sdrb_parts, ddr_parts = handle_special_pin_separation(unfilled_df, df)
-    
+    #unfilled_df, gpio_parts, sdrb_parts, ddr_parts = handle_special_pin_separation(unfilled_df, df)
+
+    unfilled_df, gpio_parts, sdrb_parts, ddr_parts, csi_interface_parts, lvds_interface_parts = handle_special_pin_separation(
+        unfilled_df, df, functional_separation=True
+    )
+
+
     # Step 6: Process main parts
     main_parts = process_main_parts(unfilled_df, Strict_Population,Balanced_Assignment)
     
     # Step 7: Build result dictionary
-    df_dict = build_result_dictionary(power_parts, main_parts, gpio_parts, sdrb_parts, ddr_parts)
+    df_dict = build_result_dictionary(power_parts, main_parts, gpio_parts, sdrb_parts, ddr_parts, csi_interface_parts, lvds_interface_parts)
     
     # Step 8: Validate results
     validate_final_results(df_dict, df)

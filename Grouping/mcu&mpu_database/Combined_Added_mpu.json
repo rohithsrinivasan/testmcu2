@@ -408,6 +408,7 @@
             "MA12",
             "MA13",
             "MA14",
+            "MA15",
             "MA2",
             "MA3",
             "MA4",
@@ -2413,6 +2414,10 @@
             "SCL1",
             "SDA1"
         ],
+        "I2C_2": [
+            "SCL2",
+            "SDA2"
+        ],
         "I2C_3": [
             "SWCLK",
             "SWDIO"
@@ -3280,7 +3285,8 @@
                 "A2VSS(N.C.)"
             ],
                         "ADC_VSS": [
-                "ADAVSS18"
+                "ADAVSS18",
+                "VSS_ADC"
             ],
             "DIGRF_PLL_VSS": [
                 "DIGRF_PLL_VSS"
@@ -3492,6 +3498,11 @@
             ],
             "VSS-CPG": [
                 "VSS-CPG"
+            ],
+            "VSS-CPGPLL" : [
+                "VSS_CPGPLL0",
+                "VSS_CPGPLL1",
+                "VSS_CPGPLL2"
             ],
             "VSS-NC": [
                 "VSS (N.C.)",
@@ -6556,6 +6567,11 @@
                 "VDD-CPG",
                 "VDD-CPG(3.3V)"
             ],
+            "VDD-CPGPLL" : [
+                "VDD18_CPGPLL0",
+                "VDD18_CPGPLL1",
+                "VDD18_CPGPLL2"
+            ], 
             "VDD-DDR": [
                 "VDD-DDR"
             ],
@@ -6742,6 +6758,9 @@
             ],
             "VTHREF": [
                 "VTHREF"
+            ],
+            "VTHSENSE" : [
+                "VTHSENSE"
             ],
             "VREFI": [
                 "VREFI"
@@ -7988,8 +8007,7 @@
         "VI1_4_A",
         "VI1_5_A",
         "VI1_6_A",
-        "VI1_7_A",
-        "VI1_CLK_A"
+        "VI1_7_A"
     ],
     "VI0_DATA": [
         "VI0_DATA0",
@@ -8005,12 +8023,35 @@
         "VI0_DATA10",
         "VI0_DATA11"
       ],
+      "VI1_DATA": [
+        "VI1_DATA0",
+        "VI1_DATA1",
+        "VI1_DATA2",
+        "VI1_DATA3",
+        "VI1_DATA4",
+        "VI1_DATA5",
+        "VI1_DATA6",
+        "VI1_DATA7",
+        "VI1_DATA8",
+        "VI1_DATA9",
+        "VI1_DATA10",
+        "VI1_DATA11"
+      ],
+
       "VI0_*": [
         "VI0_CLK",
         "VI0_CLKENB",
         "VI0_FIELD",
         "VI0_HSYNC#",
         "VI0_VSYNC#"
+      ],
+      "VI1_Control*": [
+        "VI1_CLK",
+        "VI1_CLKENB",
+        "VI1_FIELD",
+        "VI1_HSYNC#",
+        "VI1_VSYNC#",
+        "VI1_CLK_A"
       ]
     },
     "VMONOUT": [

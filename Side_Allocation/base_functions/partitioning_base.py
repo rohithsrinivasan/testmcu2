@@ -74,7 +74,7 @@ def identify_unfilled_pins(df):
         print(f"❌ Step 3 FAILED: {e}")
         raise
 
-
+'''
 def handle_special_pin_separation(unfilled_df, df):
     """
     Step 5: Handle GPIO/SDRB/DDR separation
@@ -115,6 +115,59 @@ def handle_special_pin_separation(unfilled_df, df):
         print(f"✅ Step 5 Complete: {len(unfilled_df)} pins remaining for main processing")
         return unfilled_df, gpio_parts, sdrb_parts, ddr_parts
 
+    except Exception as e:
+        print(f"❌ Step 5 FAILED: {e}")
+        raise
+        
+'''
+
+def handle_special_pin_separation(unfilled_df, df, functional_separation=False):
+    """
+    Step 5: Handle special pin separations, flexible for interface types
+    """
+    print("🎯 Step 5: Handling Special Interface Separations...")
+
+    # List all interface types needing splitting
+    interface_types = [
+        ('GPIO_Pins', functional_block_constraints.test_one_GPIOcase),
+        ('SDRB_Pins', functional_block_constraints.test_two_SRDBcase),
+        ('DDR_Pins', functional_block_constraints.test_three_DDRcase),
+    ]
+    # Add dynamically if functional separation is enabled
+    if functional_separation:
+        interface_types += [
+            ('CSI_Interface', functional_block_constraints.generic_handler_function),
+            ('LVDS_Interface', functional_block_constraints.generic_handler_function),
+            ('Display_Unit', functional_block_constraints.generic_handler_function),
+            ('QSPI', functional_block_constraints.generic_handler_function),  # Use 'QSPI' to match any QSPI*
+        ]
+    # Results for each group, dictionary for clarity
+    results = {name: [] for name, _ in interface_types}
+
+    try:
+        lower_threshold = 10
+
+        for interface_name, handler_func in interface_types:
+            # For QSPI wildcard, match all QSPI*
+            if interface_name == 'QSPI':
+                mask = unfilled_df['Priority'].str.match(r'QSPI', na=False)
+            else:
+                mask = unfilled_df['Priority'].str.contains(interface_name, na=False)
+
+            pins_df = unfilled_df[mask]
+            print(f"🔍 {interface_name} pins found: {len(pins_df)}")
+
+            if len(pins_df) > lower_threshold:
+                print(f"🔄 Separating {len(pins_df)} {interface_name} pins")
+                # Call the specialized or generic handler
+                part_list = handler_func(unfilled_df, df, interface_name)
+                results[interface_name] = part_list
+                # Remove these pins from unfilled as they are now handled
+                unfilled_df = unfilled_df[~mask]
+                print(f"✅ {interface_name} separation complete: {len(part_list)} parts")
+        print(f"✅ Step 5 Complete: {len(unfilled_df)} pins remaining for main processing")
+        # You can return the dict, or unpack for backwards compatibility
+        return (unfilled_df,) + tuple(results[name] for name, _ in interface_types)
     except Exception as e:
         print(f"❌ Step 5 FAILED: {e}")
         raise
