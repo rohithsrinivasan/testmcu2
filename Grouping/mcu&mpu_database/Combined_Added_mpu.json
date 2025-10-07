@@ -1045,16 +1045,6 @@
         "SDCLK": [
             "SDCLK"
         ],
-        "USB_X": [
-            "USB_X1",
-            "USB_X2"
-        ],
-        "USB_XTAL": [
-            "USBEXTAL",
-            "USBXTAL",
-            "USB_EXTAL",
-            "USB_XTAL"
-        ],
         "AX*": [
             "X1",
             "X1[CL1]",
@@ -1318,13 +1308,71 @@
                 "CSI1_DATA3P"
             ]
         },
-        "VDD": {
+
+
+        "CSI1_DATA_0": {
+            "Diff Pair": [
+            "CSI1_DATAN0",
+            "CSI1_DATAP0"
+            ]
+        },
+        "CSI1_DATA_1": {
+            "Diff Pair": [
+            "CSI1_DATAN1",
+            "CSI1_DATAP1"
+            ]
+        },
+        "CSI1_REXT": {
+            "Single": [
+            "CSI1_REXT"
+            ]
+        },
+        "CSI2_DATA0a": {
+            "Diff Pair": [
+            "CSI2_DATAN0",
+            "CSI2_DATAP0"
+            ]
+        },
+        "CSI2_DATA1a": {
+            "Diff Pair": [
+            "CSI2_DATAN1",
+            "CSI2_DATAP1"
+            ]
+        },
+        "CSI2_DATA2a": {
+            "Diff Pair": [
+            "CSI2_DATAN2",
+            "CSI2_DATAP2"
+            ]
+        },
+        "CSI2_DATA3a": {
+            "Diff Pair": [
+            "CSI2_DATAN3",
+            "CSI2_DATAP3"
+            ]
+        },
+        "CSI2_REXT": {
+            "Single": [
+            "CSI2_REXT"
+            ]
+        },
+        "A-VDD": {
             "CSI1_MSVDD0P8": [
                 "CSI1_MSVDD0P8"
             ],
             "CSI2_MSVDD0P8": [
                 "CSI2_MSVDD0P8"
-            ]
+            ],
+            "VDDQ": [
+                "VDDQ18_CSI1",
+                "VDDQ18_CSI2"
+            ],
+            "VDD09" : [
+                "VDD09_CSI0",
+                "VDD09_CSI1",
+                "VDD09_CSI2"
+            ]                
+
         },
         "CSI2_CLK": {
             "Diff Pair": [
@@ -1408,7 +1456,13 @@
         ],
         "DU_DOTCLK": [
             "DU_DOTCLKIN",
-            "DU_DOTCLKOUT"
+            "DU_DOTCLKOUT",
+            "DU_DOTCLKIN0",
+            "DU_DOTCLKIN1",
+            "DU_DOTCLKIN2",
+            "DU_DOTCLKIN3"
+
+
         ],
         "DU_DR*": {
             "DU_DR*": [
@@ -1564,7 +1618,38 @@
             ],
             "AVB0_TXCREFCLK": [
                 "AVB0_TXCREFCLK"
+            ],
+            "AVB_MDIO": [
+                "AVB_MDIO"
+            ],
+            "AVB_RXD": [
+                "AVB_RD0",
+                "AVB_RD1",
+                "AVB_RD2",
+                "AVB_RD3"
+            ],
+            "AVB_RX_CTL": [
+                "AVB_RX_CTL"
+            ],
+            "AVB_RXC": [
+                "AVB_RXC"
+            ],
+            "AVB_TXD": [
+                "AVB_TD0",
+                "AVB_TD1",
+                "AVB_TD2",
+                "AVB_TD3"
+            ],
+            "AVB_TX_CTL": [
+                "AVB_TX_CTL"
+            ],
+            "AVB_TXC": [
+                "AVB_TXC"
+            ],
+            "AVB_TXCREFCLK": [
+                "AVB_TXCREFCLK"
             ]
+
         },
         "ET0*": {
             "ET0_COL": [
@@ -1659,7 +1744,10 @@
             "ET1_TXER": [
                 "ET1_TXER"
             ]
-        }
+        },
+        "A-ETH-VDDQ" : [
+            "VDDQ25_ETH"
+        ]
     },
     "HDMI Interface": {
         "HD Control": {
@@ -1690,7 +1778,71 @@
                 "HDTXCM",
                 "HDTXCP"
             ]
+        },
+        "A-VDDQ18": [
+            "VDDQ18_HDMI0",
+            "VDDQ18_HDMI1"
+            ],
+
+        "HDMI0": {
+            "HPD": ["HDMI0_HPD"],
+            "RREF": ["HDMI0_RREF"],
+            "I2C": [
+            "HDMI0_SCL",
+            "HDMI0_SDA"
+            ],
+            "TMDS_CLK": [
+            "HDMI0_TMDSCLKN",
+            "HDMI0_TMDSCLKP"
+            ],
+            "TMDS_DATA": {
+            "N": [
+                "HDMI0_TMDSDATAN0",
+                "HDMI0_TMDSDATAN1",
+                "HDMI0_TMDSDATAN2"
+            ],
+            "P": [
+                "HDMI0_TMDSDATAP0",
+                "HDMI0_TMDSDATAP1",
+                "HDMI0_TMDSDATAP2"
+            ]
+            },
+            "A-VDD" : {
+                "0" : [
+                "VDDQ09_HDMI0",
+                "VDDQ09_HDMI0"
+                ],
+                "1" : [
+                "VDDQ09_HDMI1",
+                "VDDQ09_HDMI1"
+                ]
         }
+        },
+        "HDMI1": {
+            "HPD": ["HDMI1_HPD"],
+            "RREF": ["HDMI1_RREF"],
+            "I2C": [
+            "HDMI1_SCL",
+            "HDMI1_SDA"
+            ],
+            "TMDS_CLK": [
+            "HDMI1_TMDSCLKN",
+            "HDMI1_TMDSCLKP"
+            ],
+            "TMDS_DATA": {
+            "N": [
+                "HDMI1_TMDSDATAN0",
+                "HDMI1_TMDSDATAN1",
+                "HDMI1_TMDSDATAN2"
+            ],
+            "P": [
+                "HDMI1_TMDSDATAP0",
+                "HDMI1_TMDSDATAP1",
+                "HDMI1_TMDSDATAP2"
+            ]
+            }
+        }
+
     },
     "CT": [
         "CT",
@@ -2035,7 +2187,7 @@
     },
 
 
-  "DDR*": {
+  "DDR-Memory": {
  "General": {
     "ADDR": [
       "DDR_ADDR0", "DDR_ADDR1", "DDR_ADDR2", "DDR_ADDR3",
@@ -2068,6 +2220,17 @@
     "RESET_N": ["DDR_RESET_N"],
     "VAA": ["DDR_VAA"],
     "VDDQ": ["DDR_VDDQ"],
+    "A-DDR_PLL" : [    
+      "VDD09_DDRPLL0",
+      "VDD09_DDRPLL1",
+      "VDD09_DDRPLL2",
+      "VDD09_DDRPLL3"
+    ],
+    "VDDQVA"  :[    
+        "VDDQVA_DDR0",
+        "VDDQVA_DDR1",
+        "VDDQVA_DDR2"
+    ],
     "VREF": ["DDR_VREF"],
     "WE": ["DDR_WE", "DDR_WE\\"],
             "DDR Control": {
@@ -2210,7 +2373,93 @@
             "MRESET_OUT": [
                 "MRESET_OUT"
             ]
+        },
+
+        "Memory-Bus": {
+            "M0": {
+            "Backup": ["M01BKUP", "M0BKUP"],
+            "Address": ["M0ATB0", "M0ATB1"],
+            "Command Address 0": ["M0CA0", "M0CA1", "M0CA2", "M0CA3", "M0CA4", "M0CA5","M0CA6","M0CA7","M0CA8","M0CA9","M0CA10","M0CA11","M0CA12","M0CA13","M0CA14","M0CA15"],
+            "Clock": ["M0CKA", "M0CKA#", "M0CKB", "M0CKB#", "M0CKE0", "M0CKE1"],
+            "Bank Address": ["M0BA0", "M0BA1", "M0BA2"],
+            "On-Die Termination": ["M0ODT0", "M0ODT1"],
+            "RAS": ["M0RAS#"],
+            "WE": ["M0WE#"],
+            "CAS": ["M0CAS#"],
+
+            "Chip Select": ["M0CS0A#", "M0CS0B#", "M0CS1A#", "M0CS1B#"],
+            "Data Mask": ["M0DM0", "M0DM1", "M0DM2", "M0DM3"],
+            "Data": [
+                "M0DQ0", "M0DQ1", "M0DQ2", "M0DQ3", "M0DQ4", "M0DQ5", "M0DQ6", "M0DQ7", "M0DQ8",
+                "M0DQ9", "M0DQ10", "M0DQ11", "M0DQ12", "M0DQ13", "M0DQ14", "M0DQ15", "M0DQ16",
+                "M0DQ17", "M0DQ18", "M0DQ19", "M0DQ20", "M0DQ21", "M0DQ22", "M0DQ23", "M0DQ24",
+                "M0DQ25", "M0DQ26", "M0DQ27", "M0DQ28", "M0DQ29", "M0DQ30", "M0DQ31"
+            ],
+            "Data Strobes": [
+                "M0DQS0", "M0DQS0#", "M0DQS1", "M0DQS1#", "M0DQS2", "M0DQS2#", "M0DQS3", "M0DQS3#"
+            ],
+            "Reset": ["M0RESET#"],
+            "ZQ Calibration": ["M0ZQ"]
+            },
+            "M1": {
+            "Backup" : ["M1BKUP"],
+            "Address": ["M1ATB0", "M1ATB1"],
+            "Command Address": ["M1CA0", "M1CA1", "M1CA2", "M1CA3", "M1CA4", "M1CA5","M1CA6", "M1CA7", "M1CA8", "M1CA9", "M1CA10", "M1CA11", "M1CA12", "M1CA13", "M1CA14", "M1CA15", "M1CA16"],
+            "Clock": ["M1CKA", "M1CKA#", "M1CKB", "M1CKB#", "M1CKE0", "M1CKE1"],
+            "Chip Select": ["M1CS0A#", "M1CS0B#", "M1CS1A#", "M1CS1B#"],
+            "Data Mask": ["M1DM0", "M1DM1", "M1DM2", "M1DM3"],
+            "Data": [
+                "M1DQ0", "M1DQ1", "M1DQ2", "M1DQ3", "M1DQ4", "M1DQ5", "M1DQ6", "M1DQ7", "M1DQ8",
+                "M1DQ9", "M1DQ10", "M1DQ11", "M1DQ12", "M1DQ13", "M1DQ14", "M1DQ15", "M1DQ16",
+                "M1DQ17", "M1DQ18", "M1DQ19", "M1DQ20", "M1DQ21", "M1DQ22", "M1DQ23", "M1DQ24",
+                "M1DQ25", "M1DQ26", "M1DQ27", "M1DQ28", "M1DQ29", "M1DQ30", "M1DQ31"
+            ],
+            "Data Strobes": [
+                "M1DQS0", "M1DQS0#", "M1DQS1", "M1DQS1#", "M1DQS2", "M1DQS2#", "M1DQS3", "M1DQS3#"
+            ],
+            "Reset": ["M1RESET#"],
+            "ZQ Calibration": ["M1ZQ"]
+            },
+            "M2": {
+            "Backup": ["M23BKUP"],
+            "Address": ["M2ATB0", "M2ATB1"],
+            "Command Address": ["M2CA0", "M2CA1", "M2CA2", "M2CA3", "M2CA4", "M2CA5"],
+            "Clock": ["M2CKA", "M2CKA#", "M2CKB", "M2CKB#", "M2CKE0", "M2CKE1"],
+            "Chip Select": ["M2CS0A#", "M2CS0B#", "M2CS1A#", "M2CS1B#"],
+            "Data Mask": ["M2DM0", "M2DM1", "M2DM2", "M2DM3"],
+            "Data": [
+                "M2DQ0", "M2DQ1", "M2DQ2", "M2DQ3", "M2DQ4", "M2DQ5", "M2DQ6", "M2DQ7", "M2DQ8",
+                "M2DQ9", "M2DQ10", "M2DQ11", "M2DQ12", "M2DQ13", "M2DQ14", "M2DQ15", "M2DQ16",
+                "M2DQ17", "M2DQ18", "M2DQ19", "M2DQ20", "M2DQ21", "M2DQ22", "M2DQ23", "M2DQ24",
+                "M2DQ25", "M2DQ26", "M2DQ27", "M2DQ28", "M2DQ29", "M2DQ30", "M2DQ31"
+            ],
+            "Data Strobes": [
+                "M2DQS0", "M2DQS0#", "M2DQS1", "M2DQS1#", "M2DQS2", "M2DQS2#", "M2DQS3", "M2DQS3#"
+            ],
+            "Reset": ["M2RESET#"],
+            "ZQ Calibration": ["M2ZQ"]
+            },
+            "M3": {
+            "Address": ["M3ATB0", "M3ATB1"],
+            "Command Address": ["M3CA0", "M3CA1", "M3CA2", "M3CA3", "M3CA4", "M3CA5"],
+            "Clock": ["M3CKA", "M3CKA#", "M3CKB", "M3CKB#", "M3CKE0", "M3CKE1"],
+            "Chip Select": ["M3CS0A#", "M3CS0B#", "M3CS1A#", "M3CS1B#"],
+            "Data Mask": ["M3DM0", "M3DM1", "M3DM2", "M3DM3"],
+            "Data": [
+                "M3DQ0", "M3DQ1", "M3DQ2", "M3DQ3", "M3DQ4", "M3DQ5", "M3DQ6", "M3DQ7", "M3DQ8",
+                "M3DQ9", "M3DQ10", "M3DQ11", "M3DQ12", "M3DQ13", "M3DQ14", "M3DQ15", "M3DQ16",
+                "M3DQ17", "M3DQ18", "M3DQ19", "M3DQ20", "M3DQ21", "M3DQ22", "M3DQ23", "M3DQ24",
+                "M3DQ25", "M3DQ26", "M3DQ27", "M3DQ28", "M3DQ29", "M3DQ30", "M3DQ31"
+            ],
+            "Data Strobes": [
+                "M3DQS0", "M3DQS0#", "M3DQS1", "M3DQS1#", "M3DQS2", "M3DQS2#", "M3DQS3", "M3DQS3#"
+            ],
+            "Reset": ["M3RESET#"],
+            "ZQ Calibration": ["M3ZQ"]
+            }
         }
+
+
     },
 
     "Digital video*": {
@@ -2364,7 +2613,42 @@
     "13": ["GPIO130","GPIO131","GPIO132","GPIO133","GPIO134","GPIO135","GPIO136","GPIO137","GPIO138","GPIO139"],
     "14": ["GPIO140","GPIO141","GPIO142","GPIO143","GPIO144","GPIO145","GPIO146","GPIO147","GPIO148","GPIO149"],
     "15": ["GPIO150","GPIO151","GPIO152","GPIO153","GPIO154","GPIO155","GPIO156","GPIO157","GPIO158","GPIO159"],
-    "16": ["GPIO160","GPIO161","GPIO162","GPIO163","GPIO164","GPIO165","GPIO166","GPIO167","GPIO168","GPIO169"]
+    "16": ["GPIO160","GPIO161","GPIO162","GPIO163","GPIO164","GPIO165","GPIO166","GPIO167","GPIO168","GPIO169"],
+
+
+    "GP0": {
+        "00": ["GP0_00","GP0_01","GP0_02","GP0_03","GP0_04","GP0_05","GP0_06","GP0_07","GP0_08","GP0_09","GP0_10","GP0_11","GP0_12","GP0_13","GP0_14","GP0_15"]
+    },
+    "GP1": {
+        "00": ["GP1_00","GP1_01","GP1_02","GP1_03","GP1_04","GP1_05","GP1_06","GP1_07","GP1_08","GP1_09","GP1_10","GP1_11","GP1_12","GP1_13","GP1_14","GP1_15","GP1_16","GP1_17","GP1_18","GP1_19","GP1_20","GP1_21","GP1_22","GP1_23","GP1_24","GP1_25","GP1_26","GP1_27","GP1_28"]
+    },
+    "GP2": {
+        "00": ["GP2_00","GP2_01","GP2_02","GP2_03","GP2_04","GP2_05","GP2_06","GP2_07","GP2_08","GP2_09","GP2_10","GP2_11","GP2_12","GP2_13","GP2_14"]
+    },
+    "GP3": {
+        "00": ["GP3_00","GP3_01","GP3_02","GP3_03","GP3_04","GP3_05","GP3_06","GP3_07","GP3_08","GP3_09","GP3_10","GP3_11","GP3_12","GP3_13","GP3_14","GP3_15"]
+    },
+    "GP4": {
+        "00": ["GP4_00","GP4_01","GP4_02","GP4_03","GP4_04","GP4_05","GP4_06","GP4_07","GP4_08","GP4_09","GP4_10","GP4_11","GP4_12","GP4_13","GP4_14","GP4_15","GP4_16","GP4_17"]
+    },
+    "GP5": {
+        "00": ["GP5_00","GP5_01","GP5_02","GP5_03","GP5_04","GP5_05","GP5_06","GP5_07","GP5_08","GP5_09","GP5_10","GP5_11","GP5_12","GP5_13","GP5_14","GP5_15","GP5_16","GP5_17","GP5_18","GP5_19","GP5_20","GP5_21","GP5_22","GP5_23","GP5_24","GP5_25"],
+        "0" : ["GP5_0","GP5_1","GP5_2","GP5_3","GP5_4","GP5_5","GP5_6","GP5_7","GP5_8","GP5_9"]
+    },
+    "GP6": {
+        "00": [
+        "GP6_00","GP6_01","GP6_02","GP6_03","GP6_04","GP6_05","GP6_06","GP6_07","GP6_08","GP6_09",
+        "GP6_10","GP6_11","GP6_12","GP6_13","GP6_14","GP6_15","GP6_16","GP6_17","GP6_18","GP6_19",
+        "GP6_20","GP6_21","GP6_22","GP6_23","GP6_24","GP6_25","GP6_26","GP6_27","GP6_28","GP6_29",
+        "GP6_30","GP6_31"
+        ]
+    },
+    "GP7": {
+        "00": ["GP7_00","GP7_01","GP7_02","GP7_03"]
+    }
+
+
+
 
     },
     "HDRV": {
@@ -2419,10 +2703,22 @@
             "SDA2"
         ],
         "I2C_3": [
+            "SCL3",
+            "SDA3"
+        ],
+        "I2C_4": [
+            "SCL4",
+            "SDA4"
+        ],
+        "DVFS" : [
+            "SCL_DVFS",
+            "SDA_DVFS"
+        ],
+        "SWCLK-SDIO": [
             "SWCLK",
             "SWDIO"
         ],
-        "I2C_C": [
+        "I2C": [
             "SCL",
             "SDA"
         ],
@@ -2467,7 +2763,7 @@
             ]
         }
     },
-    "PCIE*": {
+    "PCIE Interface": {
         "REFCLK": [
         "PCIE_REFCLKN0",
         "PCIE_REFCLKN1",
@@ -2513,13 +2809,14 @@
         "PCIE_VCC18AL01",
         "PCIE_VCC18AL23"
         ],
-        "VDD": [
+        "A-VDD": [
         "PCIE_VDD09",
-        "PCIE_VDD18"
-        ],
-        "RSTOUTB": [
-        "PCIE0_RSTOUTB",
-        "PCIE1_RSTOUTB"
+        "PCIE_VDD18",
+        "VDD33_PCIE0",
+        "VDD33_PCIE1",
+        "VDD09_PCIE0",
+        "VDD09_PCIE1"
+
         ],
         "Reference Clock": {
             "Diff Pair": [
@@ -2555,6 +2852,60 @@
             "Diff Pair": [
                 "PCTXD1M",
                 "PCTXD1P"
+            ]
+        },
+
+
+        "PCIE0": {
+            "Clock": {
+            "Diff Pair": [
+                "PCIE0_CLK_M",
+                "PCIE0_CLK_P"
+            ]
+            },
+            "Reset Reference": [
+            "PCIE0_RESREF"
+            ],
+            "RX": {
+            "Diff Pair": [
+                "PCIE0_RX_M",
+                "PCIE0_RX_P"
+            ]
+            },
+            "TX": {
+            "Diff Pair": [
+                "PCIE0_TX_M",
+                "PCIE0_TX_P"
+            ]
+            },
+            "RSTOUTB": [
+            "PCIE0_RSTOUTB"
+            ]
+        },
+        "PCIE1": {
+            "Clock": {
+            "Diff Pair": [
+                "PCIE1_CLK_M",
+                "PCIE1_CLK_P"
+            ]
+            },
+            "Reset Reference": [
+            "PCIE1_RESREF"
+            ],
+            "RX": {
+            "Diff Pair": [
+                "PCIE1_RX_M",
+                "PCIE1_RX_P"
+            ]
+            },
+            "TX": {
+            "Diff Pair": [
+                "PCIE1_TX_M",
+                "PCIE1_TX_P"
+            ]
+            },
+            "RSTOUTB": [
+            "PCIE1_RSTOUTB"
             ]
         }
     },
@@ -2837,7 +3188,46 @@
                 "LVDS_CLK_N",
                 "LVDS_CLK_P"
             ]
-        }
+        },
+        "Channel 0_0": {
+        "Diff Pair": [
+            "LVDS0_CH0_N",
+            "LVDS0_CH0_P"
+        ]
+        },
+        "Channel 0_1": {
+        "Diff Pair": [
+            "LVDS0_CH1_N",
+            "LVDS0_CH1_P"
+        ]
+        },
+        "Channel 0_2": {
+        "Diff Pair": [
+            "LVDS0_CH2_N",
+            "LVDS0_CH2_P"
+        ]
+        },
+        "Channel 0_3": {
+        "Diff Pair": [
+            "LVDS0_CH3_N",
+            "LVDS0_CH3_P"
+        ]
+        },
+        "Clock 0": {
+        "Diff Pair": [
+            "LVDS0_CLK_N",
+            "LVDS0_CLK_P"
+        ]
+        },
+        "A-VDDQ" : [
+            "VDDQ09_LVDS"
+        ],
+        "A-LVDS_PLL": [
+            "VDD18_LVDSPLL1",
+            "VDD18_LVDSPLL2",
+            "VDD09_LVDSPLL2"
+        ]
+
     },
     "LVDS RX Interface": {
         "Clock 0": {
@@ -3042,7 +3432,7 @@
         "MTDO8_DRV2",
         "MTDO9_DRV2"
     ],
-    "NC": {
+    "No-Connect": {
         "NC1": [
             "(N.C)",
             "NC"
@@ -3065,7 +3455,8 @@
         ],
         "Reserved": [
             "RESERVE",
-            "Reserved"
+            "Reserved",
+            "DNU"
         ],
                 "RFU": {
             "RFU*": [
@@ -3502,7 +3893,9 @@
             "VSS-CPGPLL" : [
                 "VSS_CPGPLL0",
                 "VSS_CPGPLL1",
-                "VSS_CPGPLL2"
+                "VSS_CPGPLL2",
+                "VSS_CPGPLL3",
+                "VSS_CPGPLL4"
             ],
             "VSS-NC": [
                 "VSS (N.C.)",
@@ -3539,6 +3932,13 @@
             ],
             "VSS_MIPI": [
                 "VSS_MIPI"
+            ],
+            "VSS_DUPLL" :[
+                "VSS_DUPLL0",
+                "VSS_DUPLL1"
+            ],
+            "VSS_MLBPLL" : [
+                "VSS_MLBPLL"
             ],
             "VSS_RF": [
                 "VSS_RF"
@@ -3609,39 +4009,7 @@
         "OC",
         "OC_EN"
     ],
-    "QSPI*" : {
-        "OQSPIF*": [
-            "OQSPIF_CLK",
-            "OQSPIF_CS",
-            "OQSPIF_D1",
-            "OQSPIF_D2",
-            "OQSPIF_D3",
-            "OQSPIF_DO"
-        ],
 
-    "QSPI0": [
-        "QSPI0_IO0",
-        "QSPI0_IO1",
-        "QSPI0_IO2",
-        "QSPI0_IO3",
-        "QSPI0_MISO_IO1",
-        "QSPI0_MOSI_IO0",
-        "QSPI0_SPCLK",
-        "QSPI0_SSL"
-    ],
-    "QSPI1": [
-        "QSPI1_IO0",
-        "QSPI1_IO1",
-        "QSPI1_IO2",
-        "QSPI1_IO3",
-        "QSPI1_MISO_IO1",
-        "QSPI1_MOSI_IO0",
-        "QSPI1_SPCLK",
-        "QSPI1_SSL"
-    ]
-
-
-    },
     "PAR": [
         "PAR"
     ],
@@ -6570,10 +6938,25 @@
             "VDD-CPGPLL" : [
                 "VDD18_CPGPLL0",
                 "VDD18_CPGPLL1",
-                "VDD18_CPGPLL2"
+                "VDD18_CPGPLL2",
+                "VDD18_CPGPLL3",
+                "VDD18_CPGPLL4"
             ], 
+            "VDD-DUPLL": [
+            "VDD18_DUPLL0",
+            "VDD18_DUPLL1"
+            ],
+            "VDD-MLBPLL": [
+            "VDD18_MLBPLL",
+            "MLB_REF"
+            ],
+
             "VDD-DDR": [
                 "VDD-DDR"
+            ],
+            "VDD_DVFS" : [
+                "VDD_DVFS"
+
             ],
             "VDD-NC": [
                 "VDD (N.C.)",
@@ -6592,7 +6975,8 @@
                 "VDD-RTC(3.3V)"
             ],
             "VDD33_USB": [
-                "VDD33_USB"
+                "VDD33_USB",
+                "VDD33_USB30"
             ],
             "VDDA-PLL1": [
                 "VDDA-PLL1"
@@ -6757,10 +7141,12 @@
                 "U3REF"
             ],
             "VTHREF": [
-                "VTHREF"
+                "VTHREF",
+                "VTHREF0"
             ],
             "VTHSENSE" : [
-                "VTHSENSE"
+                "VTHSENSE",
+                "VTHSENSE0"
             ],
             "VREFI": [
                 "VREFI"
@@ -6868,7 +7254,50 @@
                 "QS0",
                 "QS1"
             ]
+        }, 
+
+
+
+        "OQSPIF": {
+            "Clock": ["OQSPIF_CLK"],
+            "Chip Select": ["OQSPIF_CS"],
+            "Data":["OQSPIF_D1","OQSPIF_D2","OQSPIF_D3","OQSPIF_DO"]
+            },
+
+        "QSPI0": {
+            "IO": [
+            "QSPI0_IO0",
+            "QSPI0_IO1",
+            "QSPI0_IO2",
+            "QSPI0_IO3"
+            ],
+            "MISO": ["QSPI0_MISO_IO1", "QSPI0_MISO"],
+            "MOSI": [
+            "QSPI0_MOSI_IO0",
+            "QSPI0_MOSI/IO1",
+            "QSPI0_MOSI"
+            ],
+            "Control": [
+            "QSPI0_SPCLK",
+            "QSPI0_SSL"
+            ]
+        },
+        "QSPI1": {
+            "IO": [
+            "QSPI1_IO0",
+            "QSPI1_IO1",
+            "QSPI1_IO2",
+            "QSPI1_IO3"
+            ],
+            "MISO": ["QSPI1_MISO_IO1","QSPI1_MISO"],
+            "MOSI": ["QSPI1_MOSI_IO0", "QSPI1_MOSI"],
+            "Control": [
+            "QSPI1_SPCLK",
+            "QSPI1_SSL"
+            ]
         }
+
+
     },
         "XSPI Interface": {
         "Chip Select": {
@@ -7052,7 +7481,13 @@
                 "SD1DAT2",
                 "SD1DAT3"
             ]
-        }
+        },
+        "SD": [
+                "VDDQVA_SD0",
+                "VDDQVA_SD1",
+                "VDDQVA_SD2",
+                "VDDQVA_SD3"
+        ]
     },
 
 
@@ -7696,6 +8131,9 @@
                 "Test": [
             "RETESTRL"
         ],
+        "PLL" : [
+            "MPLLTEST"
+        ],
         "Test High": {
             "RETESTH*": [
                 "RETESTH0",
@@ -7838,6 +8276,50 @@
                 "USB2_P(ANALOG)"
             ]
         },
+
+        "USB2_CH3": {
+            "Differential Pair": [
+            "USB2_CH3_DM",
+            "USB2_CH3_DP"
+            ],
+            "ID": ["USB2_CH3_ID"],
+            "IDn" :[
+                "ID0",
+                "ID1",
+                "ID2"
+            ],
+            "VBUS": ["USB2_CH3_VBUS"]
+        },
+
+        "USB3HS0": {
+            "Differential Pair": [
+            "USB3HS0_DM",
+            "USB3HS0_DP"
+            ],
+            "ID": ["USB3HS0_ID"],
+            "VBUS": ["USB3HS0_VBUS"]
+        },
+        "USB3S0": {
+            "Clock": {
+            "Diff Pair": [
+                "USB3S0_CLK_M",
+                "USB3S0_CLK_P"
+            ]
+            },
+            "Reset Reference": ["USB3S0_RESREF"],
+            "RX": {
+            "Diff Pair": [
+                "USB3S0_RX_M",
+                "USB3S0_RX_P"
+            ]
+            },
+            "TX": {
+            "Diff Pair": [
+                "USB3S0_TX_M",
+                "USB3S0_TX_P"
+            ]
+            }
+        },
             "UD*": {
         "UD": [
             "UDM",
@@ -7865,6 +8347,17 @@
             "USPND"
         ]
     },
+
+        "CLK-USB_X": [
+            "USB_X1",
+            "USB_X2"
+        ],
+        "CLK-USB_XTAL": [
+            "USBEXTAL",
+            "USBXTAL",
+            "USB_EXTAL",
+            "USB_XTAL"
+        ],
 
         "USB20": [
       "USB20_DM",
@@ -7916,6 +8409,13 @@
       "USB31_USVPH",
       "USB31_USVPTX"
     ],
+    "TXRTUNE" : [
+        "TXRTUNE0",
+        "TXRTUNE1",
+        "TXRTUNE2",
+        "TXRTUNE3"
+    ],
+
     "USBAPVcc": [
       "USBAPVcc0",
       "USBAPVcc1"
@@ -7923,7 +8423,25 @@
     "USBDPVcc": [
       "USBDPVcc0",
       "USBDPVcc1"
-    ]
+    ],
+    "VDDQ33": [
+      "VDDQ33_USB2",
+      "VDDQ33_USB23",
+      "VDDQ33_USB2H0",
+      "VDDQ33_USB2H1",
+      "VDDQ33_USB2H2",
+      "VDDQ33_USB2H3",
+      "VDDQ33_USB3HS0",
+      "VDDQ33_USB3HSH0"
+    ],
+    "A-VDD09" :[
+      "VDD09_USB20",
+      "VDD09_USB21",
+      "VDD09_USB22",
+      "VDD09_USB23",
+      "VDD09_USB30",
+      "VDD09_USB3HS0"
+    ]    
     },
     "USBA_D": [
         "USBA_DM",
@@ -7942,6 +8460,11 @@
             "DM1",
             "DP1"
         ],
+        "USB_D2": [
+            "DM2",
+            "DP2"
+        ],
+
                 "OTG": {
             "USOTGID": [
                 "USOTGID"

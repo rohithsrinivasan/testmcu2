@@ -8,5 +8,11 @@
     "DBSC3 Table" : "DBSC3",
     "VI Table" : "VI_*",
     "Ethernet Table" : "Ethernet",
-    "Address Bit Table" : "Address Bit"
+    "Address Bit Table" : "Address Bit",
+    "GPIO Table" : "GPIO*",
+    "Memory-Bus Table" : "Memory-Bus", 
+    "DDR Table" : "DDR-Memory",
+    "HDMI_Interface Table" : "HDMI Interface",
+    "PCIE Table" : "PCIE Interface",
+    "NC Table" : "No-Connect"
 }
