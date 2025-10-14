@@ -73,6 +73,7 @@ if 'grouped_pin_table' in st.session_state:
             "Battery-Charger-IC" : 'Side_Allocation/priority_map_battery-charger-IC.json',
             "PWM-Controller" : 'Side_Allocation/priority_map_pwm-controller.json',
             "Volatge-References" : 'Side_Allocation/priority_map_voltage-references.json',
+            "Power-Supply-Support" : 'Side_Allocation/priority_map_power-supply-support.json',
         }
     }
     mpu_splitting = "Side_Allocation/mpu_splitting.json"

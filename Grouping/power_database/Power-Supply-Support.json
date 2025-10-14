@@ -1,0 +1,154 @@
+{
+
+"Left" :{
+
+    "Input" : {
+        "-pins" : [
+            "VIN"
+        ],
+        "Bias": [
+            "BIAS"
+        ],
+        "REF" : [
+            "HVREF"
+        ]
+    },
+    "Power": {
+        "VDD*": [
+            "VDD"
+        ],
+        "VCC*" : [
+            "VCC"
+        ]
+    },
+
+  "Enable": {
+        "-pins": [
+            "EN1",
+            "EN2",
+            "EN"
+        ],
+        "UVLO": [
+            "UVLO"
+        ]
+    },
+    "Fault": {
+        "Fault": [
+            "FLT1",
+            "FLT2",
+            "FAULT"
+        ],
+        "Over_Under_Voltage": [
+            "OV",
+            "UV"
+        ]
+    },
+    "Control": {
+        "Manual_Reset": [
+            "MR"
+        ],
+        "Watchdog": [
+            "WDI"
+        ],
+        "Power_Fail_Input": [
+            "PFI"
+        ],
+        "POR_Control": [
+            "CPOR"
+        ],
+        "Voltage_Monitor": [
+            "VMON"
+        ],
+        "Power_Good": [
+            "PWRGD"
+        ]
+    },
+
+    "Interface": {
+        "SPI": [
+            "SI",
+            "SO",
+            "SCK",
+            "WP"
+        ],
+        "I2C": [
+            "SCL",
+            "SDA"
+        ]
+    }
+},
+
+"Right" : {
+
+    "Output": {
+        "-pins": [
+            "OUT_1",
+            "OUT_2"
+        ],
+        "Vout": [
+            "VOUT"
+        ]
+
+    },
+    "FET*": {
+        "Drain": [
+            "DRAIN"
+        ],
+        "Gate": [
+            "GATE"
+        ],
+        "Sense": [
+            "SENSE"
+        ]
+    },
+    "Reset*": {
+        "Reset": [
+            "RST",
+            "RESET",
+            "RST/MR"
+        ],
+        "Watchdog": [
+            "WDO",
+            "CS/WDI"
+        ]
+    },
+
+    
+    "COMP*": {
+        "-pins": [
+            "COMP"
+        ],
+        "Setting": [
+            "VSET",
+            "ADJ"
+        ]
+    },
+    "Ground*": {
+
+            "GND*" : [
+                "GND"
+            ],
+            "VSS*" : [
+                "VSS"
+            ],
+            "VEE*": [
+                "VEE"
+            ]        
+    },
+    "No_Connect": {
+        "-pins": [
+            "NC"
+        ]
+    },
+    "EPAD*" : {
+        "-pins" : [
+            "EPAD"
+        ]
+    }
+
+
+}
+
+
+}
+

@@ -1,0 +1,25 @@
+{
+
+"Left" : {
+
+    "Input" :"LA",
+    "Power" :"LB",
+    "Enable" :"LC",
+    "Control" : "LD",
+    "Fault" :"LE",
+    "Interface" : "LE"
+},
+
+"Right" : {
+
+    "Output" : "RA",
+    "FET*" :"RB",
+    "Reset*": "RC",
+    "COMP*" : "RD",
+    "Ground*" :"RE",
+    "No_Connect" : "RF",
+    "EPAD*" : "RG"
+
+}
+
+}
