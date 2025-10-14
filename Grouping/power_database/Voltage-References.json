@@ -1,0 +1,72 @@
+{
+"Left" : {
+    "Current_Input": {
+        "Non-Inverting_Input": [
+            "IN+"
+        ],
+        "Inverting_Input": [
+            "IN-"
+        ]
+        },
+    "VIN*": {
+        "Input_Voltage": [
+            "VIN"
+        ]
+        },
+    "Op-V+" : {
+        "-pins" : [
+            "V+"
+        ]
+        },
+    "Control": {
+        "Hysteresis": [
+            "HYST"
+        ],
+        "Reference_Input": [
+            "REF"
+        ],
+        "Compensation": [
+            "COMP"
+        ],
+        "Trim_Adjust": [
+            "TRIM"
+        ]
+        },
+
+    "Anode" : {
+        "-pins" : [
+            "A"
+        ]
+    }
+},
+
+"Right" : {
+
+    "Output_Voltage": {
+      "VOUT*": [
+        "VOUT"
+      ],
+        "OUT*": [
+        "OUT"
+      ]
+    },
+    "Op-V-" : {
+        "-pins" : [
+            "V-"
+        ]
+    },
+
+      "Cathode": {
+        "-pins" : [
+        "K"
+      ]
+    },
+
+    "No_Connect": {
+        "-pins" : [
+            "NC"
+        ]
+    }
+
+}
+}

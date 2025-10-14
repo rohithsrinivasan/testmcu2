@@ -1,0 +1,21 @@
+{
+
+"Left" : {
+
+    "Supply" :"LA",
+    "VREF*" :"LB",
+    "Control" :"LC",
+    "Capacitor*" :"LD",
+    "SS*" : "LE"
+},
+
+"Right" : {
+
+    "Outputs" : "RA",
+    "Feedback" :"RB",
+    "Timing" : "RC",
+    "GND*" : "RD"
+
+}
+
+}

@@ -1,0 +1,21 @@
+{
+
+"Left" : {
+
+    "VIN*" :"LA",
+    "Op-V+" :"LB",
+    "Current_Input" :"LC",
+    "Control" :"LD",
+    "Anode" : "LE"
+},
+
+"Right" : {
+
+    "Output_Voltage": "RA",
+    "Op-V-" :"RB",
+    "Cathode" : "RC",
+    "No_Connect" : "RD"
+
+}
+
+}

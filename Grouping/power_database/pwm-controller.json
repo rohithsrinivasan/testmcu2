@@ -1,0 +1,93 @@
+{
+
+"Left" : {
+    "Supply" : {
+        "VDD" : [
+            "VDD"
+        ]
+    },
+    "VREF*" : {
+        "-pins" : [
+            "VREF"
+        ],
+        "VERR*" : [
+            "VERR"
+        ]
+    },
+    "Control" : {
+        "CS*" : [
+            "CS"
+        ],
+        "RES-Delete" : [
+            "RESDEL"
+        ],
+        "Ramp_Slope_Control": [
+            "RAMP"
+        ],
+        "Real_Time_Control": [
+            "RT",
+            "RTD"
+        ]
+
+    },
+    "Capacitor*": {
+        "-pins" : [
+            "CT"
+        ]
+    },
+    "SS*": {
+        "pins": [
+            "SS"
+        ]
+    }
+
+
+
+
+},
+"Right" : {
+
+    "Outputs" : {
+
+        "High-U" : [
+            "OUTUL", 
+            "OUTUR"
+        ],
+        "Low-L" :[
+            "OUTLL", 
+            "OUTLR"
+        ],
+        "low-LN" : [
+            "OUTLLN", 
+            "OUTLRN"
+        ],
+        "Out-IOUT*" : [
+            "IOUT"
+        ]
+    },
+    "Feedback" : {
+        "-pins" : [
+            "FB"
+        ],
+        "ADJ" : [
+            "VADJ"
+        ]
+    },
+    "Timing" : {
+        "Buffer" : [
+            "CTBUF"
+        ]
+    } ,
+    "GND*" : {
+        "-pins" : [
+            "GND"
+        ]
+    }
+
+
+
+}
+
+
+
+}

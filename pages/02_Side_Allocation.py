@@ -70,8 +70,9 @@ if 'grouped_pin_table' in st.session_state:
             "Buck-Boost": "Side_Allocation/priority_map_buck-boost.json",
             "Charge-Pump": "Side_Allocation/priority_map_charge-pump.json",
             "FlyBack" : "Side_Allocation/priority_map_flyback.json",
-            "Battery-Charger-IC" : 'Side_Allocation/priority_map_battery-charger-IC.json'
-
+            "Battery-Charger-IC" : 'Side_Allocation/priority_map_battery-charger-IC.json',
+            "PWM-Controller" : 'Side_Allocation/priority_map_pwm-controller.json',
+            "Volatge-References" : 'Side_Allocation/priority_map_voltage-references.json',
         }
     }
     mpu_splitting = "Side_Allocation/mpu_splitting.json"
