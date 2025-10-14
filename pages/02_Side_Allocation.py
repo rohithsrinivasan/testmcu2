@@ -68,7 +68,9 @@ if 'grouped_pin_table' in st.session_state:
             "Boost": "Side_Allocation/priority_map_boost.json",
             "LDO" : "Side_Allocation/priority_map_ldo.json",
             "Buck-Boost": "Side_Allocation/priority_map_buck-boost.json",
-            "Charge-Pump": "Side_Allocation/priority_map_charge-pump.json"
+            "Charge-Pump": "Side_Allocation/priority_map_charge-pump.json",
+            "FlyBack" : "Side_Allocation/priority_map_flyback.json",
+            "Battery-Charger-IC" : 'Side_Allocation/priority_map_battery-charger-IC.json'
 
         }
     }

@@ -163,6 +163,9 @@
     "Real_Time_Control": [
       "RT"
     ],
+    "Protection" :[
+      "PRO"
+    ],
     "Set": [
       "SET",
       "VMSET",
@@ -370,7 +373,8 @@
       "SS/TR",
       "SS/TRK",
       "SS/TRK1",
-      "SS/TRK2/OV"
+      "SS/TRK2/OV",
+      "OV"
     ],
     "pins": [
       "SS",
@@ -661,7 +665,8 @@
     "Other_Gates": [
       "BGATE",
       "BGATE/BSOC",
-      "TGATE"
+      "TGATE",
+      "GATE"
     ]
   },
   "Ground_Pins": {

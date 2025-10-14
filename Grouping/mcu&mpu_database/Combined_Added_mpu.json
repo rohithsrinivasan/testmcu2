@@ -1364,6 +1364,7 @@
                 "CSI2_MSVDD0P8"
             ],
             "VDDQ": [
+                "VDDQ18_CSI0",
                 "VDDQ18_CSI1",
                 "VDDQ18_CSI2"
             ],
@@ -1371,6 +1372,7 @@
                 "VDD09_CSI0",
                 "VDD09_CSI1",
                 "VDD09_CSI2"
+                    
             ]                
 
         },
@@ -1796,15 +1798,18 @@
             "HDMI0_TMDSCLKP"
             ],
             "TMDS_DATA": {
-            "N": [
+            "0": [
                 "HDMI0_TMDSDATAN0",
-                "HDMI0_TMDSDATAN1",
-                "HDMI0_TMDSDATAN2"
+                "HDMI0_TMDSDATAP0"
             ],
-            "P": [
-                "HDMI0_TMDSDATAP0",
+            "1": [
                 "HDMI0_TMDSDATAP1",
-                "HDMI0_TMDSDATAP2"
+                "HDMI0_TMDSDATAN1"
+
+            ],
+            "2" : [
+                "HDMI0_TMDSDATAP2",
+                "HDMI0_TMDSDATAN2"                
             ]
             },
             "A-VDD" : {
@@ -1830,15 +1835,17 @@
             "HDMI1_TMDSCLKP"
             ],
             "TMDS_DATA": {
-            "N": [
+            "0": [
                 "HDMI1_TMDSDATAN0",
-                "HDMI1_TMDSDATAN1",
-                "HDMI1_TMDSDATAN2"
+                "HDMI1_TMDSDATAP0"
             ],
-            "P": [
-                "HDMI1_TMDSDATAP0",
-                "HDMI1_TMDSDATAP1",
-                "HDMI1_TMDSDATAP2"
+            "1": [
+                "HDMI1_TMDSDATAN1",
+                "HDMI1_TMDSDATAP1"
+            ],
+            "2" : [
+                "HDMI1_TMDSDATAP2",
+                "HDMI1_TMDSDATAN2"
             ]
             }
         }
@@ -2226,11 +2233,11 @@
       "VDD09_DDRPLL2",
       "VDD09_DDRPLL3"
     ],
-    "VDDQVA"  :[    
-        "VDDQVA_DDR0",
-        "VDDQVA_DDR1",
-        "VDDQVA_DDR2"
-    ],
+    "VDDQVA"  :{  
+        "0" : ["VDDQVA_DDR0"],
+        "1" : ["VDDQVA_DDR1"],
+        "2" :["VDDQVA_DDR2"]
+    },
     "VREF": ["DDR_VREF"],
     "WE": ["DDR_WE", "DDR_WE\\"],
             "DDR Control": {
@@ -3226,6 +3233,9 @@
             "VDD18_LVDSPLL1",
             "VDD18_LVDSPLL2",
             "VDD09_LVDSPLL2"
+        ],
+        "A-LVDS-VDD" : [
+            "VDDQ18_LVDS"
         ]
 
     },
@@ -6974,10 +6984,6 @@
                 "VDD-RTC",
                 "VDD-RTC(3.3V)"
             ],
-            "VDD33_USB": [
-                "VDD33_USB",
-                "VDD33_USB30"
-            ],
             "VDDA-PLL1": [
                 "VDDA-PLL1"
             ],
@@ -7080,10 +7086,8 @@
         ],
         "VDDQ18": [
             "VDDQ18_ADC",
-            "VDDQ18_CSI0",
             "VDDQ18_DIGRF",
             "VDDQ18_ISO",
-            "VDDQ18_LVDS",
             "VDDQ18"
         ],
         "VDDQ25": [
@@ -8416,15 +8420,15 @@
         "TXRTUNE3"
     ],
 
-    "USBAPVcc": [
+    "A-USBAPVcc": [
       "USBAPVcc0",
       "USBAPVcc1"
     ],
-    "USBDPVcc": [
+    "A-USBDPVcc": [
       "USBDPVcc0",
       "USBDPVcc1"
     ],
-    "VDDQ33": [
+    "A-VDDQ33": [
       "VDDQ33_USB2",
       "VDDQ33_USB23",
       "VDDQ33_USB2H0",
@@ -8433,6 +8437,10 @@
       "VDDQ33_USB2H3",
       "VDDQ33_USB3HS0",
       "VDDQ33_USB3HSH0"
+    ],
+    "A-VDD33_USB": [
+                "VDD33_USB",
+                "VDD33_USB30"
     ],
     "A-VDD09" :[
       "VDD09_USB20",

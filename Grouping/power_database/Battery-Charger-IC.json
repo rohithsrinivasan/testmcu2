@@ -1,0 +1,303 @@
+{
+"Left" :{
+    "Supply": {
+        "VDD": [
+            "VDD"
+        ],
+        "VDDP": [
+            "VDDP"
+        ],
+        "VCC": [
+            "VCC"
+        ],
+        "VDDSMB": [
+            "VDDSMB"
+        ]
+    },
+    "Input":{
+       "DCIN":  [
+            "DCIN"
+       ],
+        "VIN" : [
+            "VIN"
+       ]
+    },
+    "VBAT*" : {
+       "-pins" : [
+        "VBAT"
+        ]
+    },
+    "Reference": {
+        "VREF": [
+            "VREF",
+            "V2P8"
+        ],
+         "SET" :{        
+            "ACSET": [
+                "ACSET"
+            ],
+            "DCSET": [
+                "DCSET"
+            ]
+        },
+        "VADJ": [
+            "VADJ"
+        ],
+        "LIM" : {
+            "CHLIM": [
+                "CHLIM"
+            ],
+            "ACLIM": [
+                "ACLIM"
+            ]
+        }
+    },
+
+    "Battery_Management": {
+        "BATON": [
+            "BATON"
+        ],
+        "BATGONE": [
+            "BATGONE"
+        ],
+        "BATGONE_NTC": [
+            "BATGONE/NTC"
+        ],
+        "OTGEN": [
+            "OTGEN/CMIN"
+        ]
+    },
+    "Bypass": {
+        "BYPSRC": [
+            "BYPSRC"
+        ],
+        "BYPSG": [
+            "BYPSG"
+        ]
+    },
+    "Gate Drivers": [
+      "ASGATE"
+    ],
+    "Communication": {
+        "I2C": [
+            "SDA",
+            "SCL"
+        ]
+    },
+    "Current_Sense": {
+        "CSI": [
+            "CSIN",
+            "CSIP"
+        ],
+        "CSSN": [
+            "CSSN",
+            "CSSP"
+        ],
+        "IMIN": [
+            "IMIN"
+        ],
+        "PROG": [
+            "PROG"
+        ]
+    },
+
+    "Enable": {
+        "EN": [
+            "EN"
+        ],
+        "TOEN": [
+            "TOEN"
+        ]
+    },
+    "Status": {
+        "FAULT": [
+            "FAULT"
+        ],
+        "STATUS": [
+            "STATUS"
+        ],
+        "ACOK": [
+            "ACOK"
+        ]
+    },
+    "Timing": {
+        "TIME": [
+            "TIME"
+        ]
+    }
+    
+  },
+
+"Right" : {
+
+
+  "Switching": {
+    "PHASE*": [
+      "PH",
+      "PHASE",
+      "PHASE1",
+      "PHASE2",
+      "PHASE3"
+    ],
+    "SW*": [
+      "SW"
+    ]
+  },
+
+  "Gate_Drivers": {
+    "High_Side": {
+      "-pins" : [
+        "UG", 
+        "UGATE"
+      ],
+      "Channel_1": [
+        "UG1",
+        "UGATE1"
+      ],
+      "Channel_2": [
+        "UG2",
+        "UGATE2"
+      ],
+      "Channel_3": [
+        "UG3",
+        "UGATE3"
+      ]
+      
+    },
+
+    "Low_Side": {
+
+    "-pins" : [
+        "LG",
+        "LGATE",
+        "LGATE/OCSET"
+    ],
+    "Channel_1" : [
+        "LG1/PWM_MODE",
+        "LG1",
+        "LGATE1",
+        "LGATE1A",
+        "LGATE1B"
+
+    ],
+    "Channel_2" :[ 
+      "LG2/OC_MODE",
+      "LGATE2"
+    ],
+    "Channel_3" : [
+      "LGATE3"
+    ] 
+    },
+
+    "Other_Gates":{ 
+        "-pins" : [
+            "GATE"
+        ],
+        "N": [
+            "NGATE"
+        ],
+        "B" : [
+            "BGATE"
+        ]
+    }
+  },
+  "BOOT*" : {
+    "-pins" : [
+        "BOOT"
+    ],
+    "Channel_1" : [
+        "BOOT1"
+
+    ],
+    "Channel_2" : [
+        "BOOT2"
+
+    ],
+    "Channel_3" : [
+        "BOOT3"
+
+    ]
+  },
+  "Current_Sense_Output": {
+    "Charge_Sense": [
+        "CSON", 
+        "CSOP"
+    ],
+    "System_Sense": [
+        "AMON/BMON", 
+        "PSYS", 
+        "PSYS/(REFADJ)"
+    ]
+  },
+  "Adapter_Monitor": {
+    "Adapter_Inputs": [
+        "VSYS", 
+        "ACPRN", 
+        "DCPRN"
+    ],
+    "Cell_Monitor": [
+        "CELLS", 
+        "TEMP"
+    ]
+  },
+  "Protection": {
+    "-pins": [
+        "PROCHOT#",
+         "CHG", 
+         "PPR"
+        ],
+    "Compensation": [
+        "COMP", 
+        "ICOMP", 
+        "VCOMP", 
+        "COMPR", 
+        "COMPF"
+        ]
+  },
+  "Feedback_Control": {
+    "Feedback_Sense": [
+        
+        "VSEN", 
+        "VFB",  
+        "IREF"
+    ]
+  },
+  "Output" : {
+
+    "-pins" : [
+        "VOUT"
+    ],
+    "CMOUT" : [
+        "CMOUT/INT#", 
+        "OTGPG/CMOUT"
+    ]
+  },
+  "GND*": {
+    "Grounds": {
+        "-pins" : [
+            "GND"
+        ],
+        "PGND" : [
+            "PGND"
+        ]
+    }
+  },
+  "NC*": {
+    "-pins": [
+        "NC"
+    ]
+  },
+  "EPAD*" : {
+    "-pins" : [
+        "EPAD"
+    ]
+}
+
+}
+
+}
+
+
+
+
+

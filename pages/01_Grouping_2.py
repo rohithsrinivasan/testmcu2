@@ -109,6 +109,7 @@ if 'pin_table' in st.session_state:
                 "LDO": 'Grouping/power_database/LDO.json',
                 "Charge-Pump" : 'Grouping/power_database/Charge-pump.json',
                 "FlyBack": 'Grouping/power_database/FlyBack.json',
+                "Battery-Charger-IC" :  'Grouping/power_database/Battery-Charger-IC.json',
                 "PMIC": 'Grouping/power_database/PMIC.json'
             }
         }

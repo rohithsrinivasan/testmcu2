@@ -1,0 +1,36 @@
+{
+    "priority_map": {
+
+        "Input" : "LA",
+        "Supply": "LB",
+        "VBAT*"  : "LC",
+        "Reference" : "LD",
+        "Enable" :"LE",
+        "Bypass" :"LF",
+        "Gate Drivers" :"LG",
+        "Current_Sense" : "LH",
+        "Battery_Management": "LI",
+        "Communication" : "LJ",
+        "Status" :"LK",
+        "Timing" :"LL",
+
+        "BOOT*" :"RA",
+        "Switching": "RB",
+        "Gate_Drivers": "RC",
+        "Output" : "RD",
+        "Current_Sense_Output" : "RE",
+        "Adapter_Monitor" : "RF",
+        "Protection" : "RG",
+        "Feedback_Control" : "RH",
+        "GND*" : "RI",
+        "NC*" : "RJ",
+        "EPAD*" : "RK"
+
+
+
+
+
+
+
+    }
+}

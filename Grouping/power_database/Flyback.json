@@ -1,0 +1,155 @@
+{
+
+"Left" : {
+  "Supply": {
+    "VDD": [
+      "VDD"
+    ],
+    "VCC": [
+      "VCC"
+    ],
+    "HV": [
+      "HV"
+    ]
+  },
+  "Reference": {
+    "VREF": [
+      "VREF"
+    ]
+  },
+  "Timing": {
+    "SLOPE": [
+      "SLOPE"
+    ],
+    "RAMP": [
+      "RAMP"
+    ],
+    "FSET": [
+      "FSET"
+    ],
+    "SYNC": [
+      "SYNC"
+    ],
+    "RTCT": [
+      "RTCT"
+    ],
+    "RTD": [
+      "RTD"
+    ],
+    "CT": [
+      "CT"
+    ]
+  },
+  "SS": {
+    "-pins": [
+      "SS"
+    ]
+  },
+  "Control_and_Enable": {
+    "CS": [
+      "CS"
+    ],
+    "ISET": [
+      "ISET"
+    ],
+    "PRO": [
+      "PRO"
+    ],
+    "CDRV": [
+      "CDRV"
+    ],
+    "SLEEP": [
+      "SLEEP"
+    ]
+  }
+},
+
+
+"Right" : {
+  "Output": {
+    "OUT*": [
+      "OUT"
+    ],
+    "AB Pair" : [
+      "OUTA",
+      "OUTB"
+    ],
+    "AB Pair-N" : [
+      "OUTAN",
+      "OUTBN"
+    ],
+    "IOUT*" : [
+        "IOUT"
+    ],
+    "GATE": [
+      "GATE"
+    ]
+  },
+  "Feedback_and_Control": {
+    "FB": [
+      "FB"
+    ],
+    "COMP": [
+      "COMP"
+    ],
+    "Ctrl-VADJ": [
+      "VADJ"
+    ],
+    "Ctrl-VERR": [
+      "VERR"
+    ]
+  },
+  "Protection_and_Detection": {
+    "OV": [
+      "OV"
+    ],
+    "UV": [
+      "UV"
+    ],
+    "OVL": [
+      "OVL"
+    ],
+    "VDET": [
+      "VDET"
+    ]
+  },
+  "Voltage_and_Bias": {
+    "VC": [
+      "VC"
+    ]
+  },
+  "Current_Sense": {
+    "ISENSE": [
+      "ISENSE"
+    ]
+  },
+  "Ground": {
+    "GND*": [
+      "GND"
+    ],
+    "PGND*": [
+      "PGND"
+    ],
+    "LGND" :[
+        "LGND"
+    ],
+    "EPAD" :[
+        "PAD",
+        "EPAD"
+    ]
+
+
+  },
+  "Ext-MOSFET": {
+    "Drain": [
+      "D"
+    ],
+    "Source": [
+      "S"
+    ]
+  }
+}
+
+
+
+}

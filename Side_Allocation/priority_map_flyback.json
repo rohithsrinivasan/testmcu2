@@ -1,0 +1,20 @@
+{
+    "priority_map": {
+
+        "Supply" : "LA",
+        "Reference" : "LB",
+        "Timing" : "LC",
+        "SS" : "LD",
+        "Control_and_Enable" : "LE",
+
+        "Output" : "RA",
+        "Feedback_and_Control" : "RB",
+        "Protection_and_Detection" : "RC",
+        "Voltage_and_Bias" : "RD",
+        "Current_Sense" :"RE",
+        "Ext-MOSFET" : "RF",
+        "Ground" : "RG"
+
+
+    }
+}
