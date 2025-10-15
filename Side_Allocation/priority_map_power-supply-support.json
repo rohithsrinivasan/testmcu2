@@ -7,7 +7,7 @@
     "Enable" :"LC",
     "Control" : "LD",
     "Fault" :"LE",
-    "Interface" : "LE"
+    "Interface" : "LF"
 },
 
 "Right" : {

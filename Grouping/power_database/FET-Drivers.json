@@ -1,0 +1,376 @@
+{
+
+"Left" : {
+
+
+    "Supply": {
+        "-pins": [
+            "VCC",
+            "VCC1",  
+            "VCC2"
+        ],
+        "-pins-V+": [
+            "V+"
+        ],
+        "AVCC" : [
+            "AVCC"
+        ],
+        "PVCC" : [
+            "PVCC"
+        ],
+        "VDD": [
+            "VDD"
+        ],
+        "VBAT": [
+            "VBAT"
+        ],
+        "VREF": [
+            "VREF"
+        ],
+        "VDRV": [
+            "VDRV"
+        ],
+        "VEE": [
+            "VEE",
+            "VEEL",
+            "VEEH"
+        ]
+    },
+    "Enable": {
+        "Enable": [
+            "EN",
+            "HEN",
+            "VDEN",
+            "VCEN"
+        ]
+    },
+    "Control": {
+        "Feedback": [
+            "FB",
+            "FOB"
+        ],
+        "Reset": [
+            "RDT"
+        ],
+        "Ready": [
+            "RDY"
+        ],
+        "Disable": [
+            "DIS"
+        ],
+        "PWM": [
+            "PWM"
+        ],
+        "3-State" : [
+            "3-STATE"
+        ],
+        "FET-Driver_Select": [
+            "IGSEL"
+        ],
+        "FET-Drain_Set" : [
+            "IDSET"
+        ],
+        "RDU*": [
+            "RDU"
+        ],
+        "RDL*" :[
+            "RDL"
+        ],
+        "RTD*" : [
+            "RTD"
+        ],
+        "Timing": [
+            "CT"       
+        ],
+        "Soft-Select" : [
+            "SS" 
+        ]
+    },
+    "Input": {
+        "Differential_Input": [
+            "IN+",
+            "IN-"
+        ],
+        "General_Input": [
+            "IN"
+        ]
+    },
+    "Letterwise_Groups": {
+        "A": {
+            "EN" : [
+                "ENA"
+            ],
+            "E-RST" : [
+                "RSTA"
+            ],
+            "HI-LI" : [
+                "AHI",
+                "ALI"
+            ],
+            "Inputs" : [
+                "INA",
+                "IN_A",
+                "A_IN"
+            ],
+            "Signal" : [
+                "A1",
+                "A2"
+            ]
+        },
+        "B": {
+            "EN" : [
+                "ENB"
+            ],
+            "E-RST" : [
+                "RSTB"
+            ],
+            "HI-LI" : [
+                "BHI",
+                "BLI"
+            ],
+            "Inputs" : [
+                "INB",
+                "IN_B",
+                "B_IN"
+            ],
+            "Signal" : [
+                "B1",
+                "B2"
+            ]
+
+        },
+        "C": {
+            "HI-LI" : [
+                "CHI",
+                "CLI"
+            ],
+            "Inputs" : [
+                "INC",
+                "IN_C",
+                "C_IN"
+            ]
+        },
+        "D": {
+            "Inputs" : [
+                "IND",
+                "IN_D",
+                "D_IN"
+            ]
+            
+        }
+
+    },
+
+    "Delete_and_Refresh": {
+        "DEL": [
+            "DEL",
+            "HDEL",
+            "LDEL",
+            "RDEL"
+        ],
+        "Refresh" : [
+            "RFSH"
+        ]
+    },
+    "Protection_and_Reporting": {
+        "Fault": [
+            "FAULT"
+        ],
+        "UVLO": [
+            "UVLO"
+        ]
+    }
+},
+
+"Right" : {
+
+    "Voltage_inverting": {
+        "pins" : [
+        "V-"
+        ]
+    },
+    "Bootstrap": {
+        "-pins" : [
+            "BOOT"
+        ],
+        "High": [
+            "HB"
+        ]
+    },
+    "Switching" : {
+        "PHASE": [
+            "PHASE",
+            "PHS"
+        ]
+    },
+    "Gate_Drivers": {
+        "High": {
+            "-pins:" : [
+                "UGATE"
+            ],
+            "H-L" : [
+                "UGH",
+                "UGL"
+            ],
+            "Output" : [
+                "HO",
+                "HO_H",
+                "HO_L"
+            ]
+        },
+        "Low": {
+            "-pins:" : [
+                "LGATE"
+            ],
+            "H-L" : [
+                "LGH",
+                "LGL"
+            ],
+            "Output" : [
+                "LO",
+                "LO_H",
+                "LO_L"
+            ]
+        }
+    },
+
+    "Outputs": {
+        "-pins" :[
+            "OUT"
+        ],
+        "AB": [
+            "OUTA",
+            "OUTB"
+        ],
+        "A_B_" : [
+            "OUT_A",
+            "OUT_B"
+        ],
+        "HL" : [
+            "OUTH",
+            "OUTL"
+        ],
+        "A-B-" : [
+            "A_OUT",
+            "B_OUT"
+        ],
+        "P-N" : [
+            "P_OUT",
+            "N_OUT"
+        ]
+    },
+    "Letterwise_Chennels_output"   :  {        
+        "A_Channel": {
+            "High_Side": {
+                "B" : [
+                    "AHB"
+                ],
+                "H" :[
+                    "AHO",
+                    "AHS"
+                ],
+            "L" : [
+                    "ALO",
+                    "ALS"
+            ]
+            }
+        },
+        "B_Channel": {
+            "High_Side": {
+                "B" : [
+                    "BHB"
+                ],
+                "H" :[
+                    "BHO",
+                    "BHS"
+                ],
+            "L" : [
+                    "BLO",
+                    "BLS"
+            ]
+            }
+        },
+        "C_Channel": {
+            "High_Side": {
+                "B" : [
+                    "CHB"
+                ],
+                "H" :[
+                    "CHO",
+                    "CHS"
+                ],
+            "L" : [
+                    "CLO",
+                    "CLS"
+            ]
+            }
+        }
+    },
+    "Fault_and_Safety": {
+        "Fault": [
+            "FLT"
+        ],
+        "DESAT" : [
+            "DESAT"
+        ],
+        "Clamp": [
+            "CLAMP"
+        ],
+        "ILF" :[
+            "ILF"
+        ]
+    },
+    "Sense_and_Feedback": {
+        "Pair": [
+            "ISNSN",
+            "ISNSP"
+        ],
+        "-pins": [
+            "CS",
+            "SENSE"
+        ]
+    },
+    "Special_Functions": {
+        "Phase_Select": [
+            "PHASE"
+        ],
+        "Clamp_Feedback": [
+            "CLAMP"
+        ]
+    },
+    "VSS*" : {
+        "-pins" : [
+            "VSS",
+            "VSSA",
+            "VSSP",
+            "VSSB"               
+        ]
+        },
+    "GND*": {
+        "-pins" : [
+            "GND",
+            "GND1",
+            "GND2"
+        ],
+        "PGND*" : [
+            "PGND"
+        ],
+        "SGND" : [
+            "SGND"
+        ],
+        "AGND" : [
+            "AGND"
+        ]
+    },
+    "No_Connect": {
+        "-pins": [
+            "NC"
+        ]
+    },
+    "EPAD*" : {
+        "-pins" : [
+            "EPAD"
+        ]
+    }
+}
+}

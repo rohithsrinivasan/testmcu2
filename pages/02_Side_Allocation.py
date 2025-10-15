@@ -74,6 +74,7 @@ if 'grouped_pin_table' in st.session_state:
             "PWM-Controller" : 'Side_Allocation/priority_map_pwm-controller.json',
             "Volatge-References" : 'Side_Allocation/priority_map_voltage-references.json',
             "Power-Supply-Support" : 'Side_Allocation/priority_map_power-supply-support.json',
+            "FET-Drivers" : 'Side_Allocation/priority_map_fet-drivers.json',
         }
     }
     mpu_splitting = "Side_Allocation/mpu_splitting.json"

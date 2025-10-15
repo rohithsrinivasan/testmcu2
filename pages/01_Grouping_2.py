@@ -113,6 +113,7 @@ if 'pin_table' in st.session_state:
                 "PWM-Controller" : 'Grouping/power_database/pwm-controller.json',
                 "Volatge-References" : 'Grouping/power_database/Voltage-References.json',
                 "Power-Supply-Support" : 'Grouping/power_database/Power-Supply-Support.json',
+                "FET-Drivers" : 'Grouping/power_database/FET-Drivers.json',
                 "PMIC": 'Grouping/power_database/PMIC.json'
             }
         }

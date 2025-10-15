@@ -1,0 +1,33 @@
+{
+
+"Left" : {
+
+    "Supply" :"LA",
+    "Enable" :"LB",
+    "Control" :"LC",
+    "Input" : "LD",
+    "Letterwise_Groups" :"LE",
+    "Delete_and_Refresh" : "LF",
+    "Protection_and_Reporting" : "LG"
+
+},
+
+"Right" : {
+
+    "Voltage_inverting" : "RA",
+    "Bootstrap" :"RB",
+    "Switching" : "RC",
+    "Gate_Drivers" : "RD",
+    "Outputs" :"RE",
+    "Letterwise_Chennels_output" : "RF",
+    "Fault_and_Safety" : "RG",
+    "Sense_and_Feedback" : "RH",
+    "Special_Functions" : "RI",
+    "VSS*" : "RJ",
+    "GND*" : "RK",
+    "No_Connect" : "RL",
+    "EPAD*" : "RM"
+
+}
+
+}
