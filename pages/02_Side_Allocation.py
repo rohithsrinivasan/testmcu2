@@ -5,11 +5,13 @@ import datetime
 import re
 
 from Extraction.base_functions import ui_widgets
+
 from Grouping.base_functions import general_funct
+from Grouping.base_functions import excel_input
 
 from Side_Allocation.base_functions import general_constraints
 from Side_Allocation.base_functions import single80pin_constraints
-
+from Side_Allocation.base_functions import four_sided_symbol
 from Side_Allocation import priority
 from Side_Allocation import side
 from Side_Allocation import part_division
@@ -283,4 +285,42 @@ if 'grouped_pin_table' in st.session_state:
     else:   
         st.text(f"Error Occured in Displaying Dataframes") 
         # testing pyxl features
-        
+
+else:
+    st.warning("Invalid data in session state. No Grouped Pin Table Available")
+    st.session_state['no_grouping_pin_table'] = None 
+    excel_input.handle_file_upload()
+
+    if 'pin_table' in st.session_state:
+        pin_table = st.session_state['pin_table']
+
+    col1, col2, col3 = st.columns(3)
+
+    # Button 1: Clear Pin Table (Light Blue)
+    with col1:
+        if st.button("Clear Pin Table", type="secondary"):
+            del st.session_state['pin_table']
+            st.write("Pin table cleared.")
+            st.rerun()
+
+
+    part_number = st.session_state["part number"]
+    if part_number is None:
+        st.session_state["part number"] = st.session_state["uploaded_csv_name"]
+        part_number = st.session_state["uploaded_csv_name"]
+    # Display the part number
+    st.write (f"Part Number : **{part_number}**")
+    st.write("Pin Table:")
+    st.dataframe(st.session_state['pin_table'])
+    required_cols = ['Pin Designator', 'Pin Display Name', 'Electrical Type']
+    before_side_flag, without_grouping = general_funct.check_excel_format(pin_table, required_cols, optional_column= 'Side')
+
+    suggested_four_sided = four_sided_symbol.default_four_sided_toggle(without_grouping)
+    four_sided_toggle = st.sidebar.toggle("Use 4-Sided Pin Assignment", value=suggested_four_sided)
+    side_assigned_df = four_sided_symbol.assign_pin_sides(without_grouping, use_four_sided=suggested_four_sided)
+
+    st.write("Side-assigned Pin Table:")
+    st.dataframe(side_assigned_df)
+
+
+
