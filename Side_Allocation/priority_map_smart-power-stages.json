@@ -1,0 +1,13 @@
+{
+    "priority_map": {
+
+    "VIN*" : "LA",
+    "VCC*" : "LB",
+    "Control*" : "LC",
+
+    "BOOT*" : "RA",
+    "PHASE" : "RB",
+    "NC*" :"RC",
+    "GND" : "RD"
+    }
+}

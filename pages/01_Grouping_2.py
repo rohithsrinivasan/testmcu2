@@ -114,6 +114,16 @@ if 'pin_table' in st.session_state:
                 "Volatge-References" : 'Grouping/power_database/Voltage-References.json',
                 "Power-Supply-Support" : 'Grouping/power_database/Power-Supply-Support.json',
                 "FET-Drivers" : 'Grouping/power_database/FET-Drivers.json',
+                "Battery-Protectors-Monitors-Balancers" :"Grouping/power_database/Battery-Protectors-Monitors-Balancers.json",
+                "LED-Drivers" : "Grouping/power_database/LED-Drivers.json",
+                
+                "DC-DC-Power-Modules":"Grouping/power_database/DC-DC Power Modules.json",
+                "Multiphase-DC-DC-Switching Controllers":"Grouping/power_database/Multiphase DC-DC Switching Controllers.json",
+                "ORing-FET-Controllers":"Grouping/power_database/ORing-FET-Controllers.json",
+                "Protected-Intelligent-Power-Devices":"Grouping/power_database/Protected-Intelligent-Power-Devices.json",
+                "Smart-Power-Stages":"Grouping/power_database/Smart-Power-Stages.json",
+                "Solid-State-Lighting-Interface-Ics":"Grouping/power_database/Solid-State-Lighting-Interface-Ics.json",
+
                 "PMIC": 'Grouping/power_database/PMIC.json'
             }
         }

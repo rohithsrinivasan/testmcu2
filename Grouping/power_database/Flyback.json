@@ -38,6 +38,15 @@
     ],
     "CT": [
       "CT"
+    ],
+    "RT": [
+      "RT"
+    ],
+    "RTC": [
+      "RTC"
+    ],
+    "CLKS": [
+      "CLKS"
     ]
   },
   "SS": {
@@ -60,6 +69,28 @@
     ],
     "SLEEP": [
       "SLEEP"
+    ],
+    "ENABLE" : [
+      "EN",
+      "ENABLE"
+    ],
+    "MODE" : [
+      "MD",
+      "MODE"
+    ],
+    "PFC-ON": [
+      "PFC-ON"
+    ],
+    "DELAY": [
+      "DELAY"
+    ]
+  },
+  "Current_Limit": {
+    "DCLIM": [
+      "DCLIM"
+    ],
+    "CLIMIT": [
+      "CLIMIT"
     ]
   }
 },
@@ -83,6 +114,12 @@
     ],
     "GATE": [
       "GATE"
+    ],
+    "OUTM": [
+      "OUTM"
+    ],
+    "OUTAC": [
+      "OUTAC"
     ]
   },
   "Feedback_and_Control": {
@@ -97,6 +134,9 @@
     ],
     "Ctrl-VERR": [
       "VERR"
+    ],
+    "EO": [
+      "EO"
     ]
   },
   "Protection_and_Detection": {
@@ -121,11 +161,23 @@
   "Current_Sense": {
     "ISENSE": [
       "ISENSE"
+    ],
+    "IAC": [
+      "IAC"
+    ],
+    "CAI": [
+      "CAI"
+    ],
+    "CAO": [
+      "CAO"
     ]
   },
   "Ground": {
     "GND*": [
       "GND"
+    ],
+    "CGND" : [
+      "CGND"
     ],
     "PGND*": [
       "PGND"
@@ -137,8 +189,6 @@
         "PAD",
         "EPAD"
     ]
-
-
   },
   "Ext-MOSFET": {
     "Drain": [
@@ -147,9 +197,12 @@
     "Source": [
       "S"
     ]
+  },
+  "No_Connect": {
+    "NC": [
+      "NC"
+    ]
   }
 }
-
-
 
 }

@@ -1,0 +1,216 @@
+{
+  "Left": {
+    "Input": {
+      "VIN": [
+        "VIN"
+      ],
+      "VDC": [
+        "VDC"
+      ],
+      "VLOGIC": [
+        "VLOGIC"
+      ],
+      "VSO": [
+        "VSO"
+      ]
+    },
+    "Status": {
+      "FAULT": [
+        "FAULT"
+      ],
+      "FLAG": [
+        "FLAG"
+      ]
+    },
+    "Enable": {
+      "EN": [
+        "EN"
+      ],
+      "EN/PWM": [
+        "EN/PWM"
+      ],
+      "PWMI/EN": [
+        "PWMI/EN"
+      ],
+      "EN_Numbered": [
+        "EN1",
+        "EN2",
+        "EN3"
+      ],
+      "EN_PS": [
+        "EN_PS"
+      ],
+      "EN_ADIM": [
+        "EN_ADIM"
+      ],
+      "EN_VSYNC": [
+        "EN_VSYNC"
+      ]
+    },
+    "PWM": {
+      "PWM": [
+        "PWM"
+      ],
+      "PWMI": [
+        "PWMI"
+      ],
+      "PWMO": [
+        "PWMO"
+      ],
+      "FPWM": [
+        "FPWM"
+      ],
+      "PWM_SET/PLL": [
+        "PWM_SET/PLL"
+      ]
+    },
+    "Communication": {
+      "I2C": [
+        "SMBDAT/SDA",
+        "SMBCLK/SCL",
+        "SMBDAT(SDA)",
+        "SMBCLK(SCL)",
+        "SMBCLK",
+        "SMBDAT"
+      ],
+      "SPI": [
+        "SEN",
+        "SCLK",
+        "SDIO"
+      ]
+    },
+    "Control": {
+      "SEL1": [
+        "SEL1"
+      ],
+      "FSW": [
+        "FSW"
+      ],
+      "RSET": [
+        "RSET"
+      ],
+      "STV": [
+        "STV"
+      ],
+      "ACTL": [
+        "ACTL"
+      ],
+      "CSEL": [
+        "CSEL"
+      ],
+      "ISET": [
+        "ISET1",
+        "ISET2"
+      ],
+      "OSC": [
+        "OSC"
+      ],
+      "HFM": [
+        "HFM"
+      ],
+      "CE": [
+        "CE"
+      ],
+      "MON": [
+        "MON"
+      ]
+    }
+  },
+  "Right": {
+    "Switching": {
+      "LX": [
+        "LX"
+      ],
+      "SLEW": [
+        "SLEW"
+      ],
+      "GD": [
+        "GD"
+      ],
+      "CS": [
+        "CS"
+      ]
+    },
+    "Protection": {
+      "OVP": [
+        "OVP"
+      ]
+    },
+    "LED_Channels": {
+      "CH0-CH5": [
+        "CH0",
+        "CH1",
+        "CH2",
+        "CH3",
+        "CH4",
+        "CH5"
+      ],
+      "CH1-CH8": [
+        "CH6",
+        "CH7",
+        "CH8"
+      ],
+      "IIN_Channels": [
+        "IIN0",
+        "IIN1",
+        "IIN2",
+        "IIN3",
+        "IIN4",
+        "IIN5"
+      ],
+      "IOUT_Channels": [
+        "IOUT1",
+        "IOUT2",
+        "IOUT3"
+      ]
+    },
+    "Output": {
+      "VSL": [
+        "VSL"
+      ]
+    },
+    "Status_Output": {
+      "FAULT": [
+        "FAULT"
+      ]
+    },
+    "Compensation": {
+      "COMP": [
+        "COMP"
+      ]
+    },
+    "Ground": {
+      "AGND": [
+        "AGND"
+      ],
+      "PGND": [
+        "PGND"
+      ],
+      "GND": [
+        "GND"
+      ],
+      "VSS": [
+        "VSS_1",
+        "VSS_2",
+        "VSS_3",
+        "VSS_4",
+        "VSS_5",
+        "VSS_6",
+        "VSS_7"
+      ]
+    },
+    "NC": {
+      "pins": [
+        "NC",
+        "NC_1",
+        "NC_2"
+      ]
+    },
+    "EPAD": {
+      "pins": [
+        "EPAD",
+        "EP"
+      ]
+    }
+  }
+}

@@ -6,6 +6,8 @@
         "VBAT*"  : "LC",
         "Reference" : "LD",
         "Enable" :"LE",
+        "Control" :"LEA",
+        "Detection" :"LEB",
         "Bypass" :"LF",
         "Gate Drivers" :"LG",
         "Current_Sense" : "LH",
@@ -13,6 +15,7 @@
         "Communication" : "LJ",
         "Status" :"LK",
         "Timing" :"LL",
+        "Charge_Pump" : "LM",
 
         "BOOT*" :"RA",
         "Switching": "RB",

@@ -1,0 +1,778 @@
+{
+  "Left": {
+    "Supply": {
+      "VIN": [
+        "VIN"
+      ],
+      "VCC": [
+        "VCC"
+      ],
+      "VDD": [
+        "VDD"
+      ],
+      "VDDP": [
+        "VDDP"
+      ],
+      "VCCP": [
+        "VCCP"
+      ],
+      "VCCS": [
+        "VCCS"
+      ],
+      "PVCC": [
+        "PVCC"
+      ],
+      "PVCCG": [
+        "PVCCG"
+      ],
+      "VDDIO": [
+        "VDDIO"
+      ]
+    },
+    "Input_Sensing": {
+      "VINSEN": [
+        "VINSEN"
+      ],
+      "VMON": [
+        "VMON"
+      ]
+    },
+    "Enable": {
+      "ENABLE": [
+        "ENABLE"
+      ],
+      "EN": [
+        "EN"
+      ],
+      "EN_Numbered": [
+        "EN0",
+        "EN1",
+        "EN2"
+      ],
+      "EN_PWR": [
+        "EN_PWR"
+      ],
+      "EN_VTT": [
+        "EN_VTT"
+      ],
+      "EN_PH_SYNC": [
+        "EN_PH_SYNC"
+      ],
+      "EN_PWR_CFP": [
+        "EN_PWR_CFP"
+      ],
+      "CLK_EN": [
+        "CLK_EN#"
+      ]
+    },
+    "Power_Good": {
+      "PGOOD": [
+        "PGOOD"
+      ],
+      "PGOOD_NB": [
+        "PGOOD_NB"
+      ],
+      "PGOOD_SOC": [
+        "PGOOD_SOC"
+      ],
+      "PGOODG": [
+        "PGOODG"
+      ],
+      "PG": [
+        "PG"
+      ],
+      "PG_Numbered": [
+        "PG0",
+        "PG1",
+        "PG2"
+      ]
+    },
+    "Power_OK": {
+      "PWROK": [
+        "PWROK"
+      ]
+    },
+    "System_Control": {
+      "SVT": [
+        "SVT"
+      ],
+      "SVD": [
+        "SVD"
+      ],
+      "SVC": [
+        "SVC"
+      ],
+      "PSI": [
+        "PSI",
+        "PSI#"
+      ],
+      "PSICOMP": [
+        "PSICOMP"
+      ]
+    },
+    "VID_Interface": {
+      "VID": [
+        "VID0",
+        "VID1",
+        "VID2",
+        "VID3",
+        "VID4",
+        "VID5",
+        "VID6",
+        "VID7"
+      ],
+      "VW": [
+        "VW",
+        "VW0",
+        "VW1",
+        "VWG"
+      ]
+    },
+    "VR_Control": {
+      "VR_ON": [
+        "VR_ON"
+      ],
+      "VR_RDY": [
+        "VR_RDY"
+      ],
+      "VR_FAN": [
+        "VR_FAN"
+      ],
+      "VR_HOT": [
+        "VR_HOT",
+        "VR_HOT#"
+      ],
+      "VR_TT": [
+        "VR_TT#"
+      ]
+    },
+    "Feedback": {
+      "FB": [
+        "FB"
+      ],
+      "FB_Numbered": [
+        "FB0",
+        "FB1",
+        "FB2"
+      ],
+      "FB_NB": [
+        "FB_NB"
+      ],
+      "FB_SOC": [
+        "FB_SOC"
+      ],
+      "FBG": [
+        "FBG"
+      ]
+    },
+    "Compensation": {
+      "COMP": [
+        "COMP"
+      ],
+      "COMP_Numbered": [
+        "COMP0",
+        "COMP1"
+      ],
+      "COMP_NB": [
+        "COMP_NB"
+      ],
+      "COMP_SOC": [
+        "COMP_SOC"
+      ],
+      "COMPG": [
+        "COMPG"
+      ],
+      "SCOMP": [
+        "SCOMP"
+      ]
+    },
+    "Voltage_Sense": {
+      "VSEN": [
+        "VSEN"
+      ],
+      "VSEN_Numbered": [
+        "VSEN0",
+        "VSEN1",
+        "VSEN2"
+      ],
+      "VSEN_NB": [
+        "VSEN_NB"
+      ],
+      "VSEN_SOC": [
+        "VSEN_SOC"
+      ],
+      "VDIFF": [
+        "VDIFF",
+        "VDIFF0",
+        "VDIFF1"
+      ]
+    },
+    "Return_Path": {
+      "RTN": [
+        "RTN"
+      ],
+      "RTN_Numbered": [
+        "RTN0",
+        "RTN1"
+      ],
+      "RTN_NB": [
+        "RTN_NB"
+      ],
+      "RTNG": [
+        "RTNG"
+      ]
+    },
+    "Temperature": {
+      "NTC": [
+        "NTC"
+      ],
+      "NTC_NB": [
+        "NTC_NB"
+      ],
+      "NTC_SOC": [
+        "NTC_SOC"
+      ],
+      "NTCG": [
+        "NTCG"
+      ]
+    },
+    "Current_Sense_Input": {
+      "ISEN": [
+        "ISEN1",
+        "ISEN2",
+        "ISEN3",
+        "ISEN4"
+      ],
+      "ISEN_NB": [
+        "ISEN1_NB",
+        "ISEN2_NB",
+        "ISEN3_NB"
+      ],
+      "ISEN_Differential": [
+        "ISENIN+",
+        "ISENIN-"
+      ],
+      "ISEN3_FB2": [
+        "ISEN3/FB2"
+      ]
+    },
+    "Configuration": {
+      "RBIAS": [
+        "RBIAS"
+      ],
+      "CONFIG": [
+        "CONFIG"
+      ],
+      "ADDRESS": [
+        "ADDRESS"
+      ],
+      "ADDR": [
+        "ADDR"
+      ],
+      "CFP": [
+        "CFP"
+      ],
+      "VRSEL_ADDR": [
+        "VRSEL_ADDR"
+      ],
+      "NVM_BANK_BT": [
+        "NVM_BANK_BT"
+      ],
+      "TM_EN_OTP": [
+        "TM_EN_OTP"
+      ],
+      "AUTO": [
+        "AUTO"
+      ],
+      "RSET": [
+        "RSET"
+      ],
+      "SA": [
+        "SA"
+      ]
+    },
+    "VR_Voltage": {
+      "DPRSLPVR": [
+        "DPRSLPVR"
+      ]
+    },
+    "Frequency_Control": {
+      "FS": [
+        "FS"
+      ],
+      "FSET_NB": [
+        "FSET_NB"
+      ]
+    },
+    "Soft_Start": {
+      "SS": [
+        "SS"
+      ]
+    },
+    "Timing": {
+      "TM": [
+        "TM"
+      ]
+    },
+    "Communication": {
+      "I2C_PM": [
+        "PMSCL",
+        "PMSDA"
+      ],
+      "I2C": [
+        "I2CLK",
+        "I2DATA",
+        "SDA",
+        "SCLK",
+        "SCL"
+      ],
+      "I2C_SM": [
+        "SM_PM_I2DATA",
+        "SM_PM_I2CLK"
+      ],
+      "Alert": [
+        "nPMALERT",
+        "ALERT#",
+        "SM_PMALERT#",
+        "SALRT"
+      ],
+      "AVS": [
+        "AVS_SDA",
+        "AVS_CLK",
+        "AVS_MDA",
+        "AVS_VDDIO"
+      ]
+    },
+    "nVRHOT": {
+      "pins": [
+        "nVRHOT"
+      ]
+    },
+    "Protection": {
+      "OVP": [
+        "OVP"
+      ],
+      "OCSET": [
+        "OCSET"
+      ],
+      "OCSET_NB": [
+        "OCSET_NB"
+      ],
+      "OFS_VFIXEN": [
+        "OFS/VFIXEN"
+      ],
+      "APA": [
+        "APA"
+      ]
+    },
+    "System_States": {
+      "S3": [
+        "S3"
+      ],
+      "S5": [
+        "S5"
+      ]
+    },
+    "Programming": {
+      "PROG": [
+        "PROG"
+      ],
+      "PROG_Numbered": [
+        "PROG1",
+        "PROG2"
+      ]
+    },
+    "Temperature_Monitor": {
+      "TWARN": [
+        "TWARN"
+      ]
+    },
+    "PWM_Input": {
+      "PWMIN": [
+        "PWMIN"
+      ]
+    },
+    "Voltage_Setting": {
+      "VSET": [
+        "VSET1",
+        "VSET2"
+      ]
+    },
+    "NC": {
+      "pins": [
+        "NC"
+      ]
+    }
+  },
+  "Right": {
+    "PWM_Outputs": {
+      "PWM_Numbered": [
+        "PWM0",
+        "PWM1",
+        "PWM2",
+        "PWM3",
+        "PWM4",
+        "PWM5",
+        "PWM6",
+        "PWM7",
+        "PWM8",
+        "PWM9",
+        "PWM10",
+        "PWM11"
+      ],
+      "PWM_SOC": [
+        "PWM_SOC"
+      ],
+      "PWM_Y": [
+        "PWM_Y"
+      ],
+      "PWM2_NB": [
+        "PWM2_NB",
+        "PWM3_NB"
+      ],
+      "PWMA_PWMB": [
+        "PWMA",
+        "PWMB"
+      ]
+    },
+    "Bootstrap": {
+      "BOOT": [
+        "BOOT"
+      ],
+      "BOOT_Numbered": [
+        "BOOT0",
+        "BOOT1",
+        "BOOT2"
+      ],
+      "BOOT_NB": [
+        "BOOT_NB",
+        "BOOT1_NB"
+      ],
+      "BOOTX": [
+        "BOOTX"
+      ],
+      "BOOTG": [
+        "BOOTG"
+      ]
+    },
+    "High_Side_Gate": {
+      "UGATE": [
+        "UGATE"
+      ],
+      "UGATE_Numbered": [
+        "UGATE0",
+        "UGATE1",
+        "UGATE2"
+      ],
+      "UGATE_NB": [
+        "UGATE_NB",
+        "UGATE1_NB"
+      ],
+      "UGATEX": [
+        "UGATEX"
+      ],
+      "UGATEG": [
+        "UGATEG"
+      ],
+      "UG": [
+        "UG1",
+        "UG2"
+      ]
+    },
+    "Phase_Node": {
+      "PHASE": [
+        "PHASE"
+      ],
+      "PHASE_Numbered": [
+        "PHASE0",
+        "PHASE1",
+        "PHASE2"
+      ],
+      "PHASE_NB": [
+        "PHASE_NB",
+        "PHASE1_NB"
+      ],
+      "PHASEX": [
+        "PHASEX"
+      ],
+      "PHASEG": [
+        "PHASEG"
+      ],
+      "PH": [
+        "PH1",
+        "PH2"
+      ]
+    },
+    "Low_Side_Gate": {
+      "LGATE": [
+        "LGATE"
+      ],
+      "LGATE_Numbered": [
+        "LGATE0",
+        "LGATE1",
+        "LGATE2"
+      ],
+      "LGATE_AB": [
+        "LGATE1A",
+        "LGATE1B"
+      ],
+      "LGATE_NB": [
+        "LGATE_NB",
+        "LGATE1_NB"
+      ],
+      "LGATEX": [
+        "LGATEX"
+      ],
+      "LGATEG": [
+        "LGATEG"
+      ],
+      "LG": [
+        "LG1",
+        "LG2"
+      ]
+    },
+    "Power_Ground": {
+      "VSSP": [
+        "VSSP"
+      ],
+      "VSSP_Numbered": [
+        "VSSP1",
+        "VSSP2"
+      ],
+      "PGND": [
+        "PGND0",
+        "PGND1"
+      ],
+      "PGND_NB": [
+        "PGND_NB"
+      ]
+    },
+    "Current_Sense_Output": {
+      "CS": [
+        "CS0",
+        "CS1",
+        "CS2",
+        "CS3",
+        "CS4",
+        "CS5",
+        "CS6",
+        "CS7",
+        "CS8",
+        "CS9",
+        "CS10",
+        "CS11"
+      ],
+      "CSRTN": [
+        "CSRTN0",
+        "CSRTN1",
+        "CSRTN2",
+        "CSRTN3",
+        "CSRTN4",
+        "CSRTN5",
+        "CSRTN6",
+        "CSRTN7",
+        "CSRTN8",
+        "CSRTN9",
+        "CSRTN10",
+        "CSRTN11"
+      ],
+      "ISEN_Differential": {
+        "Channel_1": [
+          "ISEN1+",
+          "ISEN1-"
+        ],
+        "Channel_2": [
+          "ISEN2+",
+          "ISEN2-"
+        ],
+        "Channel_3": [
+          "ISEN3+",
+          "ISEN3-"
+        ],
+        "Channel_4": [
+          "ISEN4+",
+          "ISEN4-"
+        ],
+        "Channel_5": [
+          "ISEN5+",
+          "ISEN5-"
+        ],
+        "Channel_6": [
+          "ISEN6+",
+          "ISEN6-"
+        ],
+        "Channel_A": [
+          "ISENA+",
+          "ISENA-"
+        ],
+        "Channel_B": [
+          "ISENB+",
+          "ISENB-"
+        ]
+      },
+      "ISP_ISN": [
+        "ISP0",
+        "ISN0",
+        "ISP1",
+        "ISN1"
+      ]
+    },
+    "Current_Sum": {
+      "ISUM": [
+        "ISUM+",
+        "ISUM-"
+      ],
+      "ISUMP_ISUMN": [
+        "ISUMP",
+        "ISUMN"
+      ],
+      "ISUMP_NB": [
+        "ISUMP_NB"
+      ],
+      "ISUMN_NB": [
+        "ISUMN_NB"
+      ],
+      "ISUMP_SOC": [
+        "ISUMP_SOC"
+      ],
+      "ISUMN_SOC": [
+        "ISUMN_SOC"
+      ],
+      "ISUMPG": [
+        "ISUMPG"
+      ],
+      "ISUMNG": [
+        "ISUMNG"
+      ]
+    },
+    "Current_Monitor": {
+      "IMON": [
+        "IMON"
+      ],
+      "IMON_NB": [
+        "IMON_NB"
+      ],
+      "IMON_SOC": [
+        "IMON_SOC"
+      ],
+      "IMONG": [
+        "IMONG"
+      ],
+      "IOUT": [
+        "IOUT"
+      ]
+    },
+    "Voltage_Sense_Output": {
+      "VSEN": [
+        "VSEN"
+      ],
+      "VSEN_Numbered": [
+        "VSEN0",
+        "VSEN1",
+        "VSEN2"
+      ],
+      "VSEN_NB": [
+        "VSEN_NB"
+      ],
+      "VSEN_OVP": [
+        "VSEN_OVP"
+      ]
+    },
+    "Reference_Ground": {
+      "RGND": [
+        "RGND"
+      ],
+      "RGND_Numbered": [
+        "RGND0",
+        "RGND1",
+        "RGND2"
+      ]
+    },
+    "Temperature_Sense_Output": {
+      "TEMP": [
+        "TEMP"
+      ],
+      "TEMP_Numbered": [
+        "TEMP0",
+        "TEMP1",
+        "TEMP2"
+      ],
+      "TMON": [
+        "TMON0",
+        "TMON1"
+      ],
+      "TCOMP": [
+        "TCOMP"
+      ]
+    },
+    "VR_Hot": {
+      "VR_HOT_L": [
+        "VR_HOT_L"
+      ],
+      "VR_HOT#": [
+        "VR_HOT#"
+      ]
+    },
+    "Mode_Control": {
+      "FCCM": [
+        "FCCM"
+      ],
+      "FCCM_SOC": [
+        "FCCM_SOC"
+      ],
+      "FCCM_NB": [
+        "FCCM_NB"
+      ]
+    },
+    "Protection_Output": {
+      "OVP": [
+        "OVP"
+      ]
+    },
+    "Compensation_Output": {
+      "BUF_COMP": [
+        "BUF_COMP"
+      ]
+    },
+    "Reference_Output": {
+      "DAC": [
+        "DAC"
+      ],
+      "REF": [
+        "REF"
+      ],
+      "OFS": [
+        "OFS"
+      ]
+    },
+    "Power_Outputs": {
+      "5VDLSB": [
+        "5VDLSB"
+      ],
+      "3V3AUX": [
+        "3V3AUX"
+      ],
+      "DLA": [
+        "DLA"
+      ]
+    },
+    "Ground": {
+      "GND": [
+        "GND"
+      ],
+      "GND_PAD": [
+        "GND_PAD"
+      ]
+    },
+    "NC": {
+      "pins": [
+        "NC"
+      ]
+    },
+    "EPAD": {
+      "pins": [
+        "EPAD"
+      ]
+    }
+  }
+}

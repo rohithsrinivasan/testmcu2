@@ -1,0 +1,12 @@
+{
+    "priority_map": {
+
+    "VP*" : "LA",
+    "VS*" : "LB",
+    "NC*" : "LC",
+
+    "VO*" : "RA",
+    "VBAR" : "RB",
+    "GND" :"RC"
+    }
+}

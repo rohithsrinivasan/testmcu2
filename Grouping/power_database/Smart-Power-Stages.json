@@ -1,0 +1,63 @@
+{
+
+
+    "Left"  : {
+
+        "VIN*" : {
+            "-pins" :   [
+                "VIN"
+            ]
+        },
+
+        "VCC*" :{
+             "-pins"  : [
+                "VCC"
+            ],
+            "PVCC" : [
+                "PVCC"
+            ]
+        },
+        "Control*" : {
+            "LG": [
+                "LGCTRL"
+            ],
+            "Others" : [
+                "FAULT#",
+                "TMON",
+                "PWM",
+                "IMON",
+                "REFIN"
+  
+            ]
+    }
+},
+
+
+
+"Right": {
+
+    "BOOT*" :{
+        "-pins" : [
+            "BOOT"
+        ]
+    },
+    "PHASE" :{
+        "-pins" : [
+            "PHASE"
+        ],
+        "SW*" :[
+            "SW"
+        ]
+    }, 
+    "NC*" : [
+        "NC"
+    ],
+    "GND" : [
+        "GND"
+    ]
+}
+}
+
+
+
+

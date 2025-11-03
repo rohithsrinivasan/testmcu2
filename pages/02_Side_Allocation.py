@@ -77,6 +77,17 @@ if 'grouped_pin_table' in st.session_state:
             "Volatge-References" : 'Side_Allocation/priority_map_voltage-references.json',
             "Power-Supply-Support" : 'Side_Allocation/priority_map_power-supply-support.json',
             "FET-Drivers" : 'Side_Allocation/priority_map_fet-drivers.json',
+            "Battery-Protectors-Monitors-Balancers" :"Side_Allocation/priority_map_Battery-Protectors-Monitors-Balancers.json",
+            "LED-Drivers" : "Side_Allocation/priority_map_led-drivers.json",
+
+            "DC-DC-Power-Modules":"Side_Allocation/priority_map_dc-dc-power-modules.json",
+            "Multiphase-DC-DC-Switching Controllers":"Side_Allocation/priority_map_multiphase-dcdc-switching-controllers.json",
+            "ORing-FET-Controllers":"Side_Allocation/priority_map_oring-fet-controllers.json",
+            "Protected-Intelligent-Power-Devices":"Side_Allocation/priority_map_protected-intelligent-power-devices.json",
+            "Smart-Power-Stages":"Side_Allocation/priority_map_smart-power-stages.json",
+            "Solid-State-Lighting-Interface-Ics":"Side_Allocation/priority_map_solid-state-lightening-interface-ics.json",
+
+
         }
     }
     mpu_splitting = "Side_Allocation/mpu_splitting.json"
@@ -309,18 +320,36 @@ else:
         st.session_state["part number"] = st.session_state["uploaded_csv_name"]
         part_number = st.session_state["uploaded_csv_name"]
     # Display the part number
-    st.write (f"Part Number : **{part_number}**")
-    st.write("Pin Table:")
-    st.dataframe(st.session_state['pin_table'])
-    required_cols = ['Pin Designator', 'Pin Display Name', 'Electrical Type']
-    before_side_flag, without_grouping = general_funct.check_excel_format(pin_table, required_cols, optional_column= 'Side')
+    # Ensure pin_table is initialized before proceeding further
+    if 'pin_table' in st.session_state and st.session_state['pin_table'] is not None:
+        pin_table = st.session_state['pin_table']
+        part_number = st.session_state.get('part_number', 'Unknown')
 
-    suggested_four_sided = four_sided_symbol.default_four_sided_toggle(without_grouping)
-    four_sided_toggle = st.sidebar.toggle("Use 4-Sided Pin Assignment", value=suggested_four_sided)
-    side_assigned_df = four_sided_symbol.assign_pin_sides(without_grouping, use_four_sided=suggested_four_sided)
+        st.write(f"Part Number : **{part_number}**")
+        st.write("Pin Table:")
+        st.dataframe(pin_table)
 
-    st.write("Side-assigned Pin Table:")
-    st.dataframe(side_assigned_df)
+        # Process only when pin_table is available
+        required_cols = ['Pin Designator', 'Pin Display Name', 'Electrical Type']
+        before_side_flag, without_grouping = general_funct.check_excel_format(
+            pin_table, required_cols, optional_column='Side'
+        )
+
+        suggested_four_sided = four_sided_symbol.default_four_sided_toggle(without_grouping)
+        four_sided_toggle = st.sidebar.toggle(
+            "Use 4-Sided Pin Assignment", value=suggested_four_sided
+        )
+
+        side_assigned_df = four_sided_symbol.assign_pin_sides(
+            without_grouping, use_four_sided=suggested_four_sided
+        )
+
+        st.write("Side-assigned Pin Table:")
+        st.dataframe(side_assigned_df)
+
+    else:
+        st.warning("No pin table found. Please upload a valid Excel file to proceed.")
+
 
 
 

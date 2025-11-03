@@ -12,6 +12,9 @@
         ],
         "VDDSMB": [
             "VDDSMB"
+        ],
+        "VSMB": [
+            "VSMB"
         ]
     },
     "Input":{
@@ -20,6 +23,15 @@
        ],
         "VIN" : [
             "VIN"
+       ],
+       "ACIN" : [
+        "ACIN"
+       ],
+       "ADP": [
+        "ADP"
+       ],
+       "AC/USB": [
+        "AC/USB"
        ]
     },
     "VBAT*" : {
@@ -38,6 +50,9 @@
             ],
             "DCSET": [
                 "DCSET"
+            ],
+            "FSET": [
+                "FSET"
             ]
         },
         "VADJ": [
@@ -49,6 +64,12 @@
             ],
             "ACLIM": [
                 "ACLIM"
+            ],
+            "CCLIM": [
+                "CCLIM"
+            ],
+            "ILIM": [
+                "ILIM"
             ]
         }
     },
@@ -65,6 +86,12 @@
         ],
         "OTGEN": [
             "OTGEN/CMIN"
+        ],
+        "CELL": [
+            "CELL"
+        ],
+        "NTC": [
+            "NTC"
         ]
     },
     "Bypass": {
@@ -75,7 +102,7 @@
             "BYPSG"
         ]
     },
-    "Gate Drivers": [
+    "Gate_Drivers": [
       "ASGATE"
     ],
     "Communication": {
@@ -98,6 +125,9 @@
         ],
         "PROG": [
             "PROG"
+        ],
+        "ICM": [
+            "ICM"
         ]
     },
 
@@ -107,6 +137,20 @@
         ],
         "TOEN": [
             "TOEN"
+        ],
+        "CHGEN": [
+            "CHGEN"
+        ]
+    },
+    "Control": {
+        "CONT": [
+            "CONT"
+        ],
+        "MODE": [
+            "MODE"
+        ],
+        "RST": [
+            "RST#"
         ]
     },
     "Status": {
@@ -118,11 +162,27 @@
         ],
         "ACOK": [
             "ACOK"
+        ],
+        "PG": [
+            "PG"
+        ]
+    },
+    "Detection": {
+        "ADET": [
+            "ADET"
         ]
     },
     "Timing": {
         "TIME": [
             "TIME"
+        ]
+    },
+    "Charge_Pump": {
+        "QPCP": [
+            "QPCP"
+        ],
+        "QPCN": [
+            "QPCN"
         ]
     }
     
@@ -140,7 +200,8 @@
       "PHASE3"
     ],
     "SW*": [
-      "SW"
+      "SW",
+      "VFSW"
     ]
   },
 
@@ -198,6 +259,12 @@
         ],
         "B" : [
             "BGATE"
+        ],
+        "A": [
+            "AGATE"
+        ],
+        "S": [
+            "SGATE"
         ]
     }
   },
@@ -221,12 +288,17 @@
   "Current_Sense_Output": {
     "Charge_Sense": [
         "CSON", 
-        "CSOP"
+        "CSOP",
+        "CMSRC"
     ],
     "System_Sense": [
         "AMON/BMON", 
         "PSYS", 
         "PSYS/(REFADJ)"
+    ],
+    "Monitor": [
+        "AMON",
+        "BMON"
     ]
   },
   "Adapter_Monitor": {
@@ -279,6 +351,9 @@
         ],
         "PGND" : [
             "PGND"
+        ],
+        "AGND": [
+            "AGND"
         ]
     }
   },
@@ -296,8 +371,3 @@
 }
 
 }
-
-
-
-
-

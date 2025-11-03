@@ -6,8 +6,11 @@
     "Power" :"LB",
     "Enable" :"LC",
     "Control" : "LD",
-    "Fault" :"LE",
-    "Interface" : "LF"
+    "Timing" : "LE",
+    "Setting" : "LF",
+    "Monitors" : "LG",
+    "Fault" :"LH",
+    "Interface" : "LI"
 },
 
 "Right" : {
@@ -15,10 +18,13 @@
     "Output" : "RA",
     "FET*" :"RB",
     "Reset*": "RC",
-    "COMP*" : "RD",
-    "Ground*" :"RE",
-    "No_Connect" : "RF",
-    "EPAD*" : "RG"
+    "Gate_Drivers" : "RD",
+    "Charge_Pump" : "RE",
+    "Status" : "RF",
+    "COMP*" : "RG",
+    "Ground*" :"RH",
+    "No_Connect" : "RI",
+    "EPAD*" : "RJ"
 
 }
 

@@ -22,6 +22,12 @@
       "VIN1",
       "VIN2",
       "VINSEN"
+    ],
+    "Standby_Supply": [
+      "5VSBY"
+    ],
+    "12V_Supply": [
+      "P12V"
     ]
   },
   "Communication": {
@@ -169,7 +175,9 @@
     "Set": [
       "SET",
       "VMSET",
-      "VSET"
+      "VSET",
+      "SET0",
+      "SET1"
     ],
     "Slope_Compensation": [
       "SLOPE"
@@ -178,7 +186,8 @@
       "SA"
     ],
     "System_Alert": [
-      "SALRT"
+      "SALRT",
+      "SALERT"
     ],
     "Temperature_Monitor": [
       "TMON"
@@ -197,6 +206,16 @@
     ],
     "Voltage_Tracking_Input": [
       "VTRK"
+    ],
+    "Sleep_States": [
+      "S3#",
+      "S5#"
+    ],
+    "PROG*": [
+      "PROG1",
+      "PROG2",
+      "PROG3",
+      "PROG4"
     ]
   },
   "Current_Control": {
@@ -214,7 +233,9 @@
     ],
     "I-Limit": [
       "ILIM",
-      "ILIMIT"
+      "ILIMIT",
+      "ILIM1",
+      "ILIM2"
     ],
     "ISET*": [
       "ISET",
@@ -258,7 +279,9 @@
       "EN/FF2"
     ],
     "EN-LDO": [
-      "LDO_EN#"
+      "LDO_EN#",
+      "EN_LDO",
+      "LDO3EN"
     ],
     "EN-PWR": [
       "EN_PWR"
@@ -298,14 +321,17 @@
     ],
     "General": [
       "FREQ",
-      "FS"
+      "FS",
+      "FS1"
     ],
     "SEL*": [
       "FSEL"
     ],
     "SET*": [
       "FSET",
-      "RSET"
+      "RSET",
+      "FSET1",
+      "FSET2"
     ],
     "Timer_Input": [
       "TM"
@@ -313,7 +339,11 @@
     "Timing": [
       "RT",
       "SD",
-      "TD"
+      "TD",
+      "RTCT"
+    ],
+    "Oscillator": [
+      "OSCET2"
     ]
   },
   "GPIO*": [
@@ -354,6 +384,9 @@
     ],
     "Voltage_Regulator_Ready": [
       "VR_RDY"
+    ],
+    "VID_Power_Good": [
+      "VIDPGD"
     ]
   },
   "SEL*": [
@@ -367,7 +400,9 @@
       "SSDONE"
     ],
     "SS-Soft": [
-      "SOFT"
+      "SOFT",
+      "SOFT1",
+      "SOFT2"
     ],
     "Tracking": [
       "SS/TR",
@@ -380,13 +415,18 @@
       "SS",
       "SS1",
       "SS2"
+    ],
+    "SS-EN_Combo": [
+      "SS1/EN1",
+      "SS2/EN2"
     ]
   },
   "SYNC*": {
     "Input": [
       "FSYNC",
       "SYNC",
-      "SYNCIN"
+      "SYNCIN",
+      "SYNC1"
     ],
     "Output": [
       "SYNCOUT"
@@ -406,6 +446,9 @@
     "5V_Output": [
       "V5_OUT"
     ],
+    "7V_LDO": [
+      "7VLDO"
+    ],
     "A*": [
       "AVCC",
       "AVDD"
@@ -415,7 +458,10 @@
     ],
     "LDO": [
       "LDO_3V3",
-      "LDO_5V"
+      "LDO_5V",
+      "LDO",
+      "LDO3",
+      "LDO5"
     ],
     "Phase": [
       "2PH",
@@ -447,7 +493,8 @@
       "VDD1",
       "VDD2",
       "VDDP",
-      "VDDS"
+      "VDDS",
+      "VDDQ"
     ],
     "Voltage_Rail": [
       "VR"
@@ -477,7 +524,9 @@
       "RBIAS"
     ],
     "REF": [
-      "REFIN"
+      "REFIN",
+      "LDOREFIN",
+      "REFIN2"
     ],
     "V2P5": [
       "V2P5"
@@ -494,7 +543,27 @@
     ],
     "VREF*": [
       "VREF",
-      "VREG"
+      "VREG",
+      "VREF1",
+      "VREF2",
+      "VREF3"
+    ],
+    "SREF": [
+      "SREF"
+    ],
+    "LDO_REF": [
+      "LDOREF"
+    ]
+  },
+  "DDR_Memory": {
+    "DDR_Control": [
+      "DDR"
+    ],
+    "DDR_VTT": [
+      "DDR_VTT"
+    ],
+    "DDR_VTT_Sense": [
+      "DDR_VTTSNS"
     ]
   }
 },
@@ -527,7 +596,8 @@
     "General": [
       "COMP",
       "COMP1",
-      "COMP2"
+      "COMP2",
+      "COMP4"
     ],
     "PLL": [
       "PLL_COMP"
@@ -535,12 +605,16 @@
     "others": [
       "ICOMP",
       "TCOMP"
+    ],
+    "Bypass": [
+      "BYP"
     ]
   },
   "Current_Monitors": [
     "IMON",
     "IMON1",
-    "IMON2"
+    "IMON2",
+    "IOUT"
   ],
   "Current_Sense": {
     "ISEN-Sense": [
@@ -592,11 +666,15 @@
       "ISEN",
       "ISEN1",
       "ISEN2",
-      "ISEN3"
+      "ISEN3",
+      "CSEN"
     ],
     "pair": [
       "ISENA",
       "ISENB"
+    ],
+    "Return": [
+      "CSRTN"
     ]
   },
   "EPAD*": {
@@ -610,7 +688,8 @@
       "FB",
       "FB1",
       "FB2",
-      "FB3"
+      "FB3",
+      "FB4"
     ],
     "Differential_Feedback": [
       "DFB"
@@ -626,6 +705,12 @@
     ],
     "Volatge_FB": [
       "VFB"
+    ],
+    "Secondary_FB": [
+      "SECFB"
+    ],
+    "Linear_Control": [
+      "LCFB"
     ]
   },
   "Gate_Drivers": {
@@ -642,7 +727,8 @@
       "HSOC"
     ],
     "Linear_Driver_Output": [
-      "LINDRV"
+      "LINDRV",
+      "LCDR"
     ],
     "Low_Side": [
       "LG",
@@ -654,7 +740,9 @@
       "LGATE1A",
       "LGATE1B",
       "LGATE2",
-      "LGATE3"
+      "LGATE3",
+      "LG1",
+      "LG2"
     ],
     "Low_Side_Gate_Driver": [
       "LGATE/OCS"
@@ -667,6 +755,10 @@
       "BGATE/BSOC",
       "TGATE",
       "GATE"
+    ],
+    "Drive_Outputs": [
+      "DRIVE2",
+      "DRIVE3"
     ]
   },
   "Ground_Pins": {
@@ -679,7 +771,9 @@
       "GND2"
     ],
     "Analog_Ground": [
-      "AGND"
+      "AGND",
+      "AGND1",
+      "AGND2"
     ],
     "Digital_Ground": [
       "DGND"
@@ -705,6 +799,9 @@
       "VSSP",
       "VSSP1",
       "VSSP2"
+    ],
+    "Ground_Pad": [
+      "GND_PAD"
     ]
   },
   "MOSFET_Pins": [
@@ -743,6 +840,15 @@
     ],
     "Volatge_Output": [
       "VOS"
+    ],
+    "VREF_Output": [
+      "VREF_OUT"
+    ],
+    "VREF_Input": [
+      "VREF_IN"
+    ],
+    "Output_Reference": [
+      "OUT2REF"
     ]
   },
   "Switching": {
@@ -775,7 +881,9 @@
       "PHASE",
       "PHASE1",
       "PHASE2",
-      "PHASE3"
+      "PHASE3",
+      "PH1",
+      "PH2"
     ],
     "SW*": [
       "SW"
@@ -799,7 +907,9 @@
       "VOUT2"
     ],
     "OUT*": [
-      "OUT"
+      "OUT",
+      "OUT1",
+      "OUT2"
     ],
     "Termination_Voltage": [
       "VTT"
@@ -816,11 +926,13 @@
     ],
     "Channel1": [
       "VSEN1+",
-      "VSEN1-"
+      "VSEN1-",
+      "VSEN1"
     ],
     "Channel2": [
       "VSEN2+",
-      "VSEN2-"
+      "VSEN2-",
+      "VSEN2"
     ],
     "pair": [
       "VSEN+",

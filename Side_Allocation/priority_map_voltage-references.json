@@ -14,7 +14,8 @@
     "Output_Voltage": "RA",
     "Op-V-" :"RB",
     "Cathode" : "RC",
-    "No_Connect" : "RD"
+    "Ground*" : "RD",
+    "No_Connect" : "RE"
 
 }
 

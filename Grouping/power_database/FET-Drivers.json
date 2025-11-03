@@ -84,6 +84,9 @@
         ],
         "Soft-Select" : [
             "SS" 
+        ],
+        "A-Voltage" : [
+            "VCTRL"
         ]
     },
     "Input": {
@@ -93,6 +96,12 @@
         ],
         "General_Input": [
             "IN"
+        ],
+        "High" : [
+            "HI"
+        ],
+        "Low" : [
+            "LI"
         ]
     },
     "Letterwise_Groups": {
@@ -216,6 +225,9 @@
                 "HO",
                 "HO_H",
                 "HO_L"
+            ],
+            "Side" : [
+                "HS"
             ]
         },
         "Low": {

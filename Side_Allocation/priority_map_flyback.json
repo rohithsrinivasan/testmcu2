@@ -6,6 +6,7 @@
         "Timing" : "LC",
         "SS" : "LD",
         "Control_and_Enable" : "LE",
+        "Current_Limit" :"LF",
 
         "Output" : "RA",
         "Feedback_and_Control" : "RB",

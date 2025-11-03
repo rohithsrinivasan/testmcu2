@@ -61,6 +61,12 @@
         "K"
       ]
     },
+    "Ground*" : {
+       "-pins" : [
+        "GND"
+       ]
+
+    },
 
     "No_Connect": {
         "-pins" : [

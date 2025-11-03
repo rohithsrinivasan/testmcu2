@@ -61,6 +61,7 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
     
     for i, df in enumerate(dfs):
         df = df.replace(to_replace=r'^Unnamed:.*', value=np.nan, regex=True)
+        st.dataframe(df)
         
         # Handle completely unnamed headers
         if all(df.columns.to_series().astype(str).str.contains('^Unnamed')):

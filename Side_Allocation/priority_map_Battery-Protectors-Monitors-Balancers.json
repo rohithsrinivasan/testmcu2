@@ -1,0 +1,45 @@
+{
+    "priority_map": {
+
+        "Supply" : "LA",
+        "Voltage_Input_Channels" : "LB",
+        "Regulator" : "LC",
+        "Reset_Control" : "LD",
+        "Current_Sense" : "LE",
+        "Communication" : "LF",
+        "Analog_Inputs" : "LG",
+        "Oscillator_Clock" : "LH",
+        "System_Control" : "LI",
+        "Monitoring" : "LJ",
+        "FET_Control" : "LK",
+        "Temperature" : "LL",
+        "Protection" : "LM",
+        "Configuration" : "LN",
+        "GPIO" : "LO",
+        "Enable_Control" : "LP",
+        "High_Voltage" : "LQ",
+        "Gate_Drivers_Control" : "LR",
+        "Tool_Interface" : "LS",
+        "Capacitor_Regulation" : "LT",
+
+
+        "Output_Protection" : "RA",
+        "Battery_Connections" : "RB",
+        "Current_Monitor" : "RC",
+        "Voltage_Outputs" : "RD",
+        "FET_Voltage" : "RE",
+        "Cell_Voltage_Channels" : "RF",
+        "Cell_Balancing" : "RH",
+        "Temperature_Output" : "RI",
+        "Gate_Driver_Outputs" : "RJ",
+        "Comparator_Outputs" : "RK",
+        "Port_Pins" : "RL",
+        "Current_Sense_Outputs" : "RM",
+        "Capacitor_Regulation_Output" : "RN",
+        "Ground" : "RO",
+        "NC" : "RP",
+        "EPAD" : "RQ"
+
+
+    }
+}

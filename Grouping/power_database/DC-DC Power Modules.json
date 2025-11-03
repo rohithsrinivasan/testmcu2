@@ -1,0 +1,289 @@
+{
+  "Left": {
+    "Input_Supply": {
+      "VIN": [
+        "VIN"
+      ],
+      "VDD": [
+        "VDD"
+      ],
+      "VCC": [
+        "VCC"
+      ],
+      "VDDC": [
+        "VDDC"
+      ]
+    },
+    "Gate_Driver_Supply": {
+      "VDRV": [
+        "VDRV"
+      ],
+      "VDRV1": [
+        "VDRV1"
+      ],
+      "VDRVIN": [
+        "VDRVIN"
+      ],
+      "VDRVEN": [
+        "VDRVEN"
+      ]
+    },
+    "Voltage_Rails": {
+      "V1": [
+        "V1"
+      ],
+      "VR": [
+        "VR"
+      ],
+      "V25": [
+        "V25"
+      ],
+      "VR5": [
+        "VR5"
+      ],
+      "VR6": [
+        "VR6"
+      ],
+      "VR55": [
+        "VR55"
+      ]
+    },
+    "Voltage_Monitor": {
+      "VMON": [
+        "VMON"
+      ]
+    },
+    "Tracking": {
+      "VTRK": [
+        "VTRK"
+      ],
+      "VTRKP": [
+        "VTRKP"
+      ],
+      "VTRKN": [
+        "VTRKN"
+      ]
+    },
+    "Enable": {
+      "EN": [
+        "EN"
+      ],
+      "EN_Numbered": [
+        "EN0",
+        "EN1"
+      ]
+    },
+    "Power_Good": {
+      "PG": [
+        "PG"
+      ],
+      "PG_Numbered": [
+        "PG0",
+        "PG1"
+      ]
+    },
+    "Address_Configuration": {
+      "SA": [
+        "SA"
+      ]
+    },
+    "Communication": {
+      "I2C": [
+        "SDA",
+        "SCL"
+      ],
+      "SALRT": [
+        "SALRT"
+      ],
+      "DDC": [
+        "DDC"
+      ]
+    },
+    "Synchronization": {
+      "SYNC": [
+        "SYNC"
+      ]
+    },
+    "Current_Input": {
+      "IIN": [
+        "IINN",
+        "IINP"
+      ]
+    },
+    "Temperature_External": {
+      "XTEMP": [
+        "XTEMP"
+      ],
+      "XTEMP_Differential": {
+        "Channel_0": [
+          "XTEMP0P",
+          "XTEMP0N"
+        ],
+        "Channel_1": [
+          "XTEMP1P",
+          "XTEMP1N"
+        ],
+        "General": [
+          "XTEMP+",
+          "XTEMP-"
+        ]
+      }
+    },
+    "Control": {
+      "FC0": [
+        "FC0"
+      ],
+      "MGN": [
+        "MGN"
+      ],
+      "MGN_Numbered": [
+        "MGN0",
+        "MGN1"
+      ],
+      "UVLO": [
+        "UVLO"
+      ],
+      "SS": [
+        "SS"
+      ],
+      "SS_UVLO": [
+        "SS/UVLO"
+      ],
+      "ASCR": [
+        "ASCR"
+      ],
+      "CS": [
+        "CS"
+      ]
+    },
+    "Voltage_Setting": {
+      "VSET": [
+        "VSET"
+      ],
+      "VSET_Numbered": [
+        "VSET0",
+        "VSET1"
+      ]
+    }
+  },
+  "Right": {
+    "Switching_Outputs": {
+      "SW": [
+        "SW"
+      ],
+      "SW_Numbered": [
+        "SW1",
+        "SW2"
+      ],
+      "SWD": [
+        "SWD1",
+        "SWD2"
+      ],
+      "VSWH": [
+        "VSWH"
+      ],
+      "PHASE": [
+        "PHASE"
+      ]
+    },
+    "Output_Voltage": {
+      "VOUT": [
+        "VOUT"
+      ],
+      "VDRVOUT": [
+        "VDRVOUT"
+      ]
+    },
+    "Feedback": {
+      "FB_Differential": [
+        "FB+",
+        "FB-"
+      ]
+    },
+    "Voltage_Reference": {
+      "VR": [
+        "VR"
+      ],
+      "V25": [
+        "V25"
+      ]
+    },
+    "Voltage_Setting_Output": {
+      "VSET": [
+        "VSET"
+      ]
+    },
+    "Voltage_Sense": {
+      "VSEN_Differential": {
+        "General": [
+          "VSENP",
+          "VSENN",
+          "VSEN+",
+          "VSEN-"
+        ],
+        "Channel_0": [
+          "VSEN0P",
+          "VSEN0N"
+        ],
+        "Channel_1": [
+          "VSEN1P",
+          "VSEN1N"
+        ]
+      }
+    },
+    "Current_Sense": {
+      "ISEN_AB": {
+        "General": [
+          "ISENA",
+          "ISENB"
+        ],
+        "Channel_0": [
+          "ISENA0",
+          "ISENB0"
+        ],
+        "Channel_1": [
+          "ISENA1",
+          "ISENB1"
+        ]
+      }
+    },
+    "PWM_Outputs": {
+      "PWM_HL": {
+        "Channel_0": [
+          "PWMH0",
+          "PWML0"
+        ],
+        "Channel_1": [
+          "PWMH1",
+          "PWML1"
+        ]
+      }
+    },
+    "Test": {
+      "TEST": [
+        "TEST"
+      ]
+    },
+    "Ground": {
+      "PGND": [
+        "PGND"
+      ],
+      "SGND": [
+        "SGND"
+      ],
+      "DGND": [
+        "DGND"
+      ]
+    },
+    "NC": {
+      "pins": [
+        "NC"
+      ]
+    },
+    "EPAD": {
+      "pins": [
+        "EPAD"
+      ]
+    }
+  }
+}
