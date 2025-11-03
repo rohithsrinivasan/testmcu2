@@ -1,0 +1,405 @@
+{
+  "Left": {
+    "Supply_Inputs": {
+      "A-Main_Supply": {
+        "PVCC": [
+          "PVCC"
+        ],
+        "VCC": [
+          "VCC"
+        ],
+        "LVCC": [
+          "LVCC"
+        ],
+        "VDD": [
+          "VDD"
+        ],
+        "AVDD": [
+          "AVDD"
+        ],
+        "VDDIO": [
+          "VDDIO"
+        ]
+      },
+      "B-Analog_Input": {
+        "AVIN": [
+          "AVIN"
+        ],
+        "AVIN_FILT": [
+          "AVIN_FILT",
+          "AVIN_FLT"
+        ]
+      },
+      "C-Power_Inputs": {
+        "PVIN": [
+          "PVIN_A",
+          "PVIN_B",
+          "PVIN_C",
+          "PVIN_D"
+        ]
+      },
+      "D-Buck_Inputs": {
+        "VIN": [
+          "VIN1",
+          "VIN2/3",
+          "VIN3",
+          "VIN4",
+          "VIN5",
+          "VIN6",
+          "VIN7",
+          "VIN8",
+          "VIN2_5",
+          "VIN3_4",
+          "VIN5_6"
+        ]
+      },
+      "E-Charger_Inputs": {
+        "VCHG": [
+          "VCHG"
+        ],
+        "VINDCD": [
+          "VINDCD1",
+          "VINDCD2"
+        ],
+        "VINLDO": [
+          "VINLDO"
+        ]
+      },
+      "F-LDO_Inputs": {
+        "LDOIN": [
+          "LDOIN4"
+        ],
+        "LDO_VIN": [
+          "LDO1_VIN",
+          "LDO2_VIN",
+          "LDO3_VIN"
+        ]
+      },
+      "G-Battery": {
+        "BBAT": [
+          "BBAT"
+        ],
+        "VBAT": [
+          "VBAT"
+        ]
+      }
+    },
+    "Enable_Control": {
+      "EN": [
+        "EN"
+      ],
+      "EN_LV": [
+        "EN_LV"
+      ],
+      "CEN": [
+        "CEN"
+      ],
+      "DCD_Enable": [
+        "ENDCD1",
+        "ENDCD2"
+      ],
+      "LDO_Enable": [
+        "ENLDO1",
+        "ENLDO2"
+      ]
+    },
+    "Power_Good": {
+      "PGOOD": [
+        "PGOOD"
+      ],
+      "PGOOD_Numbered": [
+        "PGOOD1",
+        "PGOOD2",
+        "PGOOD3",
+        "PGOOD4",
+        "PGOOD2/3"
+      ]
+    },
+    "Communication": {
+      "I2C": [
+        "SCL",
+        "SDA"
+      ],
+      "CS": [
+        "CS"
+      ]
+    },
+    "VID_Interface": {
+      "VIDEN": [
+        "VIDEN"
+      ],
+      "VID": [
+        "VID2",
+        "VID3"
+      ]
+    },
+    "GPIO": {
+      "GPIO": [
+        "GPIO",
+        "GPIO0",
+        "GPIO1",
+        "GPIO2",
+        "GPIO3",
+        "GPIO4",
+        "GPIO5",
+        "GPIO6",
+        "GPI6",
+        "GPIO3_SDA",
+        "GPI4_SCL"
+      ],
+      "MPIO": [
+        "MPIO0",
+        "MPIO1",
+        "MPIO2",
+        "MPIO3",
+        "MPIO4",
+        "MPIO5"
+      ]
+    },
+    "System_Control": {
+      "Soft_Start": [
+        "SOFT"
+      ],
+      "Bypass": [
+        "BYP"
+      ],
+      "Configuration": [
+        "CFG1"
+      ],
+      "Reset": [
+        "RSTB"
+      ],
+      "Watchdog": [
+        "WDOG_RST"
+      ],
+      "Power_On": [
+        "PWRON"
+      ],
+      "VIN_Select": [
+        "VIN_SEL"
+      ],
+      "LDO_Select": [
+        "LDO_SEL1",
+        "LDO_SEL2"
+      ]
+    },
+    "IO_Supply": {
+      "VIO": [
+        "VIO"
+      ]
+    },
+    "Programming": {
+      "VPROG": [
+        "VPROG"
+      ]
+    },
+    "RTC": {
+      "VRTC": [
+        "VRTC"
+      ],
+      "Crystal": [
+        "XIN",
+        "XOUT"
+      ]
+    },
+    "Reference": {
+      "VREFIN": [
+        "VREFIN"
+      ],
+      "VREFOUT": [
+        "VREFOUT"
+      ]
+    }
+  },
+  "Right": {
+    "Buck_Outputs": {
+      "A-Single_Output": {
+        "VOUT": [
+          "VOUT"
+        ],
+        "VPLL": [
+          "VPLL"
+        ],
+        "VSRAM": [
+          "VSRAM"
+        ]
+      },
+      "B-Multi_Output": {
+        "VOUT1-4": [
+          "VOUT1",
+          "VOUT2",
+          "VOUT3",
+          "VOUT4"
+        ],
+        "VOUT5-8": [
+          "VOUT5",
+          "VOUT6",
+          "VOUT7",
+          "VOUT8"
+        ]
+      },
+      "C-Buck_Inputs_Right": {
+        "BUCK1": [
+          "BUCK1_VIN1",
+          "BUCK1_VIN2",
+          "BUCK1_VIN3"
+        ],
+        "BUCK2": [
+          "BUCK2_VIN"
+        ],
+        "BUCK3": [
+          "BUCK3_VIN"
+        ],
+        "BUCK4": [
+          "BUCK4_VIN1",
+          "BUCK4_VIN2"
+        ],
+        "BUCK5": [
+          "BUCK5_VIN"
+        ],
+        "BUCK6": [
+          "BUCK6_VIN"
+        ]
+      }
+    },
+    "Switching_Nodes": {
+      "Phase": {
+        "PHASE": [
+          "PHASE"
+        ],
+        "PHASE_Numbered": [
+          "PHASE1",
+          "PHASE2",
+          "PHASE3"
+        ]
+      },
+      "PH_Outputs": [
+        "PH_A",
+        "PH_B",
+        "PH_C",
+        "PH_D"
+      ],
+      "Buck_LX": {
+        "BUCK1": [
+          "BUCK1_LX1",
+          "BUCK1_LX2",
+          "BUCK1_LX3"
+        ],
+        "BUCK2": [
+          "BUCK2_LX"
+        ],
+        "BUCK3": [
+          "BUCK3_LX"
+        ],
+        "BUCK4": [
+          "BUCK4_LX1",
+          "BUCK4_LX2"
+        ],
+        "BUCK5": [
+          "BUCK5_LX"
+        ],
+        "BUCK6": [
+          "BUCK6_LX"
+        ]
+      },
+      "DCD_SW": [
+        "SW1",
+        "SW2"
+      ]
+    },
+    "Bootstrap": {
+      "BOOT": [
+        "BOOT1"
+      ]
+    },
+    "Feedback": {
+      "FB": [
+        "FB"
+      ],
+      "FB_Numbered": [
+        "FB1",
+        "FB2",
+        "FB3"
+      ],
+      "Buck_FB": [
+        "BUCK1_FB",
+        "BUCK2_FB",
+        "BUCK3_FB",
+        "BUCK4_FB",
+        "BUCK5_FB",
+        "BUCK6_FB"
+      ]
+    },
+    "LDO_Outputs": {
+      "LDOOUT": [
+        "LDOOUT4"
+      ],
+      "LDO_OUT": [
+        "LDO1_OUT",
+        "LDO2_OUT",
+        "LDO3_OUT"
+      ],
+      "VOLDO": [
+        "VOLDO1",
+        "VOLDO2"
+      ]
+    },
+    "Return_Path": {
+      "RTN": [
+        "RTN1",
+        "RTN2",
+        "RTN3",
+        "RTN4"
+      ]
+    },
+    "Interrupt": {
+      "INT": [
+        "INT",
+        "INT#"
+      ]
+    },
+    "Fault": {
+      "BFLT": [
+        "BFLT#"
+      ]
+    },
+    "Ground": {
+      "PGND": [
+        "PGND",
+        "PGND1",
+        "PGND2/3"
+      ],
+      "PGND_Multi": [
+        "PGND_A",
+        "PGND_B",
+        "PGND_C",
+        "PGND_D",
+        "PGND_AB",
+        "PGND_CD"
+      ],
+      "GND": [
+        "GND"
+      ],
+      "AGND": [
+        "AGND"
+      ],
+      "GNDDCD": [
+        "GNDDCD1",
+        "GNDDCD2"
+      ],
+      "GNDLDO": [
+        "GNDLDO"
+      ]
+    },
+    "NC": {
+      "pins": [
+        "NC"
+      ]
+    },
+    "EPAD": {
+      "pins": [
+        "EPAD"
+      ]
+    }
+  }
+}

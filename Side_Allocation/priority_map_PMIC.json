@@ -1,0 +1,30 @@
+{
+    "priority_map": {
+
+    "Supply_Inputs" : "LA",
+    "Enable_Control" : "LB",
+    "Power_Good" : "LC",
+    "Communication" : "LD",
+    "VID_Interface" : "LE",
+    "GPIO" : "LF",
+    "System_Control" : "LG",
+    "IO_Supply" : "LH",
+    "Programming" : "LI",
+    "RTC" : "LJ",
+    "Reference" : "LK",
+
+    "Buck_Outputs" : "RA",
+    "Switching_Nodes" : "RB",
+    "Bootstrap" : "RC",
+    "Feedback" : "RD",
+    "LDO_Outputs" : "RE",
+    "Return_Path" : "RF",
+    "Interrupt" : "RG",
+    "Fault" : "RH",
+    "Ground" : "RI",
+    "NC" : "RJ",
+    "EPAD" : "RK"
+    }
+}
+
+

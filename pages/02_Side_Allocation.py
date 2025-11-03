@@ -87,7 +87,9 @@ if 'grouped_pin_table' in st.session_state:
             "Smart-Power-Stages":"Side_Allocation/priority_map_smart-power-stages.json",
             "Solid-State-Lighting-Interface-Ics":"Side_Allocation/priority_map_solid-state-lightening-interface-ics.json",
 
-
+            "AC-DC & Isolated DC-DC Converters":"Side_Allocation/priority_map_ac-dc&isolated-dc-dc-converters.json",
+            "USB Type-C Port Manager":"Side_Allocation/priority_map_usb-type-c-port-manager.json",
+            "PMIC": 'Side_Allocation/priority_map_PMIC.json'
         }
     }
     mpu_splitting = "Side_Allocation/mpu_splitting.json"

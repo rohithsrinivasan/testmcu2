@@ -124,6 +124,9 @@ if 'pin_table' in st.session_state:
                 "Smart-Power-Stages":"Grouping/power_database/Smart-Power-Stages.json",
                 "Solid-State-Lighting-Interface-Ics":"Grouping/power_database/Solid-State-Lighting-Interface-Ics.json",
 
+
+                "AC-DC & Isolated DC-DC Converters":"Grouping/power_database/AC-DC & Isolated DC-DC Converters.json",
+                "USB Type-C Port Manager":"Grouping/power_database/USB Type-C Port Manager.json",
                 "PMIC": 'Grouping/power_database/PMIC.json'
             }
         }
