@@ -15,22 +15,12 @@
             ]
         },
 
-        "Input_Capacitors" :{
-             "CAP*"  : [
-                "CAP+",
-                "CAP-"
-            ],
-            "C1*" : [
-                "C1P",
-                "CIN",
-                "BS1"
-            ],
-            "C2*" : [
-                "C2P",
-                "C2N",
-                "BSP"
+        "BOOST*" : {
+            "-pins" : [
+                "BOOST",
+                "BST"
             ]
-    
+        
         },
 
         "EN" :[
@@ -69,6 +59,24 @@
         "VCORE"
     ]
     },
+    "Capacitors" :{
+            "CAP*"  : [
+            "CAP+",
+            "CAP-"
+        ],
+        "C1*" : [
+            "C1P",
+            "CIN",
+            "BS1"
+        ],
+        "C2*" : [
+            "C2P",
+            "C2N",
+            "BSP"
+        ]
+
+    },
+
     "NC*" : [
         "NC"
     ],

@@ -2,7 +2,7 @@
     "priority_map": {
 
         "Voltage_Input" : "LA",
-        "Input_Capacitors" : "LB",
+        "BOOST*" : "LB",
         "OSC" : "LC",
         "LV*" : "LD",
         "EN" :"LE",
@@ -10,9 +10,10 @@
         "GPIO" :"LG",
 
         "VOUT*" : "RA",
-        "NC*" : "RB",
-        "GND*" : "RC",
-        "EPAD*" : "RD"
+        "Capacitors" : "RB",
+        "NC*" : "RC",
+        "GND*" : "RD",
+        "EPAD*" : "RE"
 
 
     }

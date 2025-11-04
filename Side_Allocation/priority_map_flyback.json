@@ -9,12 +9,14 @@
         "Current_Limit" :"LF",
 
         "Output" : "RA",
-        "Feedback_and_Control" : "RB",
-        "Protection_and_Detection" : "RC",
-        "Voltage_and_Bias" : "RD",
-        "Current_Sense" :"RE",
-        "Ext-MOSFET" : "RF",
-        "Ground" : "RG"
+        "Protection_and_Detection" : "RB",
+        "Ext-MOSFET" : "RC",
+        "Feedback_and_Control" : "RD",
+        "Voltage_and_Bias" : "RE",
+        "OVL" : "RF",
+        "Current_Sense" :"RG",
+        "Ground" : "RH",
+        "No_Connect" :"RI"
 
 
     }

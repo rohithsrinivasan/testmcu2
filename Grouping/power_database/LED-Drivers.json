@@ -1,7 +1,7 @@
 {
   "Left": {
     "Input": {
-      "VIN": [
+      "A-VIN": [
         "VIN"
       ],
       "VDC": [
@@ -71,7 +71,9 @@
         "SMBDAT(SDA)",
         "SMBCLK(SCL)",
         "SMBCLK",
-        "SMBDAT"
+        "SMBDAT",
+        "SDA",
+        "SCL"
       ],
       "SPI": [
         "SEN",
@@ -121,7 +123,7 @@
       "LX": [
         "LX"
       ],
-      "SLEW": [
+      "A-SLEW": [
         "SLEW"
       ],
       "GD": [
@@ -137,15 +139,13 @@
       ]
     },
     "LED_Channels": {
-      "CH0-CH5": [
+      "CH": [
         "CH0",
         "CH1",
         "CH2",
         "CH3",
         "CH4",
-        "CH5"
-      ],
-      "CH1-CH8": [
+        "CH5",
         "CH6",
         "CH7",
         "CH8"

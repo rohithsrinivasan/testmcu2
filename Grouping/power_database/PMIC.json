@@ -24,10 +24,6 @@
       "B-Analog_Input": {
         "AVIN": [
           "AVIN"
-        ],
-        "AVIN_FILT": [
-          "AVIN_FILT",
-          "AVIN_FLT"
         ]
       },
       "C-Power_Inputs": {
@@ -48,6 +44,7 @@
           "VIN6",
           "VIN7",
           "VIN8",
+          "VIN1_2",
           "VIN2_5",
           "VIN3_4",
           "VIN5_6"
@@ -101,6 +98,10 @@
       "LDO_Enable": [
         "ENLDO1",
         "ENLDO2"
+      ],
+      "Z-AVIN_FILT": [
+          "AVIN_FILT",
+          "AVIN_FLT"
       ]
     },
     "Power_Good": {

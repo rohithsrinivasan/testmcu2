@@ -141,7 +141,10 @@ def process_pin_dataframe(df, testing_electrical_type=False):
         "electrical": "Electrical Type",
         "electrical type": "Electrical Type",
         "description": "Pin Alternate Name",
-        "Pin Alternate Name": "Pin Alternate Name"
+        "Pin description": "Pin Alternate Name",
+        "desc": "Pin Alternate Name",
+        "Pin Alternate Name": "Pin Alternate Name",
+        "Alternate Name": "Pin Alternate Name"
     }
     
     # Find and rename matching columns

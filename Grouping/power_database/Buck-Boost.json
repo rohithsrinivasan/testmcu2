@@ -161,7 +161,8 @@
     ]
   },
   "EPAD*": [
-    "EPAD"
+    "EPAD",
+    "PAD"
   ],
   "Feedback*": [
     "FB",
