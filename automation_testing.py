@@ -80,3 +80,19 @@ if __name__ == "__main__":
     os.makedirs(output_directory, exist_ok=True)
 
     automate_streamlit(input_directory, output_directory)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

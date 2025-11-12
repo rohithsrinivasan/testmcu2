@@ -21,7 +21,6 @@ def check_excel_format(df, required_columns, optional_column=None, default_value
         df_cols = set(df.columns)
         required_set = set(required_columns)
         
-        # Perfect match
         if df_cols == required_set:
             return True, df
         

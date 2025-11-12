@@ -292,3 +292,40 @@ def grouping_as_per_database(old_df, json_paths, SENSITIVITY=True, SMARTSEARCH=F
 
     print("✅ Labels assigned to Grouping column successfully.")
     return df
+
+
+# Add this function after the imports section
+def suggest_power_subcategories(pin_table, json_paths_power):
+    """Test all Power subcategories and return suggestions ranked by completeness"""
+    suggestions = []
+    
+    for sub_cat, json_path in json_paths_power.items():
+        try:
+            test_database = {sub_cat: json_path}
+            test_result = grouping_as_per_database(
+                pin_table.copy(),
+                test_database,
+                SENSITIVITY=False,
+                SMARTSEARCH=False,
+                SINGLE_FILE=True
+            )
+            
+            # Count filled vs empty groupings
+            total_pins = len(test_result)
+            filled_pins = test_result['Grouping'].notna().sum()
+            has_errors = any("❌" in str(val) for val in test_result['Grouping'].values)
+            
+            if not has_errors:
+                match_percentage = (filled_pins / total_pins) * 100
+                suggestions.append({
+                    'subcategory': sub_cat,
+                    'percentage': match_percentage,
+                    'filled': filled_pins,
+                    'total': total_pins
+                })
+        except Exception as e:
+            continue
+    
+    # Sort by percentage (descending), then by filled count
+    suggestions.sort(key=lambda x: (x['percentage'], x['filled']), reverse=True)
+    return suggestions

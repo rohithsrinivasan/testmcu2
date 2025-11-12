@@ -144,9 +144,52 @@ if 'pin_table' in st.session_state:
 
         # Conditional logic for sub-category radio buttons and state management
         if selected_category == 'Power':
+            # Run suggestion analysis only once per selection
+            if 'power_suggestions' not in st.session_state or st.session_state.get('last_analyzed_table') != id(added_empty_grouping_column):
+                with st.spinner("Analyzing Power subcategories..."):
+                    suggestions = Assigning_Pin_Group.suggest_power_subcategories(added_empty_grouping_column, json_paths_Single['Power'])
+                    st.session_state['power_suggestions'] = suggestions
+                    st.session_state['last_analyzed_table'] = id(added_empty_grouping_column)
+            
+            suggestions = st.session_state.get('power_suggestions', [])
+            
+            # Display suggestions in sidebar
+            if suggestions:
+                with st.sidebar:
+                    st.markdown("---")
+                    st.markdown("### 🎯 Suggested Subcategories")
+                    
+                    # Show top 3 suggestions
+                    for i, sug in enumerate(suggestions[:3]):
+                        if sug['percentage'] == 100:
+                            color = "green"
+                            icon = "✅"
+                        elif sug['percentage'] >= 90:
+                            color = "orange"
+                            icon = "⚠️"
+                        else:
+                            color = "gray"
+                            icon = "ℹ️"
+                        
+                        st.markdown(
+                            f"{icon} <span style='color:{color}'><b>{sug['subcategory']}</b> - {sug['percentage']:.1f}% ({sug['filled']}/{sug['total']} pins)</span>",
+                            unsafe_allow_html=True
+                        )
+                    st.markdown("---")
+            
+            # Show radio button with default to best suggestion
+            default_index = 0
+            if suggestions and suggestions[0]['percentage'] == 100:
+                sub_cat_options = list(json_paths_Single['Power'].keys())
+                try:
+                    default_index = sub_cat_options.index(suggestions[0]['subcategory'])
+                except ValueError:
+                    default_index = 0
+            
             sub_category = st.sidebar.radio(
                 "Select Power Sub-Category",
-                options=list(json_paths_Single['Power'].keys())
+                options=list(json_paths_Single['Power'].keys()),
+                index=default_index
             )
             selected_database = {sub_category: json_paths_Single['Power'][sub_category]}
             st.session_state["sub_category"] = sub_category
