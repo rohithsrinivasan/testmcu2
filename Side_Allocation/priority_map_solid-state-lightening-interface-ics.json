@@ -1,0 +1,17 @@
+{
+    "priority_map": {
+
+    "Supply" : "LA",
+    "PWM*" : "LB",
+    "CS*" : "LC",
+    "RT*" : "LD",
+
+    "OUT*" : "RA",
+    "VREF" : "RB",
+    "FB*" :"RC",
+    "COMP*" : "RD",
+    "GND" : "RE",
+    "NC*" : "RF",
+    "EPAD*" : "RG"
+    }
+}

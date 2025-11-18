@@ -1,0 +1,18 @@
+{
+    "priority_map": {
+
+    "Input" : "LA",
+    "Supply" : "LB",
+    "Current_Sense" : "LC",
+    "Current_Compensation" : "LD",
+    "Protection" : "LE",
+    "NC" : "LF",
+
+    "Gate_Driver" : "RA",
+    "Feedback" : "RB",
+    "Brown_Out" :"RC",
+    "Compensation" : "RD",
+    "Mode_Control" :"RE",
+    "Ground" : "RF"
+    }
+}

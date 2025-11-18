@@ -1,10 +1,9 @@
 import pdfplumber
 import pandas as pd
-#import tabula
-#import streamlit as st
-import tempfile 
-#import subprocess
-#import os, sys
+import tabula
+import numpy as np
+import streamlit as st
+
 def find_pages_between_keywords(pdf_path, start_keyword, end_keyword):
     with pdfplumber.open(pdf_path) as pdf:
         start_page, end_page = None, None

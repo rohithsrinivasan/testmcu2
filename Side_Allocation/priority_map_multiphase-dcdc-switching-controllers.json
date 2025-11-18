@@ -1,0 +1,59 @@
+{
+    "priority_map": {
+
+
+        "Supply" : "LA",
+        "Input_Sensing" : "LB",
+        "Enable" : "LC",
+        "Power_Good": "LD",
+        "Power_OK" : "LE",
+        "System_Control" : "LF",
+        "VID_Interface" : "LG",
+        "VR_Control" : "LH",
+        "Feedback" : "LI",
+        "Compensation" : "LJ",
+        "Voltage_Sense" : "LK",
+        "Return_Path" : "LL",
+        "Temperature" : "LM",
+        "Current_Sense_Input" : "LN",
+        "Configuration" : "LO",
+        "VR_Voltage" : "LP",
+        "Frequency_Control" : "LQ",
+        "Soft_Start" : "LR",
+        "Timing" : "LS",
+        "Communication" : "LT",
+        "nVRHOT" : "LU",
+        "Protection" : "LV",
+        "System_States" : "LW",
+        "Programming" : "LX",
+        "Temperature_Monitor" : "LY",
+        "PWM_Input" : "LZ",
+        "Voltage_Setting" : "LZA",
+
+
+        "PWM_Outputs" : "RA",
+        "Bootstrap" : "RB",
+        "High_Side_Gate" : "RC",
+        "Phase_Node" : "RD",
+        "Low_Side_Gate" : "RE",
+        "Power_Ground" : "RF",
+        "Current_Sense_Output" : "RG",
+        "Current_Sum" : "RH",
+        "Current_Monitor" : "RI",
+        "Voltage_Sense_Output" : "RJ",
+        "Reference_Ground" : "RK",
+        "Temperature_Sense_Output" : "RL",
+        "VR_Hot" : "RM",
+        "Mode_Control" : "RN",
+        "Protection_Output" : "RO",
+        "Compensation_Output" : "RP",
+        "Reference_Output" : "RQ",
+        "Power_Outputs" : "RR",
+        "Ground" : "RS",
+        "NC": "RT",
+        "EPAD" : "RU"
+        
+    }
+}
+
+

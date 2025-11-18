@@ -1,0 +1,16 @@
+{
+    "priority_map": {
+
+    "Supply" : "LA",
+    "Regulator" : "LB",
+    "Crystal_Oscillator" : "LC",
+    "Reset" : "LD",
+    "Type_C_Interface" : "LE",
+    "Port_Pins" : "LF",
+
+
+    "Port_Pins_Right" : "RA",
+    "Ground" : "RB",
+    "EPAD" :"RC"
+    }
+}

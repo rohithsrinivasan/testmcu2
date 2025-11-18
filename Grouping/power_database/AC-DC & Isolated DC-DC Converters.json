@@ -1,0 +1,69 @@
+{
+  "Left": {
+    "Input": {
+      "VIN": [
+        "VIN"
+      ]
+    },
+    "Supply": {
+      "VCC": [
+        "VCC"
+      ],
+      "VREG": [
+        "VREG"
+      ]
+    },
+    "Current_Sense": {
+      "ISEN": [
+        "ISEN"
+      ]
+    },
+    "Current_Compensation": {
+      "ICOMP": [
+        "ICOMP"
+      ]
+    },
+    "Protection": {
+      "OVP": [
+        "OVP"
+      ]
+    },
+    "NC": {
+      "pins": [
+        "NC"
+      ]
+    }
+  },
+  "Right": {
+    "Gate_Driver": {
+      "GATE": [
+        "GATE"
+      ]
+    },
+    "Feedback": {
+      "FB": [
+        "FB"
+      ]
+    },
+    "Brown_Out": {
+      "BO": [
+        "BO"
+      ]
+    },
+    "Compensation": {
+      "COMP": [
+        "COMP"
+      ]
+    },
+    "Mode_Control": {
+      "SKIP": [
+        "SKIP"
+      ]
+    },
+    "Ground": {
+      "GND": [
+        "GND"
+      ]
+    }
+  }
+}

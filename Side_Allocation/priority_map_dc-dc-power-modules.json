@@ -1,0 +1,37 @@
+{
+    "priority_map": {
+
+        "Input_Supply" : "LA",
+        "Gate_Driver_Supply" : "LB",
+        "Voltage_Rails" : "LC",
+        "Voltage_Monitor" : "LD",
+        "Tracking" : "LE",
+        "Enable" : "LF",
+        "Power_Good" : "LG",
+        "Address_Configuration" : "LH",
+        "Communication" : "LI",
+        "Synchronization" : "LJ",
+        "Current_Input" : "LK",
+        "Temperature_External" : "LL",
+        "Control" : "LM",
+        "Voltage_Setting": "LN",
+
+        "Switching_Outputs" : "RA",
+        "Output_Voltage" : "RB",
+        "Feedback" : "RC",
+        "Voltage_Reference" : "RD",
+        "Voltage_Setting_Output" : "RE",
+        "Voltage_Sense" : "RF",
+        "Current_Sense" : "RG",
+        "PWM_Outputs" : "RH",
+        "Test" : "RI",
+        "Ground" : "RJ",
+        "NC" : "RK",
+        "EPAD" : "RL"
+
+
+
+    }
+}
+
+

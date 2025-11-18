@@ -1,0 +1,465 @@
+{
+
+"Left" : {
+    "Supply" : {
+        "VDD" : [
+            "VDD",
+            "VDD50",
+            "VDD18",
+            "VDD33",
+            "VDDP"
+        ],
+        "VCC": [
+            "VCC",
+            "PVCC"
+        ],
+        "AVDD": [
+            "AVDD18"
+        ]
+    },
+    "Input": {
+        "VIN": [
+            "VIN",
+            "VIN_SEN"
+        ],
+        "VIN_Protection": [
+            "VIN_OVB"
+        ]
+    },
+    "VREF*" : {
+        "-pins" : [
+            "VREF",
+            "VREF2",
+            "VREFP",
+            "ADCVREF"
+        ],
+        "VERR*" : [
+            "VERR",
+            "VERROR"
+        ],
+        "REFIN": [
+            "REFIN"
+        ],
+        "REFOUT": [
+            "REFOUT"
+        ]
+    },
+    "Control" : {
+        "CS*" : [
+            "CS",
+            "SCSET"
+        ],
+        "RES-Delete" : [
+            "RESDEL"
+        ],
+        "Ramp_Slope_Control": [
+            "RAMP",
+            "SLOPE"
+        ],
+        "Real_Time_Control": [
+            "RT",
+            "RTD",
+            "RTC"
+        ],
+        "CONTROL": [
+            "CONTROL"
+        ],
+        "DRVCTL": [
+            "DRVCTL"
+        ],
+        "MODE": [
+            "MODE"
+        ],
+        "ILIM": [
+            "ILIM"
+        ],
+        "UVLO": [
+            "UVLO"
+        ],
+        "UV/FF": [
+            "UV/FF"
+        ],
+        "DMAX": [
+            "DMAX"
+        ]
+    },
+    "Enable": {
+        "EN": [
+            "EN",
+            "PH_EN",
+            "DRIVE_EN"
+        ],
+        "FS/EN": [
+            "FS/EN"
+        ],
+        "DISABLE": [
+            "DISABLE1"
+        ]
+    },
+    "Frequency": {
+        "FSET": [
+            "FSET"
+        ],
+        "FS": [
+            "FS"
+        ]
+    },
+    "Configuration": {
+        "CFG": [
+            "CFG",
+            "CFG0",
+            "CFG1",
+            "CFG2"
+        ],
+        "FC": [
+            "FC",
+            "FC0",
+            "FC1"
+        ]
+    },
+    "Address": {
+        "ADDR": [
+            "ADDR0",
+            "ADDR1"
+        ],
+        "SA": [
+            "SA0",
+            "SA1"
+        ]
+    },
+    "Communication": {
+        "I2C": [
+            "SCL",
+            "SDA"
+        ],
+        "DDC": [
+            "DDC"
+        ],
+        "ALERT": [
+            "SALRT",
+            "SMBALERT"
+        ]
+    },
+    "Capacitor*": {
+        "-pins" : [
+            "CT"
+        ]
+    },
+    "SS*": {
+        "pins": [
+            "SS"
+        ]
+    },
+    "Status": {
+        "PGOOD": [
+            "PGOOD"
+        ],
+        "PG": [
+            "PG"
+        ],
+        "PGDLY": [
+            "PGDLY"
+        ],
+        "FAULT": [
+            "FAULT"
+        ],
+        "OTS": [
+            "OTS"
+        ]
+    },
+    "Margin_Offset": {
+        "MARGIN": [
+            "MARGIN",
+            "MGN"
+        ],
+        "OFFSET": [
+            "OFSP",
+            "OFSN"
+        ]
+    },
+    "Voltage_Setting": {
+        "VR": [
+            "VR"
+        ],
+        "V25": [
+            "V25"
+        ],
+        "V0": [
+            "V0"
+        ],
+        "V1": [
+            "V1"
+        ]
+    },
+    "Tracking": {
+        "VTRK": [
+            "VTRK"
+        ],
+        "VTRACK": [
+            "VTRACK"
+        ],
+        "VRTK": [
+            "VRTK"
+        ]
+    },
+    "SYNC*": {
+        "pins": [
+            "SYNC"
+        ]
+    },
+    "VFF*": {
+        "pins": [
+            "VFF"
+        ]
+    },
+    "Tuning": {
+        "RTUNE": [
+            "RTUNE"
+        ],
+        "RVSET": [
+            "RVSET"
+        ]
+    },
+    "Temperature": {
+        "XTEMP": [
+            "XTEMP"
+        ],
+        "TEMP": [
+            "TEMP",
+            "TEMP0",
+            "TEMP1"
+        ]
+    },
+    "GPIO*": [
+        "GPIO0"
+    ]
+},
+"Right" : {
+
+    "Outputs" : {
+
+        "High-U" : [
+            "OUTUL", 
+            "OUTUR"
+        ],
+        "Low-L" :[
+            "OUTLL", 
+            "OUTLR"
+        ],
+        "low-LN" : [
+            "OUTLLN", 
+            "OUTLRN"
+        ],
+        "Out-IOUT*" : [
+            "IOUT"
+        ],
+        "AB_Pair": [
+            "OUTA",
+            "OUTB"
+        ],
+        "VOUT_Sense": [
+            "VOUT_SEN"
+        ],
+        "VOUT_Protection": [
+            "VOUT_OVB"
+        ]
+    },
+    "PWM_Signals": {
+        "Single": [
+            "PWM"
+        ],
+        "Numbered": [
+            "PWM0",
+            "PWM1",
+            "PWM2",
+            "PWM3",
+            "PWM4",
+            "PWM5",
+            "PWM6"
+        ],
+        "High_Low": [
+            "PWMH",
+            "PWML"
+        ],
+        "Modes": [
+            "PWM_INV",
+            "PWM_TRI"
+        ]
+    },
+    "Gate_Drivers": {
+        "High_Side": [
+            "GH"
+        ],
+        "Low_Side": [
+            "GL"
+        ],
+        "Top_Gate": [
+            "TGATE"
+        ],
+        "Bottom_Gate": [
+            "BGATE"
+        ],
+        "External_Driver": [
+            "EXDRV"
+        ],
+        "LSE": [
+            "LSE",
+            "LSE0"
+        ]
+    },
+    "BOOT*": {
+        "pins": [
+            "BOOT"
+        ],
+        "BST": [
+            "BST"
+        ],
+        "BSOC": [
+            "BSOC"
+        ]
+    },
+    "Switching": {
+        "LX": [
+            "LX"
+        ],
+        "SW": [
+            "SW"
+        ]
+    },
+    "Current_Sense": {
+        "ISEN_Differential": [
+            "ISENA",
+            "ISENB"
+        ],
+        "ISEN_Numbered": [
+            "ISEN1",
+            "ISEN2",
+            "ISEN3",
+            "ISEN4"
+        ],
+        "ISEN_Channel_1": [
+            "ISEN1N",
+            "ISEN1P"
+        ],
+        "ISEN_Channel_2": [
+            "ISEN2N",
+            "ISEN2P"
+        ],
+        "ISEN_Channel_3": [
+            "ISEN3N",
+            "ISEN3P"
+        ],
+        "ISEN_Channel_4": [
+            "ISEN4N",
+            "ISEN4P"
+        ],
+        "ISEN_Channel_5": [
+            "ISEN5N",
+            "ISEN5P"
+        ],
+        "ISEN_Channel_6": [
+            "ISEN6N",
+            "ISEN6P"
+        ],
+        "ISNS_Differential": [
+            "ISNSP",
+            "ISNSN"
+        ],
+        "ISNS_Channel_0": [
+            "ISNSP0",
+            "ISNSN0"
+        ],
+        "ISNS_Channel_1": [
+            "ISNSP1",
+            "ISNSN1"
+        ],
+        "TSOC": [
+            "TSOC"
+        ]
+    },
+    "Feedback" : {
+        "-pins" : [
+            "FB"
+        ],
+        "ADJ" : [
+            "VADJ"
+        ],
+        "VFB_Differential": [
+            "VFBP",
+            "VFBN"
+        ]
+    },
+    "Voltage_Sense": {
+        "VSEN": [
+            "VSEN"
+        ],
+        "VSEN_Differential": [
+            "VSEN+",
+            "VSEN-",
+            "VSENSP",
+            "VSENSN"
+        ]
+    },
+    "Compensation": {
+        "COMP": [
+            "COMP"
+        ],
+        "DROOP": [
+            "DROOP"
+        ],
+        "PLL_COMP": [
+            "PLL_COMP"
+        ],
+        "VDIFF": [
+            "VDIFF"
+        ]
+    },
+    "Monitors": {
+        "VMON": [
+            "VMON"
+        ],
+        "VIMON": [
+            "VIMON"
+        ]
+    },
+    "Clock": {
+        "CLK_OUT": [
+            "CLK_OUT"
+        ]
+    },
+    "Timing" : {
+        "Buffer" : [
+            "CTBUF"
+        ]
+    },
+    "GND*" : {
+        "-pins" : [
+            "GND"
+        ],
+        "PGND": [
+            "PGND"
+        ],
+        "SGND": [
+            "SGND"
+        ],
+        "DGND": [
+            "DGND"
+        ],
+        "AGND": [
+            "AGND"
+        ]
+    },
+    "NC*": {
+        "-pins": [
+            "NC"
+        ]
+    },
+    "EPAD*": {
+        "-pins": [
+            "EPAD",
+            "PAD"
+        ]
+    }
+}
+
+}

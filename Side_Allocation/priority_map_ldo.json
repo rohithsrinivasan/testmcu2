@@ -1,0 +1,26 @@
+{
+    "priority_map": {
+
+    "Power_Input" : "LA",
+    "Supply" : "LB",
+    "Control" : "LC",
+    "Timing" : "LD",
+
+
+    "Output" : "RA",
+    "BOOT*" : "RB",
+    "Switching_Node" : "RC",
+    "Compensation" : "RD",
+    "Status" : "RE",
+    "Sensing" : "RF",
+    "CSET*" : "RG",
+    "Feedback" : "RH",
+    "Adjust" :"RI",
+    "Overcurrent_Fault" : "RJ",
+    "Ground" : "RK",
+    "NC*" : "RL",
+    "EPAD*" : "RM"
+
+
+    }
+}

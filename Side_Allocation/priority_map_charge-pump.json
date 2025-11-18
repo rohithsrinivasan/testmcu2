@@ -1,0 +1,20 @@
+{
+    "priority_map": {
+
+        "Voltage_Input" : "LA",
+        "BOOST*" : "LB",
+        "OSC" : "LC",
+        "LV*" : "LD",
+        "EN" :"LE",
+        "Interface" :"LF",
+        "GPIO" :"LG",
+
+        "VOUT*" : "RA",
+        "Capacitors" : "RB",
+        "NC*" : "RC",
+        "GND*" : "RD",
+        "EPAD*" : "RE"
+
+
+    }
+}

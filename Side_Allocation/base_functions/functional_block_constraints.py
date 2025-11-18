@@ -93,6 +93,31 @@ def test_three_DDRcase(unfilled_df, df):
             Balanced_Assignment=False
         )
         return ddr_parts
+    
+
+# Generic handler for new interface types
+def generic_handler_function(unfilled_df, df, interface_name):
+    mask = unfilled_df['Priority'].str.contains(interface_name, na=False)
+    pins_df = unfilled_df[mask]
+
+    if pins_df.empty:
+        print(f"No {interface_name} pins found.")
+        return []
+
+    count = len(pins_df)
+    print(f"Found {count} {interface_name} pins")
+
+    if 40 < count < 80:
+        port_df_side_added = general_constraints.side_for_one_symbol(pins_df)
+        df.loc[pins_df.index, 'Side'] = port_df_side_added['Side'].values
+        return [port_df_side_added]
+    else:
+        # Use splitting function (reuse or generalize)
+        n_parts_needed = (len(pins_df) + 79) // 80
+        part_list = general_constraints.split_into_n_parts(
+            pins_df, n_parts_needed, max_rows=80, Strict_Population=False, Balanced_Assignment=False
+        )
+        return part_list
 
     
 

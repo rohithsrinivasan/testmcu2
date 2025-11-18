@@ -1,0 +1,45 @@
+{
+
+"Left" : {
+
+    "Supply" :"LA",
+    "VREF*" :"LB",
+    "Input" :"LC",
+    "Control" :"LD",
+    "Enable" :"LE",
+    "Frequency" :"LF",
+    "Configuration" : "LG",
+    "Address" : "LH",
+    "Communication" : "LI",
+    "Status" : "LJ",
+    "Margin_Offset" : "LK",
+    "Voltage_Setting" : "LL",
+    "Tracking" : "LM",
+    "SYNC*" : "LN",
+    "VFF*" : "LO",
+    "Tuning" : "LP",
+    "Temperature" : "LQ",
+    "GPIO*" : "LR",
+    "Capacitor*" :"LS",
+    "SS*" : "LT"
+},
+
+"Right" : {
+
+    "Outputs" : "RA",
+    "Feedback" :"RB",
+    "PWM_Signals" : "RC",
+    "Gate_Drivers" : "RD",
+    "BOOT*" : "RE",
+    "Switching" : "RF",
+    "Current_Sense" : "RG",
+    "Voltage_Sense" : "RH",
+    "Compensation" : "RI",
+    "Monitors" : "RJ",
+    "Clock" : "RK",
+    "Timing" : "RL",
+    "GND*" : "RM"
+
+}
+
+}

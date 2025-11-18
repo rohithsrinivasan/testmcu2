@@ -1,0 +1,39 @@
+{
+    "priority_map": {
+        "Buck_Inputs": "LA",
+        "Supply": "LB",
+        "EN*": "LC",
+        "PG*": "LD",
+        "SYNC*": "LE",
+        "SS*": "LF",
+        "Control": "LG",
+        "Current_Control": "LH",
+        "VSET*": "LHA",
+        "Frequency_pins": "LI",
+        "SEL*" : "LJ",
+        "OFS*": "LK",
+        "GPIO*": "LL",
+        "Communication": "LM",
+        "VID*": "LN",
+        "Voltage_Refs": "LO",
+        "DDR_Memory" : "LP",
+
+
+        "Switching": "RA",
+        "PWM_Signals": "RB",
+        "VOUT*": "RBA",
+        "FB*": "RC",
+        "Gate_Drivers": "RD",
+        "MOSFET_Pins": "RE",
+        "Reference_Voltage": "RF",
+        "VSEN*": "RG",
+        "Clock_Signals": "RI",
+        "Compensation": "RJ",
+        "Current_Sense": "RK",
+        "Voltage_Monitors": "RL",
+        "POK*": "RN",
+        "Ground_Pins": "RO",
+        "NC*": "RP",
+        "EPAD*": "RQ"
+    }
+}

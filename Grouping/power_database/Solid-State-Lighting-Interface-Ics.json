@@ -1,0 +1,63 @@
+{
+
+
+    "Left"  : {
+
+        "Supply" : {
+            "VCC*" :   [
+                "VCC"
+            ]
+        },
+
+        "PWM*" :{
+             "-pins"  : [
+                "PWM"
+            ]
+        },
+
+        "CS*" :[
+            "CS"
+        ],
+
+        "RT*" : [
+            "RT"
+        ]
+    },
+
+
+
+"Right": {
+
+    "OUT*" :{
+        "-pins" : [
+            "OUT"
+        ]
+    },
+    "VREF" : [
+        "VREF"
+    ],
+    "FB*" : {
+      "-pins" :  [
+        "FB",
+        "FB+",
+        "FB-"
+    ]
+    },
+    "COMP*":[
+        "COMP"
+    ],
+    "GND" : [
+        "GND"
+    ],
+    "NC*" : [
+        "NC"
+    ],
+    "EPAD*" : [
+        "EPAD",
+        "PAD"
+    ]
+}
+}
+
+
+

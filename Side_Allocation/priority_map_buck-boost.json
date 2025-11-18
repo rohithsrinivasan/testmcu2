@@ -1,0 +1,27 @@
+{
+    "priority_map": {
+
+        "Input_Power" : "LA",
+        "Supply" : "LB",
+        "Enable" : "LC",
+        "EXT*" : "LD",
+        "Control" : "LE",
+        "Status_and_Fault" : "LF",
+        "Timing" : "LG",
+        "Communication" : "LH",
+        "BYPS*" :"LI",
+
+        "BOOT*" : "RB",
+        "Switching_Nodes" : "RC",
+        "Output_Voltage" : "RCA",
+        "Gate_Drivers" : "RD",
+        "Feedback*" : "RE",
+        "COMP*" : "RF",
+        "OutClock" : "RG",
+        "Sense" : "RH",
+        "Ground" :"RI",
+        "NC*" : "RJ",
+        "EPAD*" : "RK"
+
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "priority_map": {
+
+        "Supply" : "LA",
+        "Input" : "LB",
+        "Sense" : "LC",
+        "NC" : "LD",
+
+        "Output" : "RA",
+        "Current_Sense" : "RB",
+        "Diagnostics" : "RC",
+        "Ground" : "RD"
+
+
+    }
+}

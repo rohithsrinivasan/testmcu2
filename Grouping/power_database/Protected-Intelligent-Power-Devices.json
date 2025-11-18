@@ -1,0 +1,69 @@
+{
+  "Left": {
+    "Supply": {
+      "VCC": [
+        "VCC"
+      ],
+      "VCC_Numbered": [
+        "VCC1",
+        "VCC2"
+      ]
+    },
+    "Input": {
+      "IN": [
+        "IN"
+      ],
+      "IN_Numbered": [
+        "IN1",
+        "IN2"
+      ],
+      "EXT": [
+        "EXT"
+      ]
+    },
+    "Sense": {
+      "SEN": [
+        "SEN"
+      ]
+    },
+    "NC": {
+      "pins": [
+        "NC"
+      ]
+    }
+  },
+  "Right": {
+    "Output": {
+      "OUT": [
+        "OUT"
+      ],
+      "OUT_Numbered": [
+        "OUT1",
+        "OUT2"
+      ]
+    },
+    "Current_Sense": {
+      "IS": [
+        "IS"
+      ],
+      "IS_Numbered": [
+        "IS1",
+        "IS2"
+      ]
+    },
+    "Diagnostics": {
+      "DIAG": [
+        "DIAG"
+      ]
+    },
+    "Ground": {
+      "GND": [
+        "GND"
+      ],
+      "GND_Numbered": [
+        "GND1",
+        "GND2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+
+
+    "Left"  : {
+
+        "Voltage_Input" : {
+            "V+*" :   [
+                "V+"
+            ],
+            "VIN*" :[
+                "VIN"
+            ],
+            "VBAT*" :[
+                "VBAT"
+            ]
+        },
+
+        "BOOST*" : {
+            "-pins" : [
+                "BOOST",
+                "BST"
+            ]
+        
+        },
+
+        "EN" :[
+            "EN"
+        ],
+
+        "OSC" : [
+            "OSC"
+        ],
+
+        "LV*" : [
+            "LV"
+        ],
+        "GPIO" : [
+            "GPIO_0",
+            "GPIO_1"
+        ],
+        "Interface" : {
+            "I2C" :[
+                "SCL",
+                "SDA"
+            ]
+        }
+},
+
+
+
+"Right": {
+
+    "VOUT*" :{
+
+    "-pins" : [
+        "VOUT"
+    ],
+    "CORE" : [
+        "VCORE"
+    ]
+    },
+    "Capacitors" :{
+            "CAP*"  : [
+            "CAP+",
+            "CAP-"
+        ],
+        "C1*" : [
+            "C1P",
+            "CIN",
+            "BS1"
+        ],
+        "C2*" : [
+            "C2P",
+            "C2N",
+            "BSP"
+        ]
+
+    },
+
+    "NC*" : [
+        "NC"
+    ],
+    "GND*" : {
+      "-pins" :  [
+        "GND"
+    ],
+    "PGND*" : [
+        "PGND"
+    ],
+    "AGND" : [
+        "AGND"
+    ]
+    },
+    "EPAD*" : [
+        "EPAD",
+        "PAD"
+    ]
+
+
+}
+}
+
+

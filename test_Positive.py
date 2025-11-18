@@ -23,3 +23,9 @@ if "Positive" in data:
         print("'Positive' is not a dictionary.")
 else:
     print("'Positive' key not found in the JSON.")
+
+
+def test_positive(original_df):
+    dupe_df = original_df.copy()
+    print(dupe_df)
+    print(f"Positive key achieved for {len(dupe_df)}")

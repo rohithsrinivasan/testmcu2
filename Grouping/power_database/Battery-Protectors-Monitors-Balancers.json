@@ -1,0 +1,571 @@
+{
+  "Left": {
+    "Supply": {
+      "A-VCC": [
+        "VCC"
+      ],
+      "B-VDD": [
+        "VDD"
+      ],
+      "VBAT": [
+        "VBAT"
+      ],
+      "VIN": [
+        "VIN"
+      ],
+      "VCHG": [
+        "VCHG"
+      ],
+      "VREF": [
+        "VREF"
+      ],
+      "V2P5": [
+        "V2P5"
+      ],
+      "V3P3": [
+        "V3P3"
+      ],
+      "VDDEXT": [
+        "VDDEXT"
+      ]
+    },
+    "Voltage_Input_Channels": {
+      "VIN0-VIN4": [
+        "VIN0",
+        "VIN1",
+        "VIN2",
+        "VIN3",
+        "VIN4"
+      ],
+      "VIN5-VIN10": [
+        "VIN5",
+        "VIN6",
+        "VIN7",
+        "VIN8",
+        "VIN9",
+        "VIN10"
+      ],
+      "VIN11-VIN12": [
+        "VIN11",
+        "VIN12"
+      ]
+    },
+    "Regulator": {
+      "REGC": [
+        "REGC"
+      ],
+      "REF": [
+        "REF"
+      ],
+      "BASE": [
+        "BASE"
+      ],
+      "TEMPREG": [
+        "TEMPREG"
+      ]
+    },
+    "Reset_Control": {
+      "RESET": [
+        "RESET",
+        "RESET(MCU)",
+        "RESET(AFE)",
+        "RESETN"
+      ],
+      "RESETOUT": [
+        "RESETOUT"
+      ],
+      "WAKEUP": [
+        "WAKEUP"
+      ],
+      "WKUP": [
+        "WKUP"
+      ]
+    },
+    "Current_Sense": {
+      "ISENS": [
+        "ISENS0",
+        "ISENS1"
+      ],
+      "ISREF": [
+        "ISREF"
+      ],
+      "DSENSE": [
+        "DSENSE"
+      ],
+      "CSENSE": [
+        "CSENSE"
+      ],
+      "CSI": [
+        "CSI1",
+        "CSI2"
+      ]
+    },
+    "Communication": {
+      "I2C": [
+        "SDA",
+        "SCL",
+        "SDAI",
+        "SDAO",
+        "SDA/P61",
+        "SCL/P60"
+      ],
+      "SPI": [
+        "SCLK",
+        "CS",
+        "DIN",
+        "DOUT",
+        "MOSI",
+        "MISO",
+        "MISO/SDA/SINGLE-WIRE",
+        "ADDR/CS",
+        "SCLK/DHI1",
+        "CS/DLO1",
+        "DIN/NC",
+        "DOUT/NC"
+      ],
+      "Address": [
+        "ADDR",
+        "ADDR0",
+        "ADDR1"
+      ],
+      "Alert": [
+        "ALRT"
+      ]
+    },
+    "Analog_Inputs": {
+      "AN": [
+        "AN0",
+        "AN1",
+        "AN2",
+        "AN3"
+      ],
+      "AUX": [
+        "AUX0",
+        "AUX1"
+      ],
+      "EXT": [
+        "EXT1",
+        "EXT2",
+        "EXT3",
+        "EXT4"
+      ]
+    },
+    "Oscillator_Clock": {
+      "XT": [
+        "XT1",
+        "XT2"
+      ],
+      "X" : [
+        "X1",
+        "X2",
+        "X1/P121",
+        "X2/P122"
+      ]
+    },
+    "System_Control": {
+      "SYSIN": [
+        "SYSIN"
+      ],
+      "PON": [
+        "PON"
+      ],
+      "PONL": [
+        "PONL"
+      ],
+      "PACK": [
+        "PACK"
+      ],
+      "EOC": [
+        "EOC"
+      ],
+      "SD": [
+        "SD"
+      ],
+      "INT": [
+        "INT"
+      ],
+      "PSD": [
+        "PSD"
+      ],
+      "FETSOFF": [
+        "FETSOFF"
+      ]
+    },
+    "Monitoring": {
+      "CHMON": [
+        "CHMON"
+      ],
+      "LDMON": [
+        "LDMON"
+      ],
+      "VMON": [
+        "VMON"
+      ]
+    },
+    "FET_Control": {
+      "DFET": [
+        "DFET"
+      ],
+      "CFET": [
+        "CFET"
+      ],
+      "PCFET": [
+        "PCFET"
+      ]
+    },
+    "Temperature": {
+      "TEMPI": [
+        "TEMPI"
+      ],
+      "TEMP3V": [
+        "TEMP3V"
+      ],
+      "VTEMP": [
+        "VTEMP"
+      ]
+    },
+    "Protection": {
+      "PPR": [
+        "PPR"
+      ],
+      "CHG": [
+        "CHG"
+      ],
+      "TIME": [
+        "TIME"
+      ],
+      "BATON": [
+        "BATON"
+      ]
+    },
+    "Configuration": {
+      "CMS": [
+        "CMS0",
+        "CMS1"
+      ],
+      "COMMRATE": [
+        "COMMRATE0",
+        "COMMRATE1",
+        "COMMS_RATE_0",
+        "COMMS_RATE_1"
+      ],
+      "COMMSELECT": [
+        "COMMS_SELECT_1",
+        "COMMS_SELECT_2"
+      ],
+      "CMODE": [
+        "CMODE"
+      ],
+      "DTRDYMODE": [
+        "DTRDYMODE"
+      ]
+    },
+    "GPIO": {
+      "GPIO": [
+        "GPIO0",
+        "GPIO1",
+        "GPIO2",
+        "GPIO3"
+      ]
+    },
+    "Enable_Control": {
+      "EN": [
+        "EN"
+      ],
+      "DATA_READY": [
+        "DATA_READY",
+        "DATAREADY"
+      ],
+      "FAULT": [
+        "FAULT"
+      ],
+      "EMITTER": [
+        "EMITTER"
+      ]
+    },
+    "High_Voltage": {
+      "HVP": [
+        "HVP0",
+        "HVP1",
+        "HVP2"
+      ]
+    },
+    "Gate_Drivers_Control": {
+      "DHI": [
+        "DHI2"
+      ],
+      "DLO": [
+        "DLO2"
+      ],
+      "RGC": [
+        "RGC"
+      ],
+      "RGO": [
+        "RGO"
+      ]
+    },
+    "Tool_Interface": {
+      "TOOL0": [
+        "TOOL0"
+      ]
+    },
+    "Capacitor_Regulation": {
+      "CREG": [
+        "CREG1",
+        "CREG2"
+      ]
+    }
+  },
+  "Right": {
+    "Output_Protection": {
+      "FUSEOUT": [
+        "FUSEOUT"
+      ],
+      "CFOUT": [
+        "CFOUT",
+        "CFOUTA",
+        "CFOUTB"
+      ],
+      "DFOUT": [
+        "DFOUT",
+        "DFOUTA",
+        "DFOUTB"
+      ]
+    },
+    "Battery_Connections": {
+      "BAT": [
+        "BAT"
+      ],
+      "VBAT": [
+        "VBAT",
+        "VBATT",
+        "VBAT1",
+        "VBAT2"
+      ],
+      "VBACK": [
+        "VBACK"
+      ],
+      "PACK": [
+        "PACK"
+      ]
+    },
+    "Current_Monitor": {
+      "IMIN": [
+        "IMIN"
+      ],
+      "IREF": [
+        "IREF"
+      ]
+    },
+    "Voltage_Outputs": {
+      "VOUT": [
+        "VOUT"
+      ],
+      "AO": [
+        "AO"
+      ],
+      "VCPMP": [
+        "VCPMP"
+      ],
+      "VCP": [
+        "VCP"
+      ]
+    },
+    "FET_Voltage": {
+      "VFET": [
+        "VFET1",
+        "VFET2"
+      ]
+    },
+    "Cell_Voltage_Channels": {
+      "VCELL0-VCELL3": [
+        "VCELL0",
+        "VCELL1",
+        "VCELL2",
+        "VCELL3"
+      ],
+      "VCELL4-VCELL6": [
+        "VCELL4",
+        "VCELL5",
+        "VCELL6"
+      ],
+      "VC0-VC4": [
+        "VC0",
+        "VC1",
+        "VC2",
+        "VC3",
+        "VC4"
+      ],
+      "VC5-VC9": [
+        "VC5",
+        "VC6",
+        "VC7",
+        "VC8",
+        "VC9"
+      ],
+      "VC10-VC14": [
+        "VC10",
+        "VC11",
+        "VC12",
+        "VC13",
+        "VC14"
+      ],
+      "VC15-VC16": [
+        "VC15",
+        "VC16"
+      ]
+    },
+    "Cell_Balancing": {
+      "CB0-CB4": [
+        "CB1",
+        "CB2",
+        "CB3",
+        "CB4"
+      ],
+      "CB5-CB9": [
+        "CB5",
+        "CB6",
+        "CB7",
+        "CB8",
+        "CB9"
+      ],
+      "CB10-CB14": [
+        "CB10",
+        "CB11",
+        "CB12",
+        "CB13",
+        "CB14"
+      ],
+      "CB15-CB16": [
+        "CB15",
+        "CB16"
+      ]
+    },
+    "Temperature_Output": {
+      "TEMPO": [
+        "TEMPO"
+      ]
+    },
+    "Gate_Driver_Outputs": {
+      "RGO": [
+        "RGO"
+      ],
+      "TGATE": [
+        "TGATE"
+      ]
+    },
+    "Comparator_Outputs": {
+      "C": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    "Port_Pins": {
+      "P00-P07": [
+        "P00",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P00/TI00",
+        "P02/ANI17/TXD1",
+        "P03/ANI16/RXD1"
+      ],
+      "P10-P17": [
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15",
+        "P16",
+        "P17",
+        "P10/SCK11/SCL11/TRDIOD1",
+        "P11/SI11/SDA11/TRDIOC1",
+        "P12/SO11/TRDIOB1/(INTP5)",
+        "P13/TRDIOA1",
+        "P14/TRDIOD0",
+        "P16/TI01/TO01/TRDIOC0/INTP5/(RXD0)",
+        "P16/INTP5/RXD0",
+        "P17/TI02/TO02/TRDIOA0/(TXD0)",
+        "P17/TXD0"
+      ],
+      "P20-P23": [
+        "P20",
+        "P21",
+        "P22",
+        "P23"
+      ],
+      "P40-P43": [
+        "P40",
+        "P43",
+        "P40/TOOL0"
+      ],
+      "P50-P54": [
+        "P50",
+        "P51",
+        "P52",
+        "P53",
+        "P54",
+        "P51/INTP2"
+      ],
+      "P60-P63": [
+        "P60",
+        "P61",
+        "P62",
+        "P63"
+      ],
+      "P120-P122": [
+        "P120",
+        "P122",
+        "P120/ANI19",
+        "P122/X2"
+      ],
+      "P137": [
+        "P137",
+        "P137/INTP0"
+      ]
+    },
+    "Current_Sense_Outputs": {
+      "CSP_CSN": [
+        "CSP",
+        "CSN"
+      ]
+    },
+    "Capacitor_Regulation_Output": {
+      "CREG": [
+        "CREG1",
+        "CREG2",
+        "CREG2S",
+        "CREG2F"
+      ]
+    },
+    "Ground": {
+      "GND": [
+        "GND",
+        "GND0",
+        "GND1"
+      ],
+      "VSS": [
+        "VSS"
+      ],
+      "DGND": [
+        "DGND"
+      ]
+    },
+    "NC": {
+      "pins": [
+        "NC"
+      ]
+    },
+    "EPAD": {
+      "pins": [
+        "EPAD"
+      ]
+    }
+  }
+}

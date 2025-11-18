@@ -1,0 +1,293 @@
+{
+
+"Left" :{
+
+    "Input" : {
+        "-pins" : [
+            "VIN",
+            "INPUT"
+        ],
+        "Bias": [
+            "BIAS"
+        ],
+        "REF" : [
+            "HVREF"
+        ],
+        "Voltage_Input": [
+            "VI1",
+            "VI2"
+        ],
+        "Supply_Sense": {
+            "12V": [
+                "12VS",
+                "12VISEN"
+            ],
+            "3V": [
+                "3VS",
+                "3VISEN"
+            ]
+        }
+    },
+    "Power": {
+        "VDD*": [
+            "VDD"
+        ],
+        "VCC*" : [
+            "VCC"
+        ],
+        "V+": [
+            "V+"
+        ],
+        "POWER_SUPPLY": [
+            "POWER_SUPPLY"
+        ]
+    },
+
+    "Enable": {
+        "-pins": [
+            "EN1",
+            "EN2",
+            "EN",
+            "ENABLE"
+        ],
+        "UVLO": [
+            "UVLO"
+        ],
+        "Sequencer": [
+            "SEQ_EN"
+        ],
+        "Channel_Enable": [
+            "ENABLE_A",
+            "ENABLE_B",
+            "ENABLE_C",
+            "ENABLE_D"
+        ]
+    },
+    "Fault": {
+        "Fault": [
+            "FLT1",
+            "FLT2",
+            "FAULT"
+        ],
+        "Over_Under_Voltage": [
+            "OV",
+            "UV"
+        ]
+    },
+    "Control": {
+        "Manual_Reset": [
+            "MR"
+        ],
+        "Watchdog": [
+            "WDI"
+        ],
+        "Power_Fail_Input": [
+            "PFI"
+        ],
+        "Power_Fail_Output": [
+            "PFO"
+        ],
+        "POR_Control": [
+            "CPOR"
+        ],
+        "Voltage_Monitor": [
+            "VMON"
+        ],
+        "Power_Good": [
+            "PWRGD",
+            "PGOOD",
+            "PGOOD2"
+        ],
+        "Power_On": [
+            "PWRON"
+        ],
+        "Current_Set": [
+            "ISET"
+        ],
+        "Current_Sense": [
+            "CS",
+            "ISEN"
+        ],
+        "Current_Limit": [
+            "RILIM"
+        ]
+    },
+    "Timing": {
+        "Timing_Capacitor": [
+            "CTIM"
+        ],
+        "Delay_Capacitor": [
+            "DELAY_CAPACITOR",
+            "CD"
+        ],
+        "TIME": [
+            "TIME"
+        ],
+        "Sequence_Timing": [
+            "TB",
+            "TC",
+            "TD"
+        ]
+    },
+    "Setting": {
+        "SET": [
+            "SET_1",
+            "SET_2"
+        ],
+        "Hysteresis": [
+            "HYST_1",
+            "HYST_2"
+        ]
+    },
+    "Monitors": {
+        "Voltage_Monitors": [
+            "V1MON",
+            "V2MON",
+            "V3MON",
+            "V4MON",
+            "V5MON"
+        ],
+        "Over_Under_Monitors": {
+            "Channel_1": [
+                "OVMON_1",
+                "UVMON_1"
+            ],
+            "Channel_2": [
+                "OVMON_2",
+                "UVMON_2"
+            ]
+        },
+        "ABCD_Monitors": [
+            "VMON_A",
+            "VMON_B",
+            "VMON_C",
+            "VMON_D"
+        ]
+    },
+    "Interface": {
+        "SPI": [
+            "SI",
+            "SO",
+            "SCK",
+            "WP"
+        ],
+        "I2C": [
+            "SCL",
+            "SDA"
+        ]
+    }
+},
+
+"Right" : {
+
+    "Output": {
+        "-pins": [
+            "OUT_1",
+            "OUT_2",
+            "OUT",
+            "OUTPUT"
+        ],
+        "Vout": [
+            "VOUT"
+        ],
+        "VO": [
+            "VO1",
+            "VO2"
+        ]
+    },
+    "Gate_Drivers": {
+        "12V_Gate": [
+            "12VG"
+        ],
+        "3V_Gate": [
+            "3VG"
+        ],
+        "High_Gate": [
+            "HGATE"
+        ],
+        "Low_Gate": [
+            "LGATE"
+        ]
+    },
+    "FET*": {
+        "Drain": [
+            "DRAIN"
+        ],
+        "Gate": [
+            "GATE"
+        ],
+        "Sense": [
+            "SENSE"
+        ]
+    },
+    "Charge_Pump": {
+        "CPUMP": [
+            "CPUMP"
+        ]
+    },
+    "Reset*": {
+        "Reset": [
+            "RST",
+            "RESET",
+            "RST/MR"
+        ],
+        "Watchdog": [
+            "WDO",
+            "CS/WDI"
+        ]
+    },
+    "Status": {
+        "Over_Under_Status": {
+            "Channel_1": [
+                "OVSTATUS_1",
+                "UVSTATUS_1"
+            ],
+            "Channel_2": [
+                "OVSTATUS_2",
+                "UVSTATUS_2"
+            ]
+        },
+        "ABCD_Status": [
+            "STATUS_A",
+            "STATUS_B",
+            "STATUS_C",
+            "STATUS_D"
+        ]
+    },
+    "COMP*": {
+        "-pins": [
+            "COMP"
+        ],
+        "Setting": [
+            "VSET",
+            "ADJ"
+        ]
+    },
+    "Ground*": {
+
+            "GND*" : [
+                "GND"
+            ],
+            "VSS*" : [
+                "VSS"
+            ],
+            "VEE*": [
+                "VEE"
+            ]        
+    },
+    "No_Connect": {
+        "-pins": [
+            "NC"
+        ]
+    },
+    "EPAD*" : {
+        "-pins" : [
+            "EPAD"
+        ]
+    }
+
+
+}
+
+
+}

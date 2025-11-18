@@ -1,0 +1,26 @@
+
+
+{
+    "priority_map": {
+
+    "Input" : "LA",
+    "Enable" : "LB",
+    "PWM" : "LC",
+    "Status" : "LD",
+    "Control" : "LE",
+    "Communication" : "LF",
+
+
+    "Switching" : "RA",
+    "Protection" : "RB",
+    "LED_Channels" : "RC",
+    "Output" : "RD",
+    "Status_Output" : "RE",
+    "Compensation" : "RF",
+    "Ground" : "RG",
+    "NC" : "RH",
+    "EPAD" : "RI"
+
+
+    }
+}
