@@ -1,5 +1,5 @@
 import pandas as pd
-import streamlit as st
+#import streamlit as st
 
 def load_uploaded_file(uploaded_file):
     """Load CSV or Excel file and return DataFrame"""
