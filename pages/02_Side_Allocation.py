@@ -12,6 +12,7 @@ from Grouping.base_functions import excel_input
 from Side_Allocation.base_functions import general_constraints
 from Side_Allocation.base_functions import single80pin_constraints
 from Side_Allocation.base_functions import four_sided_symbol
+from Side_Allocation.base_functions.symbol_viewer import DataHandler as SymbolDataHandler, SymbolRenderer
 from Side_Allocation import priority
 from Side_Allocation import side
 from Side_Allocation import part_division
@@ -230,19 +231,35 @@ if 'grouped_pin_table' in st.session_state:
 
     if isinstance(side_added, pd.DataFrame):
         side_added = general_constraints.final_filter(side_added) 
-        st.subheader(f"Smart_Table: ")
-        st.dataframe(side_added)  # Display single DataFrame
-        #st.success("Side Alloction Done!")
-
-        timestamp = datetime.datetime.now().strftime("%d-%m_%H:%M")
-        try:
-            filename = f"{part_number}_SmartPinTable_{timestamp}.csv"
-        except NameError:
+        
+        # Create tabs for Symbol View and Data Table
+        tab1, tab2 = st.tabs(["📊 Symbol View", "📋 Smart Table"])
+        
+        with tab1:
+            # Symbol Viewer
             try:
-                filename = f"{input_csv_file_name}_SmartPinTable_{timestamp}.csv"
+                renderer = SymbolRenderer()
+                part_display_name = part_number if 'part_number' in locals() else "Symbol"
+                fig = renderer.render_symbol(part_display_name, side_added)
+                st.plotly_chart(fig, use_container_width=True)
+                
+            except Exception as e:
+                st.error(f"❌ Error rendering symbol: {str(e)}")
+                st.warning("Displaying data table only")
+        
+        with tab2:
+            st.subheader(f"Smart Table:")
+            st.dataframe(side_added, use_container_width=True, height=600)
+            
+            # Download button
+            timestamp = datetime.datetime.now().strftime("%d-%m_%H:%M")
+            try:
+                filename = f"{part_number}_SmartPinTable_{timestamp}.csv"
             except NameError:
-                print("Error: File name could not be generated. Please check the variables 'part_number' and 'input_csv_file_name'.")
-                filename = "None"           
+                try:
+                    filename = f"{input_csv_file_name}_SmartPinTable_{timestamp}.csv"
+                except NameError:
+                    filename = "SmartPinTable.csv"           
 
         st.download_button(
             label="Download Smart Table",
@@ -254,15 +271,32 @@ if 'grouped_pin_table' in st.session_state:
 
     # Assuming `side_added` is a dictionary of DataFrames
     elif isinstance(side_added, dict):
-
         side_added = {k: v for k, v in side_added.items() if not v.empty}
-
+        
         for key in side_added:
             df = side_added[key]
             df = general_constraints.final_filter(df)   
             side_added[key] = df
-            st.markdown(f"<h5>Smart Table: {key}</h5>", unsafe_allow_html=True)
-            st.dataframe(df)
+        
+        # Display each part with tabs
+        for key, df in side_added.items():
+            st.markdown(f"### {key}")
+            
+            tab1, tab2 = st.tabs(["📊 Symbol View", "📋 Smart Table"])
+            
+            with tab1:
+                try:
+                    renderer = SymbolRenderer()
+                    fig = renderer.render_symbol(key, df)
+                    st.plotly_chart(fig, use_container_width=True)
+                    
+                except Exception as e:
+                    st.error(f"❌ Error rendering {key}: {str(e)}")
+            
+            with tab2:
+                st.dataframe(df, use_container_width=True, height=400)
+            
+            st.divider()
 
         # Prepare the filename
         timestamp = datetime.datetime.now().strftime("%d-%m_%H:%M")
