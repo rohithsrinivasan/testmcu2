@@ -144,6 +144,80 @@ class SymbolRenderer:
         self.geometry_calc = GeometryCalculator()
 
 
+    def add_pin_decoration(self, fig, pin_pos: Dict, geometry: Dict, elec_type: str):
+        """Add Altium-style pin decoration based on electrical type."""
+        
+        if pin_pos['side'] == 'Left':
+            origin_x = geometry['origin'][0]
+        else:
+            origin_x = geometry['origin'][0] + geometry['width']
+        
+        origin_y = pin_pos['y']
+        
+        # Triangle size
+        triangle_size = 20
+        
+        # Power/Passive - Circle at origin
+        if elec_type in ['Power', 'Passive', 'Ground']:
+            fig.add_shape(
+                type="circle",
+                x0=origin_x - triangle_size/2,
+                y0=origin_y - triangle_size/2,
+                x1=origin_x + triangle_size/2,
+                y1=origin_y + triangle_size/2,
+                line=dict(color="black", width=2),
+                fillcolor="white"
+            )
+        
+        # Input - Triangle pointing INTO rectangle
+        elif elec_type == 'Input':
+            if pin_pos['side'] == 'Left':
+                # Triangle pointing right (into rectangle)
+                fig.add_shape(
+                    type="path",
+                    path=f"M {origin_x - triangle_size},{origin_y - triangle_size/2} L {origin_x},{origin_y} L {origin_x - triangle_size},{origin_y + triangle_size/2} Z",
+                    line=dict(color="black", width=2),
+                    fillcolor="black"
+                )
+            else:
+                # Triangle pointing left (into rectangle)
+                fig.add_shape(
+                    type="path",
+                    path=f"M {origin_x + triangle_size},{origin_y - triangle_size/2} L {origin_x},{origin_y} L {origin_x + triangle_size},{origin_y + triangle_size/2} Z",
+                    line=dict(color="black", width=2),
+                    fillcolor="black"
+                )
+        
+        # Output - Triangle pointing OUT of rectangle
+        elif elec_type == 'Output':
+            if pin_pos['side'] == 'Left':
+                # Triangle pointing left (out of rectangle)
+                fig.add_shape(
+                    type="path",
+                    path=f"M {origin_x},{origin_y - triangle_size/2} L {origin_x - triangle_size},{origin_y} L {origin_x},{origin_y + triangle_size/2} Z",
+                    line=dict(color="black", width=2),
+                    fillcolor="black"
+                )
+            else:
+                # Triangle pointing right (out of rectangle)
+                fig.add_shape(
+                    type="path",
+                    path=f"M {origin_x},{origin_y - triangle_size/2} L {origin_x + triangle_size},{origin_y} L {origin_x},{origin_y + triangle_size/2} Z",
+                    line=dict(color="black", width=2),
+                    fillcolor="black"
+                )
+        
+        # I/O - Bidirectional diamond
+        elif elec_type == 'I/O':
+            fig.add_shape(
+                type="path",
+                path=f"M {origin_x - triangle_size},{origin_y} L {origin_x},{origin_y - triangle_size/2} L {origin_x + triangle_size},{origin_y} L {origin_x},{origin_y + triangle_size/2} Z",
+                line=dict(color="black", width=2),
+                fillcolor="white"
+            )
+
+
+
     def get_pin_hover_text(self, df: pd.DataFrame, pin: Dict) -> str:
         """Generate hover text for a pin."""
         # Get pin details from dataframe
@@ -249,6 +323,13 @@ class SymbolRenderer:
                 hoverinfo='text',
                 showlegend=False
             ))
+
+            # ✅ ADD THIS - Get electrical type and add decoration
+            pin_match = df[df['Pin Designator'].astype(str) == str(pin['pin_number'])]
+            if not pin_match.empty:
+                elec_type = pin_match.iloc[0].get('Electrical Type', '')
+                self.add_pin_decoration(fig, pin, geometry, elec_type)
+
             
             # Pin name
             if pin['side'] == 'Left':

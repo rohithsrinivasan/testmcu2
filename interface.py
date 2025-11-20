@@ -24,6 +24,7 @@ st.page_link("interface.py", label="Extraction")
 st.page_link("pages/01_Grouping_2.py", label="Grouping 2.0")
 st.page_link("pages/02_Side_Allocation.py", label="SideAlloc")
 st.page_link("pages/03_Parameters.py", label="Parameters")
+st.page_link("pages/04_Build_Schematic.py", label="Build_Schematic")
 
 hide_st_style = """
             <style>

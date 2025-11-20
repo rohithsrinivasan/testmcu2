@@ -241,6 +241,12 @@ if 'grouped_pin_table' in st.session_state:
                 renderer = SymbolRenderer()
                 part_display_name = part_number if 'part_number' in locals() else "Symbol"
                 fig = renderer.render_symbol(part_display_name, side_added)
+
+                # ✅ Save figure and data in session state
+                st.session_state['symbol_figure'] = fig
+                st.session_state['symbol_data'] = side_added
+                st.session_state['part_name'] = part_display_name
+
                 st.plotly_chart(fig, use_container_width=True)
                 
             except Exception as e:
@@ -268,6 +274,9 @@ if 'grouped_pin_table' in st.session_state:
             mime='text/csv',
             type="primary"
         )
+        st.session_state["page"] = "Build_Schematic" 
+        if "page" in st.session_state and st.session_state["page"] == "Build_Schematic":
+            st.page_link("pages/04_Build_Schematic.py", label="Build_Schematic")
 
     # Assuming `side_added` is a dictionary of DataFrames
     elif isinstance(side_added, dict):
@@ -288,6 +297,12 @@ if 'grouped_pin_table' in st.session_state:
                 try:
                     renderer = SymbolRenderer()
                     fig = renderer.render_symbol(key, df)
+
+                    # ✅ Save for this part
+                    if 'symbol_figures' not in st.session_state:
+                        st.session_state['symbol_figures'] = {}
+                    st.session_state['symbol_figures'][key] = fig
+
                     st.plotly_chart(fig, use_container_width=True)
                     
                 except Exception as e:
@@ -327,7 +342,9 @@ if 'grouped_pin_table' in st.session_state:
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                 type="primary"
             )
-
+        st.session_state["page"] = "Build_Schematic" 
+        if "page" in st.session_state and st.session_state["page"] == "Build_Schematic":
+            st.page_link("pages/04_Build_Schematic.py", label="Build_Schematic")
 
     else:   
         st.text(f"Error Occured in Displaying Dataframes") 
@@ -385,6 +402,8 @@ else:
 
     else:
         st.warning("No pin table found. Please upload a valid Excel file to proceed.")
+
+
 
 
 

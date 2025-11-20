@@ -3362,6 +3362,9 @@
             "MODE5",
             "MODE6",
             "THMODE"
+        ],
+        "FLMD*" : [
+            "FLMD"
         ]
     },
     "Boot": {
