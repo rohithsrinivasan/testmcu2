@@ -9,7 +9,10 @@
       "ISOVSS",
       "PGAVSS0",
       "VSS_MIPI",
-      "PGAVSS1"
+      "PGAVSS1",
+      "AAVREFH",
+      "AAVSS"
+
     ],
     "VSS": [
       "Vss",
@@ -336,6 +339,7 @@
     ],
     "Analog VCC": [
       "A10VCC",
+      "J0VCC",
       "A1VCC",
       "A2VCC",
       "A3VCC",
@@ -757,7 +761,10 @@
       "BVCC"
     ],
     "Ports C" : [
-      "CVCC"
+      "CVCC",
+      "AFCVCC",
+      "AFCVSS"
+
     ],
     "Ports E" :[
       "E0VCC",

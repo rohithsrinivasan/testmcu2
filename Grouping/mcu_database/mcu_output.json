@@ -96,7 +96,11 @@
       "ET0_TXER",
       "ET1_MDC",
       "ET1_TXCTL_TXEN",
-      "ET1_TXER"
+      "ET1_TXER",
+
+      "ETH0_SG_TXD_N",
+      "ETH0_SG_TXD_P"
+
     ],
     "Output ET0 TX": [
       "ET0_TXD0",

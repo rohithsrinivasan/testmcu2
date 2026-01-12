@@ -261,7 +261,17 @@
       "With Hash (#)": [
         "AURORES1#",
         "AURORES2#",
-        "AURORESPD#"
+        "AURORESPD#",
+        "AURORES",
+        "SVRNGATE",
+        "SVRPGATE",
+        "SVRNGATE",
+        "SVRPGATE",
+
+        "MSYN",
+        "EVTO0"
+
+
       ],
       "With Z": [
         "AURORES1Z",
@@ -340,6 +350,7 @@
       "AN130",
       "AN131",
       "AN132",
+      "AN133",
       "AN140",
       "AN141",
       "AN142",
@@ -1322,7 +1333,16 @@
       "MODE3",
       "MODE4",
       "MODE5",
-      "MODE6"
+      "MODE6",
+
+      "RESET",
+      "ESR0",
+      "ESR1",
+      "SBMD",
+      "ETH0_SG_RXD_N",
+      "ETH0_SG_RXD_P"
+
+
     ],
     "Boot": [
       "MD_BOOT0",
