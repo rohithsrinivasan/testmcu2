@@ -81,7 +81,7 @@ def handle_special_pin_separation(
     df,
     mpu_functional_groups,
     functional_separation=False,
-    lower_threshold=8
+    lower_threshold=6
 ):
     core_groups = {
         'GPIO Table': ('GPIO_Pins', functional_block_constraints.test_one_GPIOcase),
@@ -153,7 +153,7 @@ def _generic_interface_handler(unfilled_df, df, mask, interface_name):
     count = len(pins_df)
     print(f"Found {count} {interface_name} pins")
 
-    if 40 < count < 80:
+    if count < 80:
         port_df_side_added = general_constraints.side_for_one_symbol(pins_df)
         df.loc[pins_df.index, 'Side'] = port_df_side_added['Side'].values
         return [port_df_side_added]

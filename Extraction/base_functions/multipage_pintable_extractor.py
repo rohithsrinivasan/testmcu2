@@ -2,10 +2,11 @@ import pdfplumber
 import re
 import streamlit as st
 import pandas as pd
+import fitz  # PyMuPDF
+import io
 
 def find_table_starting_and_stopping_based_on_pin_string(pdf_path, page_number_list, pin_keyword, package_keyword):
 
-    
     with pdfplumber.open(pdf_path) as pdf:
         for page_number in page_number_list:
             if page_number > len(pdf.pages):
@@ -13,34 +14,31 @@ def find_table_starting_and_stopping_based_on_pin_string(pdf_path, page_number_l
                 continue
 
             text = pdf.pages[page_number - 1].extract_text()
-            #print(f"--- Page {page_number} Text ---")
-            #print(text)  # Print the entire page text
 
             matching_lines = [line for line in text.split('\n')
                             if pin_keyword.lower() in line.lower() and package_keyword.lower() in line.lower()]
 
-            #print(f"--- Matching lines on page {page_number} ---")
-            #print(matching_lines)  # Print the matching lines    
-
             if matching_lines and len(matching_lines[0].split(" ")) == 2:
                 for line in matching_lines:
                     words = line.split()
-                    # Check if the line contains a valid section number with two words
                     if len(words) == 2 and re.match(r'^[A-Z0-9]\.\d+\.\d+$', words[0]):
-                        #print("found target line")
                         section_number = words[0]
                         sections = section_number.split('.')
-                        sections[-1] = str(int(sections[-1]) + 1)  # Increment the last section
+                        sections[-1] = str(int(sections[-1]) + 1)
                         next_section_number = '.'.join(sections)
-                        #print(next_section_number)
 
                         new_next_section_number, ending_page_number = find_ending_page(pdf, page_number_list, next_section_number)
 
-                        # Return the first matching page number and section details
                         return page_number, section_number, new_next_section_number, ending_page_number
 
-    print(f"Keyword '{pin_keyword}' or '{package_keyword}' not found or no valid table number found in the specified pages.")
-    return None
+    # Add this block before returning None
+    st.write(f"Keyword '{pin_keyword}' or '{package_keyword}' not found in pages. Checking embedded Excel...")
+    found, excel_name = check_keywords_in_embedded_excel(pdf_path, pin_keyword, package_keyword)
+    if found:
+        return "EMBEDDED_EXCEL", excel_name, None, None
+    
+    st.write(f"Keywords not found in PDF or embedded Excel.")
+    return None, None, None, None
 
 
 def find_ending_page(pdf, page_number_list, next_section_number):
@@ -254,3 +252,105 @@ def remove_rows_with_more_empty_values(df, threshold=8):
     # Filter rows with more empty values than the threshold
     filtered_df = df[empty_counts <= threshold]
     return filtered_df
+
+def check_keywords_in_embedded_excel(pdf_path, pin_keyword, package_keyword):
+    """Check if keywords exist in embedded Excel attachments in PDF"""
+    
+    if isinstance(pdf_path, io.BytesIO):
+        pdf_path.seek(0)
+        doc = fitz.open(stream=pdf_path.read(), filetype="pdf")
+        pdf_path.seek(0)
+    else:
+        doc = fitz.open(pdf_path)
+    
+    # Step 1: Get all attachments
+    attachment_list = []
+    
+    for page_num in range(len(doc)):
+        page = doc[page_num]
+        annots = page.annots()
+        if annots:
+            for annot in annots:
+                if annot.type[0] == 17:  # FileAttachment type
+                    file_info = annot.file_info
+                    file_name = file_info.get('filename', 'Unknown')
+                    file_content = annot.get_file()
+                    attachment_list.append((page_num + 1, file_name, file_content))
+    
+    doc.close()
+    
+    if not attachment_list:
+        st.write("⚠️ No file attachments found.")
+        return False, None
+    
+    # Step 2: Filter Excel files that START WITH "EDI"
+    edi_excel_files = [
+        (page, name, content) 
+        for page, name, content in attachment_list 
+        if name.endswith(('.xlsx', '.xls')) and name.startswith('EDI')
+    ]
+    
+    if not edi_excel_files:
+        st.write("⚠️ No Excel files starting with 'EDI' found.")
+        return False, None
+    
+    # Step 3: Auto-select if only 1 file, otherwise show checkboxes
+    if len(edi_excel_files) == 1:
+        # ✅ AUTO-SELECT: Only 1 EDI Excel file
+        selected_file = edi_excel_files[0]
+        st.write(f"📄 Auto-selected: **{selected_file[1]}** (Page {selected_file[0]})")
+    else:
+        # ✅ MULTIPLE FILES: Let user choose
+        st.write("Select an Excel file to search:")
+        
+        selected_file = None
+        for i, (page, file_name, content) in enumerate(edi_excel_files):
+            if st.checkbox(f"Page {page}: {file_name}", key=f"edi_cb_{i}"):
+                selected_file = (page, file_name, content)
+                break  # Take first selected
+        
+        # If nothing selected, stop and wait
+        if selected_file is None:
+            st.info("👆 Select an Excel file to continue")
+            st.stop()
+    
+    # Step 4: Process selected file
+    page, file_name, file_content = selected_file
+    search_keyword = f"{pin_keyword}{package_keyword}"
+    
+    st.write(f"🔍 Searching for: **{search_keyword}** in **{file_name}**")
+    
+    try:
+        xls = pd.ExcelFile(io.BytesIO(file_content))
+        st.write(f"Available sheets: {xls.sheet_names}")
+        
+        # Search for matching sheet
+        for sheet in xls.sheet_names:
+            df = pd.read_excel(xls, sheet_name=sheet, dtype=str)
+            if df.astype(str).apply(lambda x: x.str.contains(search_keyword, case=False, na=False)).any().any():
+                st.write(f"✅ Found in sheet: **{sheet}**")
+                df = pd.read_excel(xls, sheet_name=sheet, dtype=str)
+                
+                # Find and set header row
+                header_keywords = ["Primary Pin Name", "Primary Electrical Type", "Pin Number"]
+                header_row = None
+                for idx, row in df.iterrows():
+                    if any(keyword in str(cell) for cell in row for keyword in header_keywords):
+                        header_row = idx
+                        break
+                
+                if header_row is not None:
+                    df.columns = df.iloc[header_row]
+                    df = df.iloc[header_row + 1:].reset_index(drop=True)
+                
+                # change header to these before printing df : ["Pin Designator", "Pin Display Name", "Electrical Type", "Pin Alternate Name"]
+                df.columns = ["Pin Designator", "Pin Display Name", "Electrical Type", "Pin Alternate Name"]
+                st.dataframe(df)
+                return True, df  # ✅ SUCCESS
+        
+        st.write(f"❌ Keyword '{search_keyword}' not found in any sheet")
+        
+    except Exception as e:
+        st.error(f"Error processing {file_name}: {e}")
+    
+    return False, None

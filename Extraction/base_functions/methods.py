@@ -12,7 +12,7 @@ def find_pages_between_keywords(pdf_path, start_keyword, end_keyword):
             text = page.extract_text().lower()
             
             # Update the start_page to the latest occurrence of the start_keyword
-            if start_keyword in text:
+            if any(kw in text for kw in start_keyword):
                 start_page = page_num
             
             # Update the end_page to the latest occurrence of the end_keyword
@@ -56,12 +56,59 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
     
     dfs = [df for df in dfs if not df.empty and df.dropna(how='all').shape[0] > 0]
     st.write(f"📄 Found {len(dfs)} non-empty tables.")
+
+
+     # Fallback to text extraction if no tables found
+    if len(dfs) == 0:
+        st.write("⚠️ No tables detected. Trying text extraction fallback...")
+        try:
+            import pdfplumber
+            text_dfs = []
+            
+            # Noise filter keywords
+            noise_keywords = ["Symbol", "Pin", "Information", "Part", "Number", "Indexing", "Numbering", "Index"]
+            
+            with pdfplumber.open(file_path) as pdf:
+                for page_num in my_list_of_pages if isinstance(my_list_of_pages, list) else [my_list_of_pages]:
+                    if page_num == 'all' or page_num > len(pdf.pages):
+                        continue
+                    
+                    page = pdf.pages[page_num - 1] if isinstance(page_num, int) else pdf.pages[0]
+                    text = page.extract_text()
+                    
+                    if text:
+                        lines = text.split('\n')
+                        rows = []
+                        
+                        for line in lines:
+                            words = line.split()
+                            if len(words) == len(target_columns):
+                                rows.append(words)
+                        
+                        if rows:
+                            df = pd.DataFrame(rows, columns=target_columns)
+                            
+                            # NEW: Filter out noise rows
+                            mask = ~df.apply(lambda row: row.astype(str).str.contains('|'.join(noise_keywords), case=False, na=False).any(), axis=1)
+                            df = df[mask]
+                            
+                            if not df.empty:
+                                text_dfs.append(df)
+            
+            if text_dfs:
+                st.write(f"✅ Extracted {len(text_dfs)} tables from text.")
+                dfs = text_dfs
+                modified_dfs = text_dfs
+    
+        
+        except Exception as e:
+            st.warning(f"Text extraction also failed: {e}")
+
     
     modified_dfs = []
     
     for i, df in enumerate(dfs):
         df = df.replace(to_replace=r'^Unnamed:.*', value=np.nan, regex=True)
-        st.dataframe(df)
         
         # Handle completely unnamed headers
         if all(df.columns.to_series().astype(str).str.contains('^Unnamed')):

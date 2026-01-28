@@ -3,7 +3,8 @@
     "LVDS Interface Table": "LVDS Interface",
     "Display Unit Table": "Display Unit",
     "DIGRF Interface Table": "DIGRF Interface",
-    "USB Interface Table": "USB",
+    "USB Table": "USB",
+    "USB 2 Table": "USB2",
     "QSPI Interface Table" : "QSPI*", 
     "DBSC3 Table" : "DBSC3",
     "VI Table" : "VI_*",
@@ -11,9 +12,13 @@
     "Address Bit Table" : "Address Bit",
     "GPIO Table" : "GPIO*",
     "Memory-Bus Table" : "Memory-Bus", 
-    "DDR Table" : "DDR-Memory",
+    "DDR Interface Table" : "DDR-Memory",
     "HDMI_Interface Table" : "HDMI Interface",
     "PCIE Table" : "PCIE Interface",
     "Analog Inputs" : "Analog input_",
-    "NC Table" : "No-Connect"
+    "NC Table" : "No-Connect",
+    "XSPI Table" : "XSPI Interface",
+    "LPDDR Table" : "LPDDR Interface",
+    "SD Table" : "SD Interface"
+    
 }

@@ -2,7 +2,7 @@ import streamlit as st
 from .base_functions import methods
 
 def fetch_part_number_details(input_part_number,input_buffer):
-    start_keyword = "part number indexing"
+    start_keyword = ["part number indexing", "part numbering index"]
     end_keyword = "symbol pin information"
     part_number_index_pages = methods.find_pages_between_keywords(input_buffer, start_keyword, end_keyword)
     st.text(f'Part Number Indexing pages : {part_number_index_pages}')

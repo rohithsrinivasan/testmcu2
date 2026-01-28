@@ -13,7 +13,24 @@ def extracting_pin_tables(file_path, part_number, number_of_pins, package_type, 
     pin_string = f"{number_of_pins}-"
     package_string = f"{package_type}"
     table_starting_page_number, table_start_string, table_stop_string, table_ending_page_number = multipage_pintable_extractor.find_table_starting_and_stopping_based_on_pin_string(file_path, pin_configuration_pages, pin_string, package_string)
-    st.text(f"Starting Page Number : {table_starting_page_number}, Table Starting Section : {table_start_string}, Table Stopping Section : {table_stop_string} , Ending Page Number : {table_ending_page_number}" )
+
+   # ✅ EARLY RETURN for embedded Excel
+    if table_starting_page_number == "EMBEDDED_EXCEL":
+        df_from_excel = table_start_string
+        if df_from_excel is not None:
+            st.header(f"\nExtracted Pin Table (from Embedded Excel)")
+            df_from_excel = st.data_editor(df_from_excel)
+            st.session_state["page"] = "grouping"
+            return df_from_excel  # ✅ RETURN EARLY - Skip all other processing
+        else:
+            st.error("❌ No data found in embedded Excel")
+            return None  # or return pd.DataFrame()
+
+    # ========== REST OF THE CODE ONLY RUNS FOR PDF TABLE EXTRACTION ==========
+
+    else:
+        st.text(f"Starting Page Number : {table_starting_page_number}, Table Starting Section : {table_start_string}, Table Stopping Section : {table_stop_string} , Ending Page Number : {table_ending_page_number}")
+
     pin_table_pages = multipage_pintable_extractor.generate_list_of_page_numbers(table_starting_page_number, table_ending_page_number)
     # Use these dfs as tables
     target_columns=['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name']
@@ -53,3 +70,59 @@ def extracting_pin_tables(file_path, part_number, number_of_pins, package_type, 
         st.session_state["page"] = "grouping"    
 
     return merged_df
+
+
+def extracting_pin_tables(file_path, part_number, number_of_pins, package_type, package_code):
+    start_keyword = "symbol pin information"
+    end_keyword = "symbol parameters"
+    pin_configuration_pages = methods.find_pages_between_keywords(file_path, start_keyword, end_keyword)
+    
+    pin_string = f"{number_of_pins}-"
+    package_string = f"{package_type}"
+    table_starting_page_number, table_start_string, table_stop_string, table_ending_page_number = multipage_pintable_extractor.find_table_starting_and_stopping_based_on_pin_string(file_path, pin_configuration_pages, pin_string, package_string)
+
+    # ✅ EARLY RETURN for embedded Excel
+    if table_starting_page_number == "EMBEDDED_EXCEL":
+        df_from_excel = table_start_string
+        if df_from_excel is not None:
+            st.header(f"\nExtracted Pin Table (from Embedded Excel)")
+            df_from_excel = st.data_editor(df_from_excel)
+            st.session_state["page"] = "grouping"
+            return df_from_excel  # ✅ RETURN EARLY - Skip all other processing
+        else:
+            st.error("❌ No data found in embedded Excel")
+            return None  # or return pd.DataFrame()
+
+    # ========== REST OF THE CODE ONLY RUNS FOR PDF TABLE EXTRACTION ==========
+    st.text(f"Starting Page Number : {table_starting_page_number}, Table Starting Section : {table_start_string}, Table Stopping Section : {table_stop_string} , Ending Page Number : {table_ending_page_number}")
+
+    pin_table_pages = multipage_pintable_extractor.generate_list_of_page_numbers(table_starting_page_number, table_ending_page_number)
+    
+    target_columns = ['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name']
+    detection_keyword = "elect"
+    st.text(f"Pin Table Pages : {pin_table_pages}")
+    dfs = methods.table_extraction_logic(file_path, pin_table_pages, target_columns, detection_keyword)
+    
+    extracted_table_as_text = multipage_pintable_extractor.extract_table_as_text(file_path, pin_table_pages, table_start_string, table_stop_string)
+    page_numbers = multipage_pintable_extractor.generate_list_of_page_numbers(table_starting_page_number, table_ending_page_number)
+    
+    table_as_text = multipage_pintable_extractor.text_filter(extracted_table_as_text)
+    
+    combo_dict, num = multipage_pintable_extractor.combine_dataframes_and_print_dictionary(dfs)
+    top_3_combinations = multipage_pintable_extractor.filter_top_3_by_size(combo_dict, table_as_text)
+    reduced_combo_dict = multipage_pintable_extractor.filter_combo_dict_based_on_size_filter(combo_dict, top_3_combinations)
+    noise_calculation_combo_dict, min_key = multipage_pintable_extractor.compare_input_string_with_value_string(reduced_combo_dict, table_as_text)
+    final_pin_tables_to_be_merged, number = multipage_pintable_extractor.get_dataframes_from_tuple(dfs, min_key)
+    
+    Before_merging_flag = methods.before_merging(final_pin_tables_to_be_merged)
+    
+    if Before_merging_flag:
+        merged_df = methods.merge_tables(final_pin_tables_to_be_merged)
+        st.header(f"\nExtracted Pin Table")
+        merged_df = st.data_editor(merged_df)
+        st.session_state["page"] = "grouping"
+        return merged_df
+    
+    # Handle case when merging fails
+    st.error("❌ Could not merge tables")
+    return None

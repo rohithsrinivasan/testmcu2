@@ -960,6 +960,9 @@
         "CANFD1": [
             "CANFD1_RX",
             "CANFD1_TX"
+        ],
+        "BSCAN" : [
+            "BSCAN_EN"
         ]
     },
     "CAS*": [
@@ -1103,6 +1106,18 @@
         "System": {
             "CLK": [
                 "CLK"
+            ],
+            "SYSCLK": [
+                "SYSCLK_OSC_BYPASS"
+            ],
+            "SSCG_EN" : [
+                "SYSCLK_SSCG_EN"
+            ],
+            "EXTAL_XIN" : [
+                "SYSCLK_EXTAL_XIN"
+            ],
+            "XOUT" :[
+                "SYSCLK_XOUT"
             ]
         },
         "EM_XTAL": [
@@ -1129,10 +1144,15 @@
         "QSPI Clock": [
             "QXTAL"
         ],
-        "Crystal": [
+        "Crystal- RT": [
             "RTXIN",
             "RTXOUT"
         ],
+        "Crystal- RTC": [
+            "RTC_XIN",
+            "RTC_XOUT"
+        ],
+
                 "IM0": {
             "IM*CLK": [
                 "IM0CLK"
@@ -1243,12 +1263,20 @@
             "Diff Pair": [
                 "CSI0_DATA0N",
                 "CSI0_DATA0P"
+            ],
+            "D0": [
+                "CSI_D0_P", 
+                "CSI_D0_N"
             ]
         },
         "CSI0_DATA1": {
             "Diff Pair": [
                 "CSI0_DATA1N",
                 "CSI0_DATA1P"
+            ],
+            "D1": [
+                "CSI_D1_P", 
+                "CSI_D1_N"
             ]
         },
         "CSI0_DATA2": {
@@ -2260,7 +2288,7 @@
     "RAS": ["DDR_RAS"],
     "RESET_N": ["DDR_RESET_N"],
     "VAA": ["DDR_VAA"],
-    "VDDQ": ["DDR_VDDQ"],
+    "VDDQ": ["DDR_VDDQ", "VDDQ_DDR"],
     "A-DDR_PLL" : [    
       "VDD09_DDRPLL0",
       "VDD09_DDRPLL1",
@@ -2358,7 +2386,14 @@
       "VDDQ": ["DDR1_VDDQ"],
       "VDDQLP": ["DDR1_VDDQLP"],
       "ZN": ["DDR1_ZN"]
+    },
+    "DDR4 Interface": {
+        "Address": ["DDR4_A0", "DDR4_A1", "DDR4_A2", "DDR4_A3", "DDR4_A4", "DDR4_A9", "DDR4_A10_AP", "DDR4_A13", "DDR4_A14_WE#", "DDR4_A15_CAS#", "DDR4_A16_RAS#"],
+        "Bank": ["DDR4_BA0", "DDR4_BA1"],
+        "Clock": ["DDR4_CK_T", "DDR4_CK_C"],
+        "Control": ["DDR4_ACT#", "DDR4_ODT"]
     }
+
   },
 
       "Flash HM Controller": {
@@ -2810,11 +2845,15 @@
         "PCIE_REFCLKN0",
         "PCIE_REFCLKN1",
         "PCIE_REFCLKP0",
-        "PCIE_REFCLKP1"
+        "PCIE_REFCLKP1",
+        "PCIE_REFCLK_P",
+        "PCIE_REFCLK_N"
         ],
         "RX": [
         "PCIE_RX_DN",
-        "PCIE_RX_DP"
+        "PCIE_RX_DP",
+        "PCIE_RX_N",
+        "PCIE_RX_P"
         ],
         "RXDNL": [
         "PCIE_RXDNL0",
@@ -2830,7 +2869,9 @@
         ],
         "TX": [
         "PCIE_TX_DN",
-        "PCIE_TX_DP"
+        "PCIE_TX_DP",
+        "PCIE_TX_N",
+        "PCIE_TX_P"
         ],
         "TXDNL": [
         "PCIE_TXDNL0",
@@ -3008,7 +3049,10 @@
             "TRCLK",
             "TRST",
             "TRST#",
-            "TRSTZ"
+            "TRSTZ",
+            "JTAG_TDO",
+            "JTAG_TDI",
+            "JTAG_TRST#" 
         ],
         "JTAG_Sync*": [
             "TRSYNC",
@@ -3017,16 +3061,19 @@
         ],
                 "Clock": [
             "TCK/SWDCLK",
-            "TCK_SWCLK"
+            "TCK_SWCLK",
+            "JTAG_TCK_SWCLK"
         ],
         "Mode Select": [
             "TMS/SWDIO",
-            "TMS_SWDIO"
+            "TMS_SWDIO",
+            "JTAG_TMS_SWDIO"
         ],
         "Reset": [
             "TRSTN"
         ]
-    },
+       
+        },
     "L*": [
         "LX",
         "LY",
@@ -3062,6 +3109,18 @@
         "LSW"
     ],
         "LPDDR Interface": {
+
+
+        "DQ0-7": ["LP4DDR4_DQ0", "LP4DDR4_DQ1", "LP4DDR4_DQ2", "LP4DDR4_DQ3", "LP4DDR4_DQ4", "LP4DDR4_DQ5", "LP4DDR4_DQ6", "LP4DDR4_DQ7"],
+        "DQ8-15": ["LP4DDR4_DQ8", "LP4DDR4_DQ9", "LP4DDR4_DQ10", "LP4DDR4_DQ11", "LP4DDR4_DQ12", "LP4DDR4_DQ13", "LP4DDR4_DQ14", "LP4DDR4_DQ15"],
+        "DMI": ["LP4DDR4_DMI0_DM0#", "LP4DDR4_DMI1_DM1#"],
+        "DQS0": ["LP4DDR4_DQS0_T", "LP4DDR4_DQS0_C"],
+        "DQS1": ["LP4DDR4_DQS1_T", "LP4DDR4_DQS1_C"],
+        "Clock": ["LP4DDR4_CK_T_BG0", "LP4DDR4_CK_C_BG1"],
+        "Control": ["LP4DDR4_CKE0", "LP4DDR4_CS0_CS0#", "LP4DDR4_RST#"],
+        "Address": ["LP4DDR4_CA0_A12_BC#", "LP4DDR4_CA1_A11", "LP4DDR4_CA2_A7", "LP4DDR4_CA3_A8", "LP4DDR4_CA4_A6", "LP4DDR4_CA5_A5"],
+        "Calibration": ["LP4DDR4_ZN"],
+
         "Test": [
             "LPDTEST"
         ],
@@ -3271,7 +3330,14 @@
         ],
         "A-LVDS-VDD" : [
             "VDDQ18_LVDS"
-        ]
+        ],
+        "DSI/LVDS Interface": {
+            "CLK": ["DSI_LVDS_CLK_P", "DSI_LVDS_CLK_N"],
+            "D0": ["DSI_LVDS_D0_P", "DSI_LVDS_D0_N"],
+            "D1": ["DSI_LVDS_D1_P", "DSI_LVDS_D1_N"],
+            "D2": ["DSI_LVDS_D2_P", "DSI_LVDS_D2_N"],
+            "D3": ["DSI_LVDS_D3_P", "DSI_LVDS_D3_N"]
+        }       
 
     },
     "LVDS RX Interface": {
@@ -3407,10 +3473,16 @@
     },
     "Boot": {
             "Boot_Mode": [
-                "B\\H\\E\\"
+                "B\\H\\E\\",
+                "BOOT_MODE",
+                "BOOT_MODE0",
+                "BOOT_MODE1",
+                "BOOT_MODE2",
+                "BOOT_MODE3"
             ],
             "BOOTCPUSEL": [
-                "BOOTCPUSEL"
+                "BOOTCPUSEL",
+                "BOOT_CPU_SELECT"
             ],
             "BOOTPLLCA*": [
                 "BOOTPLLCA0",
@@ -3453,9 +3525,6 @@
         ],
         "Isolation": [
             "RTISO"
-        ],
-        "Battery Reset": [
-            "VBATTRESET#"
         ]
         },
     "MPMD": {
@@ -3787,7 +3856,8 @@
             "AVREF": [
                 "AVREFVSS"
             ],
-            "AVSS": [
+            "AVSS": {
+                "-A" : [
                 "A0VSS",
                 "A1VSS",
                 "A2VSS",
@@ -3797,6 +3867,10 @@
                 "AVSS1",
                 "AVSS2"
             ],
+            "ADC": ["AVSS_ADC", "AVSS_ADC", "AVSS_ADC"],
+            "TSU": ["AVSS_TSU"],
+            "USB2": ["AVSS_USB2", "AVSS_USB2", "AVSS_USB2", "AVSS_USB2", "AVSS_USB2"]
+            },
             "AAVSS" :[
                 "AAVSS"
             ],
@@ -4269,7 +4343,11 @@
                 "PA7",
                 "PA8",
                 "PA9"
-            ]
+            ],
+            "Port A_ISO": {
+                "ISO": ["PA0_ISO", "PA1_ISO", "PA2_ISO", "PA3_ISO", "PA4_ISO", "PA5_ISO", "PA6_ISO", "PA7_ISO"]
+            }
+
         },
         "Port PAH": {
             "PAH*": [
@@ -4334,7 +4412,11 @@
                 "PB7",
                 "PB8",
                 "PB9"
-            ]
+            ],
+            "Port B_ISO": {
+                "ISO": ["PB0_ISO", "PB1_ISO", "PB2_ISO", "PB3_ISO", "PB4_ISO", "PB5_ISO", "PB6_ISO", "PB7_ISO"]
+            }
+            
         },
         "Port PC": {
             "PC*": [
@@ -4374,7 +4456,11 @@
                 "PC7",
                 "PC8",
                 "PC9"
-            ]
+            ],
+            "Port C_ISO": {
+                "ISO": ["PC0_ISO", "PC1_ISO", "PC2_ISO"]
+            }
+
         },
         "Port PCM": {
             "PCM*": [
@@ -4454,7 +4540,11 @@
                 "PD7",
                 "PD8",
                 "PD9"
-            ]
+            ],
+            "Port D_ISO": {
+                "ISO": ["PD0_ISO", "PD1_ISO", "PD2_ISO", "PD3_ISO", "PD4_ISO", "PD5_ISO", "PD6_ISO", "PD7_ISO"]
+            }
+
         },
         "Port PDH": {
             "PDH*": [
@@ -4539,7 +4629,11 @@
                 "PE7",
                 "PE8",
                 "PE9"
-            ]
+            ],
+            "Port E_ISO": {
+                "ISO": ["PE0_ISO", "PE1_ISO", "PE2_ISO", "PE3_ISO", "PE4_ISO", "PE5_ISO", "PE6_ISO", "PE7_ISO"]
+            }
+
         },
         "Port PF": {
             "PF*": [
@@ -4571,7 +4665,11 @@
                 "PF7",
                 "PF8",
                 "PF9"
-            ]
+            ],
+            "Port F_ISO": {
+                "ISO": ["PF0_ISO", "PF1_ISO", "PF2_ISO"]
+            }
+
         },
         "Port PG": {
             "PG*": [
@@ -4610,7 +4708,10 @@
                 "PG7",
                 "PG8",
                 "PG9"
-            ]
+            ],
+            "Port G_ISO": {
+                "ISO": ["PG0_ISO", "PG1_ISO", "PG2_ISO", "PG3_ISO", "PG4_ISO", "PG5_ISO", "PG6_ISO", "PG7_ISO"]
+            }
         },
         "Port PH": {
             "PH*": [
@@ -4630,7 +4731,11 @@
                 "PH7",
                 "PH8",
                 "PH9"
-            ]
+            ],
+            "Port H_ISO": {
+                "ISO": ["PH0_ISO", "PH1_ISO", "PH2_ISO", "PH3_ISO", "PH4_ISO", "PH5_ISO"]
+            }
+
         },
         "Port PI": {
             "PI*": [
@@ -4725,7 +4830,11 @@
                 "PK7",
                 "PK8",
                 "PK9"
-            ]
+            ],
+            "Port K_ISO": {
+                "ISO": ["PK0_ISO", "PK1_ISO", "PK2_ISO", "PK3_ISO"]
+            }
+
         },
         "Port PL": {
             "PL*": [
@@ -5236,6 +5345,9 @@
       "P2_8",
       "P2_9"
     ],
+
+    "02_ISO": ["P20_ISO", "P21_ISO"],
+
     "03": [
       "P03_0",
       "P03_1",
@@ -5309,6 +5421,7 @@
       "P3_8",
       "P3_9"
     ],
+    "03_AWO": ["P30_AWO", "P31_AWO", "P32_AWO", "P33_AWO", "P34_AWO", "P35_AWO", "P36_AWO"],
     "04": [
       "P04_0",
       "P04_00",
@@ -5450,6 +5563,8 @@
       "P5_8",
       "P5_9"
     ],
+    "05_ISO": ["P50_ISO", "P51_ISO", "P52_ISO", "P53_ISO", "P54_ISO", "P55_ISO", "P56_ISO"],
+
     "06": [
       "P06_0",
       "P06_00",
@@ -5539,6 +5654,8 @@
       "P6_8",
       "P6_9"
     ],
+    "06_ISO": ["P60_ISO", "P61_ISO", "P62_ISO", "P63_ISO", "P64_ISO", "P65_ISO", "P66_ISO"],
+
     "07": [
       "P07_0",
       "P07_00",
@@ -5616,6 +5733,8 @@
       "P7_8",
       "P7_9"
     ],
+    "07_ISO": ["P70_ISO", "P71_ISO", "P72_ISO", "P73_ISO", "P74_ISO", "P75_ISO", "P76_ISO", "P77_ISO"],
+
     "08": [
       "P08_0",
       "P08_00",
@@ -5690,6 +5809,9 @@
       "P8_8",
       "P8_9"
     ],
+    "08_ISO": ["P80_ISO", "P81_ISO", "P82_ISO", "P83_ISO", "P84_ISO", "P85_ISO"],
+  
+
     "09": [
       "P09_0",
       "P09_00",
@@ -6647,7 +6769,14 @@
                 "PWVBAT"
             ],
             "VBATT_VDD": [
-                "VBATT_VDD"
+                "VBATT_VDD",
+                "VDD_VBATT"
+            ],
+            "VABTT_inputs": [
+            "VBATTRESET#",
+            "VBAT_RST#",
+            "VBAT_RTC_WKUP",
+            "VBAT_TAMPER"
             ]
         },
         "VBP": [
@@ -6987,6 +7116,13 @@
             "AVDD_RF": [
                 "AVDD_RF"
             ],
+            "ASO*" :[
+                "VDD10_ASO"
+            ],
+            "AWO*" :[
+                "VDD10_AWO"
+            ],
+            "ISO": ["VDD10_ISO"],
             "BVDD": [
                 "BVDD"
             ],
@@ -7002,6 +7138,7 @@
             "DVDD_USB": [
                 "DVDD_USB"
             ],
+            "VDD18_USB2": ["VDD18_USB2"],
             "E*VDD": [
                 "E0VDD",
                 "E1VDD"
@@ -7204,7 +7341,6 @@
             ],
             "VDDQ": [
             "VDDQ_CK",
-            "VDDQ_DDR",
             "VDDQ_DU",
             "VDDQ_MAPLL",
             "VDDQ_MDPLL0",
@@ -7234,6 +7370,30 @@
                 "RGMII5_VDDQ"
             ]
         },
+        "VAA*": {
+            "VAA18_ADC": ["VAA18_ADC"],
+            "VAA18_TSU": ["VAA18_TSU"],
+            "VAA18_CSI": ["VAA18_CSI"],
+            "VAA18_DSI": ["VAA18_DSI"],
+            "VAA18_OTP": ["VAA18_OTP"],
+            "VAA18_PCIE": ["VAA18_PCIE"],
+            "VAA09_PCIE": ["VAA09_PCIE"],
+            "VAA18_DDR": ["VAA18_DDR"],
+            "VAA18_USB2": ["VAA18_USB2"],
+            "VAA33_USB2": ["VAA33_USB2", "VAA33_USB2"],
+            "VAA10_PLL": ["VAA10_PLL47", "VAA10_PLL5", "VAA10_PLL23", "VAA10_PLL16"]
+        },
+        "PVDD*": {
+            "PVDD1218_I3C_ISO": ["PVDD1218_I3C_ISO"],
+            "PVDD18_AWO": ["PVDD18_AWO", "PVDD18_AWO"],
+            "PVDD182533_ET_ISO": ["PVDD182533_ET0_ISO", "PVDD182533_ET1_ISO"],
+            "PVDD1833_OTH": ["PVDD1833_OTH_ISO", "PVDD1833_OTH_AWO"],
+            "PVDD18_PRE_ISO": ["PVDD18_PRE_ISO"],
+            "PVDD1833_SD_ISO": ["PVDD1833_SD0_ISO", "PVDD1833_SD1_ISO", "PVDD1833_SD2_ISO"],
+            "PVDD1833_XSPI_AWO": ["PVDD1833_XSPI_AWO"]
+        },
+
+
         "VL*": [
             "VL1",
             "VL2",
@@ -7455,10 +7615,12 @@
             ]
         },
         "Reset": [
-            "XSPI_RESET0#"
+            "XSPI_RESET0#",
+            "XSPI_RST0#"
         ],
         "Clock": [
-            "XSPI_SPCLK"
+            "XSPI_SPCLK",
+            "XSPI_CKP"
         ],
         "Write Protect": [
             "XSPI_WP0#"
@@ -7528,10 +7690,11 @@
         ]
     },
     "SD Interface": {
-        "SD0": {
-            "SD0_RST": [
+        "SD0_0": {
+            "SD0RST": [
                 "\\SD0_RST"
-            ]
+            ],
+            "SD0": ["SD0_DS"]
         },
         "SD0_CLK": [
             "SD0_CLK"
@@ -7731,7 +7894,8 @@
             "RSTN",
             "RSTOUT#",
             "nRST",
-            "PRST"
+            "PRST",
+            "SYS_RST#"
         ],
             "System Control": {
         "Reset": [
@@ -7881,12 +8045,29 @@
     "SBIAS": [
         "SBIAS"
     ],
+    "SCIF*" : {
     "SCIF2_RXD": [
         "SCIF2_RXD"
     ],
+    "SCIF2_TXD": [
+        "SCIF2_TXD"
+    ],
+    "SCIF0_RXD": [
+        "SCIF0_RXD"
+    ],
+    "SCIF0_TXD": [
+        "SCIF0_TXD"
+    ],
+    "SCIF1_RXD": [
+        "SCIF1_RXD"
+    ],
+    "SCIF1_TXD": [
+        "SCIF1_TXD"
+    ],
     "SCIF_CLK_A": [
         "SCIF_CLK_A"
-    ],
+    ]
+    },
     "SCPT7": [
         "SCPT7",
         "SCPT[7]"
@@ -8405,7 +8586,9 @@
             "USB2_Analog" :[
                 "USB2_M(ANALOG)",
                 "USB2_P(ANALOG)"
-            ]
+            ],
+            "Reference": ["USB2_RREF"]
+            
         },
 
         "USB2_CH3": {
@@ -8489,26 +8672,20 @@
             "USB_EXTAL",
             "USB_XTAL"
         ],
+        "USB20": {
+            "Data": ["USB20_DM", "USB20_DP"],
+            "OTG": ["USB20_OTGEXICEN", "USB20_OTGID"],
+            "Tuning": ["USB20_TXRTUNE"],
+            "A-Power": ["USB20_USDVDD", "USB20_USVDD18", "USB20_USVDD33"],
+            "VBUS": ["USB20_VUBUSIN", "USB20_VBUSIN"]
+        },
 
-        "USB20": [
-      "USB20_DM",
-      "USB20_DP",
-      "USB20_OTGEXICEN",
-      "USB20_OTGID",
-      "USB20_TXRTUNE",
-      "USB20_USDVDD",
-      "USB20_USVDD18",
-      "USB20_USVDD33",
-      "USB20_VUBUSIN"
-    ],
-    "USB21": [
-      "USB21_DM",
-      "USB21_DP",
-      "USB21_TXRTUNE",
-      "USB21_USDVDD",
-      "USB21_USVDD18",
-      "USB21_USVDD33"
-    ],
+        "USB21": {
+            "Data": ["USB21_DM", "USB21_DP"],
+            "Tuning": ["USB21_TXRTUNE"],
+            "A-Power": ["USB21_USDVDD", "USB21_USVDD18", "USB21_USVDD33"],
+            "VBUS": ["USB21_VBUSIN"]
+        },
     "USB3": [
       "USB3_USRESREF"
     ],

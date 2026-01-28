@@ -1,0 +1,1317 @@
+{
+  "Power": {
+    "Analog-Positive": {
+      "AVDD-Main": ["AVDD", "AVDD12_24", "AVDD125", "AVDDPCIe", "AVDDSYS"],
+      "VDDA-Main": ["VDDA", "VDDA_BG", "VDDA_FB", "VDDA_IN1", "VDDA_IN2", "VDDA_LC", "VDDA_LC_BG", "VDDA_PDCP", "VDDA_PDCP_XTAL", "VDDA_XT", "VDDA_XTAL", "VDDA1", "VDDA1.5", "VDDA1.8", "VDDA100M", "VDDA2", "VDDA25M", "VDDA3", "VDDA3.3", "VDDA4", "VDDA5", "VDDAO0p", "VDDAp"],
+      "VCCA-Main": ["VCCA", "VCCA_A", "VCCA_B", "VCCA_C", "VCCA_D", "VCCA_IN1", "VCCA_IN2", "VCCA_XT"]
+    },
+    "Digital-Positive": {
+      "VDD-Core": ["VDD", "VDD Core", "VDD_CORE", "VDD_CORE_1.5", "VDDCORE", "VDDCORE_3.3", "VDD1.5", "VDD1.8", "VDD1_8"],
+      "VDD-Clock": ["VDD_27MHz", "VDD_CK", "VDD_CLK", "VDD_CLKA", "VDD_CLKB", "VDDCLK0", "VDDCLK1", "VDDCLK2", "VDDCLK3"],
+      "VDD-CPU": ["VDDCPU", "VDDCPU_3.3", "VDDCPU_IO", "VDDCPU_LVIO", "VDDCPUIO", "VDDCPUPLL_3.3"],
+      "VDD-Differential": ["VDD_DIFF", "VDD_DIFF5", "VDD_DIFF6", "VDDDIF_CORE_1.5", "VDDDIFF1", "VDDDIFF2"],
+      "VDD-Digital": ["VDD_DIG", "VDDDIG", "VDDDIG1.5", "VDDDIG1.8", "VDDDIG3", "VDDDIG3.3"],
+      "VDD-Input": ["VDD_IN", "VDD_IN_0", "VDD_IN_1", "VDD_INP", "VDD_INPUT", "VDDI", "VDDIN", "VDDINA", "VDDINB"],
+      "VDD-Output": ["VDD Output", "VDDO", "VDDO_A", "VDDO_B", "VDDO_D0", "VDDO_D1", "VDDO_D2", "VDDO_D3", "VDDO_GF", "VDDO_Q0", "VDDO_Q1", "VDDO_Q2", "VDDO_Q3", "VDDO_Q4", "VDDO_Q5", "VDDO_Q6", "VDDO_Q7", "VDDO_Q8", "VDDO_Q9", "VDDO_Q10", "VDDO_Q11", "VDDO_QA", "VDDO_QB", "VDDO_QC", "VDDO_QD", "VDDO_QE", "VDDO_QF", "VDDO_QG", "VDDO_QH", "VDDO_QCLKA", "VDDO_QCLKB", "VDDO_QCLKC", "VDDO_QCLKD", "VDDO_QREF", "VDDO_R01", "VDDO_R23", "VDDO_R4", "VDDO_R5", "VDDO_REF", "VDDO0", "VDDO1", "VDDO1.5", "VDDO1.8", "VDDO2", "VDDO3", "VDDO3.3", "VDDO33_QC", "VDDO33_QD", "VDDO4", "VDDO5", "VDDOA", "VDDOB", "VDDOC", "VDDOD", "VDDODA", "VDDOREF", "VDDOUT1", "VDDOUT2"],
+      "VDD-IO": ["VDD_IO", "VDDIO", "VDDIO_96MHz", "VDDIO_CPU", "VDDIO_LCD", "VDDIO_PCI3.3", "VDDIO_SRC", "VDD48IO_3.3"],
+      "VDD-PLL-VCO": ["VDD_APLL", "VDD_CP", "VDD_CPF", "VDD_CPV", "VDD_DCO_Q0_Q1", "VDD_DCO_Q0123", "VDD_DCO_Q0Q1", "VDD_DCO_Q2_Q3", "VDD_DCO_Q2Q3", "VDD_DCO_Q4_Q5", "VDD_DCO_Q4567", "VDD_DCO_Q4Q5", "VDD_DCO_Q6_Q7", "VDD_DCO_Q6Q7", "VDD_DCO_Q8", "VDD_DCO_Q9", "VDD_DCO_Q10", "VDD_DCO_Q11", "VDD_DCO1", "VDD_DPLL0", "VDD_DPLL1", "VDD_LCF", "VDD_LCV", "VDD_LCV1", "VDD_LCV2", "VDD_OSC", "VDD_OSC0", "VDD_PLL1", "VDD_RFPLL", "VDD_RFVCO", "VDD48PLL_3.3", "VDDLCDPLL_3.3", "VDDCPUPLL_3.3", "VDDPLL3I/O", "VDDPLL3IO"],
+      "VDD-Oscillator-Crystal": ["VDD_XO", "VDDXO", "VDDXTAL", "VDDXTAL1.5", "VDDXTAL1.8", "VDDXTAL3.3"],
+      "VDD-Reference": ["VDD_REF", "VDDREF", "VDDREF_1p8", "VDDREF_3.3", "VDDREF1.5", "VDDREF1.8", "VDDREF14M", "VDDREF3.3", "VDDREFIO_3.3", "VDDREFp"],
+      "VDD-Interface-Specific": ["VDD_DIA_A", "VDD_DIA_B", "VDD_DIA_FOD_A", "VDD_DIA_FOD_B", "VDD_GPIO", "VDD_GPIO_FOD", "VDD_LOGIC", "VDD_PLL1", "VDD_QCLKA", "VDD_QCLKB", "VDD_QCLKC", "VDD_QCLKD", "VDD_QCLKE", "VDD_QCLKV", "VDD_QREFA", "VDD_QREFA0", "VDD_QREFA01", "VDD_QREFA1", "VDD_QREFA2", "VDD_QREFB", "VDD_QREFB0", "VDD_QREFB1", "VDD_QREFC", "VDD_QREFD", "VDD_SD", "VDD_SP", "VDD_SPI", "VDD_SYNC", "vdd_NC"],
+      "VDD-Frequency-Specific": ["VDD100M", "VDD12_288", "VDD14", "VDD14_3.3", "VDD18", "VDD2.048", "VDD25", "VDD25_3.3", "VDD27", "VDD3.3", "VDD32K", "VDD33", "VDD33_CP0", "VDD33_CP1", "VDD33_OSC1", "VDD33_VCO", "VDD48", "VDD48_3.3", "VDD96", "VDD96IO"],
+      "VDD-Bus-Interface": ["VDDPCI", "VDDPCI_3.3", "VDDPCIe", "VDDPCIEX", "VddDDR", "VDDRGMII", "VDDRMII", "VDDSATA"],
+      "VDD-Source": ["VDDSRC", "VDDSRC_3.3", "VDDSRC_IO", "VDDSRC_LVIO", "VDDSRCI/O", "VDDSRCIO"],
+      "VDD-Other": ["VDDB", "VDDD", "VDDD1", "VDDD2", "VDDDp", "VDDMXCK", "VDDPFT", "VDDQA", "VDDQB", "VDDR", "VDDR1.5", "VDDR1.8", "VDDR3.3", "VDDSE1", "VDDSE2", "VDDSE3", "VDDSSC", "VDDSUSP", "VDDX", "VDDXD", "VDDDOT96MHz_3.3"]
+    },
+    "General-Positive": {
+      "VCC-Main": ["VCC", "VCC_A", "VCC_B", "VCC_C", "VCC_CK", "VCC_CP", "VCC_D", "VCC_SP", "VCC_X", "VCCCS", "VCCX"],
+      "VCCO-Output": ["VCCD", "VCCO", "VCCO_A", "VCCO_B", "VCCO_C", "VCCO_D", "VCCO_QA", "VCCO_QB", "VCCO0", "VCCO1", "VCCO2", "VCCO3", "VCCO4", "VCCO5", "VCCO6", "VCCO7", "VCCO8", "VCCO10", "VCCOA", "VCCOB", "VCCOC", "VCCOD"],
+      "Other-Positive": ["V_CP", "VBAT", "VBB", "VBIAS", "VC", "VC0", "VC4", "VCF", "VCOM", "VEE", "VEE_A", "VEE_B", "VEE_C", "VEE_D", "VEE_EP", "VEF", "VIN", "VPP", "VT", "VT_0", "VT_1", "VT0", "VT1", "VTC", "VTR", "Vtt_PwrGD", "VttPwr_GD", "Voltage Control", "OTP_VPP", "NVGND"]
+    },
+    "Charge-Pump": {
+      "CP-Supply": ["CP_APLL", "CP_DPLL0", "CP_DPLL1", "CP_OUT", "CP_RFPLL", "ICP", "ICP_0", "ICP_1", "ICPF", "RCP", "RSP", "TSP"]
+    },
+    "Regulators-LDO": {
+      "LDO-Output": ["CLDO", "CLDO0", "CLDO1"]
+    },
+    "Capacitor-Pins": {
+      "Filter-Caps": ["CAP", "CAP_APLL", "CAP_DPLL0", "CAP_DPLL1", "CAP_REF", "CAP_RFPLL", "CAP0", "CAP0_REF", "CAP1", "CAP1_REF", "CAP2", "CAPBIAS", "CAPREG", "CAPXTAL", "CREG_XTAL", "VCO_CAP", "VREG_OSC_CAP"]
+    },
+    "Bias-Current": {
+      "Bias-Pins": ["CBIAS", "CBIAS0", "CBIAS1", "IREF", "ISET"]
+    }
+  },
+  "Ground": {
+    "Analog-Ground": {
+      "GNDA-Main": ["GNDA", "GNDA_VCO", "VSSA", "VSSA1", "VSSA2", "VSSA3", "VSSA4", "VSSA5"]
+    },
+    "Digital-Ground": {
+      "GND-Main": ["GND", "GND_CP", "GND_EP", "GND_EPAD", "GND_SD", "Ground Core", "Ground Output"],
+      "GNDD-Main": ["GNDD", "VSSD", "VSSD1", "VSSD2"],
+      "GND-Differential": ["GNDDIF", "VSS_DIFF", "VSS_DIFF5", "VSS_DIFF6", "VSSDIFF1", "VSSDIFF2"],
+      "GND-Digital": ["GNDDIG"]
+    },
+    "Interface-Ground": {
+      "GND-Frequency-Specific": ["GND12_24", "GND125M", "GND14M", "GND2.048", "GND25", "GND27", "GND27MHz", "GND32K", "GND33", "GND48", "GND96"],
+      "GND-CPU": ["GNDCPU"],
+      "GND-DDR": ["GndDDR"],
+      "GND-Input": ["GNDINA", "GNDIMB"],
+      "GND-LCD": ["GNDLCD", "GNDDOT96MHz"],
+      "GND-Output": ["GNDO", "GNDO0", "GNDO1", "GNDODA"],
+      "GND-Bus": ["GNDPCI", "GNDPCIe", "GNDRGMII", "GNDRMII", "GNDSATA"],
+      "GND-Reference": ["GNDREF"],
+      "GND-Source": ["GNDSRC"],
+      "GND-Sync": ["GNDSSC"],
+      "GND-System": ["GNDSYS"],
+      "GND-Crystal": ["GNDXD", "GNDXTAL"],
+      "GNDINB": [ "GNDINB" ],
+      "GNDR": [ "GNDR" ]
+    },
+    "VSS-Ground": {
+      "VSS-Main": ["VSS", "VSSSE1"]
+    }
+  },
+  "Voltage-Reference": {
+    "Reference-Input": {
+      "VREF-Main": ["VREF", "VREF_ AC", "VREF_1.05", "VREF_AC", "VREF_AC0", "VREF_AC1", "VREF0", "VREF1", "VREFA", "VREFB"]
+    },
+    "Tuning-Control": {
+      "VTUNE-Main": ["VTUNE", "VVCO"],
+      "Frequency-Tune": ["FTUNE"]
+    }
+  },
+  "Clock-Inputs": {
+    "Differential-Clock-Inputs": {
+      "CLKIN-Differential": ["CLKIN0", "CLKIN0#", "CLKIN1", "CLKIN1#", "CLKIN2", "CLKIN2#", "CLKIN3", "CLKIN3#"],
+      "DIF-IN-Main": ["DIF_IN", "DIF_IN#", "DIF_IN1", "DIF_IN1#", "DIF_IN2", "DIF_IN2#", "DIF_INA", "DIF_INA#", "DIF_INB", "DIF_INB#"],
+      "CLK-IN-Differential": ["CLK_IN", "CLK_IN#"]
+    },
+    "Single-Ended-Clock-Inputs": {
+      "CLKIN-Single": ["CLKIN", "CLKINB"],
+      "CLK-Main": ["CLK", "CLK_0", "CLK_1", "CLK_2", "CLK_3"],
+      "IN-Main": ["IN", "IN_0", "IN_1", "IN0", "IN1", "IN3", "IN4", "IN5", "IN6"],
+      "IN-Differential-Pairs": ["IN1_NEG", "IN1_POS", "IN2_NEG", "IN2_POS"]
+    },
+    "Crystal-Oscillator-Inputs": {
+      "XIN-Main": ["XIN", "XIN_25", "XIN_CLKIN"],
+      "XTAL-Input": ["XTALI", "XTAL_IN"],
+      "X-Input-Main": ["X1", "X1_25", "X1_32", "X132k", "X2", "X2_25", "X2_32", "X232k"],
+      "OSC-Input": ["OSCI"]
+    },
+    "Reference-Clock-Inputs": {
+      "REF-Input": ["REF", "REF_2L", "REF_IN", "Fref"],
+      "REF-Clock-Input": ["REF_CLKIN", "nREF_CLKIN"],
+      "Feedback-Input": ["DFB_IN", "DFB_IN#", "FB_DIV", "FB_DNC", "FB_DNC#"]
+    },
+    "Sync-Input": {
+      "Sync-Signals": ["EX_SYNC1", "EX_SYNC2", "FRSYNC 8K 1PPS", "MFRSYNC_2K_1PPS"]
+    }
+  },
+    "Differential-Clock-Outputs": {
+      "CLK-Differential-Pairs": {
+        "0" :["CLK0", "CLK0#"],
+        "1" :["CLK1", "CLK1#"],
+        "A0" :["CLKA0", "CLKA0#"],
+        "A1" :["CLKA1", "CLKA1#"],
+        "B0" :["CLKB0", "CLKB0#"],
+        "B1" :["CLKB1", "CLKB1#"]
+      },
+      "BCLK-Differential-Pairs": {
+        "0" : ["BCLK0", "BCLK0#"],
+        "1" :["BCLK1", "BCLK1#"],
+        "2" :["BCLK2", "BCLK2#"],
+        "3" :["BCLK3", "BCLK3#"],
+        "4" :["BCLK4", "BCLK4#"],
+        "5" :["BCLK5", "BCLK5#"],
+        "6" :["BCLK6", "BCLK6#"],
+        "7" :["BCLK7", "BCLK7#"]
+      },
+      "DIF-Differential-Pairs": {
+        "_0" : ["DIF_0", "DIF_0#"],
+        "_1" :["DIF_1", "DIF_1#"],
+        "_2" :["DIF_2", "DIF_2#"],
+        "_3" :["DIF_3", "DIF_3#"],
+        "_4" :["DIF_4", "DIF_4#"],
+        "_5" :["DIF_5", "DIF_5#"],
+        "_6" :["DIF_6", "DIF_6#"],
+        "_7" :["DIF_7", "DIF_7#"],
+        "_8" :["DIF_8", "DIF_8#"],
+        "_9" :["DIF_9", "DIF_9#"],
+        "_10" :["DIF_10", "DIF_10#"],
+        "_11" :["DIF_11", "DIF_11#"],
+        "_12" :["DIF_12", "DIF_12#"],
+        "_13" :["DIF_13", "DIF_13#"],
+        "_14" :["DIF_14", "DIF_14#"],
+        "_15" :["DIF_15", "DIF_15#"],
+        "_16" :["DIF_16", "DIF_16#"],
+        "_17" :["DIF_17", "DIF_17#"],
+        "_18" :["DIF_18", "DIF_18#"],
+        "_19" :["DIF_19", "DIF_19#"],
+        "0" :["DIF0", "DIF0#"],
+        "1" :["DIF1", "DIF1#"],
+        "2" :["DIF2", "DIF2#"],
+        "3" :["DIF3", "DIF3#"],
+        "4" :["DIF4", "DIF4#"],
+        "5" :["DIF5", "DIF5#"],
+        "6" :["DIF6", "DIF6#"],
+        "7" :["DIF7", "DIF7#"],
+        "8" :["DIF8", "DIF8#"],
+        "9" :["DIF9", "DIF9#"],
+        "10" :["DIF10", "DIF10#"],
+        "11" :["DIF11", "DIF11#"],
+        "12" :["DIF12", "DIF12#"],
+        "13" :["DIF13", "DIF13#"],
+        "14" :["DIF14", "DIF14#"],
+        "15" :["DIF15", "DIF15#"],
+        "16" :["DIF16", "DIF16#"],
+        "17" :["DIF17", "DIF17#"],
+        "18" :["DIF18", "DIF18#"],
+        "19" :["DIF19", "DIF19#"]
+      },
+      "DIF-LRS-Pairs": {
+        "0" : ["DIF0_LRS", "DIF0#_LRS"],
+        "1" : ["DIF1_LRS", "DIF1#_LRS"]
+      },
+      "MXCK-Differential-Pairs": {
+        "4" : ["MXCK4", "MXCK4#"],
+        "5" :["MXCK5", "MXCK5#"]
+      },
+      "PCLK-Differential-Pairs": {
+        "0" : ["PCLK0", "PCLK0#"],
+        "1" : ["PCLK1", "PCLK1#"]
+      },
+      "DFB-Output-Differential": {
+        "OUT" : ["DFB_OUT", "DFB_OUT#"],
+        "OUT_NC" : ["DFB_OUT_NC", "DFB_OUT_NC#"],
+        "FBOUT_NC" : ["FBOUT_NC", "FBOUT_NC#"]
+      },
+      "RF-Output-Differential": {
+        "OUT" : ["RF_OUT", "nRF_OUT"],
+        "OUTA" : ["RF_OUTA", "nRF_OUTA"],
+        "OUTB" : ["RF_OUTB", "nRF_OUTB"]
+      },
+      "REF-Output-Differential": {
+        "CLKOUT" : ["REF_CLKOUT", "nREF_CLKOUT"]
+      },
+      "DIFF-Output-Pairs": {
+        "1" : ["DIFF1", "DIFF1B"],
+        "2" : ["DIFF2", "DIFF2B"]
+      },
+      "OUT-Differential-Pairs": {
+        "0" : ["OUT0", "OUT0#"],
+        "1" : ["OUT1", "OUT1#"],
+        "2" : ["OUT2", "OUT2#"],
+        "3" : ["OUT3", "OUT3#"],
+        "5" : ["OUT5_NEG", "OUT5_POS"],
+        "6" : ["OUT6_NEG", "OUT6_POS"]
+      }
+    },
+    "Single-Ended-Clock-Outputs": {
+      "CLK-Single-Ended": ["CLK0", "CLK0A", "CLK0B", "CLK0C", "CLK0D", "CLK1", "CLK1A", "CLK1B", "CLK1C", "CLK1D", "CLK2", "CLK3", "CLK4", "CLK5", "CLK6", "CLK7", "CLKA", "CLKA0", "CLKA1", "CLKB", "CLKB0", "CLKB1", "CLKC", "CLKD", "CLKE"],
+      "CLKOUT-Main": ["CLKOUT", "CLKOUT1", "CLKOUT2", "CLKOUT3", "CLKOUT4", "CLKOUT5", "CLKOUT6"],
+      "nCLK-Inverted": ["nCLK", "nCLK_0", "nCLK_1", "nCLK_2", "nCLK_3", "nCLK0", "nCLK0A", "nCLK0B", "nCLK0C", "nCLK0D", "nCLK1", "nCLK1A", "nCLK1B", "nCLK1C", "nCLK1D", "nCLK2", "nCLK3", "nCLK4", "nCLK5", "nCLK6", "nCLK7", "nCLKA", "nCLKB", "nCLKC", "nCLKD", "nCLKIN"],
+      "OUT-Main": ["OUT", "OUT0", "OUT0b", "OUT1", "OUT1B", "OUT2", "OUT2B", "OUT3", "OUT3B", "OUT4", "OUT4A", "OUT4b", "OUT5", "OUT5b", "OUT6", "OUT6A", "OUT6B", "OUT7", "OUT7B", "OUT8", "OUT8B", "OUT9", "OUT9B", "OUT10", "OUT10B", "OUT11", "OUT11B", "Output 0", "Output 0b"],
+      "nOUT-Inverted": ["nOUT0", "nOUT1", "nOUT2", "nOUT3"],
+      "Y-Outputs": ["Y0", "Y1", "Y2", "Y3", "Y4", "Y5", "Y6", "Y7", "Y8", "Y9", "1Y0", "1Y1", "1Y2", "1Y3", "1Y4", "2Y0", "2Y1", "2Y2", "2Y3", "2Y4"],
+      "REF-Output": ["REF_OUT", "REFOUT", "REF0", "REF0_2x", "REF1", "REF14.318M", "REF2", "REF3", "REF4", "REF5", "REFCLK"]
+    },
+    "Q-Outputs": {
+      "Q-Main": ["Q", "Q_0", "Q_1", "Q_2", "Q_3", "Q_4", "Q_5", "Q_6", "Q_7", "Q0", "Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8", "Q9", "Q10", "Q11", "Q12", "Q13", "Q14", "Q15", "Q16", "Q17"],
+      "Q-Grouped": {
+        "Q-A": ["Q_A0", "Q_A1", "QA", "QA0", "QA0_CMOS", "QA1", "QA1_CMOS", "QA2", "QA2_CMOS", "QA3", "QA3_CMOS", "QA4", "QA5", "QA6", "QA7", "Q0A", "Q1A"],
+        "Q-B": ["Q_B0", "Q_B1", "QB", "QB0", "QB1", "QB2", "QB3", "QB4", "QB5", "QB6", "QB7", "Q0B", "Q1B"],
+        "Q-C": ["Q_C0", "Q_C1", "QC", "QC0", "QC1", "QC2", "QC3", "QC4", "QC5", "Q0C", "Q1C"],
+        "Q-D": ["Q_D0", "Q_D1", "QD", "QD0", "QD1", "Q0D", "Q1D"],
+        "Q-E": ["Q_E0", "Q_E1", "Q_E2", "QE_0", "QE_1", "QE0", "QE1"],
+        "Q-F": ["Q_F0", "Q_F1", "QF"],
+        "Q-G": ["Q_G0", "Q_G1", "QG"],
+        "Q-H": ["Q_H0", "Q_H1", "Q_H2"]
+      },
+      "nQ-Inverted": ["nQ", "nQ_VCXO", "nQ0", "nQ0A", "nQ0B", "nQ0C", "nQ0D", "nQ1", "nQ1A", "nQ1B", "nQ1C", "nQ1D", "nQ2", "nQ3", "nQ4", "nQ5", "nQ6", "nQ7", "nQ8", "nQ9", "nQ10", "nQ11", "nQ12", "nQ13", "nQ14", "nQ15", "nQ16", "nQ17"],
+      "nQ-Grouped": {
+        "nQ-A": ["nQ_A0", "nQ_A1", "nQA", "nQA0", "nQA0_CMOS", "nQA1", "nQA1_CMOS", "nQA2", "nQA2_CMOS", "nQA3", "nQA3_CMOS", "nQA4", "nQA5", "nQA6", "nQA7"],
+        "nQ-B": ["nQ_B0", "nQ_B1", "nQB", "nQB0", "nQB1", "nQB2", "nQB3", "nQB4", "nQB5", "nQB6", "nQB7"],
+        "nQ-C": ["nQ_C0", "nQ_C1", "nQC", "nQC0", "nQC1", "nQC2", "nQC3", "nQC4", "nQC5"],
+        "nQ-D": ["nQ_D0", "nQ_D1", "nQD", "nQD0", "nQD1"],
+        "nQ-E": ["nQ_E0", "nQ_E1", "nQE0", "nQE1"],
+        "nQ-F": ["nQ_F0", "nQ_F1"],
+        "nQ-G": ["nQ_G0", "nQ_G1"],
+        "nQ-H": ["nQ_H0", "nQ_H1", "nQ_H2"]
+      },
+      "QCLK-Outputs": {
+        "QCLK-Main": ["QCLKC"],
+        "QCLK-A": ["QCLK_A", "QCLK_A0", "QCLK_A1", "QCLK_A2", "QCLK_A3"],
+        "QCLK-B": ["QCLK_B", "QCLK_B0", "QCLK_B1", "QCLK_B2", "QCLK_B3"],
+        "QCLK-C": ["QCLK_C", "QCLK_C0", "QCLK_C1", "QCLK_C2", "QCLK_C3"],
+        "QCLK-D": ["QCLK_D", "QCLK_D0", "QCLK_D1", "QCLK_D2", "QCLK_D3"],
+        "QCLK-E": ["QCLK_E", "QCLK_E0", "QCLK_E1", "QCLK_E2", "QCLK_E3"],
+        "QCLK-R": ["QCLK_R", "QCLK_R0", "QCLK_R1", "QCLK_R2", "QCLK_R3", "QCLK_R4", "QCLK_R5"]
+      }
+    },
+    "A*": {
+        "A": ["A1", "A2"]
+    },
+    "ADR*": {
+        "ADR": ["ADR0", "ADR1", "ADR2"]
+    },
+    "C*o": {
+        "Co": ["C1.5o", "C2o", "C3o", "C4o", "C6o", "C8o", "C16o", "C19o", "C32o"]
+    },
+    "CK*": {
+        "CK2.048": ["CK2.048_0", "CK2.048_1"],
+        "CK_SSC_DISP": ["CK_SSC_DISP_C", "CK_SSC_DISP_T"]
+    },
+    "CLK*": {
+        "CLK": ["CLK", "CLKA", "CLKB", "CLKC", "CLKD", "CLK0", "CLK1"],
+        "CLKREQ": ["CLKREQ0#", "CLKREQ1#", "CLKREQ2#", "CLKREQ3#", "CLKREQA#", "CLKREQB#", "CLKREQC#"],
+        "vCLKREQ": ["vCLKREQ0#", "vCLKREQ1#", "vCLKREQ4#"],
+        "CLK_SEL": ["CLK_SELA", "CLK_SELB", "CLK_SELC", "CLK_SELD"],
+        "vCLK_SEL": ["vCLK_SEL0_tri", "vCLK_SEL1_tri"]
+    },
+    "CPU*": {
+        "CPUC": ["CPUC0", "CPUC1_F_LRS", "CPUC2_ITP_LRS", "CPUC_F_LR1", "CPUC_ITP_LR2", "CPUC_LR0", "CPUC_LR1"],
+        "CPUC_LPR": ["CPUC0_LPR", "CPUC1_LPR"],
+        "CPUC_LPRS": ["CPU0C_LPRS", "CPU1C_LPRS", "CPUITPC_LPRS"],
+        "CPUC_LRS": ["CPUC0_LRS"],
+        "CPUT": ["CPUT0", "CPUT1_F_LRS", "CPUT2_ITP_LRS", "CPUT_F_LR1", "CPUT_ITP_LR2", "CPUT_LR0", "CPUT_LR1"],
+        "CPUT_LPR": ["CPUT0_LPR", "CPUT1_LPR"],
+        "CPUT_LPRS": ["CPU0T_LPRS", "CPU1T_LPRS", "CPUITPT_LPRS"],
+        "CPUT_LRS": ["CPUT0_LRS"],
+        "CPUCLK": ["CPUCLKC0", "CPUCLKT0"]
+    },
+    "CR*": {
+        "CR": ["CR", "CR0", "CR1"]
+    },
+    "CS*": {
+        "CS": ["CS", "CS_A0", "CS_A0_AUX"]
+    },
+    "D*": {
+        "D": ["D0", "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10"]
+    },
+    "DIF*": {
+        "DIFC_LPR": ["DIF0C_LPR", "DIF1C_LPR", "DIF2C_LPR", "DIF3C_LPR"],
+        "DIFT_LPR": ["DIF0T_LPR", "DIF1T_LPR", "DIF2T_LPR", "DIF3T_LPR"]
+    },
+    "DOT96*": {
+        "DOT96": ["DOT96C", "DOT96T", "DOT96SSC", "DOT96SST"],
+        "DOT96_LPRS": ["DOT96_LPRS", "DOT96C_LPRS", "DOT96T_LPRS"],
+        "DOT96_LPR": ["DOT96C_LPR", "DOT96T_LPR"],
+        "DOT96_LRS": ["DOT96_LRS", "DOTC_96_LRS", "DOTT_96_LRS"],
+        "DOT96MHzLR": ["DOTC_96MHzLR", "DOTT_96MHzLR"]
+    },
+    "ENABLE*": {
+        "ENABLE": ["ENABLE1", "ENABLE2"]
+    },
+    "EXT_SEL*": {
+        "EXT_SEL": ["EXT_SEL", "EXT_SEL0", "EXT_SEL1"]
+    },
+    "F*o": {
+        "Fo": ["F0o", "F8o", "F16o", "F19o", "F32o"]
+    },
+    "FIN*": {
+        "FIN": ["FIN[0]", "FIN[1]", "FIN0", "FIN1"]
+    },
+    "FS*": {
+        "FS": ["FS0", "FS1", "FS3", "FS4"],
+        "vFS": ["vFS0", "vFS1", "vFS2"],
+        "FSL": ["FSLA", "FSLB", "FSLC"]
+    },
+    "FSEL*": {
+        "FSEL": ["FSEL", "FSEL0", "FSEL1"],
+        "FSEL_A": ["FSEL_A0", "FSEL_A1"],
+        "FSEL_B": ["FSEL_B0", "FSEL_B1"],
+        "FSEL_C": ["FSEL_C0", "FSEL_C1"],
+        "FSEL_D": ["FSEL_D0", "FSEL_D1"],
+        "FSEL_E": ["FSEL_E0", "FSEL_E1"],
+        "F_sel": ["F_sel0", "F_sel1"]
+    },
+    "GPIO*": {
+        "GPIO": ["GPIO[0]", "GPIO[1]", "GPIO[2]", "GPIO[3]", "GPIO[4]", "GPIO[5]", "GPIO[6]", "GPIO[7]", "GPIO[8]", "GPIO[9]", "GPIO[10]", "GPIO[11]", "GPIO[12]", "GPIO[13]", "GPIO[14]", "GPIO[15]"],
+        "GPIO_indexed": ["GPIO0", "GPIO1", "GPIO2", "GPIO3", "GPIO4", "GPIO5", "GPIO6", "GPIO7", "GPIO8", "GPIO9", "GPIO10", "GPIO11", "GPIO12", "GPIO13", "GPIO14", "GPIO15"],
+        "GPIO_underscore": ["GPIO_0", "GPIO_1", "GPIO_2", "GPIO_3"]
+    },
+    "I2C*": {
+        "I2C_AD": ["I2C_AD1", "I2C_AD2"]
+    },
+    "IC*": {
+        "IC": ["IC", "IC0", "IC1", "IC2", "IC3"]
+    },
+    "ICLK*": {
+        "ICLK": ["ICLKA_1.05", "ICLKB_1.05"]
+    },
+    "IO*": {
+        "IOA": ["IOA", "IOA0", "IOA1"],
+        "IOB": ["IOB", "IOB0", "IOB1"],
+        "vIO": ["vIOA_tri", "vIOB_tri"]
+    },
+    "LCD100*": {
+        "LCD100_LPRS": ["LCD100_LPRS", "LCD100C_LPRS", "LCD100T_LPRS"]
+    },
+    "LF*": {
+        "LF0": ["LF0", "LF0A", "LF0B", "LF0C", "LF0D"],
+        "LF1": ["LF1", "LF1A", "LF1B", "LF1C", "LF1D"]
+    },
+    "LOCK*": {
+        "LOCK": ["LOCK", "LOCKA", "LOCKB", "LOCKC", "LOCKD", "LOCK_F", "LOCK_V"],
+        "DPLL_LOCK": ["DPLL1_LOCK", "DPLL2_LOCK"]
+    },
+    "MODE_sel*": {
+        "MODE_sel": ["MODE_sel0", "MODE_sel1"]
+    },
+    "N*": {
+        "NA": ["NA[0]", "NA[1]", "NA0", "NA1", "NA_DIV0", "NA_DIV1"],
+        "NB": ["NB[0]", "NB[1]", "NB0", "NB1"],
+        "NC": ["NC[0]", "NC[1]", "NC0", "NC1"],
+        "ND": ["ND[0]", "ND[1]", "ND0", "ND1"]
+    },
+    "nIN*": {
+        "nIN": ["nIN", "nIN_0", "nIN_1", "nIN0", "nIN1"]
+    },
+    "nOSC*": {
+        "nOSC": ["nOSC", "nOSC_0", "nOSC_1"]
+    },
+    "nPCLK*": {
+        "nPCLK": ["nPCLK", "nPCLK0", "nPCLK1", "nPCLKA", "nPCLKB"]
+    },
+    "nQCLK*": {
+        "nQCLK_A": ["nQCLK_A0", "nQCLK_A1", "nQCLK_A2"],
+        "nQCLK_B": ["nQCLK_B0", "nQCLK_B1", "nQCLK_B2"],
+        "nQCLK_C": ["nQCLK_C", "nQCLK_C0", "nQCLK_C1"],
+        "nQCLK_D": ["nQCLK_D", "nQCLK_D0", "nQCLK_D1", "nQCLK_D2", "nQCLK_D3"],
+        "nQCLK_E": ["nQCLK_E", "nQCLK_E0", "nQCLK_E1"],
+        "nQCLK_R": ["nQCLK_R0", "nQCLK_R1", "nQCLK_R2", "nQCLK_R3", "nQCLK_R4", "nQCLK_R5"]
+    },
+    "nQREF*": {
+        "nQREF_A": ["nQREF_A0", "nQREF_A1", "nQREF_A2"],
+        "nQREF_B": ["nQREF_B0", "nQREF_B1"],
+        "nQREF_C": ["nQREF_C", "nQREF_C0", "nQREF_C1"],
+        "nQREF_D": ["nQREF_D"],
+        "nQREF_R": ["nQREF_R0", "nQREF_R1", "nQREF_R2", "nQREF_R3", "nQREF_R4", "nQREF_R5"]
+    },
+    "ODASEL*": {
+        "ODASEL": ["ODASEL_0", "ODASEL_1"]
+    },
+    "ODBSEL*": {
+        "ODBSEL": ["ODBSEL_0", "ODBSEL_1"]
+    },
+    "OE*": {
+        "OE": ["OE", "OE_0", "OE_1", "OE_2", "OE_3", "OE_4", "OE_5", "OE_6", "OE_7"],
+        "OE#": ["OE0#", "OE1#", "OE2#", "OE3#", "OE4#", "OE5#", "OE6#", "OE7#", "OE8#", "OE9#", "OE10#", "OE11#", "OE12#"],
+        "OE_#": ["OE_0#", "OE_1#", "OE_2#", "OE_3#", "OE_4#", "OE_5#", "OE_6#", "OE_7#"],
+        "OEA": ["OEA", "OEA0", "OEA1", "OEA2", "OEA3", "OEA4", "OEA5", "OEA6", "OEA7"],
+        "OEB": ["OEB", "OEB0", "OEB1", "OEB2", "OEB3", "OEB4", "OEB5", "OEB6", "OEB7"],
+        "vOE": ["vOE_0", "vOE_2", "vOE_3", "vOE_4", "vOE_7", "vOE_07#", "vOE_16#", "vOE_2345#"],
+        "vOE#": ["vOE0#", "vOE1#", "vOE2#", "vOE3#", "vOE4#", "vOE5#", "vOE6#", "vOE7#", "vOE8#", "vOE9#", "vOE10#", "vOE11#", "vOE12#"],
+        "vOEA": ["vOEA0", "vOEA1"],
+        "vOEB": ["vOEB0", "vOEB1"]
+    },
+    "OSC*": {
+        "OSC": ["OSC", "OSC_0", "OSC_1"]
+    },
+    "PCI*": {
+        "PCI": ["PCI0", "PCI1", "PCI2", "PCI3", "PCI4", "PCI5_F"],
+        "PCI_F": ["PCI_F1_2x", "PCI_F2", "PCI_F5"],
+        "PCIeC_LR": ["PCIeC_LR0", "PCIeC_LR1", "PCIeC_LR2", "PCIeC_LR3", "PCIeC_LR4", "PCIeC_LR5"],
+        "PCIeT_LR": ["PCIeT_LR0", "PCIeT_LR1", "PCIeT_LR2", "PCIeT_LR3", "PCIeT_LR4", "PCIeT_LR5"],
+        "PCIEXC": ["PCIEXC0", "PCIEXC1", "PCIEXC2", "PCIEXC3", "PCIEXC4", "PCIEXC5"],
+        "PCIEXT": ["PCIEXT0", "PCIEXT1", "PCIEXT2", "PCIEXT3", "PCIEXT4", "PCIEXT5"]
+    },
+    "PCLK*": {
+        "PCLK": ["PCLK", "PCLKA", "PCLKB"]
+    },
+    "PDSEL*": {
+        "PDSEL": ["PDSEL_0", "PDSEL_1", "PDSEL_2"]
+    },
+    "PEREQ*": {
+        "PEREQ": ["PEREQ1#", "PEREQ2#", "PEREQ3#"]
+    },
+    "Q*": {
+        "Q": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6"]
+    },
+    "QREF*": {
+        "QREF_A": ["QREF_A0", "QREF_A1", "QREF_A2"],
+        "QREF_B": ["QREF_B0", "QREF_B1"],
+        "QREF_C": ["QREF_C", "QREF_C0", "QREF_C1"],
+        "QREF_D": ["QREF_D"],
+        "QREF_R": ["QREF_R0", "QREF_R1", "QREF_R2", "QREF_R3", "QREF_R4", "QREF_R5"],
+        "QREF": ["QREF0", "QREF1"]
+    },
+    "REF_SEL*": {
+        "REF_SEL": ["REF_SEL", "REF_SEL0", "REF_SEL1"]
+    },
+    "RGMII*": {
+        "RGMII": ["RGMII0", "RGMII1"]
+    },
+    "RMII*": {
+        "RMII": ["RMII0", "RMII1", "RMII2", "RMII3", "RMII4", "RMII5"]
+    },
+    "S*": {
+        "S": ["S0", "S1", "S2"],
+        "S_A": ["S_A0", "S_A1"]
+    },
+    "SATA*": {
+        "SATA_LPRS": ["SATA_LPRS", "SATAC_LPR", "SATAT_LPR"],
+        "SATA_LRS": ["SATA_LRS", "SATAC_LR", "SATAT_LR"]
+    },
+    "SCL*": {
+        "SCL": ["SCL", "SCL1", "SCL_M"],
+        "SCL_DFC": ["SCL_DFC1"]
+    },
+    "SDA*": {
+        "SDA": ["SDA", "SDA1", "SDA_M"],
+        "SDA_DFC": ["SDA_DFC0", "SDA_DFCO"]
+    },
+    "SE*": {
+        "SE": ["SE1", "SE2", "SE3"]
+    },
+    "SEL*": {
+        "SEL": ["SEL", "SEL0", "SEL1", "SEL2"],
+        "SELA": ["SELA", "SELAA", "SELAB"]
+    },
+    "SMB*": {
+        "SMB_A_tr": ["SMB_A0_tr", "SMB_A1_tr"],
+        "SMB_A_tri": ["SMB_A0_tri", "SMB_A1_tri"],
+        "SMBCLK": ["SMBCLK", "SMBCLK_3.3"],
+        "SMBDAT": ["SMBDAT", "SMBDAT_3.3"]
+    },
+    "SMODE*": {
+        "SMODE": ["SMODE0", "SMODE1"],
+        "SMODEA": ["SMODEA0", "SMODEA1"],
+        "SMODEB": ["SMODEB0", "SMODEB1"]
+    },
+    "SRC*": {
+        "SRCC_LR": ["SRCC_LR2", "SRCC_LR3", "SRCC_LR4", "SRCC_LR6", "SRCC_LR7", "SRCC_LR9", "SRCC_LR10", "SRCC_LR11"],
+        "SRCT_LR": ["SRCT_LR2", "SRCT_LR3", "SRCT_LR4", "SRCT_LR6", "SRCT_LR7", "SRCT_LR9", "SRCT_LR10", "SRCT_LR11"],
+        "SRCC_LPR": ["SRCC1_LPR"],
+        "SRCT_LPR": ["SRCT1_LPR"],
+        "SRCC_LRS": ["SRCC1_LRS", "SRCC2_LRS", "SRCC3_LRS", "SRCC4_LRS", "SRCC6_LRS", "SRCC7_LRS"],
+        "SRCT_LRS": ["SRCT1_LRS", "SRCT2_LRS", "SRCT3_LRS", "SRCT4_LRS", "SRCT6_LRS", "SRCT7_LRS"],
+        "SRCC_LPRS": ["SRC0C_LPRS", "SRC1C_LPRS", "SRC2C_LPRS", "SRC3C_LPRS"],
+        "SRCT_LPRS": ["SRC0T_LPRS", "SRC1T_LPRS", "SRC2T_LPRS", "SRC3T_LPRS"],
+        "SRC_LPRS": ["SRC2_LPRS", "SRC3_LPRS", "SRC4_LPRS", "SRC6_LPRS", "SRC7_LPRS"],
+        "SRC_LRS": ["SRC1_LRS", "SRC2_LRS", "SRC3_LRS", "SRC4_LRS", "SRC5_LRS"],
+        "SRC": ["SRC1C", "SRC1T", "SRC2C", "SRC2T"]
+    },
+    "SS*": {
+        "SS": ["SS0", "SS1"],
+        "SS_EN_tri": ["SS_EN_tri", "vSS_EN_tri"]
+    },
+    "TP*": {
+        "TP": ["TP1", "TP2"]
+    },
+    "vePERst*": {
+        "vePERst": ["vePERst0#", "vePERst1#"]
+    },
+    "vSADR*": {
+        "vSADR": ["vSADR", "vSADR_tri"],
+        "vSADR_tri": ["vSADR0_tri", "vSADR1_tri"]
+    },
+    "vSEL*": {
+        "vSEL": ["vSEL0", "vSEL1"]
+    },
+    "XO*": {
+        "XO": ["XO", "XO_IN", "XO_DPLL"]
+    },
+    "XSEL*": {
+        "XSEL": ["XSEL0", "XSEL1"]
+    },
+    "Frequencies": {
+        "25MHz": ["25M", "25M2", "25M2#", "25MHz", "25MHz_0", "25MHZ_1", "25MPG"],
+        "27MHz": ["27FIX", "27MHz_nonSS", "27MHz_SS", "27SS"],
+        "100MHz": ["100M0", "100M0#", "100M1", "100M1#", "100M3", "100M3#"],
+        "125MHz": ["125M"],
+        "Others": ["1G", "2G", "14M_2X", "32.768KHz", "33.33MHZ", "USB_48MHz", "USB_48Mhz_2x", "USB48M"]
+    },
+    "Control_Signals": {
+        "Reset": ["RST", "nRST", "nMR", "nRESET", "TRST"],
+        "Enable": ["EN", "nEN"],
+        "Chip_Select": ["CS", "nCS"],
+        "Output_Enable": ["OE", "nOE_B", "nOE_C", "nOE0", "nOE1"],
+        "Power_Down": ["PD", "PD#", "nPD"],
+        "Test": ["nTEST", "TEST_MODE", "TEST_SEL"]
+    },
+    "Signal_Types": {
+        "Complementary": ["^100M_133M#", "100M_133M#"],
+        "Tristate": ["^SADR_tri", "^SADR0_tri", "^SADR1_tri", "^SMB_A0_tr", "^SMB_A1_tr"]
+    },
+        "Address_Select": {
+            "A*": [
+            "A1",
+            "A2",
+            "nA2",
+            "SA1"
+            ],
+            "ADDR_SEL": [
+            "ADDR_SEL"
+            ],
+            "SADR*": [
+            "vSADR0_tri",
+            "vSADR1_tri"
+            ],
+            "SMB_ADR*": [
+            "SMB_ADR_tri",
+            "SMB_ADR0_tri"
+            ]
+        },
+        "Amplifier": {
+            "AMP_SEL": [
+            "AMP_SEL"
+            ]
+        },
+        "Bypass": {
+            "BYPASS*": [
+            "BYPASS",
+            "BYPASS#",
+            "BYP#_HIBW_LOBW"
+            ],
+            "PLL_BYPASS*": [
+            "PLL_BYPASS",
+            "PLL_BY PASS",
+            "PLL_BYP"
+            ]
+        },
+        "Bandwidth": {
+            "HIBW_BYPM_LOBW*": [
+            "HIBW_BYPM_LOBW",
+            "HIBW_BYPM_LOBW#",
+            "^HIBW_BYPM_LOBW#",
+            "vHIBW_BYPM_LOBW#"
+            ],
+            "HIGH_BW#": [
+            "HIGH_BW#"
+            ],
+            "PLL_BW": [
+            "PLL_BW"
+            ]
+        },
+        "Capacitor_Pins": {
+            "C2": [
+            "C2"
+            ],
+            "C19*": [
+            "C19NEG",
+            "C19POS"
+            ],
+            "C*o": [
+            "C16o",
+            "C32o",
+            "C3o",
+            "C4o"
+            ]
+        },
+        "Cascade": {
+            "CASCADE*": [
+            "CASCADE",
+            "nCASCADE"
+            ]
+        },
+        "Clock_Control": {
+            "CC_IR": [
+            "CC_IR"
+            ]
+        },
+        "Chip_Enable": {
+            "CE": [
+            "CE"
+            ]
+        },
+        "Clock_Power_Good": {
+            "CK_PWRGD*": [
+            "CK_PWRGD",
+            "CK_PWRGD#"
+            ],
+            "CKPWRGD*": [
+            "CKPWRGD",
+            "CKPWRGD_PD#",
+            "^CKPWRGD_PD#",
+            "vCKPWRGD_PD#"
+            ],
+            "CLKPWRGD*": [
+            "CLKPWRGD",
+            "CLKPWRGD/PD#_3.3"
+            ]
+        },
+        "Clock_Main": {
+            "CLK": [
+            "\\CLK"
+            ],
+            "CLK*": [
+            "\\CLK0",
+            "\\CLK1",
+            "\\CLKA",
+            "\\CLKB",
+            "\\CLKC",
+            "\\CLKD"
+            ],
+            "ICLK": [
+            "ICLK"
+            ],
+            "SCLK*": [
+            "SCLK",
+            "SCLK_3.3",
+            "SCLK_AUX"
+            ],
+            "SBI_CLK": [
+            "SBI_CLK"
+            ]
+        },
+        "Clock_Status": {
+            "CLK_ACTIVE": [
+            "CLK_ACTIVE"
+            ],
+            "CLK*BAD": [
+            "CLK0BAD",
+            "CLK1BAD",
+            "XTALBAD"
+            ]
+        },
+        "Clock_Control_Signals": {
+            "CLK_INC": [
+            "CLK_INC"
+            ],
+            "CLK_INT": [
+            "CLK_INT"
+            ],
+            "CLK_SEL*": [
+            "CLK_SEL",
+            "CLKSEL"
+            ],
+            "vCLK_SEL*_tri": [
+            "^vCLK_SEL0_tri",
+            "^vCLK_SEL1_tri"
+            ]
+        },
+        "CPU_Signals": {
+            "CPU_ITP*": [
+            "CPU_ITP",
+            "CPU_ITP#"
+            ],
+            "CPU_STOP*": [
+            "CPU_STOP#",
+            "CPU_STOP#_3.3"
+            ],
+            "CPU*_LPRS": [
+            "CPU0#_LPRS",
+            "CPU0_LPRS",
+            "CPU1#_LPRS",
+            "CPU1_LPRS"
+            ],
+            "CPUITP*_LR2": [
+            "CPUITPC_LR2",
+            "CPUITPT_LR2"
+            ],
+            "ITP_EN": [
+            "ITP_EN"
+            ]
+        },
+        "Data_Direction": {
+            "E/D": [
+            "E/D"
+            ]
+        },
+        "Differential": {
+            "DIF_INC": [
+            "DIF_INC"
+            ],
+            "DIF_INT": [
+            "DIF_INT"
+            ],
+            "DIF_STOP*": [
+            "DIF_STOP",
+            "DIF_STOP#",
+            "DIF_STOP#_3.3"
+            ]
+        },
+        "Divider": {
+            "DFC0": [
+            "DFC0"
+            ],
+            "NB_DIV": [
+            "NB_DIV"
+            ],
+            "NBC_DEF": [
+            "NBC_DEF"
+            ],
+            "NC_DIV": [
+            "NC_DIV"
+            ],
+            "SRC_DIV#": [
+            "SRC_DIV#"
+            ]
+        },
+        "Do_Not_Use": {
+            "DNC": [
+            "DNC"
+            ],
+            "DNU": [
+            "DNU"
+            ],
+            "nc": [
+            "nc"
+            ],
+            "rcomp_NC": [
+            "rcomp_NC"
+            ]
+        },
+        "DOT96": {
+            "DOT96#_LPRS": [
+            "DOT96#_LPRS"
+            ],
+            "DOT96#_LRSSRC6#_LRS": [
+            "DOT96#_LRSSRC6#_LRS"
+            ],
+            "DOT96_SEL*": [
+            "^DOT96_SEL"
+            ]
+        },
+        "Exposed_Pad": {
+            "EPAD": [
+            "EPAD"
+            ]
+        },
+        "External": {
+            "EXT_SYS": [
+            "EXT_SYS"
+            ]
+        },
+        "Filter": {
+            "FILTER": [
+            "FILTER"
+            ]
+        },
+        "Frequency_Lock": {
+            "FLOCK": [
+            "FLOCK"
+            ],
+            "LOCK_IND": [
+            "LOCK_IND"
+            ]
+        },
+        "Frequency_Switch": {
+            "FLSW": [
+            "FLSW"
+            ]
+        },
+        "Frequency_Select": {
+            "FS*": [
+            "^FS0",
+            "^FS1"
+            ],
+            "F*o": [
+            "\\F0o",
+            "\\F16o",
+            "\\F32o"
+            ],
+            "FSA": [
+            "FSA"
+            ]
+        },
+        "Freerun": {
+            "FREERUN": [
+            "FREERUN"
+            ]
+        },
+        "Gate_Logic": {
+            "G": [
+            "\\G"
+            ],
+            "GL": [
+            "GL"
+            ],
+            "nG": [
+            "nG"
+            ]
+        },
+        "Holdover": {
+            "HOLDOVER": [
+            "HOLDOVER"
+            ]
+        },
+        "I2C_SPI": {
+            "nI2C*": [
+            "nI2C",
+            "nI2C_SPI"
+            ],
+            "SPI*": [
+            "SPI",
+            "SPI_SEL"
+            ]
+        },
+        "Input_Select": {
+            "IN_SEL": [
+            "IN_SEL"
+            ]
+        },
+        "Interrupt": {
+            "INTA": [
+            "\\INTA"
+            ],
+            "INT_REQ": [
+            "INT_REQ"
+            ],
+            "nINT": [
+            "nINT"
+            ],
+            "SQW/I\\N\\T\\B\\": [
+            "SQW/I\\N\\T\\B\\"
+            ]
+        },
+        "IO_Pins": {
+            "vIO*_tri": [
+            "^vIOA_tri",
+            "^vIOB_tri"
+            ]
+        },
+        "LCD": {
+            "LCD100#_LPRS": [
+            "LCD100#_LPRS"
+            ]
+        },
+        "Load_Enable": {
+            "LD": [
+            "LD"
+            ],
+            "LE": [
+            "LE"
+            ],
+            "LEN": [
+            "LEN"
+            ],
+            "SHFT_LD#": [
+            "SHFT_LD#"
+            ]
+        },
+        "Lock_Detect": {
+            "LFF": [
+            "LFF"
+            ],
+            "LFFR": [
+            "LFFR"
+            ],
+            "LFV": [
+            "LFV"
+            ]
+        },
+        "Loss_of_Signal": {
+            "LOS*": [
+            "LOS",
+            "LOS#"
+            ]
+        },
+        "Master_Reset": {
+            "nMR": [
+            "\\nMR"
+            ]
+        },
+        "SPI_Interface": {
+            "MISO": [
+            "MISO"
+            ],
+            "SDI*": [
+            "SDI",
+            "SDI_A1",
+            "SDI_A1_AUX",
+            "SDI0_AUX"
+            ],
+            "SDO": [
+            "SDO"
+            ],
+            "SDIO*": [
+            "SDIO",
+            "SDIO_AUX"
+            ]
+        },
+        "Monitor": {
+            "MON_out": [
+            "MON_out"
+            ]
+        },
+        "MPU_Mode": {
+            "MPU_MODE": [
+            "MPU_MODE"
+            ]
+        },
+        "Mute": {
+            "MUTE": [
+            "MUTE"
+            ]
+        },
+        "Multiplexer": {
+            "MUX_OUT": [
+            "MUX_OUT"
+            ]
+        },
+        "Normal_Mode": {
+            "NORMAL": [
+            "NORMAL"
+            ]
+        },
+        "Q_Outputs": {
+            "Q*": [
+            "\\Q1",
+            "\\Q2",
+            "\\Q3",
+            "\\Q4",
+            "\\Q5",
+            "\\Q6"
+            ],
+            "Q_VCXO": [
+            "Q_VCXO"
+            ],
+            "QCLK_V": [
+            "QCLK_V"
+            ],
+            "QOSC": [
+            "QOSC"
+            ],
+            "nQ*": [
+            "nQ_E2",
+            "nQCLK_V",
+            "nQOSC"
+            ]
+        },
+        "Output_Enable": {
+            "OE": [
+            "\\OE",
+            "^OE"
+            ],
+            "OE_*": [
+            "\\OE_1",
+            "\\OE_2",
+            "\\OE_5",
+            "\\OE_6",
+            "OE_96",
+            "OE_A",
+            "OE_B",
+            "OE_buffer",
+            "OE_C",
+            "OE_CPU",
+            "OE_D",
+            "OE_E",
+            "OE_G",
+            "OE_INV",
+            "OE_nCS",
+            "OE_OSC",
+            "OE_REF",
+            "OE_SE"
+            ],
+            "OE*#": [
+            "^OE0#",
+            "^OE1#",
+            "^OE2#",
+            "^OE3#",
+            "^OE4#",
+            "^OE5#",
+            "^OE6#",
+            "^OE7#",
+            "^OE8#",
+            "^OE9#",
+            "^OE10#",
+            "^OE11#",
+            "^OE12#"
+            ],
+            "OE*": [
+            "OE0",
+            "OE1",
+            "OE2",
+            "OE3",
+            "OE4",
+            "OE5",
+            "OE6",
+            "OE7"
+            ],
+            "OE*_caret": [
+            "^OEA",
+            "^OEB"
+            ],
+            "OEB*": [
+            "OEB3,11",
+            "OEB3,5",
+            "OEB6,7",
+            "OEB7_10"
+            ],
+            "POD_OE": [
+            "POD_OE"
+            ]
+        },
+        "Oscillator": {
+            "OSCO": [
+            "OSCO"
+            ],
+            "XOUT": [
+            "XOUT"
+            ],
+            "XTAL_OUT": [
+            "XTAL_OUT"
+            ],
+            "XTALO": [
+            "XTALO"
+            ]
+        },
+        "Output_Select": {
+            "OUT0_SEL*": [
+            "OUT0_SEL_I2CB",
+            "OUT0_SELB_I2C"
+            ]
+        },
+        "PCI_Signals": {
+            "PCI*_STOP#": [
+            "PCI&PCIEX_STOP#",
+            "PCI_STOP#",
+            "PCI_STOP#_3.3"
+            ],
+            "PCI2_2x": [
+            "PCI2_2x"
+            ],
+            "vSEL_PCI": [
+            "vSEL_PCI"
+            ]
+        },
+        "Power_Down": {
+            "PD": [
+            "\\PD"
+            ],
+            "PD#": [
+            "^PD#"
+            ],
+            "PDTS": [
+            "\\PDTS"
+            ]
+        },
+        "PLL": {
+            "PLL_SEL": [
+            "PLL_SEL"
+            ]
+        },
+        "Power_Select": {
+            "PS_SEL": [
+            "PS_SEL"
+            ],
+            "PWR_SEL": [
+            "PWR_SEL"
+            ],
+            "PWRGD": [
+            "PWRGD"
+            ]
+        },
+        "Reference": {
+            "nREF": [
+            "nREF"
+            ],
+            "vREF0_SEL_I2C#": [
+            "vREF0_SEL_I2C#"
+            ]
+        },
+        "Reserved": {
+            "RES*": [
+            "RES",
+            "RES_CAL"
+            ],
+            "RESERVED": [
+            "RESERVED"
+            ],
+            "RSVD": [
+            "RSVD"
+            ]
+        },
+        "Reset": {
+            "RST": [
+            "\\RST"
+            ],
+            "TRST": [
+            "\\TRST"
+            ]
+        },
+        "RF_Input": {
+            "RF_IN*": [
+            "nRF_IN",
+            "RF_IN"
+            ]
+        },
+        "S_AO": {
+            "S_AO": [
+            "S_AO"
+            ]
+        },
+        "SATA": {
+            "SATA#_LPRS": [
+            "SATA#_LPRS"
+            ],
+            "SATA#_LRS": [
+            "SATA#_LRS"
+            ],
+            "SEL_SATA_NS#": [
+            "SEL_SATA_NS#"
+            ]
+        },
+        "SBI_Signals": {
+            "SBI_IN": [
+            "SBI_IN"
+            ],
+            "SBI_OUT": [
+            "SBI_OUT"
+            ]
+        },
+        "SD": {
+            "SD": [
+            "SD"
+            ]
+        },
+        "Serial_Data": {
+            "SDAT": [
+            "SDAT"
+            ],
+            "SDATA*": [
+            "SDATA",
+            "SDATA_3",
+            "SDATA_3.3"
+            ],
+            "SMBDATA": [
+            "SMBDATA"
+            ],
+            "vSMB_WRTLOCK": [
+            "vSMB_WRTLOCK"
+            ]
+        },
+        "Single_Ended": {
+            "SE": [
+            "SE"
+            ]
+        },
+        "Select_Signals": {
+            "SEL": [
+            "^SEL"
+            ],
+            "SEL_*": [
+            "SEL_120M#",
+            "SEL_DFC",
+            "SEL_LVDS",
+            "^SEL_A_B#"
+            ],
+            "SEL*#*": [
+            "^SEL100#_66",
+            "^SEL14M_25M#",
+            "^SELPCIE125#_100",
+            "SEL12_48#"
+            ],
+            "SELSV": [
+            "SELSV"
+            ],
+            "VSEL*": [
+            "VSEL_I2C",
+            "VSEL_VDD"
+            ]
+        },
+        "Set_MinMax": {
+            "SETMAX": [
+            "SETMAX"
+            ],
+            "SETMIN": [
+            "SETMIN"
+            ]
+        },
+        "SONET_SDH": {
+            "SONET/SDH": [
+            "SONET/SDH"
+            ]
+        },
+        "Source_Signals": {
+            "SRC#7_LPRS": [
+            "SRC#7_LPRS"
+            ],
+            "SRC_IN*": [
+            "SRC_IN",
+            "SRC_IN#"
+            ],
+            "SRC_STOP#": [
+            "SRC_STOP#"
+            ],
+            "SRC*#_LRS": [
+            "SRC1#_LRS",
+            "SRC3#_LRS",
+            "SRC4#_LRS",
+            "SRC5#_LRS"
+            ],
+            "SRC*#_LPRS": [
+            "SRC2#_LPRS",
+            "SRC3#_LPRS",
+            "SRC4#_LPRS",
+            "SRC6#_LPRS"
+            ]
+        },
+        "Spread_Spectrum": {
+            "vSPREAD": [
+            "vSPREAD"
+            ]
+        },
+        "SS_Enable": {
+            "vSS_EN_tri": [
+            "^vSS_EN_tri"
+            ]
+        },
+        "Switch_Mode": {
+            "SW_MODE": [
+            "SW_MODE"
+            ],
+            "vSW_MOD*": [
+            "vSW_MOD",
+            "vSW_MODE"
+            ]
+        },
+        "System": {
+            "Sys_CCB": [
+            "Sys_CCB"
+            ]
+        },
+        "JTAG_Test": {
+            "TCK": [
+            "TCK"
+            ],
+            "TDI": [
+            "TDI"
+            ],
+            "TDO": [
+            "TDO"
+            ],
+            "TMS": [
+            "TMS"
+            ],
+            "vTEST_EN": [
+            "vTEST_EN"
+            ]
+        },
+        "Timer_Clear": {
+            "TCLR": [
+            "\\TCLR"
+            ]
+        },
+        "TIE": {
+            "TIE_en": [
+            "TIE_en"
+            ]
+        },
+        "vSBEN": {
+            "vSBEN": [
+            "vSBEN"
+            ]
+        },
+        "Write_Protect": {
+            "nWP": [
+            "nWP"
+            ]
+        },
+        "Crystal_Select": {
+            "nXO*": [
+            "nXO_DPLL",
+            "nXO_IN"
+            ],
+            "XTAL_SEL": [
+            "XTAL_SEL"
+            ]
+        },
+        "Z_Output": {
+            "ZOUTSEL": [
+            "ZOUTSEL"
+            ]
+        }
+}
