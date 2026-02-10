@@ -35,7 +35,7 @@ def extracting_pin_tables(file_path, part_number, number_of_pins, package_type, 
     # Use these dfs as tables
     target_columns=['Pin Designator', 'Pin Display Name', 'Electrical Type', 'Pin Alternate Name']
     detection_keyword="elect"
-    st.text(f"Pin Table Pages : {pin_table_pages}")
+    #st.text(f"Pin Table Pages : {pin_table_pages}")
     dfs = methods.table_extraction_logic(file_path, pin_table_pages,target_columns,detection_keyword)
     #for df in dfs:
     #    st.dataframe(df)
@@ -60,14 +60,14 @@ def extracting_pin_tables(file_path, part_number, number_of_pins, package_type, 
     #st.text(f"Before Merging Flag : {Before_merging_flag}")
     if Before_merging_flag:
         merged_df = methods.merge_tables(final_pin_tables_to_be_merged)
-        st.header(f"\nExtracted Pin Table")
-        merged_df = st.data_editor(merged_df) 
+        #st.header(f"\nExtracted Pin Table")
+        #merged_df = st.data_editor(merged_df) 
         #st.write("Page Preview:")
         #binary_data = file_path.getvalue()
         #pdf_viewer(binary_data, pages_to_render = page_numbers)                      
 
         #create_navigation_button(merged_df)
-        st.session_state["page"] = "grouping"    
+        #st.session_state["page"] = "grouping"    
 
     return merged_df
 

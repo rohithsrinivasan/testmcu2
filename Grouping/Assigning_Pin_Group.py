@@ -33,7 +33,7 @@ def smart_search_match(name, names, cutoff=0.7):
     return matches[0] if matches else None
 
 
-'''
+
 def grouping_as_per_database(old_df, json_paths, SENSITIVITY=True,SMARTSEARCH= False, SINGLE_FILE=False):
     df = old_df.copy()
 

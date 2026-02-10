@@ -284,7 +284,6 @@ def build_result_dictionary(
         raise
 
 
-
 def validate_final_results(df_dict, original_df):
     """
     Step 8: Final validation

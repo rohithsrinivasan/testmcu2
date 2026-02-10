@@ -74,7 +74,7 @@ def identify_unfilled_pins(df):
         print(f"❌ Step 3 FAILED: {e}")
         raise
 
-'''
+
 def handle_special_pin_separation(unfilled_df, df):
     """
     Step 5: Handle GPIO/SDRB/DDR separation

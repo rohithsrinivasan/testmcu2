@@ -1,6 +1,6 @@
 import pdfplumber
 import re
-import streamlit as st
+#import streamlit as st
 import pandas as pd
 import fitz  # PyMuPDF
 import io
@@ -190,7 +190,7 @@ def extract_tables_in_these_pages(input_buffer, page_numbers):
         tables = page.extract_tables()
         all_tables.extend(tables)  # Add extracted tables to the list
       except IndexError:
-        st.write(f"Error: Page {page_num} not found in the PDF.")
+        print(f"Error: Page {page_num} not found in the PDF.")
 
   return all_tables
 

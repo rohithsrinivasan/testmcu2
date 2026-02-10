@@ -41,17 +41,71 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
     Returns:
         List of matched and cleaned DataFrames
     """
-    
+
+    print("Extracting tables from PDF...", file_path)
+    #  # Create a temporary file for storing the extracted DataFrame
+    # with tempfile.NamedTemporaryFile(suffix='.pkl', delete=False) as tmp:
+    #     tmp_path = tmp.name
+    # # tmp_path is the filename you should pass to both your subprocess script and later for pd.read_pickle()
+
+   
+    # print("Console encoding:", sys.stdout.encoding)
+    # pages_str = ",".join(str(page) for page in my_list_of_pages)
+    # env = os.environ.copy()
+    # env["PYTHONUTF8"] = "1"  # force UTF-8 mode
+
+    # try:
+    #     res = subprocess.run(
+    #         [sys.executable, 'extract_pdf_tables.py', file_path, pages_str,  tmp_path],
+    #         capture_output=True, 
+    #         env = env,
+    #         encoding="utf-8", 
+    #         timeout=120)
+    #     if res.returncode != 0:
+    #         # Could not extract
+    #         print(res.stderr)
+    #         return []
+    #     print("STDOUT:", res.stdout)
+    #     print("STDERR:", res.stderr)
+    #     print("RETURN CODE:", res.returncode)
+    #     dfs = pd.read_pickle(tmp_path)
+      
+    # except Exception as e:
+    #     print("Subprocess failed:", e)
+    #     return []
+    # try:
+    #     dfs = tabula.read_pdf(
+    #         file_path,
+    #         pages=my_list_of_pages,
+    #         multiple_tables=True,
+    #         lattice=True,
+    #         encoding='ISO-8859-1'
+    #     )
+    #     print("Extracted tables:", len(dfs))
+    # except Exception as e:
+    #     print("Error reading PDF:", e)
+    #     #st.error(f"📄 Error reading PDF: {e}")
+    #     return []
+    # print("yes")
+    dfs = []
     try:
-        dfs = tabula.read_pdf(
-            file_path,
-            pages=my_list_of_pages,
-            multiple_tables=True,
-            lattice=True,
-            encoding='ISO-8859-1'
-        )
+        with pdfplumber.open(file_path) as pdf:
+            print(f"My list of pages: {my_list_of_pages}")
+            for page_num in my_list_of_pages:
+                page = pdf.pages[page_num-1]
+                tables = page.extract_tables()
+                for table in tables:
+                    if table:
+                        df = pd.DataFrame(table[1:], columns=table[0])
+                    
+                        dfs.append(df)
+        
+            dfs = [df for df in dfs if not df.empty and df.dropna(how='all').shape[0] > 0]
+              
+        print("Extracted non empty tables:", len(dfs))
     except Exception as e:
-        st.error(f"📄 Error reading PDF: {e}")
+        print("Error reading PDF:", e)
+        #st.error(f"📄 Error reading PDF: {e}")
         return []
     
     dfs = [df for df in dfs if not df.empty and df.dropna(how='all').shape[0] > 0]
@@ -106,7 +160,7 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
 
     
     modified_dfs = []
-    
+    nan = float('nan')
     for i, df in enumerate(dfs):
         df = df.replace(to_replace=r'^Unnamed:.*', value=np.nan, regex=True)
         
@@ -144,8 +198,8 @@ def table_extraction_logic(file_path, my_list_of_pages, target_columns, detectio
                 
         else:
             print(f"⚠️ Table {i + 1} skipped: Keyword not found")
-    
-    st.write(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
+    print(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
+    #st.write(f"🎯 Extracted {len(modified_dfs)} matching table(s).")
     return modified_dfs
 
 

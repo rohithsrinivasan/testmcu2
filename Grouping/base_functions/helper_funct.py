@@ -123,7 +123,7 @@ def auto_fill_grouping_if_exact_match(df, json_data, match_percentage):
     """
 
     df = df.copy()
-
+    print("yes, inside autofill function")
     for index, row in df.iterrows():
         pin_display_name = row.get("Pin Display Name", "")
         current_grouping = row.get("Grouping", "")
@@ -131,15 +131,18 @@ def auto_fill_grouping_if_exact_match(df, json_data, match_percentage):
         # Handle None values safely
         pin_display_name = pin_display_name.strip() if isinstance(pin_display_name, str) else ""
         current_grouping = current_grouping.strip() if isinstance(current_grouping, str) else ""
-
+        print(f"Processing row {index}: Pin Display Name='{pin_display_name}', Current Grouping='{current_grouping}'")
         if pin_display_name and (not current_grouping or pd.isna(current_grouping)):
             suggestions = get_suggestions(pin_display_name, json_data, top_n=1)
-
+            print(f"Suggestions for '{pin_display_name}': {suggestions}")
             if suggestions:
                 closest_pin, match_score, matched_group = suggestions[0]
 
                 if match_score > match_percentage:
+                    print(f"Auto-filled '{pin_display_name}' with group '{matched_group}' (Score: {match_score}%)")
                     df.at[index, "Grouping"] = matched_group
+        else:
+            print(f"Skipping row {pin_display_name} due to missing 'Pin Display Name' or existing 'Grouping'.")
 
     return df
 
