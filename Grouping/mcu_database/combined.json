@@ -7130,7 +7130,6 @@
         "-pins": [
             "#RES",
             "RES",
-            "RES#",
             "RESET",
             "RESET#",
             "RESETOUT",

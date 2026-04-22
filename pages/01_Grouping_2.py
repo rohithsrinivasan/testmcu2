@@ -89,9 +89,36 @@ if 'pin_table' in st.session_state:
         required_cols = ['Pin Designator', 'Pin Display Name', 'Pin Alternate Name']
         before_pin_type_flag, added_empty_pin_type_column = general_funct.check_excel_format(pin_table, required_cols, optional_column='Electrical Type')
         pin_type_added_table = Assigning_Electrical_Type.pin_type_as_per_database(added_empty_pin_type_column, json_paths, sensitivity=False) 
-        st.dataframe(pin_type_added_table)
+        st.data_editor(pin_type_added_table)
+
+        # Only run assignment once
+        if 'pin_type_added_table' not in st.session_state:
+            st.session_state['pin_type_added_table'] = pin_type_added_table
+
+        # Split into unresolved rows only
+        unresolved_mask = pin_type_added_table['Electrical Type'].isin(['NAv', 'NAss'])
+        unresolved_rows = pin_type_added_table[unresolved_mask].copy()
+        unresolved_rows['Electrical Type'] = ""  # Blank out for user to fill
+
+        if not unresolved_rows.empty:
+            st.warning(f"⚠️ {len(unresolved_rows)} pin(s) could not be assigned. Please fill in the Electrical Type below:")
+            edited_unresolved = st.data_editor(unresolved_rows, key="pin_type_editor")
+
+            still_empty = edited_unresolved['Electrical Type'].isin(['', 'NAv', 'NAss']).sum()
+
+            if still_empty > 0:
+                st.error(f"❌ {still_empty} pin(s) still unresolved. Please fill all Electrical Type values.")
+                st.stop()  # Block proceeding
+            else:
+                # Merge user fixes back into full table
+                pin_type_added_table.update(edited_unresolved)
+        else:
+            st.success("✅ All Electrical Types resolved!")
+        
         st.session_state['pin_table'] = pin_type_added_table
         database_for_grouping = st.checkbox("Use database for grouping")
+
+
         
     if database_for_grouping:
         st.success("Using database for grouping")
@@ -231,7 +258,7 @@ if 'pin_table' in st.session_state:
                 st.header("Dynamic Database")
                 show_suggestions_automatic = st.toggle("Enable Pin Suggestions Automatic")
                 show_suggestions_manual = st.toggle("Enable Pin Suggestions Manual")
-                threshold = st.slider("Minimum Match Percentage", min_value=80, max_value=100, value=100)
+                threshold = st.slider("Minimum Match Percentage", min_value=30, max_value=100, value=100)
                 edit_database = st.toggle("Edit Database", value=False)
                 category = st.session_state.get('selected_category', 'MCU Devices') # Get the stored category, or default to 'MCU Devices'
                 #category = st.session_state.get('selected_category', 'MCU Devices')

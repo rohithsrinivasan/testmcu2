@@ -28,6 +28,7 @@ def process_pin_dataframe(df, testing_electrical_type=False):
         "designator": "Pin Designator",
         "pin designator": "Pin Designator", 
         "name": "Pin Display Name",
+        "primary name" : "Pin Display Name",
         "display name" : "Pin Display Name",
         "Pin Display Name": "Pin Display Name",
         "pin name": "Pin Display Name",

@@ -1,6 +1,6 @@
 import pdfplumber
 import re
-#import streamlit as st
+import streamlit as st
 import pandas as pd
 import fitz  # PyMuPDF
 import io

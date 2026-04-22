@@ -7359,6 +7359,12 @@
         "VDDQ33": [
             "VDDQ33"
         ],
+        "VDDQ08": [
+            "VDDQ08"
+        ],
+        "OTPVDDQ18" : [
+            "OTPVDDQ18"
+        ],
                     "LPVDDQ": [
                 "LPVDDQ"
             ],
