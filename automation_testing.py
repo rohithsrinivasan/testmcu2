@@ -34,6 +34,23 @@ def automate_streamlit(input_dir, output_dir):
                 # 2. Automated file upload
                 page.set_input_files('input[type="file"]', file_path)
 
+                # 2.5. Check for "Use database for pin type" checkbox (if exists)
+                print("  → Looking for 'Use database for pin type' checkbox...")
+                pin_type_checkbox = 'label:has-text("Use database for pin type")'
+
+                try:
+                    # Check if pin type checkbox exists and is visible
+                    if page.locator(pin_type_checkbox).is_visible(timeout=5000):
+                        print("  → Checking 'Use database for pin type'...")
+                        page.check(pin_type_checkbox)
+                        time.sleep(2)  # Wait for pin type processing
+                        print("  ✓ Pin type checkbox checked")
+                    else:
+                        print("  ℹ️ Pin type checkbox not found (may already be checked)")
+                except:
+                    print("  ℹ️ Pin type checkbox not available or already checked")
+
+
                 # 3. Enable database grouping
                 page.check('label:has-text("Use database for grouping")')
 
@@ -73,8 +90,8 @@ def automate_streamlit(input_dir, output_dir):
 
 if __name__ == "__main__":
     # Configure these paths (use raw strings for Windows)
-    input_directory = r"C:\Users\a5149169\Downloads\RA_Testing\next_sprint_testing\Unique_Symbols_Excels_Refurbished\Testing"
-    output_directory = r"C:\Users\a5149169\Downloads\RA_Testing\next_sprint_testing\Unique_Symbols_Excels_Refurbished\Testing\Results"
+    input_directory = r"C:\Users\a5149169\Downloads\Component-Creation&review-Automation\Clock&timing\Pallavi_3k\MCUs\Manual_Downloads\gemini\unique_processed_output_xlsx"
+    output_directory = r"C:\Users\a5149169\Downloads\Component-Creation&review-Automation\Clock&timing\Pallavi_3k\MCUs\Manual_Downloads\gemini\unique_processed_tool_output_2_xlsx"
 
     # Create output directory if needed
     os.makedirs(output_directory, exist_ok=True)

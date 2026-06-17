@@ -3719,7 +3719,9 @@
             "BUCKGND"
         ],
         "Z_EPAD": [
-            "EPAD"
+            "EPAD",
+            "EP",
+            "Epad"
         ],
         "Y_GND_BOOST": [
             "GND_BOOST"

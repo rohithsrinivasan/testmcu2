@@ -1245,13 +1245,6 @@
       "ADSVCL",
       "GETH0VCL"
     ]
-  },
-
-  "EPAD":{
-  "General": [
-      "EPAD",
-      "Epad"
-    ]
   }
 
 }

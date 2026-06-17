@@ -26,5 +26,12 @@
       "Reserve",
       "Reserved"
     ]
+  },
+    "EPAD":{
+  "General": [
+      "EPAD",
+      "Epad",
+      "EP"
+    ]
   }
 }
