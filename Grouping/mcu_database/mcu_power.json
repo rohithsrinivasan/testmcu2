@@ -972,6 +972,9 @@
       "PVDD182533_0",
       "PVDD182533_1",
       "PVDD33"
+    ],
+    "Thermal-ball" :[
+      "VDD (Thermal ball)"
     ]
   },
   "Other_Digital_Positive": {
@@ -1136,7 +1139,8 @@
       "VSS_USB",
       "USB_GND",
       "VSS1_USBHS",
-      "VSS2_USBHS"
+      "VSS2_USBHS",
+      "VSS (Thermal ball)"
     ]
   },
   "USB_Other_Power": {

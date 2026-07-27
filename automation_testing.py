@@ -50,7 +50,6 @@ def automate_streamlit(input_dir, output_dir):
                 except:
                     print("  ℹ️ Pin type checkbox not available or already checked")
 
-
                 # 3. Enable database grouping
                 page.check('label:has-text("Use database for grouping")')
 
@@ -58,12 +57,14 @@ def automate_streamlit(input_dir, output_dir):
                 page.wait_for_selector('a[href*="Side_Allocation"]', state="visible", timeout=120000)
                 page.click('a[href*="Side_Allocation"]')
 
-                # 5. Handle download (both button types)
+                # 5. Handle download (any button with "Download")
+                print("  → Waiting for download button...")
+                download_button = page.locator(':text("Download")').first
+                download_button.wait_for(state="visible", timeout=60000)
+
+                print("  → Clicking download button...")
                 with page.expect_download(timeout=60000) as download_info:
-                    if page.get_by_text("Download Smart Table").is_visible():
-                        page.get_by_text("Download Smart Table").click()
-                    else:
-                        page.get_by_text("Download All").click()
+                    download_button.click()
 
                 download = download_info.value
                 download_path = os.path.join(output_dir, download.suggested_filename)
@@ -90,26 +91,10 @@ def automate_streamlit(input_dir, output_dir):
 
 if __name__ == "__main__":
     # Configure these paths (use raw strings for Windows)
-    input_directory = r"C:\Users\a5149169\Downloads\Component-Creation&review-Automation\Clock&timing\Pallavi_3k\MCUs\Manual_Downloads\gemini\unique_processed_output_xlsx"
-    output_directory = r"C:\Users\a5149169\Downloads\Component-Creation&review-Automation\Clock&timing\Pallavi_3k\MCUs\Manual_Downloads\gemini\unique_processed_tool_output_2_xlsx"
+    input_directory = r"C:\Users\a5149169\Downloads\rl78_f14_output\Grouping changes_needed"
+    output_directory = r"C:\Users\a5149169\Downloads\rl78_f14_output\Grouping changes_needed\output"
 
     # Create output directory if needed
     os.makedirs(output_directory, exist_ok=True)
 
     automate_streamlit(input_directory, output_directory)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
