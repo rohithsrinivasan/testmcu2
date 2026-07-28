@@ -10,4 +10,4 @@ openpyxl
 fuzzywuzzy
 PyPDF2
 python-docx
-pillow
+Pillow==10.4.0
