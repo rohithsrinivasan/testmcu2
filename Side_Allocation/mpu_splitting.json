@@ -19,6 +19,7 @@
     "NC Table" : "No-Connect",
     "XSPI Table" : "XSPI Interface",
     "LPDDR Table" : "LPDDR Interface",
-    "SD Table" : "SD Interface"
+    "SD Table" : "SD Interface",
+    "ISO Table" : "ISO"
     
 }

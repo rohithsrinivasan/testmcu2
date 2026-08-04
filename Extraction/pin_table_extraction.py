@@ -34,8 +34,11 @@ def extracting_pin_tables(file_path, part_number, number_of_pins, package_type, 
     detection_keyword = "elect"
     st.text(f"Pin Table Pages : {pin_table_pages}")
     dfs = methods.table_extraction_logic(file_path, pin_table_pages, target_columns, detection_keyword)
+
     
     extracted_table_as_text = multipage_pintable_extractor.extract_table_as_text(file_path, pin_table_pages, table_start_string, table_stop_string)
+
+
     page_numbers = multipage_pintable_extractor.generate_list_of_page_numbers(table_starting_page_number, table_ending_page_number)
     
     table_as_text = multipage_pintable_extractor.text_filter(extracted_table_as_text)

@@ -7,8 +7,8 @@ from PIL import Image
 
 from Extraction.base_functions import ui_widgets
 from Extraction.gemini_api_functions import setup
-from Extraction.gemini_api_functions import chat_interface
 from Extraction.gemini_api_functions import pinout_reader
+from Extraction.gemini_api_functions import pin_out_reader_new
 from Extraction import part_number_extraction
 from Extraction import pin_table_extraction
 from Extraction import fetch_from_url
@@ -68,6 +68,9 @@ if st.button("Clear Inputs"):
 # Toggle for Gemini API
 use_ai_extraction = st.toggle("Use Gemini API for extraction")
 pinout_read = st.toggle("Read From Pinout Diagram")
+if 'api_manager' not in st.session_state:
+    st.session_state.api_manager = setup.APIManager()
+
 # Part number input
 if "part_number" not in st.session_state:
     st.session_state.part_number = None
@@ -100,66 +103,22 @@ if st.session_state.input_buffer:
         else:
             st.write("Pin table displayed")
 
-    elif use_ai_extraction:
-        api_key = setup.get_and_validate_api_key()
-    # Document upload
-        with st.spinner("Processing document..."):
-            if api_key and not st.session_state.gemini_model:
-                if setup.setup_gemini(api_key):
-                    print("✅ Gemini API configured!")
-            document_text = chat_interface.process_document(input_buffer)
-            if document_text:
-                st.session_state.document_content = document_text
-                st.success(f"✅ Document processed! ({len(document_text)} characters)")               
-                # Show document preview
-                with st.expander("📄 Document Preview"):
-                    st.text_area("Content preview:", document_text[:1000] + "...", height=200, disabled=True)
-
-            # Add the chat interface
-            chat_interface.display_chat_interface_2()
-
     else:
         st.warning("Please enter a valid Part Number.")
 
 else:
     st.info("Please upload a PDF file.")
 
-if pinout_read:
-    # Initialize extractor
-    extractor = pinout_reader.PinoutExtractor()
 
-    # Initialize session state
-    if 'current_stage' not in st.session_state:
-        st.session_state.current_stage = 'capture'
-    
-    # Sidebar navigation
-    st.sidebar.title("AI Extractor")
-    
-    # Stage selection
-    stage = st.sidebar.radio(
-        "Select Stage:",
-        ["Step 1: upload", "Step 2: Extract"],
-        index=0 if st.session_state.current_stage == 'capture' else 1
-    )
-    
-    # Update current stage based on selection
-    if "Step 1" in stage:
-        st.session_state.current_stage = 'capture'
-    elif "Step 2" in stage:
-        st.session_state.current_stage = 'extract'
-    
-    # Display current stage info
-    st.sidebar.markdown("---")
-    st.sidebar.info(f"**Current Stage:** {st.session_state.current_stage.title()}")
-        
-    # Main content based on stage
-    if st.session_state.current_stage == 'capture':
-        extractor.upload_screenshot()
-    elif st.session_state.current_stage == 'extract':
-        extractor.extract_pinout_data()
+if pinout_read:    
+    extractor = pin_out_reader_new.PinoutExtractor()
+    extractor.run()
 
-        if "page" in st.session_state and st.session_state["page"] == "grouping":
-            st.page_link("pages/01_Grouping_2.py", label="Grouping 2.0")
+    # Link to grouping page if available
+    if "page" in st.session_state and st.session_state["page"] == "grouping":
+        st.page_link("pages/01_Grouping_2.py", label="Grouping 2.0")
+
+
 
 
 

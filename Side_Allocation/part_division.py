@@ -81,7 +81,7 @@ def handle_special_pin_separation(
     df,
     mpu_functional_groups,
     functional_separation=False,
-    lower_threshold=6
+    lower_threshold=4
 ):
     core_groups = {
         'GPIO Table': ('GPIO_Pins', functional_block_constraints.test_one_GPIOcase),

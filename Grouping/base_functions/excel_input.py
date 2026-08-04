@@ -34,6 +34,7 @@ def process_pin_dataframe(df, testing_electrical_type=False):
         "Pin Display Name": "Pin Display Name",
         "pin name": "Pin Display Name",
         "electrical": "Electrical Type",
+        "Pin Electrical Type": "Electrical Type",
         "electrical type": "Electrical Type",
         "description": "Pin Alternate Name",
         "Pin description": "Pin Alternate Name",
