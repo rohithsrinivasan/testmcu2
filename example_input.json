@@ -1,0 +1,30 @@
+{
+  "part_number": "R7FA8M85A",
+  "pins": [
+    {
+      "Pin Designator": "1",
+      "Pin Display Name": "VCC",
+      "Pin Alternate Name": "Power"
+    },
+    {
+      "Pin Designator": "2",
+      "Pin Display Name": "GND",
+      "Pin Alternate Name": "Ground"
+    },
+    {
+      "Pin Designator": "3",
+      "Pin Display Name": "P000",
+      "Pin Alternate Name": "AN000/IRQ0"
+    },
+    {
+      "Pin Designator": "4",
+      "Pin Display Name": "P001",
+      "Pin Alternate Name": "AN001/IRQ1"
+    },
+    {
+      "Pin Designator": "5",
+      "Pin Display Name": "RES#",
+      "Pin Alternate Name": "RESET"
+    }
+  ]
+}

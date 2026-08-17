@@ -1,0 +1,47 @@
+[
+  {
+    "Pin Designator":"1",
+    "Pin Display Name":"VCC",
+    "Pin Alternate Name":"Power",
+    "Electrical Type":"Power",
+    "Grouping":"Positive_AA_VCC_AA_Pins",
+    "Priority":"A--_Positive_AA_VCC_AA_Pins",
+    "Side":"Left"
+  },
+  {
+    "Pin Designator":"5",
+    "Pin Display Name":"RES#",
+    "Pin Alternate Name":"RESET",
+    "Electrical Type":"NAv",
+    "Grouping":"RESET_-pins",
+    "Priority":"BR-_RESET_-pins",
+    "Side":"Left"
+  },
+  {
+    "Pin Designator":"3",
+    "Pin Display Name":"P000",
+    "Pin Alternate Name":"AN000\/IRQ0",
+    "Electrical Type":"I\/O",
+    "Grouping":"Port Pins_00",
+    "Priority":"P_Port Pins_00",
+    "Side":"Right"
+  },
+  {
+    "Pin Designator":"4",
+    "Pin Display Name":"P001",
+    "Pin Alternate Name":"AN001\/IRQ1",
+    "Electrical Type":"I\/O",
+    "Grouping":"Port Pins_00",
+    "Priority":"P_Port Pins_00",
+    "Side":"Right"
+  },
+  {
+    "Pin Designator":"2",
+    "Pin Display Name":"GND",
+    "Pin Alternate Name":"Ground",
+    "Electrical Type":"Power",
+    "Grouping":"Negative_Y_GND",
+    "Priority":"Z--_Negative_Y_GND",
+    "Side":"Right"
+  }
+]
