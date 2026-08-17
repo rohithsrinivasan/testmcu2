@@ -1,373 +1,667 @@
-# SymbolGen CLI Usage Guide
+# SymbolGen CLI Usage Guide - Complete Edition
+
+## Features Implemented
+
+✅ Category selection (MCU / Power)  
+✅ Power subcategory auto-detection  
+✅ Incomplete grouping validation (fail-fast)  
+✅ Auto-fill with threshold  
+✅ Four-sided symbols  
+✅ Debug commands for everything  
+✅ Complete feature parity with UI
+
+---
 
 ## Quick Start
 
-The SymbolGen CLI provides command-line access to pin grouping and side allocation functionality.
-
-## Installation
-
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+# MCU grouping
+python cli.py build pins.json --grouping --category mcu
 
-# Or install as package
-pip install -e .
-```
+# Power with auto-detection
+python cli.py suggest pins.json
+python cli.py build pins.json --grouping --category power --suggest-subcategory
 
-## Commands
-
-### 1. Build Command
-
-Apply grouping and/or side allocation to pin tables.
-
-**Basic Syntax:**
-```bash
-python cli.py build <input_file> [OPTIONS]
-```
-
-**Options:**
-- `--grouping` - Apply pin grouping (assigns electrical types and groups)
-- `--sidealloc` - Apply side allocation (assigns priority and sides)
-- `--mputype` - Use MPU-type splitting for multi-part symbols (only with --sidealloc)
-
-**Examples:**
-
-```bash
-# Apply grouping only
-python cli.py build pins.json --grouping
-
-# Apply both grouping and side allocation
-python cli.py build pins.json --grouping --sidealloc
-
-# Apply grouping and side allocation with MPU splitting
-python cli.py build pins.csv --grouping --sidealloc --mputype
-
-# Apply side allocation to already-grouped data
-python cli.py build pins_grouped.json --sidealloc
+# Complete workflow
+python cli.py build pins.json --grouping --sidealloc --category mcu
 ```
 
 ---
 
-### 2. Debug Command
+## Commands Overview
 
-Run in debug mode to see detailed information about unresolved pins.
+### 1. `suggest` - Power Subcategory Suggestion
+
+Auto-detect best matching Power subcategory.
+
+```bash
+python cli.py suggest <input>
+```
+
+**Output:**
+```
+📊 Subcategory Match Analysis:
+============================================================
+✅ 1. Buck                    100.0% (45/45 pins)
+⚠️  2. LDO                     87.2% (39/45 pins)
+ℹ️  3. Boost                   45.0% (20/45 pins)
+```
+
+---
+
+### 2. `build` - Process Pin Tables
+
+Apply grouping and/or side allocation.
 
 **Basic Syntax:**
 ```bash
-python cli.py debug <input_file> --grouping
+python cli.py build <input> [OPTIONS]
 ```
 
-**Example:**
+**Key Options:**
+- `--category {mcu|power}` - Device category (default: mcu)
+- `--subcategory <name>` - Power subcategory (Buck, LDO, etc.)
+- `--suggest-subcategory` - Auto-detect Power subcategory
+- `--grouping` - Apply pin grouping
+- `--sidealloc` - Apply side allocation
+- `--mputype` - Use MPU-type splitting
+- `--four-sided` - Create 4-sided symbol
+- `--auto-fill` - Auto-fill partial matches
+- `--threshold N` - Minimum match % (default: 100)
+- `--allow-incomplete` - Proceed with warnings
+- `--strict-population` - Strict population mode
+- `--balanced-assignment` - Balanced assignment mode
+
+---
+
+### 3. `debug-grouping` - Detailed Grouping Analysis
+
+Show detailed information about grouping issues.
+
 ```bash
-# Debug grouping process
-python cli.py debug pins.json --grouping
+python cli.py debug-grouping <input> [OPTIONS]
 ```
 
-**Debug output includes:**
-- Detailed list of unresolved pins
+**Shows:**
+- Unresolved pins with details
 - Electrical type distribution
 - Grouping distribution
-- Statistics on coverage
+- Complete/incomplete status
+
+---
+
+### 4. `debug-sidealloc` - Detailed Side Allocation Analysis
+
+Show detailed information about side allocation.
+
+```bash
+python cli.py debug-sidealloc <input> [OPTIONS]
+```
+
+**Shows:**
+- Priority distribution
+- Side distribution
+- Part distribution (for multi-part)
+
+---
+
+## Category Selection
+
+### MCU Devices
+
+```bash
+python cli.py build pins.json --grouping --category mcu
+```
+
+**Uses database:**
+- `Grouping/mcu&mpu_database/Combined_Added_mpu.json`
+
+---
+
+### Power Devices (19 Subcategories)
+
+**Available subcategories:**
+1. Buck
+2. Boost
+3. Buck-Boost
+4. LDO
+5. Charge-Pump
+6. FlyBack
+7. Battery-Charger-IC
+8. PWM-Controller
+9. Voltage-References
+10. Power-Supply-Support
+11. FET-Drivers
+12. Battery-Protectors-Monitors-Balancers
+13. LED-Drivers
+14. DC-DC-Power-Modules
+15. Multiphase-DC-DC-Switching-Controllers
+16. ORing-FET-Controllers
+17. Protected-Intelligent-Power-Devices
+18. Smart-Power-Stages
+19. Solid-State-Lighting-Interface-Ics
+20. AC-DC-Isolated-DC-DC-Converters
+21. USB-Type-C-Port-Manager
+22. PMIC
+
+**Manual selection:**
+```bash
+python cli.py build pins.json --grouping \
+  --category power --subcategory Buck
+```
+
+**Auto-detection:**
+```bash
+python cli.py build pins.json --grouping \
+  --category power --suggest-subcategory
+```
+
+---
+
+## Incomplete Grouping Validation
+
+### Strict Mode (Default)
+
+Fails if any pins are ungrouped:
+
+```bash
+python cli.py build pins.json --grouping --category mcu
+```
+
+**If incomplete:**
+```
+❌ GROUPING INCOMPLETE: 5 pins unresolved
+   Status: NOT AVAILABLE
+   
+   Unresolved pins:
+   Pin Designator Pin Display Name
+                3             P003
+                4             P004
+                
+💡 Options:
+   1. Run with --debug-grouping to see details
+   2. Use --auto-fill --threshold 80 to fill partial matches
+   3. Use --allow-incomplete to proceed anyway
+```
+
+### Allow Incomplete
+
+Proceed with warnings:
+
+```bash
+python cli.py build pins.json --grouping --allow-incomplete
+```
+
+---
+
+## Auto-Fill with Threshold
+
+Auto-fill grouping if match confidence >= threshold.
+
+```bash
+python cli.py build pins.json --grouping \
+  --auto-fill --threshold 80
+```
+
+**How it works:**
+- `--threshold 100`: Only exact matches (default)
+- `--threshold 80`: 80%+ similarity
+- `--threshold 50`: 50%+ similarity
+
+**Example output:**
+```
+⚙️  Auto-filling groups (threshold: 80%)...
+✅ Auto-filled 12 pins
+⚠️  Warning: 3 pins with unresolved Grouping
+```
+
+---
+
+## Four-Sided Symbols
+
+Create symbols with Top/Bottom/Left/Right sides.
+
+```bash
+python cli.py build pins.json --grouping --sidealloc --four-sided
+```
+
+**Algorithm:**
+1. Divide pins equally across 4 sides
+2. EPAD pins assigned to Top
+3. Natural sort by pin number
+
+**Output example:**
+```
+📦 Four-sided symbol
+Total pins: 64
+Base pins per side: 16
+Assigned 16 pins to Left side
+Assigned 16 pins to Bottom side
+Assigned 16 pins to Right side
+Assigned 16 pins to Top side
+```
+
+---
+
+## MPU Type Splitting
+
+Split multi-part symbols by functional groups.
+
+```bash
+python cli.py build pins.json --grouping --sidealloc \
+  --mputype --strict-population --balanced-assignment
+```
+
+**Options:**
+- `--mputype`: Enable functional grouping
+- `--strict-population`: Enforce max 80 pins/part
+- `--balanced-assignment`: Balance pins across parts
+
+---
+
+## Debug vs Build
+
+### Build Commands
+- **Run** the feature
+- **Save** output files
+- Show **summary** only
+
+### Debug Commands
+- **Run** the feature
+- Show **detailed** analysis
+- Show **all unresolved** items
+- Save debug output
+
+**Example comparison:**
+
+**Build:**
+```bash
+python cli.py build pins.json --grouping
+# Output:
+# ✅ Loaded 100 pins
+# ⚙️  Assigning groups...
+# ✅ Grouping completed
+# ✨ Success!
+```
+
+**Debug:**
+```bash
+python cli.py debug-grouping pins.json
+# Output:
+# ✅ Loaded 100 pins
+# ⚙️  Assigning groups...
+# ⚠️  Warning: 5 pins unresolved
+#
+# Unresolved pins:
+# Pin 45: P045 - Type: I/O
+# Pin 67: CUSTOM - Type: NAv
+# ...
+# 
+# Electrical Type Distribution:
+# Power: 20
+# I/O: 60
+# NAv: 5
+# ...
+```
+
+---
+
+## Complete Workflow Examples
+
+### Example 1: MCU Device
+
+```bash
+# Step 1: Group pins
+python cli.py build mcu_pins.json --grouping --category mcu
+
+# Step 2: Review (optional)
+python cli.py debug-grouping mcu_pins.json --category mcu
+
+# Step 3: Side allocation
+python cli.py build mcu_pins_grouped.json --sidealloc --category mcu
+
+# Or do everything at once:
+python cli.py build mcu_pins.json --grouping --sidealloc --category mcu
+```
+
+---
+
+### Example 2: Power Device (Auto-detect)
+
+```bash
+# Step 1: Suggest subcategory
+python cli.py suggest power_pins.json
+
+# Output:
+# ✅ 1. Buck  100.0% (45/45 pins)
+#
+# To use:
+#   python cli.py build power_pins.json --grouping \
+#       --category power --subcategory Buck
+
+# Step 2: Build with suggestion
+python cli.py build power_pins.json --grouping --sidealloc \
+  --category power --suggest-subcategory
+```
+
+---
+
+### Example 3: Large MCU with MPU Splitting
+
+```bash
+python cli.py build large_mcu.csv --grouping --sidealloc \
+  --category mcu --mputype --strict-population --balanced-assignment
+```
+
+---
+
+### Example 4: Four-Sided Symbol
+
+```bash
+python cli.py build pins.json --grouping --sidealloc --four-sided
+```
+
+---
+
+### Example 5: Auto-Fill Partial Matches
+
+```bash
+# Try exact matches first
+python cli.py build pins.json --grouping
+
+# If many unresolved, try 80% threshold
+python cli.py build pins.json --grouping --auto-fill --threshold 80
+
+# Debug to see what's still missing
+python cli.py debug-grouping pins.json --auto-fill --threshold 80
+```
+
+---
+
+### Example 6: Incomplete Grouping Handling
+
+```bash
+# Strict mode (fails on incomplete)
+python cli.py build pins.json --grouping
+
+# If fails, debug to see issues
+python cli.py debug-grouping pins.json
+
+# Or allow incomplete and fix manually later
+python cli.py build pins.json --grouping --allow-incomplete
+```
 
 ---
 
 ## Input File Formats
 
-The CLI accepts three input formats:
+### JSON Format
 
-### 1. JSON Format
-
-**Simple array:**
+**Array:**
 ```json
 [
   {
     "Pin Designator": "1",
     "Pin Display Name": "VCC",
     "Pin Alternate Name": "Power"
-  },
-  {
-    "Pin Designator": "2",
-    "Pin Display Name": "GND",
-    "Pin Alternate Name": "Ground"
   }
 ]
 ```
 
-**With part metadata:**
+**With metadata:**
 ```json
 {
   "part_number": "R7FA8M85A",
-  "pins": [
-    {
-      "Pin Designator": "1",
-      "Pin Display Name": "VCC",
-      "Pin Alternate Name": "Power"
-    }
-  ]
+  "pins": [...]
 }
 ```
 
-### 2. CSV Format
+### CSV Format
 
 ```csv
 Pin Designator,Pin Display Name,Pin Alternate Name
 1,VCC,Power
 2,GND,Ground
-3,P000,AN000/IRQ0
 ```
 
-### 3. Excel Format (.xlsx)
+### Excel Format
 
-Standard Excel file with columns:
-- Pin Designator
-- Pin Display Name
-- Pin Alternate Name
+Standard `.xlsx` with same columns.
 
-Optional columns (if already processed):
-- Electrical Type
-- Grouping
-- Priority
-- Side
+---
+
+## Output Files
+
+**Naming convention:**
+- `input_grouped.json` - After grouping
+- `input_sidealloc.json` - After side allocation
+- `input_debug_grouping.json` - Debug grouping output
+- `input_debug_sidealloc.json` - Debug side alloc output
 
 ---
 
 ## Required Columns
 
 **For Grouping:**
-- `Pin Designator` - Pin number/identifier
-- `Pin Display Name` - Primary pin name
-- `Pin Alternate Name` - Alternative function names
+- Pin Designator
+- Pin Display Name
+- Pin Alternate Name
 
 **For Side Allocation:**
-- All grouping columns PLUS:
-- `Electrical Type` - Pin electrical type (auto-assigned if missing)
-- `Grouping` - Pin group assignment (auto-assigned if missing)
+- All grouping columns
+- Electrical Type (auto-generated if missing)
+- Grouping (auto-generated if missing)
 
 ---
 
-## Output Files
+## Output Columns
 
-The CLI creates output files with suffixes:
+**After Grouping:**
+- Original columns
+- Electrical Type (Power, I/O, Input, Output, Passive)
+- Grouping (functional group name)
 
-- `_grouped.json` - After grouping
-- `_sidealloc.json` - After side allocation
-- `_debug.json` - Debug output
-
-**Example:**
-```bash
-# Input: pins.json
-# Outputs:
-#   - pins_grouped.json
-#   - pins_sidealloc.json (if --sidealloc used)
-```
+**After Side Allocation:**
+- All grouping columns
+- Priority (placement priority)
+- Side (Left, Right, Top, Bottom)
+- Part (for multi-part symbols)
 
 ---
 
-## Workflow Examples
+## Error Handling
 
-### Complete Workflow
+### Missing Subcategory for Power
 
 ```bash
-# 1. Start with raw pin data
-python cli.py build raw_pins.json --grouping
-
-# 2. Review grouped output (optional)
-python cli.py debug raw_pins.json --grouping
-
-# 3. Apply side allocation
-python cli.py build raw_pins_grouped.json --sidealloc
-
-# Or do everything in one step:
-python cli.py build raw_pins.json --grouping --sidealloc
+python cli.py build pins.json --grouping --category power
+# ❌ Error: Power category requires --subcategory
 ```
 
-### MPU Multi-part Symbol
-
+**Fix:**
 ```bash
-# For large pin counts (>80 pins) with MPU-type splitting
-python cli.py build large_mcu.csv --grouping --sidealloc --mputype
+python cli.py build pins.json --grouping --category power --suggest-subcategory
 ```
 
 ---
 
-## Understanding the Output
+### Incomplete Grouping
 
-### Grouping Stage
-
-**Adds columns:**
-- `Electrical Type` - Power, I/O, Input, Output, Passive, etc.
-- `Grouping` - Functional group (e.g., "Port Pins_00", "VCC_Pins", etc.)
-
-**Example output:**
-```json
-{
-  "Pin Designator": "3",
-  "Pin Display Name": "P000",
-  "Pin Alternate Name": "AN000/IRQ0",
-  "Electrical Type": "I/O",
-  "Grouping": "Port Pins_00"
-}
+```bash
+python cli.py build pins.json --grouping
+# ❌ GROUPING INCOMPLETE: 5 pins unresolved
+#    Status: NOT AVAILABLE
 ```
 
-### Side Allocation Stage
+**Options:**
+1. Debug: `python cli.py debug-grouping pins.json`
+2. Auto-fill: `python cli.py build pins.json --grouping --auto-fill --threshold 80`
+3. Allow: `python cli.py build pins.json --grouping --allow-incomplete`
 
-**Adds columns:**
-- `Priority` - Pin placement priority (1-100+)
-- `Side` - Symbol side (Left, Right, Top, Bottom)
-- `Part` - Part number (for multi-part symbols)
+---
 
-**Example output:**
-```json
-{
-  "Pin Designator": "3",
-  "Pin Display Name": "P000",
-  "Pin Alternate Name": "AN000/IRQ0",
-  "Electrical Type": "I/O",
-  "Grouping": "Port Pins_00",
-  "Priority": 10,
-  "Side": "Right"
-}
+### Invalid Subcategory
+
+```bash
+python cli.py build pins.json --grouping --category power --subcategory InvalidName
+# ❌ Error: Invalid Power subcategory: InvalidName
+#    Available: Buck, Boost, LDO, ...
+```
+
+---
+
+## Tips & Best Practices
+
+### 1. Always Use Debug Mode First
+
+```bash
+# Debug to see what will happen
+python cli.py debug-grouping pins.json --category mcu
+
+# Then run actual build
+python cli.py build pins.json --grouping --category mcu
+```
+
+### 2. Power Devices: Use Auto-Suggest
+
+```bash
+# Don't guess the subcategory
+python cli.py suggest pins.json
+
+# Use the suggestion
+python cli.py build pins.json --grouping --category power --suggest-subcategory
+```
+
+### 3. Handle Incomplete Grouping
+
+```bash
+# Start strict
+python cli.py build pins.json --grouping
+
+# If fails, try auto-fill
+python cli.py build pins.json --grouping --auto-fill --threshold 80
+
+# Still fails? Debug
+python cli.py debug-grouping pins.json --auto-fill --threshold 80
+
+# Last resort: allow incomplete and fix manually
+python cli.py build pins.json --grouping --allow-incomplete
+```
+
+### 4. Large Symbols: Use MPU Type
+
+```bash
+# For MCUs with >80 pins and functional grouping
+python cli.py build large_mcu.json --grouping --sidealloc \
+  --mputype --balanced-assignment
+```
+
+### 5. Compact Symbols: Use Four-Sided
+
+```bash
+# Better layout for 30-80 pin devices
+python cli.py build pins.json --grouping --sidealloc --four-sided
+```
+
+---
+
+## Command Cheat Sheet
+
+```bash
+# Suggest Power subcategory
+python cli.py suggest <input>
+
+# MCU grouping only
+python cli.py build <input> --grouping --category mcu
+
+# Power grouping with auto-detect
+python cli.py build <input> --grouping --category power --suggest-subcategory
+
+# Complete MCU flow
+python cli.py build <input> --grouping --sidealloc --category mcu
+
+# Power with specific subcategory
+python cli.py build <input> --grouping --sidealloc \
+  --category power --subcategory Buck
+
+# Auto-fill partial matches (80% threshold)
+python cli.py build <input> --grouping --auto-fill --threshold 80
+
+# Four-sided symbol
+python cli.py build <input> --grouping --sidealloc --four-sided
+
+# MPU type splitting
+python cli.py build <input> --grouping --sidealloc --mputype
+
+# Allow incomplete grouping
+python cli.py build <input> --grouping --allow-incomplete
+
+# Debug grouping
+python cli.py debug-grouping <input> --category mcu
+
+# Debug side allocation
+python cli.py debug-sidealloc <input> --category mcu
 ```
 
 ---
 
 ## Troubleshooting
 
-### Issue: "Missing required columns"
+### Q: "GROUPING INCOMPLETE" error
 
-**Solution:** Ensure your input file has these columns:
-- Pin Designator
-- Pin Display Name
-- Pin Alternate Name
+**A:** Use one of:
+1. `--debug-grouping` to see which pins
+2. `--auto-fill --threshold 80` to fill partial matches
+3. `--allow-incomplete` to proceed anyway
 
-### Issue: "Unresolved Electrical Type (NAv)"
+### Q: Power device - which subcategory?
 
-**Cause:** Pin not found in database
-
-**Solution:**
-1. Run with `debug` command to see which pins are unresolved
-2. Manually add `Electrical Type` column to input
-3. Or add pin patterns to database JSON files
-
-### Issue: "Unresolved Grouping"
-
-**Cause:** Pin not found in grouping database
-
-**Solution:**
-1. Check if using correct device category (MCU vs Power)
-2. Manually add `Grouping` column if needed
-3. Or extend grouping database
-
-### Issue: Unicode/Emoji errors on Windows
-
-**Status:** Fixed in latest version with automatic encoding handling
-
----
-
-## Advanced Usage
-
-### Custom Input with Pre-filled Columns
-
-If you have partial data already processed, the CLI will use existing values:
-
-```json
-[
-  {
-    "Pin Designator": "1",
-    "Pin Display Name": "VCC",
-    "Pin Alternate Name": "Power",
-    "Electrical Type": "Power"
-  }
-]
-```
-
-Running `--grouping` will:
-- Keep existing "Electrical Type"
-- Only assign "Grouping"
-
-### Batch Processing
-
+**A:** Use `suggest` command:
 ```bash
-# Process multiple files
-for file in *.json; do
-    python cli.py build "$file" --grouping --sidealloc
-done
+python cli.py suggest pins.json
 ```
 
----
+### Q: How to see detailed output?
 
-## Database Files
-
-The CLI uses these databases:
-
-**MCU/MPU:**
-- `Grouping/mcu&mpu_database/Combined_Added_mpu.json`
-
-**Pin Types:**
-- `Grouping/mcu_database/mcu_input.json`
-- `Grouping/mcu_database/mcu_power.json`
-- `Grouping/mcu_database/mcu_io.json`
-- `Grouping/mcu_database/mcu_output.json`
-- `Grouping/mcu_database/mcu_passive.json`
-
-**Priority:**
-- `Side_Allocation/priority_map_mpuadded.json`
-
----
-
-## Exit Codes
-
-- `0` - Success
-- `1` - Error (missing file, invalid format, etc.)
-- `130` - Interrupted by user (Ctrl+C)
-
----
-
-## Getting Help
-
+**A:** Use debug commands:
 ```bash
-# Show general help
-python cli.py --help
+python cli.py debug-grouping pins.json
+python cli.py debug-sidealloc pins.json
+```
 
-# Show build command help
-python cli.py build --help
+### Q: Symbol too crowded on 2 sides?
 
-# Show debug command help
-python cli.py debug --help
+**A:** Use `--four-sided`:
+```bash
+python cli.py build pins.json --grouping --sidealloc --four-sided
+```
+
+### Q: Multi-part symbol not splitting right?
+
+**A:** Try MPU type with options:
+```bash
+python cli.py build pins.json --grouping --sidealloc \
+  --mputype --strict-population --balanced-assignment
 ```
 
 ---
 
-## Integration with Existing Workflow
+## Version History
 
-The CLI complements the Streamlit UI:
+**v2.0.0** (Current)
+- ✅ Power device support (19 subcategories)
+- ✅ Auto-suggest Power subcategory
+- ✅ Incomplete grouping validation
+- ✅ Auto-fill with threshold
+- ✅ Four-sided symbols
+- ✅ Debug commands for all features
+- ✅ Complete feature parity with UI
 
-**Use CLI for:**
-- Batch processing
-- Automation/scripting
-- CI/CD pipelines
-- Headless environments
-
-**Use Streamlit UI for:**
-- Interactive exploration
-- Visual feedback
-- Manual corrections
-- Learning the tool
-
-Both interfaces use the same underlying functions, so results are consistent.
-
----
-
-## Future Enhancements
-
-Planned features:
-- Support for Power device categories
-- Custom database selection
-- Output format options (CSV, Excel)
-- Validation and pre-flight checks
-- Progress bars for large files
+**v1.0.0**
+- Basic MCU grouping and side allocation
 
 ---
 
 **Last Updated:** 2026-08-17  
-**Version:** 1.0.0
+**Features:** Complete  
+**Status:** Production Ready

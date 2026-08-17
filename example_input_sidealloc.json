@@ -9,12 +9,12 @@
     "Side":"Left"
   },
   {
-    "Pin Designator":"5",
-    "Pin Display Name":"RES#",
-    "Pin Alternate Name":"RESET",
-    "Electrical Type":"Input",
-    "Grouping":"RESET_-pins",
-    "Priority":"BR-_RESET_-pins",
+    "Pin Designator":"2",
+    "Pin Display Name":"GND",
+    "Pin Alternate Name":"Ground",
+    "Electrical Type":"Power",
+    "Grouping":"Negative_Y_GND",
+    "Priority":"Z--_Negative_Y_GND",
     "Side":"Left"
   },
   {
@@ -24,7 +24,7 @@
     "Electrical Type":"I\/O",
     "Grouping":"Port Pins_00",
     "Priority":"P_Port Pins_00",
-    "Side":"Right"
+    "Side":"Bottom"
   },
   {
     "Pin Designator":"4",
@@ -33,15 +33,15 @@
     "Electrical Type":"I\/O",
     "Grouping":"Port Pins_00",
     "Priority":"P_Port Pins_00",
-    "Side":"Right"
+    "Side":"Bottom"
   },
   {
-    "Pin Designator":"2",
-    "Pin Display Name":"GND",
-    "Pin Alternate Name":"Ground",
-    "Electrical Type":"Power",
-    "Grouping":"Negative_Y_GND",
-    "Priority":"Z--_Negative_Y_GND",
+    "Pin Designator":"5",
+    "Pin Display Name":"RES#",
+    "Pin Alternate Name":"RESET",
+    "Electrical Type":"NAv",
+    "Grouping":"RESET_-pins",
+    "Priority":"BR-_RESET_-pins",
     "Side":"Right"
   }
 ]
