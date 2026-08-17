@@ -12,7 +12,7 @@
     "Pin Designator":"5",
     "Pin Display Name":"RES#",
     "Pin Alternate Name":"RESET",
-    "Electrical Type":"NAv",
+    "Electrical Type":"Input",
     "Grouping":"RESET_-pins",
     "Priority":"BR-_RESET_-pins",
     "Side":"Left"
