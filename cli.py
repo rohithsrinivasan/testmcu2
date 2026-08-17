@@ -13,7 +13,6 @@ import sys
 import json
 import pandas as pd
 from pathlib import Path
-import os
 
 # Fix Windows encoding for console output
 if sys.platform == 'win32':
@@ -27,7 +26,6 @@ if sys.platform == 'win32':
 from Grouping.base_functions import general_funct
 from Grouping import Assigning_Electrical_Type, Assigning_Pin_Group
 from Side_Allocation import priority, side, part_division
-from Side_Allocation.base_functions import general_constraints
 
 
 class SymbolGenCLI:

@@ -31,7 +31,7 @@
     "Pin Designator":"5",
     "Pin Display Name":"RES#",
     "Pin Alternate Name":"RESET",
-    "Electrical Type":"Input",
+    "Electrical Type":"NAv",
     "Grouping":"RESET_-pins"
   }
 ]
