@@ -1,13 +1,15 @@
-pandas
+# Core dependencies - kept in sync with setup.py
+pandas>=2.0.0
 pdfplumber==0.11.4
-tabula-py
-numpy
+tabula-py>=2.0.0
+numpy>=1.24.0
 streamlit==1.38.0
-streamlit_pdf_viewer
-python-dotenv
-google-generativeai
-openpyxl
-fuzzywuzzy
-PyPDF2
-python-docx
+streamlit-pdf-viewer>=0.0.1
+python-dotenv>=1.0.0
+google-generativeai>=0.3.0
+openpyxl>=3.0.0
+fuzzywuzzy>=0.18.0
+PyPDF2>=3.0.0
+python-docx>=1.0.0
 Pillow==10.4.0
+PyMuPDF>=1.23.0

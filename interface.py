@@ -7,15 +7,18 @@ from PIL import Image
 
 from Extraction.base_functions import ui_widgets
 from Extraction.gemini_api_functions import setup
-from Extraction.gemini_api_functions import pinout_reader
 from Extraction.gemini_api_functions import pin_out_reader_new
 from Extraction import part_number_extraction
 from Extraction import pin_table_extraction
 from Extraction import fetch_from_url
 
 load_dotenv()
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-genai.configure(api_key=GEMINI_API_KEY)
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+if not GOOGLE_API_KEY:
+    st.error("❌ GOOGLE_API_KEY not found in .env file. Please copy .env.example to .env and add your API key.")
+    st.stop()
+
+genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-2.5-flash-preview-05-20')
 
 st.set_page_config(page_icon= 'dados/logo_small.png', page_title= "SymbolGen" )
