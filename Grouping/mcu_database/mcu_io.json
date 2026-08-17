@@ -143,7 +143,6 @@
       "HM_DQ5",
       "HM_DQ6",
       "HM_DQ7",
-      "HM_RESET#",
       "HM_RWDS"
     ],
 
@@ -783,12 +782,10 @@
     ],
     "Interface_DDR_Pins": [
       "DDR0_ATEST",
-      "DDR0_RESETN",
       "DDR0_VAA",
       "DDR0_VDDQ",
       "DDR0_VDDQLP",
       "DDR0_ZN",
-      "DDR1_RESETN",
       "DDR1_VAA",
       "DDR1_VDDQ",
       "DDR1_VDDQLP",
@@ -1215,14 +1212,11 @@
     "DDI",
     "DDO"
   ],
-  "Ready and Reset Control": [
+  "Ready Control": [
     "DRDY#",
     "\\DRDY",
     "DCURDY",
-    "\\DCURDY",
-    "DRST#",
-    "DCUTRST",
-    "\\DCUTRST"
+    "\\DCURDY"
   ],
   "Mode Select / State": [
     "DETMS"
@@ -1379,10 +1373,6 @@
 
 "XSP_Pins" : {
 
-    "XSP10 RST": [
-      "XSPI0_RSTO0N",
-      "XSPI0_RSTO0P"
-    ],
     "XSPI_CLK": [
       "XSPI0_CKN",
       "XSPI0_CKP",
@@ -1413,10 +1403,6 @@
       "XSPI_IO5",
       "XSPI_IO6",
       "XSPI_IO7"
-    ],
-    "B_XSPI_reset": [
-      "XSPI0_RESET0N",
-      "XSPI_RESET0#"
     ]
 
 },
@@ -3215,7 +3201,6 @@
       "PC9",
       "PCC0BVD1",
       "PCC0BVD2",
-      "PCC0RESET",
       "PC_0",
       "PC_1",
       "PC_2",
